@@ -1,6 +1,6 @@
-package ar.edu.unlam.analisis_software;
+package ar.edu.unlam.analisis.software;
 import java.io.*;
-class bdatoa
+public class controlpac
 {
 	public static void ps(String x)
         {
