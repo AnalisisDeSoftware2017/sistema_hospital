@@ -42,12 +42,33 @@ public class MainController implements IController{
         return instance;
     }
 
-    public void runController() {
+    @Override
+    public void runController(IController controller) {
         try {
             String option = this.menu.getOptionFromMenu();
+
+            switch (option){
+
+                case "1": runIngresoDatos(); break;
+                case "2": runInformes(); break;
+                case "3": salir(); break;
+                default: break;
+            }
+
         } catch (IOException e) {
             System.out.println("Error al leer la opcion ingresada. Intentelo nuevamente, En caso de persistir el error. Reinicie la aplicacion");
             System.exit(1);
         }
+    }
+
+    private void salir() {
+    }
+
+    private void runInformes() {
+
+    }
+
+    private void runIngresoDatos() {
+
     }
 }
