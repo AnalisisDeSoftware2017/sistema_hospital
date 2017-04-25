@@ -1,5 +1,9 @@
 package ar.edu.unlam.analisis.software.utils;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 /**
  * Created by sbogado on 4/24/17.
  */
@@ -21,6 +25,7 @@ public class Menu {
 
     private void parseOpcionesSeparador(String [] opciones, String[] cabezera, String [] pie, String decorador, String decoradorOpcion, String separador) throws Exception {
         this.separador = separador;
+        this.cabezera = cabezera;
         this.cantidadOpciones = opciones.length;
         this.options = new String[opciones.length];
         this.descripcionOpciones = new String[opciones.length];
@@ -55,7 +60,7 @@ public class Menu {
         this.descripcionOpciones = descripcionOpciones;
     }
 
-    public void imprimirMenu(){
+    private void imprimirMenu(){
         imprimirCabezera();
         imprimirOpciones();
         imprimirPie();
@@ -76,21 +81,42 @@ public class Menu {
     }
 
 
-    public void imprimirOpciones(){
+    private void imprimirOpciones(){
         //TODO: calcular la cantidad de caracteres que hay y agregarle espacios;
-        StringBuilder sb = new StringBuilder();
+        String auxSeparador = this.separador;
+        auxSeparador.replace('\\',' ');
         for(int i = 0 ; i < this.cantidadOpciones ; i++){
-            System.out.println(sb.append(this.options[i]).append(this.separador).append(this.descripcionOpciones[i]));
+            System.out.println(this.options[i]+auxSeparador+this.descripcionOpciones[i]);
         }
-    }
 
-    //TODO: write this method and return a valid option
-    public String getOption(){
-        return null;
+        System.out.println("Este es el separador:");
     }
 
     private Boolean validateOption(String option){
+        for(String opt : this.options) {
+            if (opt.equals(option)) {
+                return true;
+            }
+        }
         return false;
     }
 
+    public String getOptionFromMenu() throws IOException {
+        String option ="";
+        Boolean isValid= false;
+        do{
+            imprimirMenu();
+            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+            option = br.readLine();
+            isValid = validateOption(option);
+            if(!isValid) {
+                imprimirIsNoValid();
+            }
+        }while(!isValid);
+        return option;
+    }
+
+    private void imprimirIsNoValid() {
+        System.out.println("Debe digitar una opcion del menu\n\n\n\n\n");
+    }
 }
