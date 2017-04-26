@@ -88,8 +88,6 @@ public class Menu {
         for(int i = 0 ; i < this.cantidadOpciones ; i++){
             System.out.println(this.options[i]+auxSeparador+this.descripcionOpciones[i]);
         }
-
-        System.out.println("Este es el separador:");
     }
 
     private Boolean validateOption(String option){
