@@ -1,6 +1,6 @@
 package ar.edu.unlam.analisis.software;
 
-import ar.edu.unlam.analisis.software.controller.MainController;
+import ar.edu.unlam.analisis.software.controller.impl.MainController;
 
 /**
  * Created by sbogado on 4/25/17.

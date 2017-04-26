@@ -1,5 +1,6 @@
-package ar.edu.unlam.analisis.software.controller;
+package ar.edu.unlam.analisis.software.controller.impl;
 
+import ar.edu.unlam.analisis.software.controller.IController;
 import ar.edu.unlam.analisis.software.utils.Menu;
 
 import java.io.IOException;
@@ -8,7 +9,7 @@ import java.util.logging.Logger;
 /**
  * Created by sbogado on 4/25/17.
  */
-public class MainController implements IController{
+public class MainController implements IController {
 
     private static final Logger logger = Logger.getLogger(String.valueOf(MainController.class));
     private final static String[] MENU={"1-  Ingreso de datos", "2-  Informes", "3-  Salir"};
@@ -43,7 +44,7 @@ public class MainController implements IController{
     }
 
     @Override
-    public void runController(IController controller) {
+    public void runController() {
         try {
             String option = this.menu.getOptionFromMenu();
 
@@ -66,9 +67,10 @@ public class MainController implements IController{
 
     private void runInformes() {
 
+
     }
 
     private void runIngresoDatos() {
-
+        IngresosController.getInstance(this).runController();
     }
 }

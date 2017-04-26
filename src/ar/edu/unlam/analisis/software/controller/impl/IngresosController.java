@@ -1,4 +1,6 @@
-package ar.edu.unlam.analisis.software.controller;
+package ar.edu.unlam.analisis.software.controller.impl;
+
+import ar.edu.unlam.analisis.software.controller.IController;
 
 /**
  * Created by sbogado on 4/25/17.
@@ -6,13 +8,13 @@ package ar.edu.unlam.analisis.software.controller;
 public class IngresosController implements IController {
 
     private IController controllerAnterior;
-    private IngresosController instance;
+    private static IngresosController instance;
 
     private IngresosController(IController controllerAnterior){
         this.controllerAnterior = controllerAnterior;
     }
 
-    public IngresosController getInstance(IController controllerAnterior){
+    public static IngresosController getInstance(IController controllerAnterior){
         if(instance == null){
             instance = new IngresosController(controllerAnterior);
         }
@@ -21,7 +23,7 @@ public class IngresosController implements IController {
 
     @Override
     public void runController() {
-
+        System.out.println("Esta corriendo el controller IngresoController.");
     }
 
 
