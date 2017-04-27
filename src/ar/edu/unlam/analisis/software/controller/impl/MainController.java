@@ -43,7 +43,7 @@ public class MainController implements IController {
     }
 
     @Override
-    public void runController() {
+    public void runController() throws Exception {
         try {
             String option = this.menu.getOptionFromMenu();
 
@@ -62,11 +62,13 @@ public class MainController implements IController {
     }
 
     private void salir() {
+        System.out.println("Muchas gracias poir utilizar el sistema");
+        System.exit(0);
     }
 
-    private void runInformes() {
-
-
+    private void runInformes() throws Exception {
+        //TODO change this exception
+        InformesController.getInstance(this).runController();
     }
 
     private void runIngresoDatos() {

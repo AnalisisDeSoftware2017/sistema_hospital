@@ -1,4 +1,4 @@
-/*package ar.edu.unlam.analisis.software;
+package ar.edu.unlam.analisis.software;
 import java.io.*;
 public class controlpac
 {
@@ -348,5 +348,5 @@ public class controlpac
      }while (op1!=3);
 
     }
-}*/
+}
  

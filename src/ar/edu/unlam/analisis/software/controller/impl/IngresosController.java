@@ -1,7 +1,10 @@
 package ar.edu.unlam.analisis.software.controller.impl;
 
 import ar.edu.unlam.analisis.software.controller.IController;
+import ar.edu.unlam.analisis.software.model.Medico;
 import ar.edu.unlam.analisis.software.model.Paciente;
+import ar.edu.unlam.analisis.software.model.SituaciondDelPaciente;
+import ar.edu.unlam.analisis.software.utils.AppUtils;
 import ar.edu.unlam.analisis.software.utils.Menu;
 
 import java.io.DataOutputStream;
@@ -55,22 +58,100 @@ public class IngresosController implements IController {
     }
 
 
-    private void ingresarDatosDelPaciente() throws FileNotFoundException {
+    private void ingresarDatosDelPaciente() throws IOException {
         //TODO: cambiar esto y lanzar una excepcion con un mensaje conveniente
-        DataOutputStream datopac=new DataOutputStream (new FileOutputStream("C:\\datopac.txt"));
-        do{
-            Paciente paciente = new Paciente();
-            System.out.println("   ..............................................."+"\n");
-            System.out.println("   :-:  - D A T O S  D E L  P A C I E N T E -  :-:"+"\n");
-            System.out.println("   :-:.........................................:-:"+"\n");
-            System.out.println("Digite el codigo del paciente: ");
-            paciente.setCodigo(LeerCadena());
-            System.out.println("Digite el nombre del paciente: ");
-            paciente.setNombre(LeerCadena());
-            paciente.toString().writeUTF(nompac);
-            System.out.println("Desea ingresar otro paciente? S/N"+"\n");
+        DataOutputStream output=new DataOutputStream (new FileOutputStream("C:\\datopac.txt"));
+        Boolean ingresaOtro = false;
+        try{
+            do{
+                Paciente paciente = new Paciente();
+                System.out.println("   ..............................................."+"\n");
+                System.out.println("   :-:  - D A T O S  D E L  P A C I E N T E -  :-:"+"\n");
+                System.out.println("   :-:.........................................:-:"+"\n");
+                System.out.println("Digite el codigo del paciente: ");
+                paciente.setCodigo(LeerCadena());
+                System.out.println("Digite el nombre del paciente: ");
+                paciente.setNombre(LeerCadena());
+                //TODO ver si se puede hacer con un properties
+
+                    output.writeUTF(paciente.toString());
+                    System.out.println("Desea ingresar otro paciente? S/N"+"\n");
+                    ingresaOtro = "S".equals(AppUtils.LeerCadena());
+            }while(ingresaOtro);
+        } catch (IOException e) {
+            //TODO throw exception
+            e.printStackTrace();
+        }finally {
+            //TODO throw exception
+            output.close();
+        }
+    }
+
+
+    private void ingresarDatosDelMedico() throws IOException {
+        //TODO: cambiar esto y lanzar una excepcion con un mensaje conveniente
+        DataOutputStream output=new DataOutputStream (new FileOutputStream("C:\\datopac.txt"));
+        Boolean ingresaOtro = false;
+        try{
+            do{
+                Medico medico = new Medico();
+                System.out.println("   ..............................................."+"\n");
+                System.out.println("   :-:  - D A T O S  D E L  M E D I C O     -  :-:"+"\n");
+                System.out.println("   :-:.........................................:-:"+"\n");
+                System.out.println("Digite el codigo del medico: ");
+                medico.setCodigo(LeerCadena());
+                System.out.println("Digite el nombre del medico: ");
+                medico.setNombre(LeerCadena());
+                System.out.println("Digite la especializacion del medico: ");
+                medico.setEspecialidad(LeerCadena());
+                //TODO ver si se puede hacer con un properties
+                output.writeUTF(medico.toString());
+                System.out.println("Desea ingresar otro paciente? S/N"+"\n");
+                ingresaOtro = "S".equals(AppUtils.LeerCadena());
+            }while(ingresaOtro);
+        } catch (IOException e) {
+            //TODO throw exception
+            e.printStackTrace();
+        }finally {
+            //TODO throw exception
+            output.close();
+        }
+    }
+
+
+    private void ingresarSituacionDelPaciente() throws FileNotFoundException {
+        DataOutputStream output=new DataOutputStream (new FileOutputStream("C:\\datopac.txt"));
+        Boolean ingresaOtro = false;
+        try {
+             do{
+                 SituaciondDelPaciente situaciondDelPaciente = new SituaciondDelPaciente();
+                 System.out.println("   .....................................................");
+                 System.out.println("   :-: - S I T U A C I O N  D E L  P A C I E N T E - :-:");
+                 System.out.println("   :-:...............................................:-:");
+                 System.out.println("Digite el codigo del paciente: ");
+                 situaciondDelPaciente.setCodigoPaciente(LeerCadena());
+                 //TODO buscar paciente
+                 System.out.println("Digite el codigo del medico: ");
+                 situaciondDelPaciente.setCodigoMedico(LeerCadena());
+                 //TODO buscar medico
+                 System.out.println("Digite el diagnostico del medico: ");
+                 situaciondDelPaciente.setDiagnostico(LeerCadena());
+                 //TODO ver si se puede hacer con un properties
+                 output.writeUTF(situaciondDelPaciente.toString());
+                 System.out.println("Desea ingresar otro diagnostico? S/N" + "\n");
+                 ingresaOtro = "S".equals(AppUtils.LeerCadena());
+             }while(ingresaOtro);
+        }catch(IOException e){
+            e.printStackTrace();
+
         }
 
+
+
+
+
+
     }
+
 
 }

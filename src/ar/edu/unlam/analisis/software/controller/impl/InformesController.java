@@ -34,8 +34,17 @@ public class InformesController implements IController{
         this.menu = new Menu(MENU,ENCABEZADO,PIE,DECORADOR_LINEA, DECORADOR_OPCIONES, "\\." );
     }
 
+    public static InformesController getInstance(IController controllerAnterior) throws Exception {
+        if(instance==null){
+            instance = new InformesController(controllerAnterior);
+        }
+        return instance;
+    }
+
+
+
     @Override
-    public void runController() throws IOException {
+    public void runController() throws Exception {
         String opcion = this.menu.getOptionFromMenu();
         switch (opcion){
             case "1":  consultarPacientesDeMedico(); break;
@@ -44,7 +53,7 @@ public class InformesController implements IController{
         }
     }
 
-    private void irPantallaAnterior() throws IOException {
+    private void irPantallaAnterior() throws Exception {
         this.controllerAnterior.runController();
     }
 
