@@ -2,7 +2,9 @@ package ar.edu.unlam.analisis.software.controller.impl;
 
 import ar.edu.unlam.analisis.software.controller.IController;
 import ar.edu.unlam.analisis.software.utils.Menu;
+import ar.edu.unlam.analisis.software.views.Login;
 
+import java.awt.EventQueue;
 import java.io.IOException;
 
 /**
@@ -44,7 +46,7 @@ public class MainController implements IController {
 
     @Override
     public void runController() throws Exception {
-        try {
+        /*try {
             String option = this.menu.getOptionFromMenu();
 
             switch (option){
@@ -58,7 +60,13 @@ public class MainController implements IController {
         } catch (IOException e) {
             System.out.println("Error al leer la opcion ingresada. Intentelo nuevamente, En caso de persistir el error. Reinicie la aplicacion");
             System.exit(1);
-        }
+        }*/
+    	
+    	EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				new Login().setVisible(true); //Hace visible el login.
+			}
+		});
     }
 
     private void salir() {
@@ -67,7 +75,6 @@ public class MainController implements IController {
     }
 
     private void runInformes() throws Exception {
-        //TODO change this exception
         InformesController.getInstance(this).runController();
     }
 
