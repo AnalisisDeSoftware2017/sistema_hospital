@@ -2,10 +2,56 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bf80111d-f84e-4913-8c8c-deef1e43a5ff" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/ApplicationControlPacientes.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/controller/IController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/controller/impl/ControlPacientesController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/controller/impl/InformesController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/controller/impl/IngresosController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/controller/impl/MainController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/controlpac.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/core/dao/MedicoDao.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/core/dao/UserDao.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/core/model/Especialidades.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/core/model/Medico.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/core/model/Paciente.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/core/model/Persona.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/core/model/SituaciondDelPaciente.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/core/model/User.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/core/services/MedicoService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/core/services/PacienteService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/core/services/PersonaService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/utils/AppUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/utils/Menu.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/views/Login.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/ar/edu/unlam/analisis/software/grupo2/ApplicationControlPacientesTests.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/file.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/ar/edu/unlam/analisis/software/ApplicationControlPac.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/ar/edu/unlam/analisis/software/controller/IController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/ar/edu/unlam/analisis/software/controller/impl/ControlPacientesController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/ar/edu/unlam/analisis/software/controller/impl/InformesController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/ar/edu/unlam/analisis/software/controller/impl/IngresosController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/ar/edu/unlam/analisis/software/controller/impl/MainController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/ar/edu/unlam/analisis/software/controlpac.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/ar/edu/unlam/analisis/software/model/Medico.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/ar/edu/unlam/analisis/software/model/Paciente.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/ar/edu/unlam/analisis/software/model/Persona.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/ar/edu/unlam/analisis/software/model/SituaciondDelPaciente.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/ar/edu/unlam/analisis/software/services/MedicoService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/ar/edu/unlam/analisis/software/services/PacienteService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/ar/edu/unlam/analisis/software/services/PersonaService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/ar/edu/unlam/analisis/software/utils/AppUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/ar/edu/unlam/analisis/software/utils/Menu.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/ar/edu/unlam/analisis/software/views/Login.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/analisis_soft.iml" afterPath="$PROJECT_DIR$/.idea/analisis_soft.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ar/edu/unlam/analisis/software/controller/impl/MainController.java" afterPath="$PROJECT_DIR$/src/ar/edu/unlam/analisis/software/controller/impl/MainController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
+    <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,23 +64,122 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="Login.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/ar/edu/unlam/analisis/software/views/Login.java">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Medico.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/core/model/Medico.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1020">
-              <caret line="60" column="45" lean-forward="true" selection-start-line="60" selection-start-column="45" selection-end-line="60" selection-end-column="45" />
+            <state relative-caret-position="400">
+              <caret line="22" column="28" lean-forward="false" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2725#2881#0" expanded="true" />
-                <element signature="e#2880#2881#0" expanded="true" />
-                <element signature="e#2976#3136#0" expanded="true" />
-                <element signature="e#3135#3136#0" expanded="true" />
-                <element signature="e#3390#3391#0" expanded="true" />
-                <element signature="e#3450#3451#0" expanded="true" />
-                <element signature="e#3496#3656#0" expanded="true" />
-                <element signature="e#3655#3656#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/core/dao/UserDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MedicoDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/core/dao/MedicoDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="11" column="43" lean-forward="false" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IngresosController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/controller/impl/IngresosController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="692">
+              <caret line="158" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#6669#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/controller/impl/MainController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="20">
+              <caret line="1" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
+              <folding>
+                <marker date="1494140449162" expanded="false" signature="2505:2512" ph=" { " />
+                <marker date="1494140449162" expanded="false" signature="2566:2571" ph=" }" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SituaciondDelPaciente.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/core/model/SituaciondDelPaciente.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="18" column="14" lean-forward="false" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Paciente.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/core/model/Paciente.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="367">
+              <caret line="22" column="35" lean-forward="false" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Persona.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/core/model/Persona.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="447">
+              <caret line="33" column="28" lean-forward="false" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Especialidades.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/core/model/Especialidades.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="387">
+              <caret line="32" column="15" lean-forward="false" selection-start-line="32" selection-start-column="15" selection-end-line="32" selection-end-column="15" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="100">
+              <caret line="5" column="5" lean-forward="false" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -45,6 +190,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="package-info" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -84,6 +230,29 @@
         <option value="$PROJECT_DIR$/src/ar/edu/unlam/analisis/software/controlpac.java" />
         <option value="$PROJECT_DIR$/.project" />
         <option value="$PROJECT_DIR$/src/ar/edu/unlam/analisis/software/views/Login.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/controlpac.java" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/ApplicationControlPac.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/ApplicationControlPac.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/ApplicationControlPacientes.java" />
+        <option value="$PROJECT_DIR$/src/test/java/grupo2/views/Login.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ar/edu/unlam/analisis/software/grupo2/ApplicationControlPacientes.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/model/Persona.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/model/SituaciondDelPaciente.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/model/Especialidades.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/model/Paciente.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/model/Medico.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/model/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/core/dao/UserDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/core/model/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/core/dao/MedicoDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/controller/impl/IngresosController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/controller/impl/MainController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/core/model/Especialidades.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/core/model/Medico.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -93,11 +262,36 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="y" value="24" />
+    <option name="width" value="1920" />
+    <option name="height" value="1032" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>Internationalization issues</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>LossyEncoding</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -114,26 +308,27 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="sistema_hospital" />
+              <option name="myItemId" value="analisis_soft" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="sistema_hospital" />
+              <option name="myItemId" value="analisis_soft" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="sistema_hospital" />
+              <option name="myItemId" value="analisis_soft" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="sistema_hospital" />
+              <option name="myItemId" value="analisis_soft" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -141,17 +336,21 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="software" />
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="sistema_hospital" />
+              <option name="myItemId" value="analisis_soft" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="sistema_hospital" />
+              <option name="myItemId" value="analisis_soft" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -159,18 +358,103 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="software" />
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="analisis_soft" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="analisis_soft" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="grupo2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="analisis_soft" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="analisis_soft" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="grupo2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="analisis_soft" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="analisis_soft" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="grupo2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dao" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -180,7 +464,15 @@
     <property name="nodejs_interpreter_path" value="/usr/bin/node" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="js-jscs-nodeInterpreter" value="/usr/bin/node" />
-    <property name="SearchEverywhereHistoryKey" value="Ing&#9;FILE&#9;file:///home/sbogado/facultad/analisis_soft/src/ar/edu/unlam/analisis/software/controller/impl/IngresosController.java&#10;IngresoC&#9;FILE&#9;file:///home/sbogado/facultad/analisis_soft/src/ar/edu/unlam/analisis/software/controller/impl/IngresosController.java" />
+    <property name="SearchEverywhereHistoryKey" value="Medico&#9;FILE&#9;file:///home/sbogado/facultad/analisis_soft/src/main/java/ar/edu/unlam/analisis/software/grupo2/core/model/Medico.java&#10;Especi&#9;FILE&#9;file:///home/sbogado/facultad/analisis_soft/src/main/java/ar/edu/unlam/analisis/software/grupo2/core/model/Especialidades.java&#10;Ing&#9;FILE&#9;file:///home/sbogado/facultad/analisis_soft/src/ar/edu/unlam/analisis/software/controller/impl/IngresosController.java&#10;IngresoC&#9;FILE&#9;file:///home/sbogado/facultad/analisis_soft/src/ar/edu/unlam/analisis/software/controller/impl/IngresosController.java" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/java" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -194,7 +486,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ApplicationControlPac">
+  <component name="RunManager" selected="JUnit.ApplicationControlPacientesTests.contextLoads">
     <configuration default="false" name="controlpac" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -230,6 +522,87 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="false" name="ApplicationControlPacientesTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="ar.edu.unlam.analisis.software.grupo2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="analisis_soft" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="ar.edu.unlam.analisis.software.grupo2" />
+      <option name="MAIN_CLASS_NAME" value="ar.edu.unlam.analisis.software.grupo2.ApplicationControlPacientesTests" />
+      <option name="METHOD_NAME" value="contextLoads" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App">
+      <module name="" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <Java />
+      <Profilers>
+        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
+        <option name="GAPID_ENABLED" value="false" />
+        <option name="GAPID_DISABLE_PCS" value="false" />
+        <option name="SUPPORT_LIB_ENABLED" value="true" />
+        <option name="INSTRUMENTATION_ENABLED" value="true" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="EXTRA_OPTIONS" value="" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <Java />
+      <Profilers>
+        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
+        <option name="GAPID_ENABLED" value="false" />
+        <option name="GAPID_DISABLE_PCS" value="false" />
+        <option name="SUPPORT_LIB_ENABLED" value="true" />
+        <option name="INSTRUMENTATION_ENABLED" value="true" />
+      </Profilers>
+      <method />
+    </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -253,6 +626,136 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Cold Fusion runner description" factoryName="Cold Fusion" custom_browser="" web_path="">
+      <method />
+    </configuration>
+    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="myFilePath" />
+      <option name="GLUE" />
+      <option name="myNameFilter" />
+      <option name="myGeneratedName" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
+      <option name="BCName" value="" />
+      <option name="IOSSimulatorSdkPath" value="" />
+      <option name="adlOptions" value="" />
+      <option name="airProgramParameters" value="" />
+      <option name="appDescriptorForEmulator" value="Android" />
+      <option name="debugTransport" value="USB" />
+      <option name="debuggerSdkRaw" value="BC SDK" />
+      <option name="emulator" value="NexusOne" />
+      <option name="emulatorAdlOptions" value="" />
+      <option name="fastPackaging" value="true" />
+      <option name="fullScreenHeight" value="0" />
+      <option name="fullScreenWidth" value="0" />
+      <option name="launchUrl" value="false" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="/usr/bin/flashplayerdebugger" />
+        </LauncherParameters>
+      </option>
+      <option name="mobileRunTarget" value="Emulator" />
+      <option name="moduleName" value="" />
+      <option name="overriddenMainClass" value="" />
+      <option name="overriddenOutputFileName" value="" />
+      <option name="overrideMainClass" value="false" />
+      <option name="runTrusted" value="true" />
+      <option name="screenDpi" value="0" />
+      <option name="screenHeight" value="0" />
+      <option name="screenWidth" value="0" />
+      <option name="url" value="http://" />
+      <option name="usbDebugPort" value="7936" />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
+      <option name="BCName" value="" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="/usr/bin/flashplayerdebugger" />
+        </LauncherParameters>
+      </option>
+      <option name="moduleName" value="" />
+      <option name="trusted" value="true" />
+      <method />
+    </configuration>
     <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -267,6 +770,14 @@
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
+      <setting name="vmparams" value="" />
+      <setting name="cmdLine" value="run-app" />
+      <setting name="passParentEnv" value="true" />
+      <setting name="launchBrowser" value="true" />
+      <setting name="launchBrowserUrl" value="" />
       <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -311,6 +822,22 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
+      <node-interpreter value="project" />
+      <working-dir value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" />
@@ -336,6 +863,9 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
@@ -344,14 +874,157 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <list size="2">
+    <configuration default="true" type="ScalaTestRunConfiguration" factoryName="ScalaTest">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <setting name="useSbt" value="false" />
+      <setting name="useUiWithSbt" value="false" />
+      <classRegexps />
+      <testRegexps />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Specs2RunConfiguration" factoryName="Specs2">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <setting name="useSbt" value="false" />
+      <setting name="useUiWithSbt" value="false" />
+      <classRegexps />
+      <testRegexps />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="executeSpecs" factoryName="Gauge Execution">
+      <setting name="environment" value="" />
+      <setting name="specsToExecute" value="" />
+      <setting name="tags" value="" />
+      <setting name="parallelNodes" value="" />
+      <setting name="execInParallel" value="false" />
+      <setting name="programParameters" value="" />
+      <setting name="workingDirectory" value="" />
+      <setting name="moduleName" value="" />
+      <envMap />
+      <setting name="rowsRange" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui />
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
+    <configuration default="true" type="osgi.bnd.run" factoryName="Run Launcher">
+      <method />
+    </configuration>
+    <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
+      <method />
+    </configuration>
+    <configuration default="true" type="uTestRunConfiguration" factoryName="utest">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <setting name="useSbt" value="false" />
+      <setting name="useUiWithSbt" value="false" />
+      <classRegexps />
+      <testRegexps />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="ApplicationControlPacientes" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ar.edu.unlam.analisis.software.grupo2.ApplicationControlPacientes" />
+      <module name="analisis_soft" />
+      <envs />
+      <method />
+    </configuration>
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Application.controlpac" />
       <item index="1" class="java.lang.String" itemvalue="Application.ApplicationControlPac" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.ApplicationControlPacientesTests.contextLoads" />
+      <item index="3" class="java.lang.String" itemvalue="Spring Boot.ApplicationControlPacientes" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Application.ApplicationControlPac" />
-        <item index="1" class="java.lang.String" itemvalue="Application.controlpac" />
+      <list size="3">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.ApplicationControlPacientesTests.contextLoads" />
+        <item index="1" class="java.lang.String" itemvalue="Application.ApplicationControlPac" />
+        <item index="2" class="java.lang.String" itemvalue="Application.controlpac" />
       </list>
     </recent_temporary>
   </component>
@@ -385,40 +1058,76 @@
     <option name="localTasksCounter" value="2" />
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="ApplicationControlPacientesTests_contextLoads - 2017.05.07 at 03h 06m 33s.xml">
+      <configuration name="ApplicationControlPacientesTests.contextLoads" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ApplicationControlPacientesTests_contextLoads - 2017.05.07 at 04h 00m 54s.xml">
+      <configuration name="ApplicationControlPacientesTests.contextLoads" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ApplicationControlPacientesTests_contextLoads - 2017.05.07 at 04h 01m 25s.xml">
+      <configuration name="ApplicationControlPacientesTests.contextLoads" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6355000" />
+    <option name="totallyTimeSpent" value="11381000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="0" y="24" width="1920" height="1032" extended-state="0" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14222874" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39978448" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297414" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286638" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24973932" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14222874" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -441,95 +1150,469 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/ar/edu/unlam/analisis/software/views/Login.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/core/model/SituaciondDelPaciente.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/controller/impl/IngresosController.java" />
+    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/lang/Object.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="147" column="19" lean-forward="false" selection-start-line="147" selection-start-column="19" selection-end-line="147" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/core/model/Persona.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/core/model/Medico.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/controller/impl/InformesController.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/ApplicationControlPacientes.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/controlpac.java" />
+    <entry file="file://$PROJECT_DIR$/src/ar/edu/unlam/analisis_software/controlpac.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="296" column="0" lean-forward="false" selection-start-line="296" selection-start-column="0" selection-end-line="296" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/views/Login.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2725#2881#0" expanded="true" />
-            <element signature="e#2880#2881#0" expanded="true" />
-            <element signature="e#2976#3136#0" expanded="true" />
-            <element signature="e#3135#3136#0" expanded="true" />
-            <element signature="e#3390#3391#0" expanded="true" />
-            <element signature="e#3450#3451#0" expanded="true" />
-            <element signature="e#3496#3656#0" expanded="true" />
-            <element signature="e#3655#3656#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ar/edu/unlam/analisis/software/controlpac.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/controlpac.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="578">
           <caret line="34" column="20" lean-forward="true" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
-          <folding>
-            <marker date="1494100324507" expanded="true" signature="126:169" ph="{...}" />
-            <marker date="1494100324507" expanded="true" signature="210:502" ph="{...}" />
-            <marker date="1494100324507" expanded="true" signature="545:776" ph="{...}" />
-            <marker date="1494100324507" expanded="true" signature="846:11105" ph="{...}" />
-            <marker date="1494100324507" expanded="true" signature="7778:7915" ph="//..." />
-            <marker date="1494100324507" expanded="true" signature="8410:8573" ph="//..." />
-            <marker date="1494100324507" expanded="true" signature="8972:9216" ph="//..." />
-            <marker date="1494100324507" expanded="true" signature="10013:10154" ph="//..." />
-            <marker date="1494100324507" expanded="true" signature="10633:10841" ph="//..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ar/edu/unlam/analisis/software/controlpac.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/controlpac.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="19" column="34" lean-forward="true" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
-          <folding>
-            <marker date="1494100324507" expanded="true" signature="126:169" ph="{...}" />
-            <marker date="1494100324507" expanded="true" signature="210:502" ph="{...}" />
-            <marker date="1494100324507" expanded="true" signature="545:776" ph="{...}" />
-            <marker date="1494100324507" expanded="true" signature="846:11105" ph="{...}" />
-            <marker date="1494100324507" expanded="true" signature="7778:7915" ph="//..." />
-            <marker date="1494100324507" expanded="true" signature="8410:8573" ph="//..." />
-            <marker date="1494100324507" expanded="true" signature="8972:9216" ph="//..." />
-            <marker date="1494100324507" expanded="true" signature="10013:10154" ph="//..." />
-            <marker date="1494100324507" expanded="true" signature="10633:10841" ph="//..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ar/edu/unlam/analisis/software/controlpac.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/controlpac.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="578">
           <caret line="34" column="20" lean-forward="false" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
-          <folding>
-            <marker date="1494100324507" expanded="true" signature="126:169" ph="{...}" />
-            <marker date="1494100324507" expanded="true" signature="210:502" ph="{...}" />
-            <marker date="1494100324507" expanded="true" signature="545:776" ph="{...}" />
-            <marker date="1494100324507" expanded="true" signature="846:11105" ph="{...}" />
-            <marker date="1494100324507" expanded="true" signature="7778:7915" ph="//..." />
-            <marker date="1494100324507" expanded="true" signature="8410:8573" ph="//..." />
-            <marker date="1494100324507" expanded="true" signature="8972:9216" ph="//..." />
-            <marker date="1494100324507" expanded="true" signature="10013:10154" ph="//..." />
-            <marker date="1494100324507" expanded="true" signature="10633:10841" ph="//..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ar/edu/unlam/analisis/software/views/Login.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/views/Login.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1020">
           <caret line="60" column="45" lean-forward="true" selection-start-line="60" selection-start-column="45" selection-end-line="60" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="110" column="19" lean-forward="false" selection-start-line="110" selection-start-column="19" selection-end-line="110" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/controller/impl/ControlPacientesController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/lang/Object.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="147" column="19" lean-forward="false" selection-start-line="147" selection-start-column="19" selection-end-line="147" selection-end-column="19" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2725#2881#0" expanded="true" />
-            <element signature="e#2880#2881#0" expanded="true" />
-            <element signature="e#2976#3136#0" expanded="true" />
-            <element signature="e#3135#3136#0" expanded="true" />
-            <element signature="e#3390#3391#0" expanded="true" />
-            <element signature="e#3450#3451#0" expanded="true" />
-            <element signature="e#3496#3656#0" expanded="true" />
-            <element signature="e#3655#3656#0" expanded="true" />
+            <element signature="e#5748#5749#0" expanded="false" />
+            <element signature="e#5784#5785#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/controller/impl/InformesController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="84" column="10" lean-forward="false" selection-start-line="84" selection-start-column="10" selection-end-line="84" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/controlpac.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="479">
+          <caret line="32" column="25" lean-forward="true" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/views/Login.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/controlpac.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" column="20" lean-forward="true" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/controlpac.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="34" lean-forward="true" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/views/Login.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2860">
+          <caret line="4" column="26" lean-forward="true" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/controlpac.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="447">
+          <caret line="353" column="1" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="354" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="436">
+            <caret line="49" column="53" lean-forward="false" selection-start-line="49" selection-start-column="53" selection-end-line="49" selection-end-column="53" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/ApplicationControlPacientes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="11" column="34" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/grupo2/controller/impl/ControlPacientesController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/grupo2/controller/IController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/grupo2/ApplicationControlPacientes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/grupo2/utils/AppUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/grupo2/services/PersonaService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/grupo2/controller/impl/InformesController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/grupo2/model/Persona.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/grupo2/services/MedicoService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/grupo2/services/PacienteService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/grupo2/views/Login.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ar/edu/unlam/analisis/software/grupo2/ApplicationControlPacientesTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="37" column="20" lean-forward="false" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/core/model/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="507">
+          <caret line="54" column="4" lean-forward="false" selection-start-line="54" selection-start-column="4" selection-end-line="54" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/core/model/Persona.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="447">
+          <caret line="33" column="28" lean-forward="false" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/core/model/Paciente.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="22" column="35" lean-forward="false" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/core/model/SituaciondDelPaciente.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="18" column="14" lean-forward="false" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/core/dao/UserDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/core/dao/MedicoDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="11" column="43" lean-forward="false" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/controller/impl/IngresosController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="692">
+          <caret line="158" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#6669#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/controller/impl/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
+          <folding>
+            <marker date="1494140449162" expanded="false" signature="2505:2512" ph=" { " />
+            <marker date="1494140449162" expanded="false" signature="2566:2571" ph=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/core/model/Medico.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="22" column="28" lean-forward="false" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/core/model/Especialidades.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="387">
+          <caret line="32" column="15" lean-forward="false" selection-start-line="32" selection-start-column="15" selection-end-line="32" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/file.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" column="5" lean-forward="false" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>groovy-2.4.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>analisis_soft</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: antlr:antlr:2.7.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

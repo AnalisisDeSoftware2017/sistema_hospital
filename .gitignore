@@ -1,2 +1,6 @@
 *.class
 /bin/
+.idea/
+out/
+*.target/
+*.jar
