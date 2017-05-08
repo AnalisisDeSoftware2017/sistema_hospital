@@ -1,4 +1,4 @@
-package ar.edu.unlam.analisis.software.grupo2.views;
+/*package ar.edu.unlam.analisis.software.grupo2.extras.views;
 
 import java.awt.EventQueue;
 import java.awt.event.KeyEvent;
@@ -21,16 +21,16 @@ public class Login extends JFrame {
     private javax.swing.JTextField user;
     // End of variables declaration
 	
-	/**
+	*//**
 	 * Launch the application.
-	 */
-	/*public static void main(String[] args) {
+	 *//*
+	*//*public static void main(String[] args) {
 		
-	}*/
+	}*//*
 
-	/**
+	*//**
 	 * Create the frame.
-	 */
+	 *//*
 	public Login() {
 		initComponents();
         setSize(666,464);
@@ -151,7 +151,7 @@ public class Login extends JFrame {
         }else{
         	
         // TODO: CAMBIAR TODO ESTO PARA QUE VALIDE CONTRA LA BASE DE DATOS
-        /*	
+        *//*
             if(!this.usuario.equals(this.usuarioValido)){
                 // Si el usuario y la contrase?a no son v?lidos.
                if(!this.contrase?a.equals(this.contrase?aValida))
@@ -169,14 +169,14 @@ public class Login extends JFrame {
                     dispose();
                 }
             }
-            */
+            *//*
         }            
     }
 
     private void passwordKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_passwordKeyTyped
         // Creamos un evento para que cuando se presione la tecla Enter sea como presionar INGRESAR.
         //El usuario puede ingresar la contrase?a e ingresar con un Enter.
-        //******************************************************************************************
+        /*//******************************************************************************************
         char cTeclaPresionada=evt.getKeyChar();
         // da click en el bot?n Ingresar al detectar la tecla ENTER.
         if(cTeclaPresionada==KeyEvent.VK_ENTER){
@@ -189,7 +189,7 @@ public class Login extends JFrame {
     private void userKeyTyped(java.awt.event.KeyEvent evt) {
         // Creamos un evento para que cuando se presione la tecla Enter sea como presionar INGRESAR.
         //El usuario puede ingresar el usuario e ingresar con un Enter.
-        //******************************************************************************************
+        /*//******************************************************************************************
         char cTeclaPresionada=evt.getKeyChar();
         // da click en el bot?n Ingresar al detectar la tecla ENTER.
         if(cTeclaPresionada==KeyEvent.VK_ENTER){
@@ -206,4 +206,4 @@ public class Login extends JFrame {
             ingresar.doClick();
         }// fin del if.
     }    
-}
+}*/

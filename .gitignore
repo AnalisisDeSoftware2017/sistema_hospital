@@ -4,3 +4,4 @@
 out/
 *.target/
 *.jar
+!/src/test/java/ar/edu/unlam/analisis/software/grupo2/ApplicationControlPacientesTests.java

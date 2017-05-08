@@ -1,7 +1,9 @@
 package ar.edu.unlam.analisis.software.grupo2;
 
-import org.springframework.boot.SpringApplication;
+import ar.edu.unlam.analisis.software.grupo2.controller.impl.MainMenuController;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 
 /**
@@ -11,6 +13,13 @@ import org.springframework.context.annotation.ComponentScan;
 @ComponentScan(basePackages = {"ar.edu.unlam.analisis.software.grupo2"})
 public class ApplicationControlPacientes {
 	public static void main(String[] args) {
-		SpringApplication.run(ApplicationControlPacientes.class, args);
+		ConfigurableApplicationContext context = new SpringApplicationBuilder(ApplicationControlPacientes.class)
+				.headless(false)
+				.web(false)
+				.run(args);
+		MainMenuController mainMenuController = context.getBean(MainMenuController.class);
+		mainMenuController.prepareAndOpenFrame();
+		System.out.println("Hola mundo");
 	}
+
 }

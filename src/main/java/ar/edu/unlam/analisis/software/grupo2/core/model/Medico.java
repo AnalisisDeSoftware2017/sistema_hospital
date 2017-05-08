@@ -19,6 +19,7 @@ import java.util.List;
 @NoArgsConstructor
 @Data
 public class Medico extends Persona {
+
     @ManyToMany
     private List<Especialidades> especialidades;
 
