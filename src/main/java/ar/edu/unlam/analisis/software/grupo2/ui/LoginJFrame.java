@@ -1,5 +1,8 @@
 package ar.edu.unlam.analisis.software.grupo2.ui;
 
+import ar.edu.unlam.analisis.software.grupo2.utils.AppContext;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Component;
 
 import javax.swing.*;
@@ -11,6 +14,8 @@ import java.awt.event.KeyEvent;
 @Component
 public class LoginJFrame extends JFrame{
 
+
+    private MessageSource messageSource;
 
     private static final long serialVersionUID = 1L;
     private String usuario = "";
@@ -36,13 +41,15 @@ public class LoginJFrame extends JFrame{
     /**
      * Create the frame.
      */
-    public LoginJFrame() {
+    @Autowired
+    public LoginJFrame(MessageSource messageSource) {
         initComponents();
         setSize(666,464);
         setLocationRelativeTo(null); // Para que el login aparezca en el centro de la pantalla.
         setResizable(false); // que no pueda agrandar la pantalla.
         //TODO: add internacionalziacion
-        setTitle("Identificaci?n"); // Le da un titulo a la ventana.
+        this.messageSource=messageSource;
+        setTitle(messageSource.getMessage("ui.LoginJFrame.titulo", null, AppContext.getLocale())); // Le da un titulo a la ventana.
     }
 
     public String getUsuario(){
