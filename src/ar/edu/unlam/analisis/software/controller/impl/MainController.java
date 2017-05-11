@@ -2,7 +2,7 @@ package ar.edu.unlam.analisis.software.controller.impl;
 
 import ar.edu.unlam.analisis.software.controller.IController;
 import ar.edu.unlam.analisis.software.utils.Menu;
-import ar.edu.unlam.analisis.software.views.Login;
+import ar.edu.unlam.analisis.software.views.LoginForm;
 
 import java.awt.EventQueue;
 import java.io.IOException;
@@ -64,7 +64,7 @@ public class MainController implements IController {
     	
     	EventQueue.invokeLater(new Runnable() {
 			public void run() {
-				new Login().setVisible(true); //Hace visible el login.
+				new LoginForm().setVisible(true); //Hace visible el login.
 			}
 		});
     }

@@ -5,11 +5,11 @@ import java.awt.event.KeyEvent;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
-public class Login extends JFrame {
+public class LoginForm extends JFrame {
 
 	private static final long serialVersionUID = 1L;
 	private String usuario = "";
-	private String contrasenia = "";
+	private String contrasenia = "";      
 	
 	// Variables declaration - do not modify
     private javax.swing.JButton ingresar;
@@ -31,7 +31,7 @@ public class Login extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public Login() {
+	public LoginForm() {
 		initComponents();
         setSize(666,464);
         setLocationRelativeTo(null); // Para que el login aparezca en el centro de la pantalla.
@@ -149,27 +149,13 @@ public class Login extends JFrame {
         if(this.usuario=="" || this.contrasenia==""){
             JOptionPane.showMessageDialog(null, "Por favor, ingrese nombre de usuario y contraseña."); //Mensaje de Error.
         }else{
-        	
-        // TODO: CAMBIAR TODO ESTO PARA QUE VALIDE CONTRA LA BASE DE DATOS
-        /*	
-            if(!this.usuario.equals(this.usuarioValido)){
-                // Si el usuario y la contraseña no son v?lidos.
-               if(!this.contraseña.equals(this.contraseñaValida))
-                   JOptionPane.showMessageDialog(null,"Usuario y contraseña no son v?lidos. Vuelva a ingresar.");
-               else // S?lo el usuario no es v?lido.
-                   JOptionPane.showMessageDialog(null, "El usuario no es correcto. Vuelva a ingresar.");
-            }else{ // S?lo la contraseña no es v?lida.
-                if(!this.contraseña.equals(this.contraseñaValida))
-                   JOptionPane.showMessageDialog(null,"contraseña Incorrecta. Vuelva a ingresar.");
-                else{ //contraseña y usuario son v?lidas.
-                    MainW menu=new MainW();
-                    menu.setVisible(true); // hace visibla la ventana de menu principal.
-                    setTitle("Men? Principal"); // Le da un titulo a la ventana.
-                    menu.setLocationRelativeTo(null);
-                    dispose();
-                }
-            }
-            */
+        
+        // TODO: VALIDAR CONTRA LA BD PARA DAR ACCESO
+        MainForm main = new MainForm();
+        main.setVisible(true); // hace visibla la ventana de menu principal.
+        setTitle("Menú Principal"); // Le da un titulo a la ventana.
+        main.setLocationRelativeTo(null);
+        dispose();
         }            
     }
 
