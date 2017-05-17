@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bf80111d-f84e-4913-8c8c-deef1e43a5ff" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/config/PasswordEncoderConfig.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/ar/edu/unlam/analisis/software/grupo2/core/services/EnconderTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/core/exception/UserNotFindException.java" afterPath="$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/core/exception/FailedLoginException.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/analisis_soft.iml" afterPath="$PROJECT_DIR$/.idea/analisis_soft.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/controller/impl/MainMenuController.java" afterPath="$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/controller/impl/MainMenuController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/core/model/Especialidades.java" afterPath="$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/core/model/Especialidades.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/core/model/Persona.java" afterPath="$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/core/model/Persona.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/core/model/SituaciondDelPaciente.java" afterPath="$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/core/model/SituaciondDelPaciente.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/core/model/User.java" afterPath="$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/core/model/User.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/core/services/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/core/services/UserService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/import.sql" afterPath="$PROJECT_DIR$/src/main/resources/import.sql" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -1094,7 +1082,14 @@
       <option name="project" value="LOCAL" />
       <updated>1494993342373</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Funciona correctamente la conexion a base de datos">
+      <created>1494995169840</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1494995169840</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1130,7 +1125,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27791000" />
+    <option name="totallyTimeSpent" value="29140000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1920" height="1032" extended-state="0" />
