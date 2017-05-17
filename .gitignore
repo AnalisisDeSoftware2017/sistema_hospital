@@ -1,7 +1,8 @@
 *.class
 /bin/
-.idea/
-out/
-*.target/
-*.jar
-!/src/test/java/ar/edu/unlam/analisis/software/grupo2/ApplicationControlPacientesTests.java
+/.idea
+/out/
+*workspace.xml
+*.iml
+/target*
+/producto_analisis_soft_2017.iml
