@@ -66,7 +66,8 @@ public class User {
 
     private Date lastLogin;
 
-
+    @NotNull
+    private Integer failedLogin;
 
 
 

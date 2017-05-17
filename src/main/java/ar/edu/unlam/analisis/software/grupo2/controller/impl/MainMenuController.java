@@ -1,7 +1,7 @@
 package ar.edu.unlam.analisis.software.grupo2.controller.impl;
 
 import ar.edu.unlam.analisis.software.grupo2.controller.AbstractFrameController;
-import ar.edu.unlam.analisis.software.grupo2.core.exception.UserNotFindException;
+import ar.edu.unlam.analisis.software.grupo2.core.exception.FailedLoginException;
 import ar.edu.unlam.analisis.software.grupo2.core.model.User;
 import ar.edu.unlam.analisis.software.grupo2.core.services.UserService;
 import ar.edu.unlam.analisis.software.grupo2.ui.LoginJFrame;
@@ -54,8 +54,8 @@ public class MainMenuController extends AbstractFrameController {
         user.setPassword(loginJFrame.getPass());
         try {
             userService.loginUser(user);
-            System.out.println("Existe el usuario");
-        } catch (UserNotFindException e) {
+            //TODO redirigir a la pantalla principal
+        } catch (FailedLoginException e) {
             e.printStackTrace();
         }
     }

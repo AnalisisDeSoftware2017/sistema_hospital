@@ -1,9 +1,6 @@
 package ar.edu.unlam.analisis.software.grupo2.core.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 
 /**
  * Created by sbogado on 4/25/17.
@@ -12,7 +9,7 @@ import javax.persistence.ManyToOne;
 public class SituaciondDelPaciente {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @ManyToOne
