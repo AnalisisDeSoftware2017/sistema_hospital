@@ -47,7 +47,6 @@ public class LoginJFrame extends JFrame{
         setSize(666,464);
         setLocationRelativeTo(null); // Para que el login aparezca en el centro de la pantalla.
         setResizable(false); // que no pueda agrandar la pantalla.
-        //TODO: add internacionalziacion
         this.messageSource=messageSource;
         setTitle(messageSource.getMessage("ui.LoginJFrame.titulo", null, AppContext.getLocale())); // Le da un titulo a la ventana.
     }
@@ -83,35 +82,17 @@ public class LoginJFrame extends JFrame{
         getContentPane().setLayout(null);
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Acceso al Sistema", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.BOTTOM, new java.awt.Font("Candara", 0, 12), java.awt.Color.darkGray)); // NOI18N
+        //TODO: agragar internacionalizacion
         jLabel1.setText("Usuario:");
         jLabel4.setText("contrase?a:");
 
         user.setToolTipText("Ingrese su nombre de usuario.");
-        user.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                userKeyTyped(evt);
-            }
-        });
 
         password.setToolTipText("Ingrese su contrase?a.");
-        password.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                passwordKeyTyped(evt);
-            }
-        });
 
         ingresar.setText("Ingresar");
+
         ingresar.setToolTipText("Click para Ingresar al Sistema");
-        ingresar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ingresarActionPerformed(evt);
-            }
-        });
-        ingresar.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                ingresarKeyTyped(evt);
-            }
-        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -149,55 +130,21 @@ public class LoginJFrame extends JFrame{
         getContentPane().add(jPanel1);
         jPanel1.setBounds(430, 150, 220, 120);
 
-        //jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/portadaL.jpg")));
         getContentPane().add(jLabel5);
         jLabel5.setBounds(0, -190, 820, 700);
 
     }
 
-    private void ingresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ingresarActionPerformed
-        getUsuario(); //Obtenemos el usuario.
-        getPass(); //Obtenemos la contrase?a.
-        // Se muestra un mensaje si alguno de los campos est? vac?o.
-        if(this.usuario == null || this.usuario.isEmpty() || this.contrasenia == null || this.contrasenia.isEmpty()){
-            JOptionPane.showMessageDialog(null, "Por favor, ingrese nombre de usuario y contrase?a."); //Mensaje de Error.
-        }else{
-            //TODO validacion contra base de datos
-        }
+    public JButton getButtonIngresar(){
+        return this.ingresar;
     }
 
-    private void passwordKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_passwordKeyTyped
-        // Creamos un evento para que cuando se presione la tecla Enter sea como presionar INGRESAR.
-        //El usuario puede ingresar la contrase?a e ingresar con un Enter.
-        //******************************************************************************************
-        char cTeclaPresionada=evt.getKeyChar();
-        // da click en el bot?n Ingresar al detectar la tecla ENTER.
-        if(cTeclaPresionada== KeyEvent.VK_ENTER){
-            //Ejecuta el bot?n Ingresar (dar click)
-            ingresar.doClick();
-        }// fin del if.
-
+    public JTextField getUserNameBox(){
+        return this.user;
+    }
+    public JPasswordField getPasswordBox(){
+        return this.password;
     }
 
-    private void userKeyTyped(java.awt.event.KeyEvent evt) {
-        // Creamos un evento para que cuando se presione la tecla Enter sea como presionar INGRESAR.
-        //El usuario puede ingresar el usuario e ingresar con un Enter.
-        //******************************************************************************************
-        char cTeclaPresionada=evt.getKeyChar();
-        // da click en el bot?n Ingresar al detectar la tecla ENTER.
-        if(cTeclaPresionada==KeyEvent.VK_ENTER){
-            //Ejecuta el bot?n Ingresar (dar click)
-            ingresar.doClick();
-        }// fin del if.
-    }
-
-    private void ingresarKeyTyped(java.awt.event.KeyEvent evt) {
-        char cTeclaPresionada=evt.getKeyChar();
-        // da click al detectar la tecla ENTER.
-        if(cTeclaPresionada==KeyEvent.VK_ENTER){
-            //Ejecuta el bot?n (dar click)
-            ingresar.doClick();
-        }// fin del if.
-    }
 }
 

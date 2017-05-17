@@ -19,7 +19,6 @@ public class ApplicationControlPacientes {
 				.run(args);
 		MainMenuController mainMenuController = context.getBean(MainMenuController.class);
 		mainMenuController.prepareAndOpenFrame();
-		System.out.println("Hola mundo");
 	}
 
 }
