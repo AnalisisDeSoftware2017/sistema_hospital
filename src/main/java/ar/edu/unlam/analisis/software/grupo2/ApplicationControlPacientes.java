@@ -1,6 +1,6 @@
 package ar.edu.unlam.analisis.software.grupo2;
 
-import ar.edu.unlam.analisis.software.grupo2.controller.impl.MainMenuController;
+import ar.edu.unlam.analisis.software.grupo2.controller.LoginController;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -17,8 +17,8 @@ public class ApplicationControlPacientes {
 				.headless(false)
 				.web(false)
 				.run(args);
-		MainMenuController mainMenuController = context.getBean(MainMenuController.class);
-		mainMenuController.prepareAndOpenFrame();
+		LoginController loginController = context.getBean(LoginController.class);
+		loginController.prepareAndOpenFrame();
 	}
 
 }
