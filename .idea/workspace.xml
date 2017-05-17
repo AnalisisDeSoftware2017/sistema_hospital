@@ -2,23 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="55de4d46-05bd-401b-99e1-1ff6148848bf" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/controller/InformeController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/controller/IngresosController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/controller/MainMenuController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/utils/Command.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/ar/edu/unlam/analisis/software/controller/impl/MainController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/ar/edu/unlam/analisis/software/utils/EncryptHelper.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/ar/edu/unlam/analisis/software/views/LoginForm.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/controlpac.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/extras/views/Login.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ar/edu/unlam/analisis/software/views/DatosMedicoForm.java" afterPath="$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/ui/DatosMedicoForm.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ar/edu/unlam/analisis/software/views/DatosPacienteForm.java" afterPath="$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/ui/DatosPacienteForm.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ar/edu/unlam/analisis/software/views/MainForm.java" afterPath="$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/ui/MainForm.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/controller/impl/MainMenuController.java" afterPath="$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/controller/LoginController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/ApplicationControlPacientes.java" afterPath="$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/ApplicationControlPacientes.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/controller/AbstractFrameController.java" afterPath="$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/controller/AbstractFrameController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/controller/LoginController.java" afterPath="$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/controller/LoginController.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,12 +22,10 @@
       <file leaf-file-name="LoginController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/controller/LoginController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
-              <caret line="58" column="34" lean-forward="false" selection-start-line="58" selection-start-column="34" selection-end-line="58" selection-end-column="34" />
+            <state relative-caret-position="15">
+              <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="47" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1377#1702#0" expanded="true" />
-                <element signature="e#1701#1702#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -392,10 +375,6 @@
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -420,66 +399,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="grupo2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="producto_analisis_soft_2017" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="producto_analisis_soft_2017" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="grupo2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="producto_analisis_soft_2017" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="producto_analisis_soft_2017" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="grupo2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1138,7 +1057,14 @@
       <option name="project" value="LOCAL" />
       <updated>1494995169840</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Todo hecho con controllers">
+      <created>1495050721957</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1495050721957</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1174,7 +1100,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35420000" />
+    <option name="totallyTimeSpent" value="35638000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -1290,14 +1216,15 @@
     <MESSAGE value="Levanta la app y los test" />
     <MESSAGE value="Tecnicamente hace el login. Faltan definiciones" />
     <MESSAGE value="Funciona correctamente la conexion a base de datos" />
-    <option name="LAST_COMMIT_MESSAGE" value="Funciona correctamente la conexion a base de datos" />
+    <MESSAGE value="Todo hecho con controllers" />
+    <option name="LAST_COMMIT_MESSAGE" value="Todo hecho con controllers" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/controller/LoginController.java</url>
-          <line>30</line>
+          <line>27</line>
           <properties />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
@@ -1792,12 +1719,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ar/edu/unlam/analisis/software/grupo2/controller/LoginController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="58" column="34" lean-forward="false" selection-start-line="58" selection-start-column="34" selection-end-line="58" selection-end-column="34" />
+        <state relative-caret-position="15">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="47" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1377#1702#0" expanded="true" />
-            <element signature="e#1701#1702#0" expanded="true" />
           </folding>
         </state>
       </provider>

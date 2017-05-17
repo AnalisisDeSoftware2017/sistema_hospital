@@ -7,9 +7,6 @@ import ar.edu.unlam.analisis.software.grupo2.ui.LoginJFrame;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
-import java.awt.event.KeyAdapter;
-import java.awt.event.KeyEvent;
-
 /**
  * Created by sbogado on 5/8/17.
  */
@@ -30,22 +27,8 @@ public class LoginController extends AbstractFrameController<LoginJFrame> {
     public void prepareAndOpenFrame() {
         frame.setVisible(true);
         registerClickAction(frame.getButtonIngresar(), (e)->login());
-        registerKeyAction(frame.getPasswordBox(), keyListenerPressedEnter());
-        registerKeyAction(frame.getUserNameBox(), keyListenerPressedEnter());
-    }
-
-
-    private KeyAdapter keyListenerPressedEnter() {
-        return new KeyAdapter() {
-            @Override
-            public void keyTyped(KeyEvent e) {
-                char cTeclaPresionada=e.getKeyChar();
-                // da click al detectar la tecla ENTER.
-                if(cTeclaPresionada==KeyEvent.VK_ENTER){
-                    login();
-                }
-            }
-        };
+        registerEnterKeyAction(frame.getPasswordBox(), ()->login());
+        registerEnterKeyAction(frame.getUserNameBox(), ()->login());
     }
 
     public void login(){
@@ -61,10 +44,5 @@ public class LoginController extends AbstractFrameController<LoginJFrame> {
             e.printStackTrace();
         }
     }
-
-
-
-
-
 
 }
