@@ -6,10 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.validator.constraints.NotEmpty;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.util.Date;
@@ -23,15 +20,17 @@ import java.util.Date;
 @NoArgsConstructor
 @Entity
 @Table(name = "usuarios_sistema")
+
 public class User {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
 
 
     @NotNull
     @NotEmpty
     @Size(max=100)
+    @Column(unique = true)
     private String username;
 
 
@@ -43,6 +42,7 @@ public class User {
     @NotNull
     @NotEmpty
     @Size(max=100)
+    @Column(unique = true)
     private String email;
 
     @NotNull

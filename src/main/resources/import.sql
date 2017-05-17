@@ -1,2 +1,1 @@
-INSERT INTO "public"."usuarios_sistema" ("id", "apellido", "email", "fecha_creacion", "is_active", "is_locked", "last_login", "nombre", "password", "username") VALUES
-                            (nextval('hibernate_sequence'),'Bogado','seebogado@gmail.com',current_timestamp , true, false, NULL , 'Sebastian Emanuel Enrique', 'seeb143', 'seeb');
+INSERT INTO usuarios_sistema ("apellido", "email", "fecha_creacion", "is_active", "is_locked", "last_login", "nombre", "password", "username") VALUES ('Bogado','seebogado@hotmail.com',current_timestamp , true, false, NULL , 'Sebastian Emanuel Enrique', 'seeb143', 'palmeras');

@@ -26,4 +26,8 @@ public class UserService {
         return optUser.get();
     }
 
+    public User createUser(User user){
+        return userDao.save(user);
+    }
+
 }
