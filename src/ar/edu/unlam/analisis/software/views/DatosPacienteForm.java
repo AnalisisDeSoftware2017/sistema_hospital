@@ -411,8 +411,8 @@ public class DatosPacienteForm extends JFrame {
 	    private void mInfActionPerformed(java.awt.event.ActionEvent evt) {
 	     
 	     
-	        //InformesW iw=new InformesW();
-	        //iw.setVisible(true); // Hago visible la ventana de Informes.
+	        InformesForm iw=new InformesForm();
+	        iw.setVisible(true); // Hago visible la ventana de Informes.
 	        dispose(); // Desaparece el menu.
 	    }
 

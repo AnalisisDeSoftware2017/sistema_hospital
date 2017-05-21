@@ -86,8 +86,7 @@ public class MainForm extends JFrame {
 		menu_2.add(menuItem_4);
 		
 		JLabel label = new JLabel();
-		label.setText("jLabel1");
-		label.setBounds(0, -20, 780, 640);
+		label.setBounds(0, 0, 861, 447);
 		contentPane.add(label);
 		
 		informes = new JButton();
@@ -170,8 +169,8 @@ public class MainForm extends JFrame {
     }
 	
 	private void informesActionPerformed(java.awt.event.ActionEvent evt) {
-        //InformesW ipw=new InformesW();
-        //ipw.setVisible(true); // Hago visible la ventana de pacientes.
+        InformesForm ipw=new InformesForm();
+        ipw.setVisible(true); // Hago visible la ventana de pacientes.
         dispose(); // Para que se oculte el menu.
     }
 	
