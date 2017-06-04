@@ -35,27 +35,6 @@ public class DatosPacienteForm extends JFrame {
 	String codPac = "";
     String nomPac = "";
 
-*
-	 * Launch the application.
-
-
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					DatosPacienteForm frame = new DatosPacienteForm();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
-*
-	 * Create the frame.
-
-
 	public DatosPacienteForm() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 545, 414);

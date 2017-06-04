@@ -35,26 +35,7 @@ public class DatosMedicoForm extends JFrame {
 	String codigoMed=""; //Para guardar el nombre del medico ingresado.
     String nombreMed=""; //Para guardar el codigo del medico ingresado.
     String especialidadMed="";//Para guardar la especialidad del medico ingresado.
-	
-*
-	 * Launch the application.
 
-
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					DatosMedicoForm frame = new DatosMedicoForm();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
-*
-	 * Create the frame.
 
 
 	public DatosMedicoForm() {
@@ -293,13 +274,11 @@ public class DatosMedicoForm extends JFrame {
             DataInputStream datomedInput = null; // Luego abrimos el archivo de medicos.
             datomedInput = new DataInputStream(new FileInputStream(System.getProperty("user.home") + "\\datomed.txt")); // abre el archivo de medicos para lectura
             while (sw1 != 0) { //Bandera para la busqueda.
-                String codm = EncryptHelper.Desencriptar(datomedInput.readUTF());// lee el registro
+                //String codm = EncryptHelper.Desencriptar(datomedInput.readUTF());		// lee el registro
                 datomedInput.readUTF(); 
                 datomedInput.readUTF();
                 if (codm.equals(codigoMed)) {
-compara el codigo digitado con el codigo del medico de la
-                     tabla "datomed"
-
+					//compara el codigo digitado con el codigo del medico de la tabla "datomed"
                     found = true; //ENCONTRADO
                 }
             }
@@ -314,9 +293,9 @@ compara el codigo digitado con el codigo del medico de la
             DataOutputStream datomed = null; // abre el archivo para escritura con append habilitado
             datomed = new DataOutputStream(new FileOutputStream(System.getProperty("user.home") + "\\datomed.txt", true));
             //escribe el archivo con los datos ingresados
-             datomed.writeUTF(EncryptHelper.Encriptar(codigoMed));
+             /*datomed.writeUTF(EncryptHelper.Encriptar(codigoMed));
              datomed.writeUTF(EncryptHelper.Encriptar(nombreMed));
-             datomed.writeUTF(EncryptHelper.Encriptar(especialidadMed));
+             datomed.writeUTF(EncryptHelper.Encriptar(especialidadMed));*/
              JOptionPane.showMessageDialog(null, "Datos guardados de forma exitosa."); // Se han guardado correctamente los datos.
         } catch (Exception e) {
              JOptionPane.showMessageDialog(null, "Error al intentar abrir el archivo de m�dicos"); // Error inesperado al abrir el arhivo.
