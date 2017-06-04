@@ -6,7 +6,6 @@ import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Component;
 
 import javax.swing.*;
-import java.awt.event.KeyEvent;
 
 /**
  * Created by sbogado on 5/8/17.
@@ -138,7 +137,6 @@ public class LoginJFrame extends JFrame{
     public JButton getButtonIngresar(){
         return this.ingresar;
     }
-
     public JTextField getUserNameBox(){
         return this.user;
     }

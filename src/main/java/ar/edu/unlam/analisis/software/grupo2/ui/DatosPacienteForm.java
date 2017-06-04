@@ -1,4 +1,5 @@
-package ar.edu.unlam.analisis.software.views;
+/*
+package ar.edu.unlam.analisis.software.grupo2.ui;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
@@ -35,9 +36,11 @@ public class DatosPacienteForm extends JFrame {
 	String codPac = "";
     String nomPac = "";
 
-	/**
+	*/
+/**
 	 * Launch the application.
-	 */
+	 *//*
+
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -51,9 +54,11 @@ public class DatosPacienteForm extends JFrame {
 		});
 	}
 
-	/**
+	*/
+/**
 	 * Create the frame.
-	 */
+	 *//*
+
 	public DatosPacienteForm() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 545, 414);
@@ -288,8 +293,10 @@ public class DatosPacienteForm extends JFrame {
 	                    String codpa = EncryptHelper.Desencriptar(datopac.readUTF());// lee el registro
 	                    datopac.readUTF();
 	                    if (codpa.equals(codPac)){
-	                        /*compara el codigo digitado con el codigo del peciente de la
-	                        tabla "datopac" */
+	                        */
+/*compara el codigo digitado con el codigo del peciente de la
+	                        tabla "datopac" *//*
+
 	                        found = true; //ENCONTRADO
 	                    }
 	                } catch (EOFException e) {
@@ -437,3 +444,4 @@ public class DatosPacienteForm extends JFrame {
 	    JButton ingresarBtn;
 	    JButton borrarC;
 }
+*/

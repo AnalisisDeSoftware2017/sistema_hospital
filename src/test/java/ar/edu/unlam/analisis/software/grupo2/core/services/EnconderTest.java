@@ -27,6 +27,8 @@ public class EnconderTest {
 
     @Test
     public void testPasswordEncoder(){
-        Assert.assertTrue(passwordEncoder.matches("seeb143", passwordEncoder.encode("seeb143")));
+        String encode =passwordEncoder.encode("seeb143");
+        System.out.println("Password encode: " + encode);
+        Assert.assertTrue(passwordEncoder.matches("seeb143", encode));
     }
 }

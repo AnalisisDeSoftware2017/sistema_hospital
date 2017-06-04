@@ -1,8 +1,10 @@
 *.class
 /bin/
-/.idea
+
 /out/
 *workspace.xml
 *.iml
 /target*
 /producto_analisis_soft_2017.iml
+*.idea
+.idea*
