@@ -1,4 +1,3 @@
-/*
 package ar.edu.unlam.analisis.software.grupo2.ui;
 
 import java.awt.BorderLayout;
@@ -37,10 +36,9 @@ public class DatosMedicoForm extends JFrame {
     String nombreMed=""; //Para guardar el codigo del medico ingresado.
     String especialidadMed="";//Para guardar la especialidad del medico ingresado.
 	
-	*/
-/**
+*
 	 * Launch the application.
-	 *//*
+
 
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -55,10 +53,9 @@ public class DatosMedicoForm extends JFrame {
 		});
 	}
 
-	*/
-/**
+*
 	 * Create the frame.
-	 *//*
+
 
 	public DatosMedicoForm() {
 		//setIconImage(new ImageIcon(getClass().getResource("/imagenes/iconoCM.png")).getImage()); //Agrego el icono a la ventana
@@ -300,9 +297,8 @@ public class DatosMedicoForm extends JFrame {
                 datomedInput.readUTF(); 
                 datomedInput.readUTF();
                 if (codm.equals(codigoMed)) {
-                    */
-/*compara el codigo digitado con el codigo del medico de la
-                     tabla "datomed" *//*
+compara el codigo digitado con el codigo del medico de la
+                     tabla "datomed"
 
                     found = true; //ENCONTRADO
                 }
@@ -469,4 +465,3 @@ public class DatosMedicoForm extends JFrame {
     JButton borrarC;
     JButton anterior;
 }
-*/

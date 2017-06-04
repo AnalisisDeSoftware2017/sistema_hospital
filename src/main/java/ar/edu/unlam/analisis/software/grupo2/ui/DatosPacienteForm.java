@@ -1,4 +1,3 @@
-/*
 package ar.edu.unlam.analisis.software.grupo2.ui;
 
 import java.awt.BorderLayout;
@@ -36,10 +35,9 @@ public class DatosPacienteForm extends JFrame {
 	String codPac = "";
     String nomPac = "";
 
-	*/
-/**
+*
 	 * Launch the application.
-	 *//*
+
 
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -54,10 +52,9 @@ public class DatosPacienteForm extends JFrame {
 		});
 	}
 
-	*/
-/**
+*
 	 * Create the frame.
-	 *//*
+
 
 	public DatosPacienteForm() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -253,14 +250,14 @@ public class DatosPacienteForm extends JFrame {
    }
    
    private static boolean soloLetras(String cadena){
-	      if(cadena.matches("[áéíóúña-zÑÁÉÍÓÚA-Z][áéíóúña-zÁÉÍÓÚÑA-z ]*")) // Se valida en esta función que no puede ser vacía la cadena.
+	      if(cadena.matches("[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½a-zï¿½ï¿½ï¿½ï¿½ï¿½ï¿½A-Z][ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½a-zï¿½ï¿½ï¿½ï¿½ï¿½ï¿½A-z ]*")) // Se valida en esta funciï¿½n que no puede ser vacï¿½a la cadena.
 	        return true; //Son letras.
 	      else
 	        return false; //No son letras.
 	    }
 
 	    private static boolean alfanumerico(String cadena){
-	      if(cadena.matches("[0-9a-zA-z]+")) // Tampoco puede ser vacía una cadena.
+	      if(cadena.matches("[0-9a-zA-z]+")) // Tampoco puede ser vacï¿½a una cadena.
 	        return true; // Es alfanimerico
 	      else
 	        return false; //No es alfanumerico
@@ -270,10 +267,10 @@ public class DatosPacienteForm extends JFrame {
 	        String mensaje="";
 	        int ret=0; // comienza siendo valido.
 	        if(!alfanumerico(codPac)){ // El codigo del paciente debe ser alfanumerico sin espacios.
-	                mensaje="El código no es válido o no se ha ingresado. "; //Se guarda mensaje de aviso.
+	                mensaje="El cï¿½digo no es vï¿½lido o no se ha ingresado. "; //Se guarda mensaje de aviso.
 	                ret++; //Ret se incrementa porque ya no es valido.
 	        }
-	        if(!soloLetras(nomPac)){ // El nombre del paciente sólo debe contener letras.
+	        if(!soloLetras(nomPac)){ // El nombre del paciente sï¿½lo debe contener letras.
 	         mensaje= mensaje + "El nombre del paciente posee caracteres incorrectos o no se ha ingresado."; //Se guarda mensaje de aviso.
 	         ret++; // Ret deja de ser valido.
 	        }
@@ -283,7 +280,7 @@ public class DatosPacienteForm extends JFrame {
 	    }
 	    
 	    public boolean ExistePac(){
-	        boolean found = false; // Creo una variable boolena que será la que idique si existe o no el paciente.
+	        boolean found = false; // Creo una variable boolena que serï¿½ la que idique si existe o no el paciente.
 	        try {
 	            DataInputStream datopac = null; // Luego abro el archivo de pacientes para recorrerlo.
 	            datopac = new DataInputStream(new FileInputStream(System.getProperty("user.home") + "\\datopac.txt")); // abre el archivo de pacientes para lectura
@@ -293,9 +290,8 @@ public class DatosPacienteForm extends JFrame {
 	                    String codpa = EncryptHelper.Desencriptar(datopac.readUTF());// lee el registro
 	                    datopac.readUTF();
 	                    if (codpa.equals(codPac)){
-	                        */
-/*compara el codigo digitado con el codigo del peciente de la
-	                        tabla "datopac" *//*
+compara el codigo digitado con el codigo del peciente de la
+	                        tabla "datopac"
 
 	                        found = true; //ENCONTRADO
 	                    }
@@ -310,7 +306,7 @@ public class DatosPacienteForm extends JFrame {
 	  }
 	    
 	    public void grabarDatosPac(){
-	        // Esta función se encarga de grabar los datos en el archivo de pacientes.
+	        // Esta funciï¿½n se encarga de grabar los datos en el archivo de pacientes.
 	        try{
 	            DataOutputStream datopac = null; //Para luego abrir el archivo de pacientes para escritura con append habilitado.
 	            datopac = new DataOutputStream(new FileOutputStream(System.getProperty("user.home") + "\\datopac.txt", true)); //Se abre el arvhivo.
@@ -330,23 +326,23 @@ public class DatosPacienteForm extends JFrame {
 	    }
 
 	    private void ingresarBtnKeyTyped(java.awt.event.KeyEvent evt) {
-            // Creamos un evento para que cuando se presione la tecla Enter sea como presionar el botón.
+            // Creamos un evento para que cuando se presione la tecla Enter sea como presionar el botï¿½n.
 
 	        char cTeclaPresionada=evt.getKeyChar();
 	        // da click al detectar la tecla ENTER.
 	        if(cTeclaPresionada==KeyEvent.VK_ENTER){
-	            //Ejecuta el botón (dar click)
+	            //Ejecuta el botï¿½n (dar click)
 	            ingresarBtn.doClick();
 	        }// fin del if.
 	    }
 
 	    private void anteriorKeyTyped(java.awt.event.KeyEvent evt) {
-	                // Creamos un evento para que cuando se presione la tecla Enter sea como presionar el botón.
+	                // Creamos un evento para que cuando se presione la tecla Enter sea como presionar el botï¿½n.
 	     
 	        char cTeclaPresionada=evt.getKeyChar();
 	        // da click al detectar la tecla ENTER.
 	        if(cTeclaPresionada==KeyEvent.VK_ENTER){
-	            //Ejecuta el botón (dar click)
+	            //Ejecuta el botï¿½n (dar click)
 	            anterior.doClick();
 	        }// fin del if.
 	    }
@@ -356,15 +352,15 @@ public class DatosPacienteForm extends JFrame {
 	            getCodigoPac(); //Obtenemos el codigo del paciente ingresado.
 	            getNombrePac(); // Obtenemos el nombre del paciente ingresado.
 	            if(validarDatosPac()==0){ // Si los datos estan bien ingresados, verifico la existencia del paciente.
-	                if(!ExistePac()) // Si el paciente no está registrado en el archivo entonces lo agrego.
+	                if(!ExistePac()) // Si el paciente no estï¿½ registrado en el archivo entonces lo agrego.
 	                    grabarDatosPac(); //Se guardan los datos ingresados en el archivo.
 	                else
-	                    JOptionPane.showMessageDialog(null, "El código de paciente ya existe."); //Se informa que el paciente ya existe.
+	                    JOptionPane.showMessageDialog(null, "El cï¿½digo de paciente ya existe."); //Se informa que el paciente ya existe.
 	            }      
 	    }
 
 	    private void codigoPacActionPerformed(java.awt.event.ActionEvent evt) {
-	        // Creamos un evento para que cuando se presione la tecla Enter sea como presionar el botón Ingresar.
+	        // Creamos un evento para que cuando se presione la tecla Enter sea como presionar el botï¿½n Ingresar.
 	    }
 
 	    private void codigoPacKeyTyped(java.awt.event.KeyEvent evt) {
@@ -372,7 +368,7 @@ public class DatosPacienteForm extends JFrame {
 	                char cTeclaPresionada=evt.getKeyChar();
 	        // da click en ingresar al detectar la tecla ENTER.
 	        if(cTeclaPresionada==KeyEvent.VK_ENTER){
-	            //Ejecuta el botón (dar click)
+	            //Ejecuta el botï¿½n (dar click)
 	            ingresarBtn.doClick();
 	        }// fin del if.
 	    }
@@ -381,7 +377,7 @@ public class DatosPacienteForm extends JFrame {
 	                char cTeclaPresionada=evt.getKeyChar();
 	        // da click en ingresar al detectar la tecla ENTER.
 	        if(cTeclaPresionada==KeyEvent.VK_ENTER){
-	            //Ejecuta el botón (dar click)
+	            //Ejecuta el botï¿½n (dar click)
 	            ingresarBtn.doClick();
 	        }// fin del if.
 	    }
@@ -391,7 +387,7 @@ public class DatosPacienteForm extends JFrame {
 	        char cTeclaPresionada=evt.getKeyChar();
 	        // da click al detectar la tecla ENTER.
 	        if(cTeclaPresionada==KeyEvent.VK_ENTER){
-	            //Ejecuta el botón (dar click)
+	            //Ejecuta el botï¿½n (dar click)
 	            borrarC.doClick();
 	        }// fin del if.
 	    }//GEN-LAST:event_borrarCKeyTyped
@@ -444,4 +440,3 @@ public class DatosPacienteForm extends JFrame {
 	    JButton ingresarBtn;
 	    JButton borrarC;
 }
-*/
