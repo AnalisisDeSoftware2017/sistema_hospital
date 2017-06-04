@@ -1,25 +1,40 @@
-package ar.edu.unlam.analisis.software.grupo2.ui;
+package ar.edu.unlam.analisis.software.views;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.MessageSource;
-import org.springframework.stereotype.Component;
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
 
-import javax.swing.*;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-import java.awt.*;
+import javax.swing.JMenuBar;
+import javax.swing.JMenu;
+import javax.swing.JMenuItem;
+import javax.swing.JLabel;
+import javax.swing.JButton;
+import java.awt.Font;
 import java.awt.event.KeyEvent;
 
-@Component
+import javax.swing.SwingConstants;
+
 public class MainForm extends JFrame {
 
-
 	private JPanel contentPane;
-	private JButton salir;
-	private JButton informes;
-	private JButton ingreso;
 
-	@Autowired
-	private MessageSource messageSource;
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					MainForm frame = new MainForm();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
 
 	/**
 	 * Create the frame.
@@ -71,8 +86,7 @@ public class MainForm extends JFrame {
 		menu_2.add(menuItem_4);
 		
 		JLabel label = new JLabel();
-		label.setText("jLabel1");
-		label.setBounds(0, -20, 780, 640);
+		label.setBounds(0, 0, 861, 447);
 		contentPane.add(label);
 		
 		informes = new JButton();
@@ -86,7 +100,7 @@ public class MainForm extends JFrame {
             }
         });
         informes.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(KeyEvent evt) {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
                 informesKeyTyped(evt);
             }
         });
@@ -97,6 +111,16 @@ public class MainForm extends JFrame {
 		salir.setText("Salir");
 		salir.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		salir.setBounds(40, 360, 180, 64);
+		salir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                salirActionPerformed(evt);
+            }
+        });
+        salir.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                salirKeyTyped(evt);
+            }
+        });
 		contentPane.add(salir);
 		
 		ingreso = new JButton();
@@ -110,7 +134,7 @@ public class MainForm extends JFrame {
             }
         });
 		ingreso.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(KeyEvent evt) {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
                 ingresoKeyTyped(evt);
             }
         });
@@ -129,51 +153,46 @@ public class MainForm extends JFrame {
         //menu.setVisible(true); // Vuelve el menu proncipal
         dispose(); // Desaparece el informes.
     }
-
+	
+	private void salirActionPerformed(java.awt.event.ActionEvent evt) {
+        System.exit(0); // SE SALE DEL PROGRAMA.
+    }
 	
 	
-	private void salirKeyTyped(KeyEvent evt) {
+	private void salirKeyTyped(java.awt.event.KeyEvent evt) {
         char cTeclaPresionada = evt.getKeyChar();
         // da click al detectar la tecla ENTER.
         if(cTeclaPresionada == KeyEvent.VK_ENTER){
-            //Ejecuta el botï¿½n (dar click)
+            //Ejecuta el botón (dar click)
             salir.doClick();
         }// fin del if.
     }
-
+	
 	private void informesActionPerformed(java.awt.event.ActionEvent evt) {
-        //InformesW ipw=new InformesW();
-        //ipw.setVisible(true); // Hago visible la ventana de pacientes.
+        InformesForm ipw=new InformesForm();
+        ipw.setVisible(true); // Hago visible la ventana de pacientes.
         dispose(); // Para que se oculte el menu.
     }
 	
-	private void informesKeyTyped(KeyEvent evt) {
+	private void informesKeyTyped(java.awt.event.KeyEvent evt) {
         char cTeclaPresionada = evt.getKeyChar();
         // da click al detectar la tecla ENTER.
         if(cTeclaPresionada == KeyEvent.VK_ENTER){
-            //Ejecuta el botï¿½n (dar click)
+            //Ejecuta el botón (dar click)
             informes.doClick();
         }// fin del if.
     }
 	
-	private void ingresoKeyTyped(KeyEvent evt) {
+	private void ingresoKeyTyped(java.awt.event.KeyEvent evt) {
         char cTeclaPresionada=evt.getKeyChar();
         // da click al detectar la tecla ENTER.
         if(cTeclaPresionada==KeyEvent.VK_ENTER){
-            //Ejecuta el botï¿½n (dar click)
+            //Ejecuta el botón (dar click)
             ingreso.doClick();
         }// fin del if.
     }
-
-
-    public JButton getInformes(){
-		return this.informes;
-	}
-
-	public JButton getSalir(){
-    	return this.salir;
-	}
-	public JButton getIngreso(){
-		return this.ingreso;
-	}
+	
+	JButton salir;
+	JButton informes;
+	JButton ingreso;
 }

@@ -1,5 +1,4 @@
-/*
-package ar.edu.unlam.analisis.software.grupo2.ui;
+package ar.edu.unlam.analisis.software.views;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
@@ -32,11 +31,9 @@ public class DatosMedicoForm extends JFrame {
     String nombreMed=""; //Para guardar el codigo del medico ingresado.
     String especialidadMed="";//Para guardar la especialidad del medico ingresado.
 	
-	*/
-/**
+	/**
 	 * Launch the application.
-	 *//*
-
+	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -50,11 +47,9 @@ public class DatosMedicoForm extends JFrame {
 		});
 	}
 
-	*/
-/**
+	/**
 	 * Create the frame.
-	 *//*
-
+	 */
 	public DatosMedicoForm() {
 		//setIconImage(new ImageIcon(getClass().getResource("/imagenes/iconoCM.png")).getImage()); //Agrego el icono a la ventana
         setSize(529,383); 
@@ -139,7 +134,7 @@ public class DatosMedicoForm extends JFrame {
 		codigo.setBounds(214, 83, 93, 21);
 		codigo.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		codigo.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(KeyEvent evt) {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
                 codigoKeyTyped(evt);
             }
         });
@@ -155,7 +150,7 @@ public class DatosMedicoForm extends JFrame {
 		nombre.setBounds(284, 122, 157, 21);
 		nombre.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		nombre.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(KeyEvent evt) {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
                 nombreKeyTyped(evt);
             }
         });
@@ -171,7 +166,7 @@ public class DatosMedicoForm extends JFrame {
             }
         });
         anterior.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(KeyEvent evt) {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
                 anteriorKeyTyped(evt);
             }
         });
@@ -187,7 +182,7 @@ public class DatosMedicoForm extends JFrame {
             }
         });
         ingresarBtn.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(KeyEvent evt) {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
                 ingresarBtnKeyTyped(evt);
             }
         });
@@ -203,7 +198,7 @@ public class DatosMedicoForm extends JFrame {
             }
         });
         borrarC.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(KeyEvent evt) {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
                 borrarCKeyTyped(evt);
             }
         });
@@ -219,7 +214,7 @@ public class DatosMedicoForm extends JFrame {
 		especialidad.setBounds(347, 161, 157, 21);
 		especialidad.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		especialidad.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(KeyEvent evt) {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
                 especialidadKeyTyped(evt);
             }
         });
@@ -232,7 +227,7 @@ public class DatosMedicoForm extends JFrame {
 	
 	public DatosMedicoForm(String codigo) { // Constructor 2 para crear un medico desde otras clases
         this.codigoMed=codigo;
-        //Sï¿½lo cargamos el dato bï¿½sico para poder usar los metodos de medico.
+        //Sólo cargamos el dato básico para poder usar los metodos de medico.
     }
 	
 	public String getCodigoMed(){
@@ -251,14 +246,14 @@ public class DatosMedicoForm extends JFrame {
     }
     
     private static boolean soloLetras(String cadena){
-      if(cadena.matches("[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½a-zï¿½ï¿½ï¿½ï¿½ï¿½ï¿½A-Z][ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½a-zï¿½ï¿½ï¿½ï¿½ï¿½ï¿½A-z ]*")) // Se valida en esta funciï¿½n que no puede ser vacï¿½a la cadena.
+      if(cadena.matches("[áéíóúña-zÑÁÉÍÓÚA-Z][áéíóúña-zÁÉÍÓÚÑA-z ]*")) // Se valida en esta función que no puede ser vacía la cadena.
         return true; //Son letras.
       else
         return false; //No son letras.
     }
 
     private static boolean alfanumerico(String cadena){
-      if(cadena.matches("[0-9a-zA-z]+")) // Tampoco puede ser vacï¿½a una cadena.
+      if(cadena.matches("[0-9a-zA-z]+")) // Tampoco puede ser vacía una cadena.
         return true; // Es alfanimerico
       else
         return false; //No es alfanumerico
@@ -268,15 +263,15 @@ public class DatosMedicoForm extends JFrame {
         String mensaje="";
         int ret=0; // comienza siendo valido.
         if(!alfanumerico(codigoMed)){ // El codigo del paciente debe ser alfanumerico sin espacios.
-                mensaje="El cï¿½digo no es vï¿½lido o no se ha ingresado. "; //Se guarda mensaje de aviso.
+                mensaje="El código no es válido o no se ha ingresado. "; //Se guarda mensaje de aviso.
                 ret++; //Ret se incrementa porque ya no es valido.
         }
-        if(!soloLetras(nombreMed)){ // El nombre del paciente sï¿½lo debe contener letras.
-         mensaje= mensaje + "El nombre del mï¿½dico posee caracteres incorrectos o no se ha ingresado. "; //Se guarda mensaje de aviso.
+        if(!soloLetras(nombreMed)){ // El nombre del paciente sólo debe contener letras.
+         mensaje= mensaje + "El nombre del médico posee caracteres incorrectos o no se ha ingresado. "; //Se guarda mensaje de aviso.
          ret++; // Ret deja de ser valido.
         }
-          if(!soloLetras(especialidadMed)){ // El nombre del paciente sï¿½lo debe contener letras.
-         mensaje= mensaje + "La especialidad del mï¿½dico posee caracteres incorrectos o no se ha ingresado"; //Se guarda mensaje de aviso.
+          if(!soloLetras(especialidadMed)){ // El nombre del paciente sólo debe contener letras.
+         mensaje= mensaje + "La especialidad del médico posee caracteres incorrectos o no se ha ingresado"; //Se guarda mensaje de aviso.
          ret++; // Ret deja de ser valido.
         }
         if(ret!=0)
@@ -295,10 +290,8 @@ public class DatosMedicoForm extends JFrame {
                 datomedInput.readUTF(); 
                 datomedInput.readUTF();
                 if (codm.equals(codigoMed)) {
-                    */
-/*compara el codigo digitado con el codigo del medico de la
-                     tabla "datomed" *//*
-
+                    /*compara el codigo digitado con el codigo del medico de la
+                     tabla "datomed" */
                     found = true; //ENCONTRADO
                 }
             }
@@ -309,7 +302,7 @@ public class DatosMedicoForm extends JFrame {
  }
     
  public void grabarDatosMed(){
-     try { // Esta funciï¿½n se encarga de grabar los datos en el archivo de medicos.
+     try { // Esta función se encarga de grabar los datos en el archivo de medicos.
             DataOutputStream datomed = null; // abre el archivo para escritura con append habilitado
             datomed = new DataOutputStream(new FileOutputStream(System.getProperty("user.home") + "\\datomed.txt", true));
             //escribe el archivo con los datos ingresados
@@ -318,7 +311,7 @@ public class DatosMedicoForm extends JFrame {
              datomed.writeUTF(EncryptHelper.Encriptar(especialidadMed));
              JOptionPane.showMessageDialog(null, "Datos guardados de forma exitosa."); // Se han guardado correctamente los datos.
         } catch (Exception e) {
-             JOptionPane.showMessageDialog(null, "Error al intentar abrir el archivo de mï¿½dicos"); // Error inesperado al abrir el arhivo.
+             JOptionPane.showMessageDialog(null, "Error al intentar abrir el archivo de médicos"); // Error inesperado al abrir el arhivo.
         };
      
  }
@@ -331,26 +324,26 @@ public class DatosMedicoForm extends JFrame {
         dispose(); // Desaparece el ingreso de datos de medico.
     }
 
-    private void ingresarBtnKeyTyped(KeyEvent evt) {
+    private void ingresarBtnKeyTyped(java.awt.event.KeyEvent evt) {
         
-                // Creamos un evento para que cuando se presione la tecla Enter sea como presionar el botï¿½n.
+                // Creamos un evento para que cuando se presione la tecla Enter sea como presionar el botón.
      
         char cTeclaPresionada=evt.getKeyChar();
         // da click al detectar la tecla ENTER.
         if(cTeclaPresionada==KeyEvent.VK_ENTER){
-            //Ejecuta el botï¿½n (dar click)
+            //Ejecuta el botón (dar click)
             ingresarBtn.doClick();
         }// fin del if.
     }
 
-    private void anteriorKeyTyped(KeyEvent evt) {//GEN-FIRST:event_anteriorKeyTyped
+    private void anteriorKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_anteriorKeyTyped
         
-                // Creamos un evento para que cuando se presione la tecla Enter sea como presionar el botï¿½n.
+                // Creamos un evento para que cuando se presione la tecla Enter sea como presionar el botón.
      
         char cTeclaPresionada=evt.getKeyChar();
         // da click al detectar la tecla ENTER.
         if(cTeclaPresionada==KeyEvent.VK_ENTER){
-            //Ejecuta el botï¿½n (dar click)
+            //Ejecuta el botón (dar click)
             anterior.doClick();
         }// fin del if.
     }
@@ -362,12 +355,12 @@ public class DatosMedicoForm extends JFrame {
         especialidad.setText(""); // Se borra el contenido de la especialidad.
     }
 
-    private void borrarCKeyTyped(KeyEvent evt) {
+    private void borrarCKeyTyped(java.awt.event.KeyEvent evt) {
         
         char cTeclaPresionada=evt.getKeyChar();
         // da click al detectar la tecla ENTER.
         if(cTeclaPresionada==KeyEvent.VK_ENTER){
-            //Ejecuta el botï¿½n (dar click)
+            //Ejecuta el botón (dar click)
             borrarC.doClick();
         }// fin del if.
     }
@@ -378,39 +371,39 @@ public class DatosMedicoForm extends JFrame {
         getNombreMed(); // Obtenemos el nombre del medico ingresado.
         getEspecialidadMed(); // Obtenemos la especialidad del medico.
         if(validarDatosMed()==0){ // Si los datos estan bien ingresados, verifico la existencia del medico.
-          if(!medicoExiste()) // Si el medico no estï¿½ registrado en el archivo entonces lo agrego.
+          if(!medicoExiste()) // Si el medico no está registrado en el archivo entonces lo agrego.
             grabarDatosMed(); //Se guardan los datos ingresados en el archivo.
           else
-           JOptionPane.showMessageDialog(null, "El cï¿½digo del mï¿½dico ya existe."); //Se informa que el medico ya existe.
+           JOptionPane.showMessageDialog(null, "El código del médico ya existe."); //Se informa que el medico ya existe.
         }   
     }
 
-    private void especialidadKeyTyped(KeyEvent evt) {
+    private void especialidadKeyTyped(java.awt.event.KeyEvent evt) {
         
                 char cTeclaPresionada=evt.getKeyChar();
         // da click al detectar la tecla ENTER.
         if(cTeclaPresionada==KeyEvent.VK_ENTER){
-            //Ejecuta el botï¿½n ingresar datos (dar click)
+            //Ejecuta el botón ingresar datos (dar click)
             ingresarBtn.doClick();
         }// fin del if.
     }
 
-    private void nombreKeyTyped(KeyEvent evt) {
+    private void nombreKeyTyped(java.awt.event.KeyEvent evt) {
         
                 char cTeclaPresionada=evt.getKeyChar();
         // da click al detectar la tecla ENTER.
         if(cTeclaPresionada==KeyEvent.VK_ENTER){
-            //Ejecuta el botï¿½n ingresar datos(dar click)
+            //Ejecuta el botón ingresar datos(dar click)
             ingresarBtn.doClick();
         }// fin del if.
     }
 
-    private void codigoKeyTyped(KeyEvent evt) {
+    private void codigoKeyTyped(java.awt.event.KeyEvent evt) {
         
                 char cTeclaPresionada=evt.getKeyChar();
         // da click al detectar la tecla ENTER.
         if(cTeclaPresionada==KeyEvent.VK_ENTER){
-            //Ejecuta el botï¿½n ingresar datos(dar click)
+            //Ejecuta el botón ingresar datos(dar click)
             ingresarBtn.doClick();
         }// fin del if.
     }
@@ -443,8 +436,8 @@ public class DatosMedicoForm extends JFrame {
     private void mInfActionPerformed(java.awt.event.ActionEvent evt) {
         
                 
-        //InformesW iw=new InformesW();
-        //iw.setVisible(true); // Hago visible la ventana de Informes.
+        InformesForm iw=new InformesForm();
+        iw.setVisible(true); // Hago visible la ventana de Informes.
         dispose(); // Desaparece el menu.
     }
 
@@ -464,4 +457,3 @@ public class DatosMedicoForm extends JFrame {
     JButton borrarC;
     JButton anterior;
 }
-*/
