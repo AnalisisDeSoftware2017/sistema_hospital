@@ -1,44 +1,18 @@
 package ar.edu.unlam.analisis.software.grupo2.ui;
 
-import java.awt.BorderLayout;
-import java.awt.EventQueue;
-import java.awt.event.KeyEvent;
-
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-import javax.swing.JLabel;
-import javax.swing.border.EtchedBorder;
-import java.awt.Font;
-import javax.swing.SwingConstants;
-import javax.swing.GroupLayout;
+import javax.swing.*;
 import javax.swing.GroupLayout.Alignment;
-import javax.swing.JButton;
 import javax.swing.LayoutStyle.ComponentPlacement;
-import javax.swing.JMenuBar;
-import javax.swing.JMenu;
-import javax.swing.JMenuItem;
+import javax.swing.border.EmptyBorder;
+import javax.swing.border.EtchedBorder;
+import java.awt.*;
 
 public class InformesForm extends JFrame {
 
 	private JPanel contentPane;
-
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					InformesForm frame = new InformesForm();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
+	private JButton listaddoPacXMedBtn;
+	private JButton enfermedadesBtn;
+	private JButton anterior;
 	/**
 	 * Create the frame.
 	 */
@@ -62,35 +36,16 @@ public class InformesForm extends JFrame {
 		jPanel1.setBounds(5, 66, 424, 190);
 		contentPane.add(jPanel1);
 		
-		JButton EnfermedadesBtn = new JButton();
-		EnfermedadesBtn.setText("Enfermedades que atiende cada m\u00C3\u00A9dico");
-		EnfermedadesBtn.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		EnfermedadesBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                EnfermedadesBtnActionPerformed(evt);
-            }
-        });
-        EnfermedadesBtn.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(KeyEvent evt) {
-                EnfermedadesBtnKeyTyped(evt);
-            }
-        });
-		
-		JButton listaddoPacXMedBtn = new JButton();
+		enfermedadesBtn = new JButton();
+		enfermedadesBtn.setText("Enfermedades que atiende cada m\u00C3\u00A9dico");
+		enfermedadesBtn.setFont(new Font("Tahoma", Font.PLAIN, 14));
+
+		listaddoPacXMedBtn = new JButton();
 		listaddoPacXMedBtn.setText("Listado de pacientes por m\u00C3\u00A9dico");
 		listaddoPacXMedBtn.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		listaddoPacXMedBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                listadoPacXMedBtnActionPerformed(evt);
-            }
-        });
-		listaddoPacXMedBtn.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(KeyEvent evt) {
-                listadoPacXMedBtnKeyTyped(evt);
-            }
-        });
+
 		
-		JButton anterior = new JButton();
+		anterior = new JButton();
 		anterior.setText("Anterior");
 		anterior.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		GroupLayout gl_jPanel1 = new GroupLayout(jPanel1);
@@ -102,7 +57,7 @@ public class InformesForm extends JFrame {
 						.addGroup(Alignment.TRAILING, gl_jPanel1.createSequentialGroup()
 							.addGroup(gl_jPanel1.createParallelGroup(Alignment.LEADING)
 								.addComponent(listaddoPacXMedBtn, GroupLayout.PREFERRED_SIZE, 289, GroupLayout.PREFERRED_SIZE)
-								.addComponent(EnfermedadesBtn))
+								.addComponent(enfermedadesBtn))
 							.addGap(64))
 						.addGroup(Alignment.TRAILING, gl_jPanel1.createSequentialGroup()
 							.addComponent(anterior, GroupLayout.PREFERRED_SIZE, 86, GroupLayout.PREFERRED_SIZE)
@@ -112,7 +67,7 @@ public class InformesForm extends JFrame {
 			gl_jPanel1.createParallelGroup(Alignment.LEADING)
 				.addGroup(gl_jPanel1.createSequentialGroup()
 					.addGap(24)
-					.addComponent(EnfermedadesBtn, GroupLayout.PREFERRED_SIZE, 36, GroupLayout.PREFERRED_SIZE)
+					.addComponent(enfermedadesBtn, GroupLayout.PREFERRED_SIZE, 36, GroupLayout.PREFERRED_SIZE)
 					.addPreferredGap(ComponentPlacement.UNRELATED)
 					.addComponent(listaddoPacXMedBtn, GroupLayout.PREFERRED_SIZE, 35, GroupLayout.PREFERRED_SIZE)
 					.addGap(18)
@@ -152,7 +107,8 @@ public class InformesForm extends JFrame {
 	        });
 	        jMenu3.add(mINI);
 		jMenu3.add(mINI);
-		
+
+		//TODO add this to controller
 		JMenuItem mIngDat = new JMenuItem();
 		mIngDat.setText("Ingreso de Datos");
 		 mIngDat.addActionListener(new java.awt.event.ActionListener() {
@@ -174,7 +130,8 @@ public class InformesForm extends JFrame {
 	            }
 	        });
 		opciones.add(Salir);
-		
+
+		//TODO add this to a controller
 		JMenuItem cerrarSesion = new JMenuItem();
 		cerrarSesion.setText("Cerrar Sesi\u00C3\u00B3n");
 		cerrarSesion.addActionListener(new java.awt.event.ActionListener() {
@@ -185,55 +142,6 @@ public class InformesForm extends JFrame {
 		opciones.add(cerrarSesion);
 	}
 	
-	private void anteriorActionPerformed(java.awt.event.ActionEvent evt) {
-        MainForm menu=new MainForm();
-        menu.setVisible(true); // Vuelve el menu proncipal
-        dispose(); // Desaparece el informes.        
-    }
-
-    private void listadoPacXMedBtnActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
-        //PacientesXMedW pxm=new PacientesXMedW();
-        //pxm.setVisible(true);
-        dispose(); // Se oculta la ventana de informes.
-    }
-
-    private void EnfermedadesBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EnfermedadesBtnActionPerformed
-        // TODO add your handling code here:
-     //   EnfermedadesMedW em=new EnfermedadesMedW();
-       // em.setVisible(true);
-        dispose(); // se oculta la ventana de informes.
-    }
-
-    private void listadoPacXMedBtnKeyTyped(KeyEvent evt) {
-
-        char cTeclaPresionada=evt.getKeyChar();
-        // da click al detectar la tecla ENTER.
-        if(cTeclaPresionada==KeyEvent.VK_ENTER){
-            //Ejecuta el bot�n (dar click)
-            //listadoPacXMedBtn.doClick();
-        }// fin del if.
-    }
-
-    private void EnfermedadesBtnKeyTyped(KeyEvent evt) {
-       
-        char cTeclaPresionada=evt.getKeyChar();
-        // da click al detectar la tecla ENTER.
-        if(cTeclaPresionada==KeyEvent.VK_ENTER){
-            //Ejecuta el bot�n (dar click)
-            //EnfermedadesBtn.doClick();
-        }// fin del if.
-    }
-
-    private void anteriorKeyTyped(KeyEvent evt) {
-
-        char cTeclaPresionada=evt.getKeyChar();
-        // da click al detectar la tecla ENTER.
-        if(cTeclaPresionada==KeyEvent.VK_ENTER){
-            //Ejecuta el bot�n (dar click)
-     //       anterior.doClick();
-        }// fin del if.
-    }
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
@@ -253,18 +161,32 @@ public class InformesForm extends JFrame {
         System.exit(0); // SE SALE DEL PROGRAMA.
     }
 
-    private void cerrarSesionActionPerformed(java.awt.event.ActionEvent evt) {
+
+
+   /* private void cerrarSesionActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
         LoginForm log=new LoginForm(); // Abre el log principal del sistema.
         log.setVisible(true); // Hace visible el log.     
         dispose();//SE OCULTA
-    }//GEN-LAST:event_cerrarSesionActionPerformed
+    }*///GEN-LAST:event_cerrarSesionActionPerformed
 
-    private void mIngDatActionPerformed(java.awt.event.ActionEvent evt) {
+    /*private void mIngDatActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
         //IngresoPacientesW ipw=new IngresoPacientesW();
         //ipw.setVisible(true); // Hago visible la ventana de pacientes.    
         dispose(); // Para que se oculte el menu.
-    }
+    }*/
+
+
+	public JButton getListaddoPacXMedBtn(){
+		return this.listaddoPacXMedBtn;
+	}
+	public JButton getEnfermedadesBtn(){
+		return enfermedadesBtn;
+	}
+	public JButton getAnterior(){
+		return this.anterior;
+	}
+
 
 }
