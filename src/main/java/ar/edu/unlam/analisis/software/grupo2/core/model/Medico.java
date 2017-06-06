@@ -20,8 +20,10 @@ import java.util.List;
 @Data
 public class Medico extends Persona {
 
+
+
     @ManyToMany
-    private List<Especialidades> especialidades;
+    private List<Especialidad> especialidades;
 
     @OneToMany(mappedBy = "medico")
     private List<SituaciondDelPaciente> situaciones;

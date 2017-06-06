@@ -1,63 +1,17 @@
 package ar.edu.unlam.analisis.software.grupo2.ui;
 
-import java.awt.BorderLayout;
-import java.awt.EventQueue;
-
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-import javax.swing.JMenuBar;
-import javax.swing.JMenu;
-import javax.swing.JMenuItem;
-import javax.swing.JOptionPane;
-import javax.swing.JLabel;
-import java.awt.Font;
-import java.awt.event.KeyEvent;
-
-import javax.swing.SwingConstants;
-import javax.swing.JTextField;
-import java.awt.Color;
-import javax.swing.JButton;
-import javax.swing.GroupLayout;
+import javax.swing.*;
 import javax.swing.GroupLayout.Alignment;
-import javax.swing.JScrollPane;
 import javax.swing.LayoutStyle.ComponentPlacement;
+import javax.swing.border.EmptyBorder;
+import java.awt.*;
 
+@org.springframework.stereotype.Component
 public class EnfermedadesMedicoForm extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField nombreMed;
 	private JTextField codigoMed;
-	
-    String codMed="";
-String nomMed="";
-
-String codm=""; // En estas variables vamos a guardar los datos de la b�squeda del medico.
-String nomm="";
-String espm="";
-String codp="";// Estas variables que siguen nos ayudan en la b�squeda de datos del m�dico.
-String codme="";
-String enfp="";
-String codpa="";// Nos sirven para la lectura de pacientes.
-String nompa="";
-String checkEnfermedades=""; //Para que no se muestre una misma enfermedad en la lista, ya que puede haber muchos diagnosticos de esa enfermedad.
-String lista=""; // Limpio la lista de enfermedades a mostrar.
-
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					EnfermedadesMedicoForm frame = new EnfermedadesMedicoForm();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
 
 	/**
 	 * Create the frame.
@@ -135,11 +89,11 @@ String lista=""; // Limpio la lista de enfermedades a mostrar.
 		
 		JMenuItem cerrarSesion = new JMenuItem();
 		cerrarSesion.setText("Cerrar Sesi\u00C3\u00B3n");
-		cerrarSesion.addActionListener(new java.awt.event.ActionListener() {
+		/*cerrarSesion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cerrarSesionActionPerformed(evt);
             }
-        });
+        });*/
 		opciones.add(cerrarSesion);
 		
 		JLabel jLabel1 = new JLabel();
@@ -164,15 +118,10 @@ String lista=""; // Limpio la lista de enfermedades a mostrar.
 		nombreMed.setBounds(466, 201, 93, 20);
 		contentPane.add(nombreMed);
 		
-		JButton anterior = new JButton();
+		anterior = new JButton();
 		anterior.setText("Anterior");
 		anterior.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		anterior.setBounds(10, 361, 100, 30);
-		anterior.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                anteriorActionPerformed(evt);
-            }
-        });
 		contentPane.add(anterior);
 		
 		JLabel jLabel4 = new JLabel();
@@ -215,11 +164,7 @@ String lista=""; // Limpio la lista de enfermedades a mostrar.
 		borrarC = new JButton();
 		borrarC.setText("Borrar");
 		borrarC.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		borrarC.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                borrarCActionPerformed(evt);
-            }
-        });
+
 		GroupLayout gl_panel = new GroupLayout(panel);
 		gl_panel.setHorizontalGroup(
 			gl_panel.createParallelGroup(Alignment.LEADING)
@@ -254,61 +199,8 @@ String lista=""; // Limpio la lista de enfermedades a mostrar.
 		);
 		panel.setLayout(gl_panel);
 	}
-	
-	private void anteriorActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
-        InformesForm menu=new InformesForm();
-        menu.setVisible(true); // Vuelve el menu de informes
-        dispose(); // Desaparece el informe de pacientes por medico.
-    }
 
-    private void anteriorKeyTyped(KeyEvent evt) {
-     
-        char cTeclaPresionada=evt.getKeyChar();
-        // da click al detectar la tecla ENTER.
-        if(cTeclaPresionada==KeyEvent.VK_ENTER){
-            //Ejecuta el bot�n (dar click)
-            anterior.doClick();
-        }// fin del if.
-    }
-
-    private void consultarBtnActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
-         this.codMed=codigoMed.getText(); // Ser�a un getCodMed();
-         lista="";
-         checkEnfermedades="";
-         //listaEnf.setText("");
-        DatosMedicoForm medico=new DatosMedicoForm(codMed); // Creo un medico para usar el metodo que verifique que existe.
-    }
-
-    private void consultarBtnKeyTyped(KeyEvent evt) {
-        // TODO add your handling code here:
-        char cTeclaPresionada=evt.getKeyChar();
-        // da click al detectar la tecla ENTER.
-        if(cTeclaPresionada==KeyEvent.VK_ENTER){
-            //Ejecuta el bot�n (dar click)
-            consultarBtn.doClick();
-        }// fin del if.
-    }
-
-    private void borrarCActionPerformed(java.awt.event.ActionEvent evt) {
-        codigoMed.setText(""); // Limpio los datos.
-        nombreMed.setText("");
-
-    }
-
-    private void borrarCKeyTyped(KeyEvent evt) {
-        // TODO add your handling code here:
-        char cTeclaPresionada=evt.getKeyChar();
-        // da click al detectar la tecla ENTER.
-        if(cTeclaPresionada==KeyEvent.VK_ENTER){
-            //Ejecuta el bot�n (dar click)
-            borrarC.doClick();
-        }// fin del if.
-    }
-
-    
-
+/*
     private void codigoMedKeyTyped(KeyEvent evt) {
                 // TODO add your handling code here:
         char cTeclaPresionada=evt.getKeyChar();
@@ -317,7 +209,7 @@ String lista=""; // Limpio la lista de enfermedades a mostrar.
             //Ejecuta el bot�n (dar click)
             consultarBtn.doClick();
         }// fin del if.
-    }
+    }*/
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {
        //ManualW guiaRapida=new ManualW();
@@ -341,18 +233,32 @@ String lista=""; // Limpio la lista de enfermedades a mostrar.
         System.exit(0); // SE SALE DEL PROGRAMA.
     }
 
-    private void cerrarSesionActionPerformed(java.awt.event.ActionEvent evt) {
+    /*private void cerrarSesionActionPerformed(java.awt.event.ActionEvent evt) {
         LoginForm log=new LoginForm(); // Abre el log principal del sistema.
         log.setVisible(true); // Hace visible el log.
         dispose();//SE OCULTA
-    }
+    }*/
     private void mIngDatActionPerformed(java.awt.event.ActionEvent evt) {
          //IngresoPacientesW ipw=new IngresoPacientesW();
         //ipw.setVisible(true); // Hago visible la ventana de pacientes.    
         dispose(); // Para que se oculte el menu.
     }
 	
-    JButton consultarBtn;
-    JButton borrarC;
-    JButton anterior;
+    private JButton consultarBtn;
+    private JButton borrarC;
+	private JButton anterior;
+
+
+	public JButton getConsultarBtn() {
+		return consultarBtn;
+	}
+
+	public JButton getBorrarC() {
+		return borrarC;
+	}
+
+	public JButton getAnterior() {
+		return anterior;
+	}
+
 }

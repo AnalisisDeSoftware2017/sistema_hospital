@@ -1,39 +1,16 @@
 package ar.edu.unlam.analisis.software.grupo2.ui;
 
-import java.awt.BorderLayout;
-import java.awt.EventQueue;
-
-import javax.swing.JFrame;
-import javax.swing.JPanel;
+import javax.swing.*;
 import javax.swing.border.EmptyBorder;
-
-import ar.edu.unlam.analisis.software.utils.EncryptHelper;
-
-import javax.swing.JMenuBar;
-import javax.swing.JMenu;
-import javax.swing.JMenuItem;
-import javax.swing.JOptionPane;
-import javax.swing.JTextField;
-import java.awt.Font;
+import java.awt.*;
 import java.awt.event.KeyEvent;
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
-import java.io.EOFException;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-
-import javax.swing.JButton;
-import java.awt.Dimension;
-import javax.swing.JLabel;
 
 public class DatosPacienteForm extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField codigoPac;
 	private JTextField nombrePac;
-	
-	String codPac = "";
-    String nomPac = "";
+
 
 	public DatosPacienteForm() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -72,16 +49,6 @@ public class DatosPacienteForm extends JFrame {
 		ingresarBtn.setBounds(275, 172, 90, 33);
 		ingresarBtn.setText("Ingresar");
 		ingresarBtn.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		ingresarBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ingresarBtnActionPerformed(evt);
-            }
-        });
-        ingresarBtn.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                ingresarBtnKeyTyped(evt);
-            }
-        });
 		contentPane.add(ingresarBtn);
 		
 		anterior = new JButton();
@@ -89,32 +56,12 @@ public class DatosPacienteForm extends JFrame {
 		anterior.setText("Anterior");
 		anterior.setMaximumSize(new Dimension(77, 33));
 		anterior.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		anterior.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                anteriorActionPerformed(evt);
-            }
-        });
-        anterior.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                anteriorKeyTyped(evt);
-            }
-        });
 		contentPane.add(anterior);
 		
 		borrarC = new JButton();
 		borrarC.setBounds(130, 172, 140, 33);
 		borrarC.setText("Borrar Campos");
 		borrarC.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		borrarC.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                borrarCActionPerformed(evt);
-            }
-        });
-        borrarC.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                borrarCKeyTyped(evt);
-            }
-        });
 		contentPane.add(borrarC);
 		
 		JLabel jLabel4 = new JLabel();
@@ -173,11 +120,11 @@ public class DatosPacienteForm extends JFrame {
 		
 		JMenuItem menuItem_2 = new JMenuItem();
 		menuItem_2.setText("Ingreso de Datos");
-		menuItem_2.addActionListener(new java.awt.event.ActionListener() {
+		/*menuItem_2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mIngDatActionPerformed(evt);
             }
-        });
+        });*/
 		jMenu5.add(menuItem_2);
 		
 		JMenuItem menuItem_3 = new JMenuItem();
@@ -204,100 +151,14 @@ public class DatosPacienteForm extends JFrame {
 		
 		JMenuItem menuItem_5 = new JMenuItem();
 		menuItem_5.setText("Cerrar Sesi\u00F3n");
-		menuItem_5.addActionListener(new java.awt.event.ActionListener() {
+		/*menuItem_5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cerrarSesionActionPerformed(evt);
             }
-        });
+        });*/
 		opciones.add(menuItem_5);
 	}
 
-	public DatosPacienteForm(String codigo) { //CONSTRUCTOR para crear un paciente desde otras clases.
-        this.codPac=codigo; // Guardo el dato pasado. 
-   }
-   
-   public String getCodigoPac(){
-       // Obtenemos el codigo del paciente ingresado.
-       this.codPac=codigoPac.getText();
-       return codPac;
-   }
-   
-   public String getNombrePac(){
-       // Obtenemos el nombre del paciente ingresado.
-       this.nomPac=nombrePac.getText();
-       return nomPac;
-   }
-   
-   private static boolean soloLetras(String cadena){
-	      if(cadena.matches("[������a-z������A-Z][������a-z������A-z ]*")) // Se valida en esta funci�n que no puede ser vac�a la cadena.
-	        return true; //Son letras.
-	      else
-	        return false; //No son letras.
-	    }
-
-	    private static boolean alfanumerico(String cadena){
-	      if(cadena.matches("[0-9a-zA-z]+")) // Tampoco puede ser vac�a una cadena.
-	        return true; // Es alfanimerico
-	      else
-	        return false; //No es alfanumerico
-	    }
-	    
-	    public int validarDatosPac(){
-	        String mensaje="";
-	        int ret=0; // comienza siendo valido.
-	        if(!alfanumerico(codPac)){ // El codigo del paciente debe ser alfanumerico sin espacios.
-	                mensaje="El c�digo no es v�lido o no se ha ingresado. "; //Se guarda mensaje de aviso.
-	                ret++; //Ret se incrementa porque ya no es valido.
-	        }
-	        if(!soloLetras(nomPac)){ // El nombre del paciente s�lo debe contener letras.
-	         mensaje= mensaje + "El nombre del paciente posee caracteres incorrectos o no se ha ingresado."; //Se guarda mensaje de aviso.
-	         ret++; // Ret deja de ser valido.
-	        }
-	        if(ret!=0)
-	            JOptionPane.showMessageDialog(null, mensaje);
-	        return ret; // Correctos o Incorrectos.
-	    }
-	    
-	    public boolean ExistePac(){
-	        boolean found = false; // Creo una variable boolena que ser� la que idique si existe o no el paciente.
-	        try {
-	            DataInputStream datopac = null; // Luego abro el archivo de pacientes para recorrerlo.
-	            datopac = new DataInputStream(new FileInputStream(System.getProperty("user.home") + "\\datopac.txt")); // abre el archivo de pacientes para lectura
-	            int sw1 = 1; // Bandera para recorrer el archivo hasta su fin. 
-	            while (sw1 != 0) {// recorre los registros
-	                try {
-	                    String codpa = EncryptHelper.Desencriptar(datopac.readUTF());// lee el registro
-	                    datopac.readUTF();
-	                    if (codpa.equals(codPac)){
-compara el codigo digitado con el codigo del peciente de la
-	                        tabla "datopac"
-
-	                        found = true; //ENCONTRADO
-	                    }
-	                } catch (EOFException e) {
-	                    sw1 = 0;
-	                }
-	            }
-	        } catch (Exception e) {
-	            //JOptionPane.showMessageDialog(null, "Error al verificar la existencia del paciente"); // Mensaje inesperado de error.
-	        }
-	        return found; // Se devuelve true or false.
-	  }
-	    
-	    public void grabarDatosPac(){
-	        // Esta funci�n se encarga de grabar los datos en el archivo de pacientes.
-	        try{
-	            DataOutputStream datopac = null; //Para luego abrir el archivo de pacientes para escritura con append habilitado.
-	            datopac = new DataOutputStream(new FileOutputStream(System.getProperty("user.home") + "\\datopac.txt", true)); //Se abre el arvhivo.
-	            // graba los datos en el archivo
-	            datopac.writeUTF(EncryptHelper.Encriptar(codPac)); //Se graba el codigo de paciente.
-	            datopac.writeUTF(EncryptHelper.Encriptar(nomPac)); // Se graba el nombre de paciente.
-	            JOptionPane.showMessageDialog(null, "Datos guardados de forma exitosa.");
-	        }catch(Exception ioe){
-	            JOptionPane.showMessageDialog(null, "Error al intentar abrir el archivo de Pacientes");
-	        }
-	    }
-	    
 	    private void anteriorActionPerformed(java.awt.event.ActionEvent evt) {
 	        //IngresoPacientesW menu=new IngresoPacientesW();
 	        //menu.setVisible(true); // Vuelve el menu de ingreso de datos
@@ -326,17 +187,7 @@ compara el codigo digitado con el codigo del peciente de la
 	        }// fin del if.
 	    }
 
-	    private void ingresarBtnActionPerformed(java.awt.event.ActionEvent evt) {
-	             
-	            getCodigoPac(); //Obtenemos el codigo del paciente ingresado.
-	            getNombrePac(); // Obtenemos el nombre del paciente ingresado.
-	            if(validarDatosPac()==0){ // Si los datos estan bien ingresados, verifico la existencia del paciente.
-	                if(!ExistePac()) // Si el paciente no est� registrado en el archivo entonces lo agrego.
-	                    grabarDatosPac(); //Se guardan los datos ingresados en el archivo.
-	                else
-	                    JOptionPane.showMessageDialog(null, "El c�digo de paciente ya existe."); //Se informa que el paciente ya existe.
-	            }      
-	    }
+
 
 	    private void codigoPacActionPerformed(java.awt.event.ActionEvent evt) {
 	        // Creamos un evento para que cuando se presione la tecla Enter sea como presionar el bot�n Ingresar.
@@ -359,22 +210,6 @@ compara el codigo digitado con el codigo del peciente de la
 	            //Ejecuta el bot�n (dar click)
 	            ingresarBtn.doClick();
 	        }// fin del if.
-	    }
-
-	    private void borrarCKeyTyped(java.awt.event.KeyEvent evt) {
-	        // TODO add your handling code here:
-	        char cTeclaPresionada=evt.getKeyChar();
-	        // da click al detectar la tecla ENTER.
-	        if(cTeclaPresionada==KeyEvent.VK_ENTER){
-	            //Ejecuta el bot�n (dar click)
-	            borrarC.doClick();
-	        }// fin del if.
-	    }//GEN-LAST:event_borrarCKeyTyped
-
-	    private void borrarCActionPerformed(java.awt.event.ActionEvent evt) {
-	     
-	        codigoPac.setText(""); // Se borra el contenido del codigo.
-	        nombrePac.setText(""); // Se borra el contenido del nombre.
 	    }
 
 	    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {
@@ -402,20 +237,49 @@ compara el codigo digitado con el codigo del peciente de la
 	        System.exit(0); // SE SALE DEL PROGRAMA.
 	    }
 
-	    private void cerrarSesionActionPerformed(java.awt.event.ActionEvent evt) {
+	    /*private void cerrarSesionActionPerformed(java.awt.event.ActionEvent evt) {
 	        LoginForm log=new LoginForm(); // Abre el log principal del sistema.
 	        log.setVisible(true); // Hace visible el log.
 	        dispose();//SE OCULTA
 	    }//GEN-LAST:event_cerrarSesionActionPerformed
 
 	    private void mIngDatActionPerformed(java.awt.event.ActionEvent evt) {
-	     
+
 	        //IngresoPacientesW ipw=new IngresoPacientesW();
-	        //ipw.setVisible(true); // Hago visible la ventana de pacientes.    
+	        //ipw.setVisible(true); // Hago visible la ventana de pacientes.
 	        dispose(); // Para que se oculte el menu.
-	    }
-	    
-	    JButton anterior;
-	    JButton ingresarBtn;
-	    JButton borrarC;
+	    }*/
+
+	    private JButton anterior;
+		private JButton ingresarBtn;
+	    private JButton borrarC;
+
+		public String getCodigoPac(){
+			// Obtenemos el codigo del paciente ingresado.
+			return codigoPac.getText();
+		}
+
+		public String getNombrePac(){
+			// Obtenemos el nombre del paciente ingresado.
+			return nombrePac.getText();
+		}
+
+		public JButton getAnterior() {
+			return anterior;
+		}
+
+		public JButton getIngresarBtn() {
+			return ingresarBtn;
+		}
+
+		public JButton getBorrarC() {
+			return borrarC;
+		}
+
+
+
+
+
+
+
 }

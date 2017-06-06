@@ -16,7 +16,7 @@ import java.util.List;
  */
 @Entity
 @Getter @Setter @Data @NoArgsConstructor
-public class Especialidades {
+public class Especialidad {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
