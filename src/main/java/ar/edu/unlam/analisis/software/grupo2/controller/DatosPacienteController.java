@@ -42,6 +42,11 @@ public class DatosPacienteController extends AbstractFrameController<DatosMedico
 
     }
 
+    @Override
+    protected void setTextoFrame() {
+
+    }
+
 
     private void irAPantallaAnterior() {
         frame.setVisible(false);

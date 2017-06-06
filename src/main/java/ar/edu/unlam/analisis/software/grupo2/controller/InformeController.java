@@ -12,15 +12,13 @@ import org.springframework.stereotype.Controller;
 public class InformeController extends AbstractFrameController<InformesForm>{
 
 
-    private  MainMenuController mainMenuController;
 
     private UserService userService;
 
     @Autowired
-    public InformeController(InformesForm informesForm, UserService userService, MainMenuController mainMenuController){
+    public InformeController(InformesForm informesForm, UserService userService){
         this.frame = informesForm;
         this.userService = userService;
-        this.mainMenuController = mainMenuController;
     }
 
     public void prepareAndOpenFrame() {
@@ -28,6 +26,11 @@ public class InformeController extends AbstractFrameController<InformesForm>{
         /*registerClickAction(frame.getButtonIngresar(), (e)->login());
         registerEnterKeyAction(frame.getPasswordBox(), ()->login());
         registerEnterKeyAction(frame.getUserNameBox(), ()->login());*/
+    }
+
+    @Override
+    protected void setTextoFrame() {
+
     }
 
     /*public void login(){

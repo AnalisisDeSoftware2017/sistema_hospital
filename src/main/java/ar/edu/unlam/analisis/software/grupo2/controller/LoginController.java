@@ -31,6 +31,11 @@ public class LoginController extends AbstractFrameController<LoginJFrame> {
         registerEnterKeyAction(frame.getUserNameBox(), ()->login());
     }
 
+    @Override
+    protected void setTextoFrame() {
+
+    }
+
     public void login(){
         User user = new User();
         user.setUsername(frame.getUsuario());

@@ -7,6 +7,7 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.border.EtchedBorder;
 import java.awt.*;
 
+@org.springframework.stereotype.Component
 public class InformesForm extends JFrame {
 
 	private JPanel contentPane;
@@ -111,11 +112,11 @@ public class InformesForm extends JFrame {
 		//TODO add this to controller
 		JMenuItem mIngDat = new JMenuItem();
 		mIngDat.setText("Ingreso de Datos");
-		 mIngDat.addActionListener(new java.awt.event.ActionListener() {
+		/* mIngDat.addActionListener(new java.awt.event.ActionListener() {
 	            public void actionPerformed(java.awt.event.ActionEvent evt) {
 	                mIngDatActionPerformed(evt);
 	            }
-	        });
+	        });*/
 		jMenu3.add(mIngDat);
 		
 		JMenu opciones = new JMenu();
@@ -134,11 +135,11 @@ public class InformesForm extends JFrame {
 		//TODO add this to a controller
 		JMenuItem cerrarSesion = new JMenuItem();
 		cerrarSesion.setText("Cerrar Sesi\u00C3\u00B3n");
-		cerrarSesion.addActionListener(new java.awt.event.ActionListener() {
+	/*	cerrarSesion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cerrarSesionActionPerformed(evt);
             }
-        });
+        });*/
 		opciones.add(cerrarSesion);
 	}
 	

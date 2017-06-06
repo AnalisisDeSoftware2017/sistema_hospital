@@ -10,15 +10,17 @@ import org.springframework.stereotype.Controller;
 @Controller
 public class MainMenuController extends AbstractFrameController<MainForm> {
 
-    private IngresosController ingresosController;
+    /*private IngresosController ingresosController;*/
     private InformeController informeController;
     private AbstractFrameController controllerAnterior;
 
     @Autowired
     public MainMenuController(MainForm mainForm, IngresosController ingresosController, InformeController informeController){
         this.frame = mainForm;
-        this.ingresosController = ingresosController;
+        /*this.ingresosController = ingresosController;
+        this.ingresosController.setControllerAnterior(this);*/
         this.informeController  = informeController;
+        this.informeController.setControllerAnterior(this);
 
     }
 
@@ -31,6 +33,13 @@ public class MainMenuController extends AbstractFrameController<MainForm> {
         this.registerEnterKeyAction(frame.getIngreso(),()->dibujarIngreso());
         this.registerEnterKeyAction(frame.getSalir(), ()->salir());
         frame.setVisible(true);
+    }
+
+    @Override
+    protected void setTextoFrame() {
+
+
+
     }
 
     private void dibujarIngreso() {

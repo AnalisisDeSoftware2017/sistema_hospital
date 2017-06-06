@@ -228,11 +228,11 @@ public class PacientesMedicoForm extends JFrame {
 		
 		JMenuItem cerrarSesion = new JMenuItem();
 		cerrarSesion.setText("Cerrar Sesi\u00C3\u00B3n");
-		cerrarSesion.addActionListener(new java.awt.event.ActionListener() {
+		/*cerrarSesion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cerrarSesionActionPerformed(evt);
             }
-        });
+        });*/
 		menu_2.add(cerrarSesion);
 		
 		JScrollPane scrollPane = new JScrollPane();
@@ -333,13 +333,13 @@ public class PacientesMedicoForm extends JFrame {
         // TODO add your handling code here:
         System.exit(0); // SE SALE DEL PROGRAMA.
     }
-
+/*
     private void cerrarSesionActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
         LoginForm log=new LoginForm(); // Abre el log principal del sistema.
         log.setVisible(true); // Hace visible el log.
         dispose();//SE OCULTA
-    }
+    }*/
 
     private void mIngDatActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:

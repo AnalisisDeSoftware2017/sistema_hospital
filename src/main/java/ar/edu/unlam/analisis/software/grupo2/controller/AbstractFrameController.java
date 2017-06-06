@@ -41,5 +41,7 @@ public abstract class AbstractFrameController<T extends  JFrame> {
         this.frame.setVisible(visible);
     }
 
+    protected abstract void setTextoFrame();
+
 
 }

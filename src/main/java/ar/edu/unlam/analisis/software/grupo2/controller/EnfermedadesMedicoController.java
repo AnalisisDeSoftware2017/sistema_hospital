@@ -34,6 +34,11 @@ public class EnfermedadesMedicoController extends AbstractFrameController<Enferm
         frame.setVisible(true);
     }
 
+    @Override
+    protected void setTextoFrame() {
+
+    }
+
     private void consultar() {
 
     }
