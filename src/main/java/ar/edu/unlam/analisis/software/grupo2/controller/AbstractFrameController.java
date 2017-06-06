@@ -27,7 +27,9 @@ public abstract class AbstractFrameController<T extends  JFrame> {
         component.addKeyListener(new KeyAdapter() {
             @Override
             public void keyTyped(KeyEvent e) {
-                command.execute();
+                if(e.getKeyChar()==KeyEvent.VK_ENTER){
+                    command.execute();
+                }
             }
         });
     }

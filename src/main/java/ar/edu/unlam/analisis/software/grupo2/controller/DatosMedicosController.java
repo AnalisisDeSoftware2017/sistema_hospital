@@ -55,7 +55,7 @@ public class DatosMedicosController extends AbstractFrameController<DatosMedicoF
             Medico medico = new Medico();
             medico.setCodigo(frame.getCodigoMed());
             medico.setNombre(frame.getNombreMed());
-            medicoService.saveMedico(medico);
+            medicoService.save(medico);
         }
     }
 

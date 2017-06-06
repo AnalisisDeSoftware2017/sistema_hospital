@@ -36,8 +36,8 @@ public class ApplicationControlPacientesTests {
         user.setApellido("Bogado");
         user.setEmail("seebogado@gmail.com");
         user.setFechaCreacion(new Date());
-        user.setIsActive(true);
-        user.setIsLocked(false);
+        user.setActive(true);
+        user.setLocked(false);
         user.setNombre("Sebastian Emanuel Enrique");
         user.setPassword("seeb143");
         user.setUsername("mys");
@@ -48,8 +48,8 @@ public class ApplicationControlPacientesTests {
         user2.setApellido("Bogado");
         user2.setEmail("seebogado@yahoo.com");
         user2.setFechaCreacion(new Date());
-        user2.setIsActive(true);
-        user2.setIsLocked(false);
+        user2.setActive(true);
+        user2.setLocked(false);
         user2.setNombre("Sebastian Emanuel Enrique");
         user2.setPassword("seeb143");
         user2.setUsername("xplotion");

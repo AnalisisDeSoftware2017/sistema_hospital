@@ -11,8 +11,10 @@ import java.awt.*;
 public class IngresoForm extends JFrame {
 
 	private JPanel contentPane;
-	private JButton listaddoPacXMedBtn;
-	private JButton enfermedadesBtn;
+
+	private JButton btnABMPaciente;
+	private JButton btnABMMedico;
+	private JButton btnAbmEnfermedades;
 	private JButton anterior;
 	/**
 	 * Create the frame.
@@ -37,20 +39,20 @@ public class IngresoForm extends JFrame {
 		jPanel1.setBounds(18, 66, 834, 383);
 		contentPane.add(jPanel1);
 		
-		enfermedadesBtn = new JButton();
-		enfermedadesBtn.setText("ABM medico");
-		enfermedadesBtn.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		btnABMMedico = new JButton();
+		btnABMMedico.setText("ABM medico");
+		btnABMMedico.setFont(new Font("Tahoma", Font.PLAIN, 14));
 
-		listaddoPacXMedBtn = new JButton();
-		listaddoPacXMedBtn.setText("ABM Paciente");
-		listaddoPacXMedBtn.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		btnABMPaciente = new JButton();
+		btnABMPaciente.setText("ABM Paciente");
+		btnABMPaciente.setFont(new Font("Tahoma", Font.PLAIN, 14));
 
 		
 		anterior = new JButton();
 		anterior.setText("Anterior");
 		anterior.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		
-		JButton btnAbmEnfermedades = new JButton();
+		btnAbmEnfermedades = new JButton();
 		btnAbmEnfermedades.setText("ABM Enfermedades");
 		btnAbmEnfermedades.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		GroupLayout gl_jPanel1 = new GroupLayout(jPanel1);
@@ -63,8 +65,8 @@ public class IngresoForm extends JFrame {
 							.addComponent(anterior, GroupLayout.PREFERRED_SIZE, 86, GroupLayout.PREFERRED_SIZE)
 							.addGap(97))
 						.addGroup(gl_jPanel1.createParallelGroup(Alignment.TRAILING, false)
-							.addComponent(enfermedadesBtn, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-							.addComponent(listaddoPacXMedBtn, Alignment.LEADING, GroupLayout.PREFERRED_SIZE, 289, GroupLayout.PREFERRED_SIZE)
+							.addComponent(btnABMMedico, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+							.addComponent(btnABMPaciente, Alignment.LEADING, GroupLayout.PREFERRED_SIZE, 289, GroupLayout.PREFERRED_SIZE)
 							.addComponent(btnAbmEnfermedades, Alignment.LEADING, GroupLayout.PREFERRED_SIZE, 289, GroupLayout.PREFERRED_SIZE)))
 					.addGap(259))
 		);
@@ -74,9 +76,9 @@ public class IngresoForm extends JFrame {
 					.addContainerGap(111, Short.MAX_VALUE)
 					.addComponent(btnAbmEnfermedades, GroupLayout.PREFERRED_SIZE, 36, GroupLayout.PREFERRED_SIZE)
 					.addPreferredGap(ComponentPlacement.RELATED)
-					.addComponent(enfermedadesBtn, GroupLayout.PREFERRED_SIZE, 36, GroupLayout.PREFERRED_SIZE)
+					.addComponent(btnABMMedico, GroupLayout.PREFERRED_SIZE, 36, GroupLayout.PREFERRED_SIZE)
 					.addPreferredGap(ComponentPlacement.UNRELATED)
-					.addComponent(listaddoPacXMedBtn, GroupLayout.PREFERRED_SIZE, 35, GroupLayout.PREFERRED_SIZE)
+					.addComponent(btnABMPaciente, GroupLayout.PREFERRED_SIZE, 35, GroupLayout.PREFERRED_SIZE)
 					.addGap(18)
 					.addComponent(anterior, GroupLayout.PREFERRED_SIZE, 40, GroupLayout.PREFERRED_SIZE)
 					.addGap(89))
@@ -185,12 +187,13 @@ public class IngresoForm extends JFrame {
     }*/
 
 
-	public JButton getListaddoPacXMedBtn(){
-		return this.listaddoPacXMedBtn;
+	public JButton getBtnABMPaciente(){
+		return this.btnABMPaciente;
 	}
-	public JButton getEnfermedadesBtn(){
-		return enfermedadesBtn;
+	public JButton getBtnABMMedico(){
+		return btnABMMedico;
 	}
+	public JButton getBtnAbmEnfermedades(){return this.btnAbmEnfermedades;}
 	public JButton getAnterior(){
 		return this.anterior;
 	}

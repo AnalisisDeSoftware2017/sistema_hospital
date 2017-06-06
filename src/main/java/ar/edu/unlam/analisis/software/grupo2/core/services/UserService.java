@@ -30,7 +30,7 @@ public class UserService {
         if(!compruebaPassword(user.getPassword(), optUser.get())){
             optUser.get().setFailedLogin(optUser.get().getFailedLogin()+1);
             if(CANTIDAD_DE_LOGINS_FAILS_TO_BLOCK.equals(optUser.get().getFailedLogin().intValue())){
-                optUser.get().setIsLocked(true);
+                optUser.get().setLocked(true);
             }
             userDao.save(optUser.get());
             throw new FailedLoginException();
