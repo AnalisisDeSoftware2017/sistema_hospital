@@ -16,7 +16,7 @@ import java.util.List;
  */
 @Entity
 @Getter @Setter @Data @NoArgsConstructor
-public class Especialidad {
+public class Especialidad extends AbmEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -30,5 +30,10 @@ public class Especialidad {
     @ManyToMany
     //TODO ver como joinear la tabla
     private List<Medico> medicos;
+
+	@Override
+	public String getName() {
+		return nombreEspecialidad;
+	}
 
 }

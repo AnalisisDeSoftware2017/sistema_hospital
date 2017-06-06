@@ -7,3 +7,7 @@
 /target*
 /producto_analisis_soft_2017.iml
 .idea/
+
+.project
+.classpath
+archivos_prueba/

@@ -8,5 +8,5 @@ import org.springframework.stereotype.Repository;
  * Created by sbogado on 6/6/17.
  */
 @Repository
-public interface EspecialidadDao extends JpaRepository<Especialidad, Long>{
+public interface EspecialidadDao extends CustomJpaRepository<Especialidad, Long>{
 }

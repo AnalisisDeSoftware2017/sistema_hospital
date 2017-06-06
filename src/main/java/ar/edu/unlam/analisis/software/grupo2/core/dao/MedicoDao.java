@@ -8,7 +8,7 @@ import java.util.Optional;
 /**
  * Created by sbogado on 07/05/17.
  */
-public interface MedicoDao extends JpaRepository<Medico, Long> {
+public interface MedicoDao extends CustomJpaRepository<Medico, Long> {
 
     Optional<Medico> findMedicoById(Long id);
 

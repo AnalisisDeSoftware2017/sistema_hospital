@@ -1,4 +1,4 @@
-package ar.edu.unlam.analisis.software.grupo2.core.services;
+package ar.edu.unlam.analisis.software.grupo2.core.services.impl;
 
 import ar.edu.unlam.analisis.software.grupo2.core.dao.PacienteDao;
 import ar.edu.unlam.analisis.software.grupo2.core.model.Paciente;

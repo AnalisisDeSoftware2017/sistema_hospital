@@ -4,6 +4,8 @@ import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
 import java.awt.event.KeyEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class DatosPacienteForm extends JFrame {
 
@@ -14,14 +16,14 @@ public class DatosPacienteForm extends JFrame {
 
 	public DatosPacienteForm() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 545, 414);
+		setBounds(100, 100, 883, 575);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
 		codigoPac = new JTextField();
-		codigoPac.setBounds(130, 93, 93, 21);
+		codigoPac.setBounds(335, 147, 205, 21);
 		codigoPac.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		codigoPac.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -36,7 +38,7 @@ public class DatosPacienteForm extends JFrame {
 		contentPane.add(codigoPac);
 		
 		nombrePac = new JTextField();
-		nombrePac.setBounds(103, 133, 210, 21);
+		nombrePac.setBounds(333, 190, 210, 21);
 		nombrePac.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		nombrePac.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
@@ -46,36 +48,34 @@ public class DatosPacienteForm extends JFrame {
 		contentPane.add(nombrePac);
 		
 		ingresarBtn = new JButton();
-		ingresarBtn.setBounds(275, 172, 90, 33);
+		ingresarBtn.setBounds(432, 363, 90, 33);
 		ingresarBtn.setText("Ingresar");
 		ingresarBtn.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		contentPane.add(ingresarBtn);
 		
 		anterior = new JButton();
-		anterior.setBounds(31, 251, 100, 33);
+		anterior.setBounds(28, 484, 100, 33);
 		anterior.setText("Anterior");
 		anterior.setMaximumSize(new Dimension(77, 33));
 		anterior.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		contentPane.add(anterior);
 		
 		borrarC = new JButton();
-		borrarC.setBounds(130, 172, 140, 33);
+		borrarC.setBounds(287, 363, 140, 33);
 		borrarC.setText("Borrar Campos");
 		borrarC.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		contentPane.add(borrarC);
 		
-		JLabel jLabel4 = new JLabel();
-		jLabel4.setBounds(0, -10, 530, 390);
-		contentPane.add(jLabel4);
+
 		
 		JLabel jLabel2 = new JLabel();
-		jLabel2.setBounds(37, 94, 48, 17);
+		jLabel2.setBounds(267, 151, 48, 17);
 		jLabel2.setText("C\u00F3digo:");
 		jLabel2.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		contentPane.add(jLabel2);
 		
 		JLabel jLabel3 = new JLabel();
-		jLabel3.setBounds(31, 134, 54, 17);
+		jLabel3.setBounds(261, 191, 54, 17);
 		jLabel3.setText("Nombre:");
 		jLabel3.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		contentPane.add(jLabel3);
@@ -157,6 +157,71 @@ public class DatosPacienteForm extends JFrame {
             }
         });*/
 		opciones.add(menuItem_5);
+		
+		txtApellido = new JTextField();
+		txtApellido.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		txtApellido.setBounds(333, 227, 210, 21);
+		contentPane.add(txtApellido);
+		
+		JLabel lblApellido = new JLabel();
+		lblApellido.setText("Apellido:");
+		lblApellido.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblApellido.setBounds(261, 228, 54, 17);
+		contentPane.add(lblApellido);
+		
+		txtEmail = new JTextField();
+		txtEmail.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		txtEmail.setBounds(330, 260, 210, 21);
+		contentPane.add(txtEmail);
+		
+		JLabel lblEmail = new JLabel();
+		lblEmail.setText("Email:");
+		lblEmail.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblEmail.setBounds(258, 261, 54, 17);
+		contentPane.add(lblEmail);
+		
+		txtTelefono = new JTextField();
+		txtTelefono.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		txtTelefono.setBounds(330, 297, 210, 21);
+		contentPane.add(txtTelefono);
+		
+		JLabel lblTelefono = new JLabel();
+		lblTelefono.setText("Telefono:");
+		lblTelefono.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblTelefono.setBounds(254, 298, 58, 17);
+		contentPane.add(lblTelefono);
+		
+		txtCelular = new JTextField();
+		txtCelular.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		txtCelular.setBounds(330, 330, 210, 21);
+		contentPane.add(txtCelular);
+		
+		JLabel lblCelular = new JLabel();
+		lblCelular.setText("Celular:");
+		lblCelular.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblCelular.setBounds(258, 331, 54, 17);
+		contentPane.add(lblCelular);
+		
+		textField = new JTextField();
+		textField.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		textField.setBounds(335, 114, 205, 21);
+		contentPane.add(textField);
+		
+		JLabel lblNroDocumento = new JLabel();
+		lblNroDocumento.setText("Nro Doc. :");
+		lblNroDocumento.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblNroDocumento.setBounds(253, 118, 62, 17);
+		contentPane.add(lblNroDocumento);
+		
+		JLabel lblTipoDoc = new JLabel();
+		lblTipoDoc.setText("Tipo Doc. :");
+		lblTipoDoc.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblTipoDoc.setBounds(241, 78, 73, 17);
+		contentPane.add(lblTipoDoc);
+		
+		JComboBox comboBox = new JComboBox();
+		comboBox.setBounds(338, 75, 194, 27);
+		contentPane.add(comboBox);
 	}
 
 	    private void anteriorActionPerformed(java.awt.event.ActionEvent evt) {
@@ -253,6 +318,11 @@ public class DatosPacienteForm extends JFrame {
 	    private JButton anterior;
 		private JButton ingresarBtn;
 	    private JButton borrarC;
+	    private JTextField txtApellido;
+	    private JTextField txtEmail;
+	    private JTextField txtTelefono;
+	    private JTextField txtCelular;
+	    private JTextField textField;
 
 		public String getCodigoPac(){
 			// Obtenemos el codigo del paciente ingresado.
@@ -275,11 +345,4 @@ public class DatosPacienteForm extends JFrame {
 		public JButton getBorrarC() {
 			return borrarC;
 		}
-
-
-
-
-
-
-
 }

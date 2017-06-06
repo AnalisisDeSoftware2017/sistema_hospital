@@ -10,7 +10,7 @@ import java.util.Optional;
  * Created by sbogado on 6/6/17.
  */
 @Repository
-public interface PacienteDao extends JpaRepository<Paciente, Long>{
+public interface PacienteDao extends CustomJpaRepository<Paciente, Long>{
 
     Optional<Paciente> findPacienteById(Long id);
     Optional<Paciente> findPacienteByCodigo(String codigo);

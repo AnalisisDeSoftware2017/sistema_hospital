@@ -2,8 +2,8 @@ package ar.edu.unlam.analisis.software.grupo2.controller;
 
 import ar.edu.unlam.analisis.software.grupo2.core.model.Medico;
 import ar.edu.unlam.analisis.software.grupo2.core.model.Paciente;
-import ar.edu.unlam.analisis.software.grupo2.core.services.MedicoService;
-import ar.edu.unlam.analisis.software.grupo2.core.services.PacienteService;
+import ar.edu.unlam.analisis.software.grupo2.core.services.impl.MedicoService;
+import ar.edu.unlam.analisis.software.grupo2.core.services.impl.PacienteService;
 import ar.edu.unlam.analisis.software.grupo2.ui.DatosMedicoForm;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

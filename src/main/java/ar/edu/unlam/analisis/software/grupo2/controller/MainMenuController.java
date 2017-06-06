@@ -50,7 +50,7 @@ public class MainMenuController extends AbstractFrameController<MainForm> {
 
     private void dibujarInformes() {
         this.setVisible(false);
-        /*informeController.setControllerAnterior(this);
-        informeController.prepareAndOpenFrame();*/
+        informeController.setControllerAnterior(this);
+        informeController.prepareAndOpenFrame();
     }
 }
