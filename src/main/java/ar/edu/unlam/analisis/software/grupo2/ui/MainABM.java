@@ -1,18 +1,14 @@
 package ar.edu.unlam.analisis.software.grupo2.ui;
 
-import javax.swing.JFrame;
-import javax.swing.JPanel;
+import javax.swing.*;
 import javax.swing.border.EmptyBorder;
-
-import org.springframework.stereotype.Component;
 
 import ar.edu.unlam.analisis.software.grupo2.core.model.AbmEntity;
 
-import ar.edu.unlam.analisis.software.grupo2.core.model.Persona;
 import ar.edu.unlam.analisis.software.grupo2.ui.customComponents.JListCustom;
 
 
-import javax.swing.JButton;
+import java.util.List;
 
 public abstract class MainABM<T extends AbmEntity> extends JFrame {
 
@@ -37,9 +33,9 @@ public abstract class MainABM<T extends AbmEntity> extends JFrame {
 		panel.setBounds(21, 63, 809, 517);
 		contentPane.add(panel);
 		panel.setLayout(null);
-		
-		listEntity = new JListCustom<T>();
-		listEntity.setBounds(6, 507, 585, -503);
+
+		listEntity = new JListCustom<>();
+		listEntity.setBounds(6, 4, 585, 507);
 		panel.add(listEntity);
 		
 		btnCrear = new JButton("Crear");
@@ -58,6 +54,7 @@ public abstract class MainABM<T extends AbmEntity> extends JFrame {
 	
 	public T getSelectedItem(){
 		return this.listEntity.getSelectedElement();
+
 	}
 	
 	public JButton getBtnEliminar(){
@@ -70,7 +67,15 @@ public abstract class MainABM<T extends AbmEntity> extends JFrame {
 	public JButton getBtnCrear(){
 		return this.btnCrear;
 	}
-	
-	
-	
+
+
+	public void cargarLista(List<T> lista) {
+		listEntity.addAll(lista);
+	}
+
+	public void addElement(T elemento){
+		listEntity.add(elemento);
+	}
+
+
 }

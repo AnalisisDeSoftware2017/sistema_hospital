@@ -71,7 +71,7 @@ public class MainForm extends JFrame {
 		contentPane.add(label);
 		
 		informes = new JButton();
-		//TODO add internacionalizancion
+		//TODO addAll internacionalizancion
 		informes.setToolTipText("Click para ver enfermedades y pacientes que atienden los m\u00E9dicos.");
 		informes.setText("Informes");
 		informes.setFont(new Font("Tahoma", Font.PLAIN, 14));
@@ -79,7 +79,7 @@ public class MainForm extends JFrame {
 		contentPane.add(informes);
 		
 		salir = new JButton();
-		//TODO add internacionalizancion
+		//TODO addAll internacionalizancion
 		salir.setToolTipText("Click para salir del programa.");
 		salir.setText("Salir");
 		salir.setFont(new Font("Tahoma", Font.PLAIN, 14));
@@ -87,15 +87,15 @@ public class MainForm extends JFrame {
 		contentPane.add(salir);
 		
 		ingreso = new JButton();
-		//TODO add internacionalizancion
+		//TODO addAll internacionalizancion
 		ingreso.setToolTipText("Click para agregar informaci\u00F3n sobre m\u00E9dicos y pacientes.");
-		//TODO add internacionalizancion
+		//TODO addAll internacionalizancion
 		ingreso.setText("Ingreso de Datos");
 		ingreso.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		ingreso.setBounds(40, 180, 180, 64);
 		contentPane.add(ingreso);
 
-		//TODO add internacionalizancion
+		//TODO addAll internacionalizancion
 		JLabel lblNewLabel = new JLabel("CONTROL DE PACIENTES");
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setFont(new Font("Cambria", Font.PLAIN, 18));

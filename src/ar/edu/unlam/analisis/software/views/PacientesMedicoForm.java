@@ -28,10 +28,10 @@ public class PacientesMedicoForm extends JFrame {
 	String codMed="";
     String nomMed="";
     
-    String codm=""; // En estas variables vamos a guardar los datos de la búsqueda del medico.
+    String codm=""; // En estas variables vamos a guardar los datos de la bï¿½squeda del medico.
     String nomm="";
     String espm="";
-    String codp="";// Estas variables que siguen nos ayudan en la búsqueda de datos del médico.
+    String codp="";// Estas variables que siguen nos ayudan en la bï¿½squeda de datos del mï¿½dico.
     String codme="";
     String enfp="";
     String codpa="";// Nos sirven para la lectura de pacientes.
@@ -255,7 +255,7 @@ public class PacientesMedicoForm extends JFrame {
 	}
 	
 	private void antActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+        // TODO addAll your handling code here:
         InformesForm menu=new InformesForm();
         menu.setVisible(true); // Vuelve el menu de informes
         dispose(); // Desaparece el informe de pacientes por medico.
@@ -265,7 +265,7 @@ public class PacientesMedicoForm extends JFrame {
         char cTeclaPresionada=evt.getKeyChar();
         // da click al detectar la tecla ENTER.
         if(cTeclaPresionada==KeyEvent.VK_ENTER){
-            //Ejecuta el botón (dar click)
+            //Ejecuta el botï¿½n (dar click)
             ant.doClick();
         }// fin del if.
     }
@@ -281,7 +281,7 @@ public class PacientesMedicoForm extends JFrame {
                 char cTeclaPresionada=evt.getKeyChar();
         // da click al detectar la tecla ENTER.
         if(cTeclaPresionada==KeyEvent.VK_ENTER){
-            //Ejecuta el botón (dar click)
+            //Ejecuta el botï¿½n (dar click)
             borrarC.doClick();
         }// fin del if.
     }
@@ -291,7 +291,7 @@ public class PacientesMedicoForm extends JFrame {
                 char cTeclaPresionada=evt.getKeyChar();
         // da click al detectar la tecla ENTER.
         if(cTeclaPresionada==KeyEvent.VK_ENTER){
-            //Ejecuta el botón (dar click)
+            //Ejecuta el botï¿½n (dar click)
             consultarBtn.doClick();
         }// fin del if.
     }
@@ -305,13 +305,13 @@ public class PacientesMedicoForm extends JFrame {
                 char cTeclaPresionada=evt.getKeyChar();
         // da click al detectar la tecla ENTER.
         if(cTeclaPresionada==KeyEvent.VK_ENTER){
-            //Ejecuta el botón (dar click)
+            //Ejecuta el botï¿½n (dar click)
             consultarBtn.doClick();
         }// fin del if.
     }
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+        // TODO addAll your handling code here:
         //ManualW guiaRapida=new ManualW();
         //guiaRapida.setVisible(true);
         setTitle("Manual de Ayuda");
@@ -330,19 +330,19 @@ public class PacientesMedicoForm extends JFrame {
     }
 
     private void SalirActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+        // TODO addAll your handling code here:
         System.exit(0); // SE SALE DEL PROGRAMA.
     }
 
     private void cerrarSesionActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+        // TODO addAll your handling code here:
         LoginForm log=new LoginForm(); // Abre el log principal del sistema.
         log.setVisible(true); // Hace visible el log.
         dispose();//SE OCULTA
     }
 
     private void mIngDatActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+        // TODO addAll your handling code here:
         //IngresoPacientesW ipw=new IngresoPacientesW();
         //ipw.setVisible(true); // Hago visible la ventana de pacientes.    
         dispose(); // Para que se oculte el menu.

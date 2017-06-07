@@ -4,10 +4,12 @@ import ar.edu.unlam.analisis.software.grupo2.core.model.Medico;
 import ar.edu.unlam.analisis.software.grupo2.ui.AbstractFormCreate;
 import ar.edu.unlam.analisis.software.grupo2.ui.SaveForm;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 /**
  * Created by sbogado on 6/6/17.
  */
+@Component
 public class SaveMedicoForm extends SaveForm<Medico> {
 
 

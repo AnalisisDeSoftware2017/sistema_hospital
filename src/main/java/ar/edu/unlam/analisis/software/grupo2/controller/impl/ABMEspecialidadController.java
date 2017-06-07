@@ -1,8 +1,12 @@
 package ar.edu.unlam.analisis.software.grupo2.controller.impl;
 
 import ar.edu.unlam.analisis.software.grupo2.controller.AbstractABMController;
+import ar.edu.unlam.analisis.software.grupo2.controller.AbstractEntitySaveController;
 import ar.edu.unlam.analisis.software.grupo2.core.model.Especialidad;
 import ar.edu.unlam.analisis.software.grupo2.core.model.Medico;
+import ar.edu.unlam.analisis.software.grupo2.core.services.impl.AbstractServiceCRUD;
+import ar.edu.unlam.analisis.software.grupo2.ui.MainABM;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
 /**
@@ -11,13 +15,11 @@ import org.springframework.stereotype.Controller;
 @Controller
 public class ABMEspecialidadController extends AbstractABMController<Especialidad, Long> {
 
-
-
-
-    @Override
-    public void prepareAndOpenFrame() {
-
+    @Autowired
+    public ABMEspecialidadController(MainABM<Especialidad> pantalla, AbstractEntitySaveController<Especialidad, Long> entitySaveController, AbstractServiceCRUD<Especialidad, Long> service) {
+        super(pantalla, entitySaveController, service);
     }
+
 
     @Override
     protected void setTextoFrame() {

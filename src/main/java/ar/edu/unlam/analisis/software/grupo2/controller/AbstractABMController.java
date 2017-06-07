@@ -1,6 +1,7 @@
 package ar.edu.unlam.analisis.software.grupo2.controller;
 
 import ar.edu.unlam.analisis.software.grupo2.core.model.AbmEntity;
+import ar.edu.unlam.analisis.software.grupo2.core.services.impl.AbstractServiceCRUD;
 import ar.edu.unlam.analisis.software.grupo2.ui.MainABM;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -10,15 +11,17 @@ public abstract class AbstractABMController<T extends AbmEntity, PK extends Seri
 
 
     private AbstractEntitySaveController<T,PK> entitySaveController;
-
+    private AbstractServiceCRUD<T,PK> service;
     @Autowired
-    public AbstractABMController(MainABM<T> pantalla, AbstractEntitySaveController<T,PK> entitySaveController){
+    public AbstractABMController(MainABM<T> pantalla, AbstractEntitySaveController<T,PK> entitySaveController, AbstractServiceCRUD<T,PK> service){
         this.frame=pantalla;
         this.entitySaveController=entitySaveController;
+        this.service = service;
     }
 
     @Override
     public void prepareAndOpenFrame() {
+        this.frame.setVisible(true);
         registerClickAction(frame.getBtnCrear(),(event)->crear());
         registerEnterKeyAction(frame.getBtnCrear(),()->crear());
         registerClickAction(frame.getBtnEditar(),(event)->editar());
@@ -27,7 +30,12 @@ public abstract class AbstractABMController<T extends AbmEntity, PK extends Seri
         registerEnterKeyAction(frame.getBtnEliminar(),()->eliminar());
         /*registerClickAction(frame.getBtnAnterior(),(event)->anterior());
         registerEnterKeyAction(frame.getBtnAnterior(),()->anterior());*/
-        this.frame.setVisible(true);
+        cargarLista();
+
+    }
+
+    private void cargarLista() {
+        this.frame.cargarLista(service.findAll());
     }
 
     private void anterior() {
@@ -48,6 +56,7 @@ public abstract class AbstractABMController<T extends AbmEntity, PK extends Seri
     private void crear() {
         this.frame.setVisible(false);
         this.entitySaveController.setControllerAnterior(this);
+        this.entitySaveController.prepareAndOpenFrame();
     }
 
     @Override

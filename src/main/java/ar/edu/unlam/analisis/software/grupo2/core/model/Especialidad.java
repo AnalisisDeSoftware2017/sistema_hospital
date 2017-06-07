@@ -84,10 +84,6 @@ public class Especialidad extends AbmEntity {
 
     @Override
     public String toString() {
-        return "Especialidad{" +
-                "id=" + id +
-                ", nombreEspecialidad='" + nombreEspecialidad + '\'' +
-                ", medicos=" + medicos +
-                '}';
+        return getName();
     }
 }

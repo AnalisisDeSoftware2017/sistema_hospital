@@ -255,7 +255,7 @@ public class PacientesMedicoForm extends JFrame {
 	}
 	
 	private void antActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+        // TODO addAll your handling code here:
         InformesForm menu=new InformesForm();
         menu.setVisible(true); // Vuelve el menu de informes
         dispose(); // Desaparece el informe de pacientes por medico.
@@ -311,7 +311,7 @@ public class PacientesMedicoForm extends JFrame {
     }
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+        // TODO addAll your handling code here:
         //ManualW guiaRapida=new ManualW();
         //guiaRapida.setVisible(true);
         setTitle("Manual de Ayuda");
@@ -330,19 +330,19 @@ public class PacientesMedicoForm extends JFrame {
     }
 
     private void SalirActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+        // TODO addAll your handling code here:
         System.exit(0); // SE SALE DEL PROGRAMA.
     }
 /*
     private void cerrarSesionActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+        // TODO addAll your handling code here:
         LoginForm log=new LoginForm(); // Abre el log principal del sistema.
         log.setVisible(true); // Hace visible el log.
         dispose();//SE OCULTA
     }*/
 
     private void mIngDatActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+        // TODO addAll your handling code here:
         //IngresoPacientesW ipw=new IngresoPacientesW();
         //ipw.setVisible(true); // Hago visible la ventana de pacientes.    
         dispose(); // Para que se oculte el menu.

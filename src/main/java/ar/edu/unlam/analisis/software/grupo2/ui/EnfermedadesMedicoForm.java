@@ -202,7 +202,7 @@ public class EnfermedadesMedicoForm extends JFrame {
 
 /*
     private void codigoMedKeyTyped(KeyEvent evt) {
-                // TODO add your handling code here:
+                // TODO addAll your handling code here:
         char cTeclaPresionada=evt.getKeyChar();
         // da click al detectar la tecla ENTER.
         if(cTeclaPresionada==KeyEvent.VK_ENTER){

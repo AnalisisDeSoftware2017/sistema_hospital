@@ -192,14 +192,14 @@ public class InformesForm extends JFrame {
     }
 
     private void listadoPacXMedBtnActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+        // TODO addAll your handling code here:
         //PacientesXMedW pxm=new PacientesXMedW();
         //pxm.setVisible(true);
         dispose(); // Se oculta la ventana de informes.
     }
 
     private void EnfermedadesBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EnfermedadesBtnActionPerformed
-        // TODO add your handling code here:
+        // TODO addAll your handling code here:
      //   EnfermedadesMedW em=new EnfermedadesMedW();
        // em.setVisible(true);
         dispose(); // se oculta la ventana de informes.
@@ -210,7 +210,7 @@ public class InformesForm extends JFrame {
         char cTeclaPresionada=evt.getKeyChar();
         // da click al detectar la tecla ENTER.
         if(cTeclaPresionada==KeyEvent.VK_ENTER){
-            //Ejecuta el botón (dar click)
+            //Ejecuta el botï¿½n (dar click)
             //listadoPacXMedBtn.doClick();
         }// fin del if.
     }
@@ -220,7 +220,7 @@ public class InformesForm extends JFrame {
         char cTeclaPresionada=evt.getKeyChar();
         // da click al detectar la tecla ENTER.
         if(cTeclaPresionada==KeyEvent.VK_ENTER){
-            //Ejecuta el botón (dar click)
+            //Ejecuta el botï¿½n (dar click)
             //EnfermedadesBtn.doClick();
         }// fin del if.
     }
@@ -230,13 +230,13 @@ public class InformesForm extends JFrame {
         char cTeclaPresionada=evt.getKeyChar();
         // da click al detectar la tecla ENTER.
         if(cTeclaPresionada==KeyEvent.VK_ENTER){
-            //Ejecuta el botón (dar click)
+            //Ejecuta el botï¿½n (dar click)
      //       anterior.doClick();
         }// fin del if.
     }
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+        // TODO addAll your handling code here:
         //ManualW guiaRapida=new ManualW();
         //guiaRapida.setVisible(true);
         setTitle("Manual de Ayuda");
@@ -249,19 +249,19 @@ public class InformesForm extends JFrame {
     }
 
     private void SalirActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+        // TODO addAll your handling code here:
         System.exit(0); // SE SALE DEL PROGRAMA.
     }
 
     private void cerrarSesionActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+        // TODO addAll your handling code here:
         LoginForm log=new LoginForm(); // Abre el log principal del sistema.
         log.setVisible(true); // Hace visible el log.     
         dispose();//SE OCULTA
     }//GEN-LAST:event_cerrarSesionActionPerformed
 
     private void mIngDatActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+        // TODO addAll your handling code here:
         //IngresoPacientesW ipw=new IngresoPacientesW();
         //ipw.setVisible(true); // Hago visible la ventana de pacientes.    
         dispose(); // Para que se oculte el menu.

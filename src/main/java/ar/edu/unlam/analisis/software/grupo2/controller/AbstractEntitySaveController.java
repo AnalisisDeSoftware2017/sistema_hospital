@@ -30,6 +30,7 @@ public abstract class AbstractEntitySaveController<T extends AbmEntity, PK exten
         registerEnterKeyAction(this.frame.getBtnCancelar(), ()->cancelar());
         registerClickAction(this.frame.getBtnGuardar(), (event)->createEntity());
         registerEnterKeyAction(this.frame.getBtnGuardar(), ()->createEntity());
+        this.frame.setVisible(true);
     }
 
     private void createEntity() {

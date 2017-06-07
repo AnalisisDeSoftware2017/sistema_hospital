@@ -145,7 +145,7 @@ public class SituacionPacienteForm extends JFrame {
 	}
 	
 	private void antActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+        // TODO addAll your handling code here:
         //IngresoPacientesW menu=new IngresoPacientesW();
         //menu.setVisible(true); // Vuelve el menu de ingreso de datos
         dispose(); // Desaparece el ingreso de diagnostico.
@@ -180,7 +180,7 @@ public class SituacionPacienteForm extends JFrame {
     }
 
     private void borrarCActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+        // TODO addAll your handling code here:
         codigoPac.setText(""); //Limpio todos los campos.
         codigoMed.setText("");
         //diagnostico.setText("");
@@ -197,7 +197,7 @@ public class SituacionPacienteForm extends JFrame {
     }
 
     private void mINIActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+        // TODO addAll your handling code here:
         MainForm menu=new MainForm();
         menu.setVisible(true); // Vuelve el menu proncipal
         dispose(); // Desaparece el informes.
@@ -211,7 +211,7 @@ public class SituacionPacienteForm extends JFrame {
     }
 
     private void SalirActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+        // TODO addAll your handling code here:
         System.exit(0); // SE SALE DEL PROGRAMA.
     }
 
@@ -220,7 +220,7 @@ public class SituacionPacienteForm extends JFrame {
     }
 
     private void mIngDatActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+        // TODO addAll your handling code here:
         //IngresoPacientesW ipw=new IngresoPacientesW();
         //ipw.setVisible(true); // Hago visible la ventana de pacientes.    
         dispose(); // Para que se oculte el menu.         

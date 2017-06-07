@@ -60,10 +60,6 @@ public class Medico extends Persona {
 
     @Override
     public String toString() {
-        return "Medico{" +
-                super.toString()+
-                "especialidades=" + especialidades +
-                ", situaciones=" + situaciones +
-                '}';
+        return getName();
     }
 }

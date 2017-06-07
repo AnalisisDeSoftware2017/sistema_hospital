@@ -32,10 +32,10 @@ public class EnfermedadesMedicoForm extends JFrame {
     String codMed="";
 String nomMed="";
 
-String codm=""; // En estas variables vamos a guardar los datos de la búsqueda del medico.
+String codm=""; // En estas variables vamos a guardar los datos de la bï¿½squeda del medico.
 String nomm="";
 String espm="";
-String codp="";// Estas variables que siguen nos ayudan en la búsqueda de datos del médico.
+String codp="";// Estas variables que siguen nos ayudan en la bï¿½squeda de datos del mï¿½dico.
 String codme="";
 String enfp="";
 String codpa="";// Nos sirven para la lectura de pacientes.
@@ -256,7 +256,7 @@ String lista=""; // Limpio la lista de enfermedades a mostrar.
 	}
 	
 	private void anteriorActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+        // TODO addAll your handling code here:
         InformesForm menu=new InformesForm();
         menu.setVisible(true); // Vuelve el menu de informes
         dispose(); // Desaparece el informe de pacientes por medico.
@@ -267,14 +267,14 @@ String lista=""; // Limpio la lista de enfermedades a mostrar.
         char cTeclaPresionada=evt.getKeyChar();
         // da click al detectar la tecla ENTER.
         if(cTeclaPresionada==KeyEvent.VK_ENTER){
-            //Ejecuta el botón (dar click)
+            //Ejecuta el botï¿½n (dar click)
             anterior.doClick();
         }// fin del if.
     }
 
     private void consultarBtnActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
-         this.codMed=codigoMed.getText(); // Sería un getCodMed();
+        // TODO addAll your handling code here:
+         this.codMed=codigoMed.getText(); // Serï¿½a un getCodMed();
          lista="";
          checkEnfermedades="";
          //listaEnf.setText("");
@@ -282,11 +282,11 @@ String lista=""; // Limpio la lista de enfermedades a mostrar.
     }
 
     private void consultarBtnKeyTyped(java.awt.event.KeyEvent evt) {
-        // TODO add your handling code here:
+        // TODO addAll your handling code here:
         char cTeclaPresionada=evt.getKeyChar();
         // da click al detectar la tecla ENTER.
         if(cTeclaPresionada==KeyEvent.VK_ENTER){
-            //Ejecuta el botón (dar click)
+            //Ejecuta el botï¿½n (dar click)
             consultarBtn.doClick();
         }// fin del if.
     }
@@ -298,11 +298,11 @@ String lista=""; // Limpio la lista de enfermedades a mostrar.
     }
 
     private void borrarCKeyTyped(java.awt.event.KeyEvent evt) {
-        // TODO add your handling code here:
+        // TODO addAll your handling code here:
         char cTeclaPresionada=evt.getKeyChar();
         // da click al detectar la tecla ENTER.
         if(cTeclaPresionada==KeyEvent.VK_ENTER){
-            //Ejecuta el botón (dar click)
+            //Ejecuta el botï¿½n (dar click)
             borrarC.doClick();
         }// fin del if.
     }
@@ -310,11 +310,11 @@ String lista=""; // Limpio la lista de enfermedades a mostrar.
     
 
     private void codigoMedKeyTyped(java.awt.event.KeyEvent evt) {
-                // TODO add your handling code here:
+                // TODO addAll your handling code here:
         char cTeclaPresionada=evt.getKeyChar();
         // da click al detectar la tecla ENTER.
         if(cTeclaPresionada==KeyEvent.VK_ENTER){
-            //Ejecuta el botón (dar click)
+            //Ejecuta el botï¿½n (dar click)
             consultarBtn.doClick();
         }// fin del if.
     }

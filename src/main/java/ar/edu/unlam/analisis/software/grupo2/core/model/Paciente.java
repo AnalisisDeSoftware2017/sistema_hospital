@@ -47,8 +47,6 @@ public class Paciente extends Persona {
 
     @Override
     public String toString() {
-        return "Paciente{" +
-                "situaciones=" + situaciones +
-                '}';
+        return getName();
     }
 }

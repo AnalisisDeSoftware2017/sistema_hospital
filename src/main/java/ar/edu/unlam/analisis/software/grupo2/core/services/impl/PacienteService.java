@@ -11,7 +11,7 @@ import java.util.Optional;
  * Created by sbogado on 4/24/17.
  */
 @Service
-public class PacienteService {
+public class PacienteService extends AbstractServiceCRUD<Paciente,Long> {
 
     @Autowired
     private PacienteDao pacienteDao;

@@ -117,7 +117,7 @@ public class IngresoForm extends JFrame {
 	        jMenu3.add(mINI);
 		jMenu3.add(mINI);
 
-		//TODO add this to controller
+		//TODO addAll this to controller
 		JMenuItem mIngDat = new JMenuItem();
 		mIngDat.setText("Ingreso de Datos");
 		/* mIngDat.addActionListener(new java.awt.event.ActionListener() {
@@ -140,7 +140,7 @@ public class IngresoForm extends JFrame {
 	        });
 		opciones.add(Salir);
 
-		//TODO add this to a controller
+		//TODO addAll this to a controller
 		JMenuItem cerrarSesion = new JMenuItem();
 		cerrarSesion.setText("Cerrar Sesi\u00C3\u00B3n");
 	/*	cerrarSesion.addActionListener(new java.awt.event.ActionListener() {
@@ -153,7 +153,7 @@ public class IngresoForm extends JFrame {
 	
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+        // TODO addAll your handling code here:
         //ManualW guiaRapida=new ManualW();
         //guiaRapida.setVisible(true);
         setTitle("Manual de Ayuda");
@@ -166,21 +166,21 @@ public class IngresoForm extends JFrame {
     }
 
     private void SalirActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+        // TODO addAll your handling code here:
         System.exit(0); // SE SALE DEL PROGRAMA.
     }
 
 
 
    /* private void cerrarSesionActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+        // TODO addAll your handling code here:
         LoginForm log=new LoginForm(); // Abre el log principal del sistema.
         log.setVisible(true); // Hace visible el log.     
         dispose();//SE OCULTA
     }*///GEN-LAST:event_cerrarSesionActionPerformed
 
     /*private void mIngDatActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+        // TODO addAll your handling code here:
         //IngresoPacientesW ipw=new IngresoPacientesW();
         //ipw.setVisible(true); // Hago visible la ventana de pacientes.    
         dispose(); // Para que se oculte el menu.
