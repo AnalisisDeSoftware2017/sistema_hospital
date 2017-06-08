@@ -50,7 +50,7 @@ public class DatosPacienteController extends AbstractFrameController<DatosMedico
 
     private void irAPantallaAnterior() {
         frame.setVisible(false);
-        controllerAnterior.prepareAndOpenFrame();
+        controllerAnterior.setVisible(true);
     }
 
     private void ingresar(){

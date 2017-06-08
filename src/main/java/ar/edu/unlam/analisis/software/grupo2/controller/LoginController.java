@@ -43,7 +43,7 @@ public class LoginController extends AbstractFrameController<LoginJFrame> {
         try {
             userService.loginUser(user);
             mainMenuController.setControllerAnterior(this);
-            mainMenuController.prepareAndOpenFrame();
+            mainMenuController.setVisible(true);
             this.setVisible(false);
         } catch (FailedLoginException e) {
             e.printStackTrace();

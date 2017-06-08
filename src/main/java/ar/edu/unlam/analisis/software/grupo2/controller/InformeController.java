@@ -1,9 +1,12 @@
 package ar.edu.unlam.analisis.software.grupo2.controller;
 
 import ar.edu.unlam.analisis.software.grupo2.core.services.UserService;
+import ar.edu.unlam.analisis.software.grupo2.ui.DatosMedicoForm;
 import ar.edu.unlam.analisis.software.grupo2.ui.InformesForm;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+
+import java.awt.event.ActionListener;
 
 /**
  * Created by sbogado on 5/17/17.
@@ -11,21 +14,44 @@ import org.springframework.stereotype.Controller;
 @Controller
 public class InformeController extends AbstractFrameController<InformesForm>{
 
-
+    private DatosMedicosController datosMedicosController;
+    private DatosPacienteController datosPacienteController;
 
     private UserService userService;
 
     @Autowired
-    public InformeController(InformesForm informesForm, UserService userService){
+    public InformeController(InformesForm informesForm, UserService userService, DatosMedicosController datosMedicosController, DatosPacienteController datosPacienteController){
         this.frame = informesForm;
         this.userService = userService;
+        this.datosMedicosController=datosMedicosController;
+        this.datosPacienteController=datosPacienteController;
     }
 
     public void prepareAndOpenFrame() {
         frame.setVisible(true);
-        /*registerClickAction(frame.getButtonIngresar(), (e)->login());
-        registerEnterKeyAction(frame.getPasswordBox(), ()->login());
-        registerEnterKeyAction(frame.getUserNameBox(), ()->login());*/
+        registerClickAction(this.frame.getAnterior(), (event)->anterior());
+        registerEnterKeyAction(this.frame.getAnterior(), ()->anterior());
+        registerClickAction(this.frame.getEnfermedadesBtn(),(event)->enfermedades());
+        registerEnterKeyAction(this.frame.getEnfermedadesBtn(),()->enfermedades());
+        registerClickAction(this.frame.getListaddoPacXMedBtn(),(event)->listadoPacientesMedico());
+        registerEnterKeyAction(this.frame.getListaddoPacXMedBtn(),()->listadoPacientesMedico());
+    }
+
+    private void listadoPacientesMedico() {
+        this.frame.setVisible(false);
+        this.datosPacienteController.setControllerAnterior(this);
+        this.datosPacienteController.setVisible(true);
+    }
+
+    private void enfermedades() {
+        this.frame.setVisible(false);
+        this.datosMedicosController.setControllerAnterior(this);
+        this.datosMedicosController.setVisible(true);
+    }
+
+    private void anterior() {
+        this.frame.setVisible(false);
+        this.controllerAnterior.setVisible(true);
     }
 
     @Override
@@ -33,19 +59,6 @@ public class InformeController extends AbstractFrameController<InformesForm>{
 
     }
 
-    /*public void login(){
-        User user = new User();
-        user.setUsername(frame.getUsuario());
-        user.setPassword(frame.getPass());
-        try {
-            userService.loginUser(user);
-            mainMenuController.setControllerAnterior(this);
-            mainMenuController.prepareAndOpenFrame();
-            this.setVisible(false);
-        } catch (FailedLoginException e) {
-            e.printStackTrace();
-        }
-    }*/
 
 
 }

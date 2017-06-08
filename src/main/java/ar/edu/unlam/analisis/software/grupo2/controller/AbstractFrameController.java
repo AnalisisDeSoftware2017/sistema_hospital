@@ -22,7 +22,9 @@ public abstract class AbstractFrameController<T extends  JFrame> {
 
     protected T frame;
 
-    public abstract void prepareAndOpenFrame();
+    private Boolean frameWasInit=false;
+
+    protected abstract void prepareAndOpenFrame();
 
     protected void registerClickAction(JButton button, ActionListener listener) {
         button.addActionListener(listener);
@@ -45,7 +47,11 @@ public abstract class AbstractFrameController<T extends  JFrame> {
         System.exit(0); // SE SALE DEL PROGRAMA.
     }
 
-    protected void setVisible(Boolean visible){
+    public void setVisible(Boolean visible){
+        if(!frameWasInit){
+            prepareAndOpenFrame();
+            frameWasInit=true;
+        }
         this.frame.setVisible(visible);
     }
 

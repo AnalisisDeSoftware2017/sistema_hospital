@@ -43,24 +43,24 @@ public class IngresosController extends AbstractFrameController<IngresoForm>{
     private void abrirPaciente() {
         this.frame.setVisible(false);
         this.pacienteController.setControllerAnterior(this);
-        this.pacienteController.prepareAndOpenFrame();
+        this.pacienteController.setVisible(true);
     }
 
     private void abrirMedico() {
         this.frame.setVisible(false);
         this.medicoController.setControllerAnterior(this);
-        this.medicoController.prepareAndOpenFrame();
+        this.medicoController.setVisible(true);
     }
 
     private void abrirEnfermedades() {
         this.frame.setVisible(false);
         this.especialidadController.setControllerAnterior(this);
-        this.especialidadController.prepareAndOpenFrame();
+        this.especialidadController.setVisible(true);
     }
 
     private void anterior() {
         this.frame.setVisible(false);
-        this.controllerAnterior.prepareAndOpenFrame();
+        this.controllerAnterior.setVisible(true);
     }
 
     @Override

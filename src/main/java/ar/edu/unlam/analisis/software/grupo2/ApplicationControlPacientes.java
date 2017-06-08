@@ -18,7 +18,7 @@ public class ApplicationControlPacientes {
 				.web(false)
 				.run(args);
 		LoginController loginController = context.getBean(LoginController.class);
-		loginController.prepareAndOpenFrame();
+		loginController.setVisible(true);
 	}
 
 }

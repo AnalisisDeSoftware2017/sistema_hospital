@@ -63,7 +63,7 @@ public abstract class AbstractABMController<T extends AbmEntity, PK extends Seri
             this.frame.setVisible(false);
             this.entitySaveController.setEntity(this.frame.getSelectedItem());
             this.entitySaveController.setControllerAnterior(this);
-            this.entitySaveController.prepareAndOpenFrame();
+            this.entitySaveController.setVisible(true);
         }else{
             this.frame.showErrorMessage(messageSource.getMessage("ar.edu.unlam.los.laureles.nada.seleccionado", null, AppContext.getLocale()));
         }
@@ -73,7 +73,7 @@ public abstract class AbstractABMController<T extends AbmEntity, PK extends Seri
         this.frame.setVisible(false);
         this.entitySaveController.setEntity(null);
         this.entitySaveController.setControllerAnterior(this);
-        this.entitySaveController.prepareAndOpenFrame();
+        this.entitySaveController.setVisible(true);
     }
 
     @Override
@@ -82,7 +82,7 @@ public abstract class AbstractABMController<T extends AbmEntity, PK extends Seri
     }
 
     @Override
-    protected void setVisible(Boolean visible){
+    public void setVisible(Boolean visible){
         super.setVisible(visible);
         if(visible){
             this.frame.cargarLista(service.findAll());
