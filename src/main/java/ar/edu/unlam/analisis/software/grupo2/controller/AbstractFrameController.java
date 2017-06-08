@@ -34,11 +34,12 @@ public abstract class AbstractFrameController<T extends  JFrame> {
         });
     }
     protected void setControllerAnterior(AbstractFrameController abstractFrameController){
-        this.controllerAnterior = controllerAnterior;
+        this.controllerAnterior = abstractFrameController;
     }
     protected void salir(){
         System.exit(0); // SE SALE DEL PROGRAMA.
     }
+
     protected void setVisible(Boolean visible){
         this.frame.setVisible(visible);
     }

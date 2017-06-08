@@ -28,8 +28,8 @@ public abstract class AbstractABMController<T extends AbmEntity, PK extends Seri
         registerEnterKeyAction(frame.getBtnEditar(),()->editar());
         registerClickAction(frame.getBtnEliminar(),(event)->eliminar());
         registerEnterKeyAction(frame.getBtnEliminar(),()->eliminar());
-        /*registerClickAction(frame.getBtnAnterior(),(event)->anterior());
-        registerEnterKeyAction(frame.getBtnAnterior(),()->anterior());*/
+        registerClickAction(frame.getBtnAnterior(),(event)->anterior());
+        registerEnterKeyAction(frame.getBtnAnterior(),()->anterior());
         cargarLista();
 
     }
@@ -50,6 +50,7 @@ public abstract class AbstractABMController<T extends AbmEntity, PK extends Seri
 
     private void editar() {
         this.frame.setVisible(false);
+        this.entitySaveController.setControllerAnterior(this);
         this.entitySaveController.setControllerAnterior(this);
     }
 

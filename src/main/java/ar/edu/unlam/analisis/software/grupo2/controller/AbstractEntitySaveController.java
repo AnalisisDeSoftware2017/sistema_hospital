@@ -56,7 +56,7 @@ public abstract class AbstractEntitySaveController<T extends AbmEntity, PK exten
 
     protected void cancelar(){
         this.frame.setVisible(false);
-        this.controllerAnterior.prepareAndOpenFrame();
+        this.controllerAnterior.setVisible(true);
     }
 
     protected abstract List<String> validateData();

@@ -17,6 +17,7 @@ public abstract class MainABM<T extends AbmEntity> extends JFrame {
 	private JButton btnEliminar;
 	private JButton btnEditar;
 	private JButton btnCrear;
+	private JButton btnAnterior;
 
 	/**
 	 * Create the frame.
@@ -49,6 +50,10 @@ public abstract class MainABM<T extends AbmEntity> extends JFrame {
 		btnEliminar = new JButton("Eliminar");
 		btnEliminar.setBounds(654, 355, 117, 29);
 		panel.add(btnEliminar);
+		
+		btnAnterior = new JButton("Anterior");
+		btnAnterior.setBounds(654, 444, 117, 29);
+		panel.add(btnAnterior);
 	}
 	
 	
@@ -76,6 +81,8 @@ public abstract class MainABM<T extends AbmEntity> extends JFrame {
 	public void addElement(T elemento){
 		listEntity.add(elemento);
 	}
-
-
+	
+	public JButton getBtnAnterior(){
+		return this.btnAnterior;
+	}
 }
