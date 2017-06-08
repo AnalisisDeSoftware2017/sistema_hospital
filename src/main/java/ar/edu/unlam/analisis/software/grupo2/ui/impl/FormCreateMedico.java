@@ -89,7 +89,7 @@ public class FormCreateMedico extends AbstractFormCreate<Medico> {
 
 
 	@Override
-	public void setEntity(Paciente entity) {
+	public void setEntity(Medico entity) {
 		this.txtApellido.setText(entity.getApellido());
 		this.txtCodigo.setText(entity.getCodigo());
 		this.txtNombre.setText(entity.getName());
