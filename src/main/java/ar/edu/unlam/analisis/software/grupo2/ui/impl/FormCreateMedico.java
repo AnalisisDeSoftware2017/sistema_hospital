@@ -76,17 +76,14 @@ public class FormCreateMedico extends AbstractFormCreate<Medico> {
 		add(lblNumeroDocumento);
 	}
 
-
-	
-	
     @Override
     public Medico getEntity() {
-    	Medico medico = new Medico();
-    	medico.setCodigo(this.txtCodigo.getText());
-    	medico.setApellido(this.txtApellido.getText());
-    	medico.setName(this.txtNombre.getText());
-    	medico.setNumeroDocumento(this.txtNumeroDeDocumento.getText());
-        return medico;
+		this.entity.setCodigo(this.txtCodigo.getText());
+		this.entity.setApellido(this.txtApellido.getText());
+		this.entity.setNombre(this.txtNombre.getText());
+		this.entity.setNumeroDocumento(this.txtNumeroDeDocumento.getText());
+		this.entity.setTipoDocumento((TipoDocumentoEnum)this.cbTipoDocumento.getSelectedItem());
+		return this.entity;
     }
 
 
@@ -97,6 +94,6 @@ public class FormCreateMedico extends AbstractFormCreate<Medico> {
 		this.txtCodigo.setText(this.entity.getCodigo());
 		this.txtNombre.setText(this.entity.getNombre());
 		this.txtNumeroDeDocumento.setText(this.entity.getNumeroDocumento());
-		this.cbTipoDocumento.setSelectedItem(this.entity.getTipoDocumento());
+		this.cbTipoDocumento.setSelectedItem(this.entity.getTipoDocumento()==null?TipoDocumentoEnum.DNI:this.entity.getTipoDocumento());
     }
 }

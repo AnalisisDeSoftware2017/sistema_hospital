@@ -81,12 +81,12 @@ public class FormCreatePaciente extends AbstractFormCreate<Paciente>{
 	
     @Override
     public Paciente getEntity() {
-    	Paciente paciente = new Paciente();
-    	paciente.setCodigo(this.txtCodigo.getText());
-    	paciente.setApellido(this.txtApellido.getText());
-    	paciente.setName(this.txtNombre.getText());
-    	paciente.setNumeroDocumento(this.txtNumeroDeDocumento.getText());
-        return paciente;
+    	this.entity.setCodigo(this.txtCodigo.getText());
+		this.entity.setApellido(this.txtApellido.getText());
+		this.entity.setNombre(this.txtNombre.getText());
+		this.entity.setNumeroDocumento(this.txtNumeroDeDocumento.getText());
+		this.entity.setTipoDocumento((TipoDocumentoEnum)this.cbTipoDocumento.getSelectedItem());
+        return this.entity;
     }
 
 	@Override
@@ -96,7 +96,7 @@ public class FormCreatePaciente extends AbstractFormCreate<Paciente>{
 		this.txtCodigo.setText(this.entity.getCodigo());
 		this.txtNombre.setText(this.entity.getNombre());
 		this.txtNumeroDeDocumento.setText(this.entity.getNumeroDocumento());
-		this.cbTipoDocumento.setSelectedItem(this.entity.getTipoDocumento());
+		this.cbTipoDocumento.setSelectedItem(this.entity.getTipoDocumento()==null?TipoDocumentoEnum.DNI:this.entity.getTipoDocumento());
 	}
 
 }

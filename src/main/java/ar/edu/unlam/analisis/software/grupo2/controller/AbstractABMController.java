@@ -50,6 +50,7 @@ public abstract class AbstractABMController<T extends AbmEntity, PK extends Seri
         if(entity != null ){
             if(this.frame.confirmEliminar(messageSource.getMessage("ar.edu.unlam.los.laureles.confirmar.eliminar",new String[]{entity.getName()},  AppContext.getLocale()))){
                 this.service.delete(entity);
+                this.cargarLista();
             }
         }else{
             this.frame.showErrorMessage(messageSource.getMessage("ar.edu.unlam.los.laureles.nada.seleccionado", null, AppContext.getLocale()));

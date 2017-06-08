@@ -38,7 +38,7 @@ public abstract class AbstractEntitySaveController<T extends AbmEntity, PK exten
         if(camporErroneos.isEmpty()){
             this.service.save(this.frame.getEntity());
             this.frame.setVisible(false);
-            this.controllerAnterior.prepareAndOpenFrame();
+            this.controllerAnterior.setVisible(true);
         }else{
             mostrarMensajeDeError(camporErroneos);
         }
