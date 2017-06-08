@@ -24,13 +24,4 @@ public class SavePacienteForm extends SaveForm<Paciente> {
         super(form);
     }
 
-    @Override
-    public void setEntity(Paciente entity) {
-        this.entity = entity;
-    }
-
-    @Override
-    public Paciente getEntity() {
-        return null;
-    }
 }

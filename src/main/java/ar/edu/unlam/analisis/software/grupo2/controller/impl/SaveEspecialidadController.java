@@ -5,11 +5,14 @@ import ar.edu.unlam.analisis.software.grupo2.core.model.Especialidad;
 import ar.edu.unlam.analisis.software.grupo2.core.model.Paciente;
 import ar.edu.unlam.analisis.software.grupo2.core.services.impl.AbstractServiceCRUD;
 import ar.edu.unlam.analisis.software.grupo2.ui.SaveForm;
+import ar.edu.unlam.analisis.software.grupo2.utils.AppContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 /**
  * Created by sbogado on 6/6/17.
@@ -29,7 +32,11 @@ public class SaveEspecialidadController extends AbstractEntitySaveController<Esp
 
 
     @Override
-    protected List<String> validateData() {
-        return null;
+    protected List<String> validateData(Especialidad entidad) {
+        List<String> errores = new ArrayList<>();
+        if(entidad==null || entidad.getName().isEmpty()){
+            errores.add(messageSource.getMessage("ar.edu.unlam.los.laureles.error.emptyEspecialidad",null, AppContext.getLocale()));
+        }
+        return errores;
     }
 }

@@ -27,11 +27,13 @@ public class FormCreateEspecialidad extends AbstractFormCreate<Especialidad>{
 
     @Override
     public Especialidad getEntity() {
-        return null;
+        this.entity.setNombreEspecialidad(this.txtEspecialidad.getText());
+		return entity;
     }
 
     @Override
     public void setEntity(Especialidad entitys) {
-
+		this.entity = entitys == null ? new Especialidad():entitys;
+		this.txtEspecialidad.setText(entity.getNombreEspecialidad());
     }
 }

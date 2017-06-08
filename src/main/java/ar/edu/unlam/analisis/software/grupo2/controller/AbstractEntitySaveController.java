@@ -15,7 +15,7 @@ import java.util.List;
 public abstract class AbstractEntitySaveController<T extends AbmEntity, PK extends Serializable> extends AbstractFrameController<SaveForm<T>>{
 
     @Autowired
-    private AbstractServiceCRUD<T,PK> service;
+    protected AbstractServiceCRUD<T,PK> service;
 
     @Autowired
     public AbstractEntitySaveController(AbstractServiceCRUD<T,PK> service, SaveForm<T> form){
@@ -34,7 +34,7 @@ public abstract class AbstractEntitySaveController<T extends AbmEntity, PK exten
     }
 
     private void createEntity() {
-        List<String> camporErroneos = validateData();
+        List<String> camporErroneos = validateData(this.frame.getEntity());
         if(camporErroneos.isEmpty()){
             this.service.save(this.frame.getEntity());
             this.frame.setVisible(false);
@@ -42,6 +42,10 @@ public abstract class AbstractEntitySaveController<T extends AbmEntity, PK exten
         }else{
             mostrarMensajeDeError(camporErroneos);
         }
+    }
+
+    public void setEntity(T entity){
+        this.frame.setEntity(entity);
     }
 
     protected void mostrarMensajeDeError(List<String> camposErroneos){
@@ -59,7 +63,7 @@ public abstract class AbstractEntitySaveController<T extends AbmEntity, PK exten
         this.controllerAnterior.setVisible(true);
     }
 
-    protected abstract List<String> validateData();
+    protected abstract List<String> validateData(T entity);
 
 
 }

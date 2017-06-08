@@ -23,13 +23,4 @@ public class SaveMedicoForm extends SaveForm<Medico> {
         super(form);
     }
 
-    @Override
-    public void setEntity(Medico entity) {
-        this.entity=entity;
-    }
-
-    @Override
-    public Medico getEntity() {
-        return this.entity;
-    }
 }

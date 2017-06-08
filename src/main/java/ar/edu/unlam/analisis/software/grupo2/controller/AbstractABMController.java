@@ -3,6 +3,7 @@ package ar.edu.unlam.analisis.software.grupo2.controller;
 import ar.edu.unlam.analisis.software.grupo2.core.model.AbmEntity;
 import ar.edu.unlam.analisis.software.grupo2.core.services.impl.AbstractServiceCRUD;
 import ar.edu.unlam.analisis.software.grupo2.ui.MainABM;
+import ar.edu.unlam.analisis.software.grupo2.utils.AppContext;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.io.Serializable;
@@ -45,17 +46,31 @@ public abstract class AbstractABMController<T extends AbmEntity, PK extends Seri
     }
 
     private void eliminar() {
-
+        T entity = this.frame.getSelectedItem();
+        if(entity != null ){
+            if(this.frame.confirmEliminar(messageSource.getMessage("ar.edu.unlam.los.laureles.confirmar.eliminar",new String[]{entity.getName()},  AppContext.getLocale()))){
+                this.service.delete(entity);
+            }
+        }else{
+            this.frame.showErrorMessage(messageSource.getMessage("ar.edu.unlam.los.laureles.nada.seleccionado", null, AppContext.getLocale()));
+        }
     }
 
     private void editar() {
-        this.frame.setVisible(false);
-        this.entitySaveController.setControllerAnterior(this);
-        this.entitySaveController.setControllerAnterior(this);
+        T entity = this.frame.getSelectedItem();
+        if(entity != null ){
+            this.frame.setVisible(false);
+            this.entitySaveController.setEntity(this.frame.getSelectedItem());
+            this.entitySaveController.setControllerAnterior(this);
+            this.entitySaveController.prepareAndOpenFrame();
+        }else{
+            this.frame.showErrorMessage(messageSource.getMessage("ar.edu.unlam.los.laureles.nada.seleccionado", null, AppContext.getLocale()));
+        }
     }
 
     private void crear() {
         this.frame.setVisible(false);
+        this.entitySaveController.setEntity(null);
         this.entitySaveController.setControllerAnterior(this);
         this.entitySaveController.prepareAndOpenFrame();
     }
@@ -63,5 +78,13 @@ public abstract class AbstractABMController<T extends AbmEntity, PK extends Seri
     @Override
     protected void setTextoFrame() {
 
+    }
+
+    @Override
+    protected void setVisible(Boolean visible){
+        super.setVisible(visible);
+        if(visible){
+            this.frame.cargarLista(service.findAll());
+        }
     }
 }

@@ -6,7 +6,7 @@ import javax.swing.*;
 
 public abstract class AbstractFormCreate<T extends AbmEntity> extends JPanel {
 
-	private T entity;
+	protected T entity;
 
 	public abstract T getEntity();
 	public abstract void setEntity(T entitys);

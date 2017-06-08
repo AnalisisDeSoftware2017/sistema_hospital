@@ -19,13 +19,4 @@ public class SaveEspecialidadForm extends SaveForm<Especialidad> {
 		super(form);
 	}
 
-	@Override
-    public void setEntity(Especialidad entity) {
-        
-    }
-
-    @Override
-    public Especialidad getEntity() {
-        return null;
-    }
 }

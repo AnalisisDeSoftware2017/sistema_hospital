@@ -1,6 +1,8 @@
 package ar.edu.unlam.analisis.software.grupo2.controller;
 
 import ar.edu.unlam.analisis.software.grupo2.utils.Command;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.MessageSource;
 
 import javax.swing.*;
 import java.awt.event.ActionListener;
@@ -14,6 +16,9 @@ import java.awt.event.KeyListener;
 public abstract class AbstractFrameController<T extends  JFrame> {
 
     protected AbstractFrameController controllerAnterior;
+
+    @Autowired
+    protected MessageSource messageSource;
 
     protected T frame;
 

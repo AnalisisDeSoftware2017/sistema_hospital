@@ -75,7 +75,7 @@ public abstract class MainABM<T extends AbmEntity> extends JFrame {
 
 
 	public void cargarLista(List<T> lista) {
-		listEntity.addAll(lista);
+		listEntity.cleanAndAddAll(lista);
 	}
 
 	public void addElement(T elemento){
@@ -84,5 +84,15 @@ public abstract class MainABM<T extends AbmEntity> extends JFrame {
 	
 	public JButton getBtnAnterior(){
 		return this.btnAnterior;
+	}
+
+	public boolean confirmEliminar(String message) {
+		//TODO add title
+		return JOptionPane.showConfirmDialog(this, message, "" ,JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION;
+	}
+
+	public void showErrorMessage(String message) {
+		//TODO add title
+		JOptionPane.showMessageDialog(this,message, "", JOptionPane.ERROR_MESSAGE);
 	}
 }

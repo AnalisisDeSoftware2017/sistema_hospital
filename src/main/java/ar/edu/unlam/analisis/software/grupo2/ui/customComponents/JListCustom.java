@@ -31,6 +31,11 @@ public class JListCustom<T extends AbmEntity > extends JList<T>{
 		}
 	}
 
+	public void cleanAndAddAll(List<T> lista){
+		this.defaultListModel.clear();
+		addAll(lista);
+	}
+
 	public void add(T elemento){
 		defaultListModel.add(this.defaultListModel.size(),elemento);
 	}

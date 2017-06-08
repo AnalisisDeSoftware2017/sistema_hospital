@@ -67,15 +67,16 @@ public class FormCreatePaciente extends AbstractFormCreate<Paciente>{
 		txtNumeroDeDocumento.setColumns(10);
 		txtNumeroDeDocumento.setBounds(171, 359, 285, 26);
 		add(txtNumeroDeDocumento);
+
+		//TODO remove this and add in controller
+		this.cbTipoDocumento.setModel(new DefaultComboBoxModel<>(TipoDocumentoEnum.values()));
 		
 		JLabel lblNumeroDocumento = new JLabel("Numero de documento:");
 		lblNumeroDocumento.setBounds(171, 331, 166, 16);
 		add(lblNumeroDocumento);
 	}
 
-	public void cargarDatos(List<TipoDocumentoEnum> tipoDocumento){
-		this.cbTipoDocumento.setModel(new DefaultComboBoxModel<>((TipoDocumentoEnum[])tipoDocumento.toArray() ) );
-	}
+
 	
 	
     @Override
@@ -90,11 +91,12 @@ public class FormCreatePaciente extends AbstractFormCreate<Paciente>{
 
 	@Override
 	public void setEntity(Paciente entity) {
-		this.txtApellido.setText(entity.getApellido());
-		this.txtCodigo.setText(entity.getCodigo());
-		this.txtNombre.setText(entity.getName());
-		this.txtNumeroDeDocumento.setText(entity.getNumeroDocumento());
-		this.cbTipoDocumento.setSelectedItem(entity.getTipoDocumento());
+		this.entity = entity==null?new Paciente():entity;
+		this.txtApellido.setText(this.entity.getApellido());
+		this.txtCodigo.setText(this.entity.getCodigo());
+		this.txtNombre.setText(this.entity.getNombre());
+		this.txtNumeroDeDocumento.setText(this.entity.getNumeroDocumento());
+		this.cbTipoDocumento.setSelectedItem(this.entity.getTipoDocumento());
 	}
 
 }

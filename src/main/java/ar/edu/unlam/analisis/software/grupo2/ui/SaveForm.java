@@ -15,7 +15,6 @@ public abstract class SaveForm<T extends AbmEntity> extends JFrame {
 	
 	private JButton btnGuardar;
 	private JButton btnCancelar;
-	protected T entity;
 	
 	private AbstractFormCreate<T> form;
 	private JPanel panel;
@@ -52,9 +51,13 @@ public abstract class SaveForm<T extends AbmEntity> extends JFrame {
 	}
 
 
-	public abstract void setEntity(T entity);
+	public final void setEntity(T entity){
+		this.form.setEntity(entity);
+	}
 
-	public abstract T getEntity();
+	public final T getEntity(){
+		return this.form.getEntity();
+	}
 	
 	public JButton getBtnGuardar(){
 		return this.btnGuardar;
