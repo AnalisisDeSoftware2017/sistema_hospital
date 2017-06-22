@@ -20,10 +20,6 @@ import java.util.Optional;
 @Controller
 public class SavePacienteController extends AbstractEntitySaveController<Paciente,Long> {
 
-    private static final int LONG_CODIGO = 20;
-    private static final int LONG_NOMBRE = 40;
-    private static final int LONG_APELLIDO = 40;
-
     @Autowired
     public SavePacienteController(AbstractServiceCRUD<Paciente, Long> service, SaveForm<Paciente> form) {
         super(service, form);
@@ -38,6 +34,12 @@ public class SavePacienteController extends AbstractEntitySaveController<Pacient
     @Override
     protected List<String> validateData(Paciente entidad) {
         List<String> errores = new ArrayList<>();
+        /** Elimino los espacios del principio y del fin*/
+        entidad.setNombre(entidad.getNombre().trim());
+        entidad.setApellido(entidad.getApellido().trim());
+        entidad.setNumeroDocumento(entidad.getNumeroDocumento().trim());
+        entidad.setCodigo(entidad.getCodigo().trim());
+
         errores.addAll(this.validationsHelper.validarNombrePersona(entidad.getNombre()));
         errores.addAll(this.validationsHelper.validarApellidoDePersona(entidad.getApellido()));
         errores.addAll(this.validationsHelper.validarCodigoPersona(entidad.getCodigo()));
