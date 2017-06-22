@@ -34,8 +34,12 @@ public class SaveEspecialidadController extends AbstractEntitySaveController<Esp
     @Override
     protected List<String> validateData(Especialidad entidad) {
         List<String> errores = new ArrayList<>();
-        if(entidad==null || entidad.getName().isEmpty()){
+        if(null == entidad.getNombreEspecialidad() || entidad.getNombreEspecialidad().isEmpty() ){
             errores.add(messageSource.getMessage("ar.edu.unlam.los.laureles.error.emptyEspecialidad",null, AppContext.getLocale()));
+        }else{
+            if(entidad.getNombreEspecialidad().length()>40){
+                errores.add(messageSource.getMessage("ar.edu.unlam.los.laureles.error.emptyEspecialidad",null, AppContext.getLocale()));
+            }
         }
         return errores;
     }
