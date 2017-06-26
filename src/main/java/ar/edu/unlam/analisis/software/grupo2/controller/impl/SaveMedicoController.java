@@ -3,8 +3,10 @@ package ar.edu.unlam.analisis.software.grupo2.controller.impl;
 import ar.edu.unlam.analisis.software.grupo2.controller.AbstractEntitySaveController;
 import ar.edu.unlam.analisis.software.grupo2.core.model.Medico;
 import ar.edu.unlam.analisis.software.grupo2.core.services.impl.AbstractServiceCRUD;
+import ar.edu.unlam.analisis.software.grupo2.core.services.impl.EspecialidadService;
 import ar.edu.unlam.analisis.software.grupo2.core.services.impl.MedicoService;
 import ar.edu.unlam.analisis.software.grupo2.ui.SaveForm;
+import ar.edu.unlam.analisis.software.grupo2.ui.impl.SaveMedicoForm;
 import ar.edu.unlam.analisis.software.grupo2.utils.AppContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -21,6 +23,9 @@ import java.util.Optional;
 public class SaveMedicoController extends AbstractEntitySaveController<Medico,Long> {
 
     @Autowired
+    private EspecialidadService especialidadService;
+
+    @Autowired
     public SaveMedicoController(AbstractServiceCRUD<Medico, Long> service, SaveForm<Medico> form) {
         super(service, form);
     }
@@ -30,6 +35,12 @@ public class SaveMedicoController extends AbstractEntitySaveController<Medico,Lo
 
     }
 
+
+    @Override
+    public void setEntity(Medico entity){
+        this.frame.setEntity(entity);
+        ((SaveMedicoForm)this.frame).setListaEspecialidades(especialidadService.findAll());
+    }
 
     @Override
     protected List<String> validateData(Medico entidad) {

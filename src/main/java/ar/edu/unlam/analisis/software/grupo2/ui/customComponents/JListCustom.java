@@ -1,10 +1,12 @@
 package ar.edu.unlam.analisis.software.grupo2.ui.customComponents;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.swing.*;
 
 import ar.edu.unlam.analisis.software.grupo2.core.model.AbmEntity;
+import ar.edu.unlam.analisis.software.grupo2.core.model.Especialidad;
 
 public class JListCustom<T extends AbmEntity > extends JList<T>{
 
@@ -45,4 +47,17 @@ public class JListCustom<T extends AbmEntity > extends JList<T>{
 	}
 
 
+	//Seteo los indices seleccionados
+    public void setSelectedItems(List<T> entidades) {
+		ArrayList<Integer> indices = new ArrayList<>();
+		for(T entidad : entidades){
+			Boolean found = false;
+			for(int  i = 0 ; i<defaultListModel.getSize() && found; i++){
+				if(entidad.getId().equals(defaultListModel.get(i).getId())){
+					indices.add(i);
+					found = true;
+				}
+			}
+		}
+    }
 }

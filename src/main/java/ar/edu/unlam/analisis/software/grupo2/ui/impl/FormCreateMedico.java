@@ -1,17 +1,16 @@
 package ar.edu.unlam.analisis.software.grupo2.ui.impl;
 
+import ar.edu.unlam.analisis.software.grupo2.core.model.Especialidad;
 import ar.edu.unlam.analisis.software.grupo2.core.model.Medico;
 import ar.edu.unlam.analisis.software.grupo2.core.model.Paciente;
 import ar.edu.unlam.analisis.software.grupo2.core.model.TipoDocumentoEnum;
 import ar.edu.unlam.analisis.software.grupo2.ui.AbstractFormCreate;
+import ar.edu.unlam.analisis.software.grupo2.ui.customComponents.JListCustom;
 import org.springframework.stereotype.Component;
-import javax.swing.JTextField;
-import javax.swing.JLabel;
+
+import javax.swing.*;
 
 import java.util.List;
-
-import javax.swing.DefaultComboBoxModel;
-import javax.swing.JComboBox;
 
 /**
  * Created by sbogado on 6/6/17.
@@ -23,7 +22,9 @@ public class FormCreateMedico extends AbstractFormCreate<Medico> {
 	private JTextField txtCodigo;
 	private JTextField txtNumeroDeDocumento;
 	private JComboBox<TipoDocumentoEnum> cbTipoDocumento;
-	
+	private List<Especialidad> listaEspecialidades;
+	private JListCustom<Especialidad> listEspecialidades;
+
 	public FormCreateMedico() {
 		setLayout(null);
 		
@@ -74,6 +75,15 @@ public class FormCreateMedico extends AbstractFormCreate<Medico> {
 		JLabel lblNumeroDocumento = new JLabel("Numero de documento:");
 		lblNumeroDocumento.setBounds(171, 331, 166, 16);
 		add(lblNumeroDocumento);
+		
+		JLabel lblEspecialidades = new JLabel("Especialidades");
+		lblEspecialidades.setBounds(171, 396, 100, 16);
+		add(lblEspecialidades);
+
+		listEspecialidades = new JListCustom<>();
+		listEspecialidades.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
+		listEspecialidades.setBounds(171, 423, 285, 88);
+		add(listEspecialidades);
 	}
 
     @Override
@@ -96,4 +106,12 @@ public class FormCreateMedico extends AbstractFormCreate<Medico> {
 		this.txtNumeroDeDocumento.setText(this.entity.getNumeroDocumento());
 		this.cbTipoDocumento.setSelectedItem(this.entity.getTipoDocumento()==null?TipoDocumentoEnum.DNI:this.entity.getTipoDocumento());
     }
+
+	public void setListaEspecialidades(List<Especialidad> listaEspecialidades) {
+		listEspecialidades.cleanAndAddAll(listaEspecialidades);
+		this.listaEspecialidades = listaEspecialidades;
+		if(entity != null && entity.getEspecialidades()!=null){
+			listEspecialidades.setSelectedItems(this.entity.getEspecialidades());
+		}
+	}
 }

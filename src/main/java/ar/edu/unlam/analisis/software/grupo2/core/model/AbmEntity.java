@@ -4,6 +4,8 @@ import java.awt.Component;
 
 public abstract class AbmEntity extends Component{
 
+	public abstract Long getId();
+
 	public AbmEntity(){
 	}
 
