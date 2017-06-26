@@ -93,10 +93,7 @@ public class FormCreatePaciente extends AbstractFormCreate<Paciente>{
 		
 	}
 
-	
 
-
-	
 	
     @Override
     public Paciente getEntity() {

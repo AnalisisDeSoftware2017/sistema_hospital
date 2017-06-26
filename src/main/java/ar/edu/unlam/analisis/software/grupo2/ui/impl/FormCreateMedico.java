@@ -93,6 +93,7 @@ public class FormCreateMedico extends AbstractFormCreate<Medico> {
 		this.entity.setNombre(this.txtNombre.getText());
 		this.entity.setNumeroDocumento(this.txtNumeroDeDocumento.getText());
 		this.entity.setTipoDocumento((TipoDocumentoEnum)this.cbTipoDocumento.getSelectedItem());
+		this.entity.setEspecialidades(this.listEspecialidades.getSelectedElements());
 		return this.entity;
     }
 
@@ -105,6 +106,9 @@ public class FormCreateMedico extends AbstractFormCreate<Medico> {
 		this.txtNombre.setText(this.entity.getNombre());
 		this.txtNumeroDeDocumento.setText(this.entity.getNumeroDocumento());
 		this.cbTipoDocumento.setSelectedItem(this.entity.getTipoDocumento()==null?TipoDocumentoEnum.DNI:this.entity.getTipoDocumento());
+		if(listaEspecialidades!=null){
+			listEspecialidades.setSelectedItems(this.entity.getEspecialidades());
+		}
     }
 
 	public void setListaEspecialidades(List<Especialidad> listaEspecialidades) {

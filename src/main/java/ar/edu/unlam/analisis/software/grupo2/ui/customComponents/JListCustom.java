@@ -60,4 +60,12 @@ public class JListCustom<T extends AbmEntity > extends JList<T>{
 			}
 		}
     }
+
+    public List<T> getSelectedElements() {
+		List<T> selectedElements = new ArrayList<>();
+		for(Integer i : this.getSelectedIndices()){
+			selectedElements.add(this.defaultListModel.get(i));
+		}
+		return selectedElements;
+    }
 }

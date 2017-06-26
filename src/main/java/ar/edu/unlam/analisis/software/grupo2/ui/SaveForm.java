@@ -1,17 +1,11 @@
 package ar.edu.unlam.analisis.software.grupo2.ui;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-import ar.edu.unlam.analisis.software.grupo2.core.model.Especialidad;
-import org.springframework.beans.factory.annotation.Autowired;
-
 import ar.edu.unlam.analisis.software.grupo2.core.model.AbmEntity;
-import javax.swing.JButton;
-import javax.swing.border.LineBorder;
-import java.awt.Color;
-import java.util.List;
 
 public abstract class SaveForm<T extends AbmEntity> extends JFrame {
 
