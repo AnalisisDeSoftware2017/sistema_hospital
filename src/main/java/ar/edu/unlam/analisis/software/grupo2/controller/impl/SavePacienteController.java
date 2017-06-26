@@ -4,9 +4,8 @@ import ar.edu.unlam.analisis.software.grupo2.controller.AbstractEntitySaveContro
 import ar.edu.unlam.analisis.software.grupo2.core.model.Paciente;
 import ar.edu.unlam.analisis.software.grupo2.core.services.impl.AbstractServiceCRUD;
 import ar.edu.unlam.analisis.software.grupo2.core.services.impl.PacienteService;
-import ar.edu.unlam.analisis.software.grupo2.ui.SaveForm;
+import ar.edu.unlam.analisis.software.grupo2.ui.AbstractContainerSaveForm;
 import ar.edu.unlam.analisis.software.grupo2.utils.AppContext;
-import ar.edu.unlam.analisis.software.grupo2.utils.ValidationsHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
@@ -21,7 +20,7 @@ import java.util.Optional;
 public class SavePacienteController extends AbstractEntitySaveController<Paciente,Long> {
 
     @Autowired
-    public SavePacienteController(AbstractServiceCRUD<Paciente, Long> service, SaveForm<Paciente> form) {
+    public SavePacienteController(AbstractServiceCRUD<Paciente, Long> service, AbstractContainerSaveForm<Paciente> form) {
         super(service, form);
     }
 

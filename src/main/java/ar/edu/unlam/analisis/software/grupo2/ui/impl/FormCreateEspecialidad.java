@@ -10,7 +10,7 @@ import javax.swing.JLabel;
  * Created by sbogado on 6/6/17.
  */
 @Component
-public class FormCreateEspecialidad extends AbstractFormCreate<Especialidad>{
+public class FormCreateEspecialidad extends AbstractFormCreate<Especialidad> {
 	private JTextField txtEspecialidad;
 	public FormCreateEspecialidad() {
 		setLayout(null);

@@ -2,7 +2,7 @@ package ar.edu.unlam.analisis.software.grupo2.controller;
 
 import ar.edu.unlam.analisis.software.grupo2.core.model.AbmEntity;
 import ar.edu.unlam.analisis.software.grupo2.core.services.impl.AbstractServiceCRUD;
-import ar.edu.unlam.analisis.software.grupo2.ui.SaveForm;
+import ar.edu.unlam.analisis.software.grupo2.ui.AbstractContainerSaveForm;
 import ar.edu.unlam.analisis.software.grupo2.utils.ValidationsHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -13,7 +13,7 @@ import java.util.List;
 /**
  * Created by sbogado on 6/6/17.
  */
-public abstract class AbstractEntitySaveController<T extends AbmEntity, PK extends Serializable> extends AbstractFrameController<SaveForm<T>>{
+public abstract class AbstractEntitySaveController<T extends AbmEntity, PK extends Serializable> extends AbstractFrameController<AbstractContainerSaveForm<T>>{
 
     @Autowired
     protected AbstractServiceCRUD<T,PK> service;
@@ -22,7 +22,7 @@ public abstract class AbstractEntitySaveController<T extends AbmEntity, PK exten
     protected ValidationsHelper validationsHelper;
 
     @Autowired
-    public AbstractEntitySaveController(AbstractServiceCRUD<T,PK> service, SaveForm<T> form){
+    public AbstractEntitySaveController(AbstractServiceCRUD<T,PK> service, AbstractContainerSaveForm<T> form){
         this.service=service;
         this.frame=form;
     }

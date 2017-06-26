@@ -4,10 +4,9 @@ import ar.edu.unlam.analisis.software.grupo2.controller.AbstractEntitySaveContro
 import ar.edu.unlam.analisis.software.grupo2.core.model.Medico;
 import ar.edu.unlam.analisis.software.grupo2.core.services.impl.AbstractServiceCRUD;
 import ar.edu.unlam.analisis.software.grupo2.core.services.impl.MedicoService;
-import ar.edu.unlam.analisis.software.grupo2.ui.SaveForm;
+import ar.edu.unlam.analisis.software.grupo2.ui.AbstractContainerSaveForm;
 import ar.edu.unlam.analisis.software.grupo2.utils.AppContext;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 
 import java.util.ArrayList;
@@ -21,7 +20,7 @@ import java.util.Optional;
 public class SaveMedicoController extends AbstractEntitySaveController<Medico,Long> {
 
     @Autowired
-    public SaveMedicoController(AbstractServiceCRUD<Medico, Long> service, SaveForm<Medico> form) {
+    public SaveMedicoController(AbstractServiceCRUD<Medico, Long> service, AbstractContainerSaveForm<Medico> form) {
         super(service, form);
     }
 
@@ -44,7 +43,4 @@ public class SaveMedicoController extends AbstractEntitySaveController<Medico,Lo
         return errores;
     }
 
-    private boolean documentValid() {
-        return true;
-    }
 }

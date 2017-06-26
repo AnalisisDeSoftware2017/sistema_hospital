@@ -1,14 +1,11 @@
 package ar.edu.unlam.analisis.software.grupo2.ui.impl;
 
 import ar.edu.unlam.analisis.software.grupo2.core.model.Medico;
-import ar.edu.unlam.analisis.software.grupo2.core.model.Paciente;
 import ar.edu.unlam.analisis.software.grupo2.core.model.TipoDocumentoEnum;
 import ar.edu.unlam.analisis.software.grupo2.ui.AbstractFormCreate;
 import org.springframework.stereotype.Component;
 import javax.swing.JTextField;
 import javax.swing.JLabel;
-
-import java.util.List;
 
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JComboBox;
