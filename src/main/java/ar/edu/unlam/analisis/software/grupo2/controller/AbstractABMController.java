@@ -2,19 +2,19 @@ package ar.edu.unlam.analisis.software.grupo2.controller;
 
 import ar.edu.unlam.analisis.software.grupo2.core.model.AbmEntity;
 import ar.edu.unlam.analisis.software.grupo2.core.services.impl.AbstractServiceCRUD;
-import ar.edu.unlam.analisis.software.grupo2.ui.MainABM;
+import ar.edu.unlam.analisis.software.grupo2.ui.AbstractFirstScreenABM;
 import ar.edu.unlam.analisis.software.grupo2.utils.AppContext;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.io.Serializable;
 
-public abstract class AbstractABMController<T extends AbmEntity, PK extends Serializable> extends AbstractFrameController<MainABM<T>>{
+public abstract class AbstractABMController<T extends AbmEntity, PK extends Serializable> extends AbstractFrameController<AbstractFirstScreenABM<T>>{
 
 
     private AbstractEntitySaveController<T,PK> entitySaveController;
     private AbstractServiceCRUD<T,PK> service;
     @Autowired
-    public AbstractABMController(MainABM<T> pantalla, AbstractEntitySaveController<T,PK> entitySaveController, AbstractServiceCRUD<T,PK> service){
+    public AbstractABMController(AbstractFirstScreenABM<T> pantalla, AbstractEntitySaveController<T,PK> entitySaveController, AbstractServiceCRUD<T,PK> service){
         this.frame=pantalla;
         this.entitySaveController=entitySaveController;
         this.service = service;
