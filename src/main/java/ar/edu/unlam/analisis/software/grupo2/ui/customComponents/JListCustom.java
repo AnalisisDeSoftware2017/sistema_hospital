@@ -1,10 +1,11 @@
 package ar.edu.unlam.analisis.software.grupo2.ui.customComponents;
 
-import java.util.List;
+import ar.edu.unlam.analisis.software.grupo2.core.model.AbmEntity;
+import org.apache.commons.lang3.ArrayUtils;
 
 import javax.swing.*;
-
-import ar.edu.unlam.analisis.software.grupo2.core.model.AbmEntity;
+import java.util.ArrayList;
+import java.util.List;
 
 public class JListCustom<T extends AbmEntity > extends JList<T>{
 
@@ -45,4 +46,16 @@ public class JListCustom<T extends AbmEntity > extends JList<T>{
 	}
 
 
+	public void setSelectedValues(List<T> entities) {
+		if(null != entities && null != defaultListModel){
+			List<Integer> indexList = new ArrayList<>();
+			entities.forEach(entity -> {
+				indexList.add(this.defaultListModel.indexOf(entity));
+			});
+			int [] array = new int[indexList.size()];
+			for(int i = 0 ; i < indexList.size(); i ++ ){
+				array[i]=indexList.get(i);
+			}
+		}
+	}
 }

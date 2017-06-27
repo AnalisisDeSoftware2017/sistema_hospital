@@ -38,9 +38,10 @@ public abstract class AbstractEntitySaveController<T extends AbmEntity, PK exten
     }
 
     private void createEntity() {
-        List<String> camporErroneos = validateData(this.frame.getEntity());
+        T entity = this.frame.getEntity();
+        List<String> camporErroneos = validateData(entity);
         if(camporErroneos.isEmpty()){
-            this.service.save(this.frame.getEntity());
+            this.service.save(entity);
             this.frame.setVisible(false);
             this.controllerAnterior.setVisible(true);
         }else{

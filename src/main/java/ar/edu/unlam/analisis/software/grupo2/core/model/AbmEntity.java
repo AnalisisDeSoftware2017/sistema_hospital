@@ -7,6 +7,7 @@ public abstract class AbmEntity extends Component{
 	public AbmEntity(){
 	}
 
+	public abstract Long getId();
 	public abstract String getName();
 	
 

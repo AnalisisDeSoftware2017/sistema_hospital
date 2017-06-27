@@ -1,6 +1,7 @@
 package ar.edu.unlam.analisis.software.grupo2.core.model;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import java.util.List;
@@ -13,7 +14,7 @@ public class Medico extends Persona {
 
 
 
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.EAGER)
     private List<Especialidad> especialidades;
 
     @OneToMany(mappedBy = "medico")
