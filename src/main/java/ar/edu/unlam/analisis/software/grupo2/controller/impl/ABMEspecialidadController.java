@@ -4,7 +4,7 @@ import ar.edu.unlam.analisis.software.grupo2.controller.AbstractABMController;
 import ar.edu.unlam.analisis.software.grupo2.controller.AbstractEntitySaveController;
 import ar.edu.unlam.analisis.software.grupo2.core.model.Especialidad;
 import ar.edu.unlam.analisis.software.grupo2.core.services.impl.AbstractServiceCRUD;
-import ar.edu.unlam.analisis.software.grupo2.ui.ListScreenABM;
+import ar.edu.unlam.analisis.software.grupo2.ui.AbstractListScreenABM;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
@@ -15,7 +15,7 @@ import org.springframework.stereotype.Controller;
 public class ABMEspecialidadController extends AbstractABMController<Especialidad, Long> {
 
     @Autowired
-    public ABMEspecialidadController(ListScreenABM<Especialidad> pantalla, AbstractEntitySaveController<Especialidad, Long> entitySaveController, AbstractServiceCRUD<Especialidad, Long> service) {
+    public ABMEspecialidadController(AbstractListScreenABM<Especialidad> pantalla, AbstractEntitySaveController<Especialidad, Long> entitySaveController, AbstractServiceCRUD<Especialidad, Long> service) {
         super(pantalla, entitySaveController, service);
     }
 
