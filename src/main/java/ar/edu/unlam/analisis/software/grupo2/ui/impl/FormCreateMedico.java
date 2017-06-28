@@ -9,8 +9,14 @@ import ar.edu.unlam.analisis.software.grupo2.ui.customComponents.JListCustom;
 import org.springframework.stereotype.Component;
 
 import javax.swing.*;
+<<<<<<< HEAD
 import java.util.List;
 
+=======
+
+import java.util.List;
+
+>>>>>>> origin/backend_services
 /**
  * Created by sbogado on 6/6/17.
  */
@@ -21,8 +27,13 @@ public class FormCreateMedico extends AbstractFormCreate<Medico> {
 	private JTextField txtCodigo;
 	private JTextField txtNumeroDeDocumento;
 	private JComboBox<TipoDocumentoEnum> cbTipoDocumento;
+<<<<<<< HEAD
 	private List<Especialidad> especialidadList;
 	private JListCustom<Especialidad> cmbEspecialidad;
+=======
+	private List<Especialidad> listaEspecialidades;
+	private JListCustom<Especialidad> listEspecialidades;
+>>>>>>> origin/backend_services
 
 	public FormCreateMedico() {
 		setLayout(null);
@@ -73,6 +84,7 @@ public class FormCreateMedico extends AbstractFormCreate<Medico> {
 		JLabel lblNumeroDocumento = new JLabel("Numero de documento:");
 		lblNumeroDocumento.setBounds(171, 331, 166, 16);
 		add(lblNumeroDocumento);
+<<<<<<< HEAD
 
 		cmbEspecialidad = new JListCustom<Especialidad>();
 		//cmbEspecialidad.setBounds(389, 32, 285, 56);
@@ -86,6 +98,17 @@ public class FormCreateMedico extends AbstractFormCreate<Medico> {
 		JScrollPane scrollPane = new JScrollPane(cmbEspecialidad);
 		scrollPane.setBounds(171, 407, 285, 104);
 		add(scrollPane);
+=======
+		
+		JLabel lblEspecialidades = new JLabel("Especialidades");
+		lblEspecialidades.setBounds(171, 396, 100, 16);
+		add(lblEspecialidades);
+
+		listEspecialidades = new JListCustom<>();
+		listEspecialidades.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
+		listEspecialidades.setBounds(171, 423, 285, 88);
+		add(listEspecialidades);
+>>>>>>> origin/backend_services
 	}
 
 
@@ -98,7 +121,11 @@ public class FormCreateMedico extends AbstractFormCreate<Medico> {
 		this.entity.setNombre(this.txtNombre.getText());
 		this.entity.setNumeroDocumento(this.txtNumeroDeDocumento.getText());
 		this.entity.setTipoDocumento((TipoDocumentoEnum)this.cbTipoDocumento.getSelectedItem());
+<<<<<<< HEAD
 		this.entity.setEspecialidades(this.cmbEspecialidad.getSelectedValuesList());
+=======
+		this.entity.setEspecialidades(this.listEspecialidades.getSelectedElements());
+>>>>>>> origin/backend_services
 		return this.entity;
 	}
 
@@ -121,5 +148,19 @@ public class FormCreateMedico extends AbstractFormCreate<Medico> {
 		}
 
 		this.cbTipoDocumento.setSelectedItem(this.entity.getTipoDocumento()==null?TipoDocumentoEnum.DNI:this.entity.getTipoDocumento());
+<<<<<<< HEAD
+=======
+		if(listaEspecialidades!=null){
+			listEspecialidades.setSelectedItems(this.entity.getEspecialidades());
+		}
+    }
+
+	public void setListaEspecialidades(List<Especialidad> listaEspecialidades) {
+		listEspecialidades.cleanAndAddAll(listaEspecialidades);
+		this.listaEspecialidades = listaEspecialidades;
+		if(entity != null && entity.getEspecialidades()!=null){
+			listEspecialidades.setSelectedItems(this.entity.getEspecialidades());
+		}
+>>>>>>> origin/backend_services
 	}
 }
