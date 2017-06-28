@@ -5,7 +5,7 @@ import ar.edu.unlam.analisis.software.grupo2.core.model.TipoDocumentoEnum;
 /**
  * Created by sbogado on 6/28/17.
  */
-public class PersonaData {
+public abstract class PersonaData {
     private TipoDocumentoEnum tipoDocumento;
 
     private String numeroDocumento;

@@ -7,11 +7,11 @@ import ar.edu.unlam.analisis.software.grupo2.data.PersonaData;
 import javax.swing.*;
 
 public abstract class AbstractPersonaFormSearch<T extends Persona, E extends PersonaData> extends JPanel {
-    private JTextField txtNombre;
-    private JTextField txtApellido;
-    private JTextField txtCodigo;
-    private JTextField txtNumeroDeDocumento;
-    private JComboBox<TipoDocumentoEnum> cbTipoDocumento;
+    protected JTextField txtNombre;
+    protected JTextField txtApellido;
+    protected JTextField txtCodigo;
+    protected JTextField txtNumeroDeDocumento;
+    protected JComboBox<TipoDocumentoEnum> cbTipoDocumento;
 
     public AbstractPersonaFormSearch() {
         setLayout(null);
