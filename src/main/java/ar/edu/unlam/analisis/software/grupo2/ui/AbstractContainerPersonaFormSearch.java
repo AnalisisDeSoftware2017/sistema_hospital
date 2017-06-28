@@ -5,9 +5,12 @@ import ar.edu.unlam.analisis.software.grupo2.data.PersonaData;
 
 import javax.swing.*;
 
-public abstract class AbstractContainerPersonaFormSearch<T extends Persona, E extends PersonaData> extends JPanel {
+public abstract class AbstractContainerPersonaFormSearch<T extends Persona, E extends PersonaData> extends JFrame {
 
     protected AbstractPersonaFormSearch<T, E> searchForm;
+    private JButton btnAnterior;
+    private JButton btnBuscar;
+
 
     public AbstractContainerPersonaFormSearch(AbstractPersonaFormSearch<T, E> form) {
         setLayout(null);
@@ -24,16 +27,24 @@ public abstract class AbstractContainerPersonaFormSearch<T extends Persona, E ex
         add(botonera);
         botonera.setLayout(null);
 
-        JButton btnBuscar = new JButton("Buscar");
+        btnBuscar = new JButton("Buscar");
         btnBuscar.setBounds(193, 47, 117, 29);
         botonera.add(btnBuscar);
 
-        JButton btnAnterior = new JButton("Anterior");
+        btnAnterior = new JButton("Anterior");
         btnAnterior.setBounds(597, 47, 117, 29);
         botonera.add(btnAnterior);
     }
 
     public E getEntity() {
         return this.searchForm.getEntity();
+    }
+
+    public JButton getBtnAnterior() {
+        return btnAnterior;
+    }
+
+    public JButton getBtnBuscar() {
+        return btnBuscar;
     }
 }
