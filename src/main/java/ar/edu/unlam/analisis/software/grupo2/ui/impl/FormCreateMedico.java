@@ -2,7 +2,6 @@ package ar.edu.unlam.analisis.software.grupo2.ui.impl;
 
 import ar.edu.unlam.analisis.software.grupo2.core.model.Especialidad;
 import ar.edu.unlam.analisis.software.grupo2.core.model.Medico;
-import ar.edu.unlam.analisis.software.grupo2.core.model.Paciente;
 import ar.edu.unlam.analisis.software.grupo2.core.model.TipoDocumentoEnum;
 import ar.edu.unlam.analisis.software.grupo2.ui.AbstractFormCreate;
 import ar.edu.unlam.analisis.software.grupo2.ui.customComponents.JListCustom;
@@ -75,7 +74,6 @@ public class FormCreateMedico extends AbstractFormCreate<Medico> {
 		add(lblNumeroDocumento);
 
 		cmbEspecialidad = new JListCustom<Especialidad>();
-		//cmbEspecialidad.setBounds(389, 32, 285, 56);
 		cmbEspecialidad.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
 		
 

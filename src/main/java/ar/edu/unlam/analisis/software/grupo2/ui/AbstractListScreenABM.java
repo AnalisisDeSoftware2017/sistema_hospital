@@ -1,13 +1,10 @@
 package ar.edu.unlam.analisis.software.grupo2.ui;
 
-import javax.swing.*;
-import javax.swing.border.EmptyBorder;
-
 import ar.edu.unlam.analisis.software.grupo2.core.model.AbmEntity;
-
 import ar.edu.unlam.analisis.software.grupo2.ui.customComponents.JListCustom;
 
-
+import javax.swing.*;
+import javax.swing.border.EmptyBorder;
 import java.util.List;
 
 public abstract class AbstractListScreenABM<T extends AbmEntity> extends JFrame {
@@ -34,10 +31,6 @@ public abstract class AbstractListScreenABM<T extends AbmEntity> extends JFrame 
 		panel.setBounds(21, 63, 809, 517);
 		contentPane.add(panel);
 		panel.setLayout(null);
-
-		listEntity = new JListCustom<>();
-		listEntity.setBounds(6, 4, 585, 507);
-		panel.add(listEntity);
 		
 		btnCrear = new JButton("Crear");
 		btnCrear.setBounds(654, 74, 117, 29);
@@ -54,10 +47,17 @@ public abstract class AbstractListScreenABM<T extends AbmEntity> extends JFrame 
 		btnAnterior = new JButton("Anterior");
 		btnAnterior.setBounds(654, 444, 117, 29);
 		panel.add(btnAnterior);
-	}
-	
-	
-	public T getSelectedItem(){
+
+        listEntity = new JListCustom<>();
+
+        JScrollPane scrollPane = new JScrollPane(listEntity);
+        scrollPane.setBounds(6, 4, 585, 507);
+        panel.add(scrollPane);
+
+    }
+
+
+    public T getSelectedItem(){
 		return this.listEntity.getSelectedElement();
 
 	}

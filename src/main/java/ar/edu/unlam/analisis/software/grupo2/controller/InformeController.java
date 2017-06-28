@@ -1,12 +1,9 @@
 package ar.edu.unlam.analisis.software.grupo2.controller;
 
-import ar.edu.unlam.analisis.software.grupo2.core.services.UserService;
-import ar.edu.unlam.analisis.software.grupo2.ui.DatosMedicoForm;
+import ar.edu.unlam.analisis.software.grupo2.core.services.impl.UserService;
 import ar.edu.unlam.analisis.software.grupo2.ui.InformesForm;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-
-import java.awt.event.ActionListener;
 
 /**
  * Created by sbogado on 5/17/17.

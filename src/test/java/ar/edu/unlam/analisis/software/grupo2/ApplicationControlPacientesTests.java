@@ -1,7 +1,7 @@
 package ar.edu.unlam.analisis.software.grupo2;
 
 import ar.edu.unlam.analisis.software.grupo2.core.model.User;
-import ar.edu.unlam.analisis.software.grupo2.core.services.UserService;
+import ar.edu.unlam.analisis.software.grupo2.core.services.impl.UserService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

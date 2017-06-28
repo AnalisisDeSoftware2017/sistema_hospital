@@ -2,7 +2,7 @@ package ar.edu.unlam.analisis.software.grupo2.controller;
 
 import ar.edu.unlam.analisis.software.grupo2.core.exception.FailedLoginException;
 import ar.edu.unlam.analisis.software.grupo2.core.model.User;
-import ar.edu.unlam.analisis.software.grupo2.core.services.UserService;
+import ar.edu.unlam.analisis.software.grupo2.core.services.impl.UserService;
 import ar.edu.unlam.analisis.software.grupo2.ui.LoginJFrame;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
