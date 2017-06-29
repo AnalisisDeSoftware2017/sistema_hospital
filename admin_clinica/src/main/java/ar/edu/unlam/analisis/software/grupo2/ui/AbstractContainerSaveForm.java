@@ -44,7 +44,6 @@ public abstract class AbstractContainerSaveForm<T extends AbmEntity> extends Abs
 		
 		this.form = form;
 		this.form.setBounds(161, 0, 725, 570);
-		this.form.setBackground(Color.red);
 		contentPane.add(this.form);
 	}
 

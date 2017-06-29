@@ -28,7 +28,6 @@ public class MedicoFormSearch extends AbstractPersonaFormSearch<Medico, MedicoDa
         cmbEspecialidad.setBounds(267, 431, 284, 27);
         add(cmbEspecialidad);
 
-        this.setBackground(Color.red);
         this.setVisible(true);
     }
 

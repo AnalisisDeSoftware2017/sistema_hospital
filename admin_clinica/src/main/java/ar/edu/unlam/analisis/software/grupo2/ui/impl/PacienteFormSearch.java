@@ -15,7 +15,6 @@ import java.awt.*;
 public class PacienteFormSearch extends AbstractPersonaFormSearch<Paciente, PacienteData> {
     public PacienteFormSearch() {
         super();
-        this.setBackground(Color.red);
         this.setVisible(true);
     }
 
