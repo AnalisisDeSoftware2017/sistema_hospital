@@ -1,8 +1,6 @@
 package ar.edu.unlam.analisis.software.grupo2.controller;
 
-import ar.edu.unlam.analisis.software.grupo2.core.model.Medico;
 import ar.edu.unlam.analisis.software.grupo2.core.model.Paciente;
-import ar.edu.unlam.analisis.software.grupo2.core.services.impl.MedicoService;
 import ar.edu.unlam.analisis.software.grupo2.core.services.impl.PacienteService;
 import ar.edu.unlam.analisis.software.grupo2.ui.DatosMedicoForm;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -42,10 +40,6 @@ public class DatosPacienteController extends AbstractFrameController<DatosMedico
 
     }
 
-    @Override
-    protected void setTextoFrame() {
-
-    }
 
 
     private void irAPantallaAnterior() {

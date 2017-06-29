@@ -21,10 +21,6 @@ public class SaveEspecialidadController extends AbstractEntitySaveController<Esp
         super(service, form);
     }
 
-    @Override
-    protected void setTextoFrame() {
-
-    }
 
 
     @Override

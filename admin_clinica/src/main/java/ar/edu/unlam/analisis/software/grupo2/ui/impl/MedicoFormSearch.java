@@ -8,6 +8,7 @@ import ar.edu.unlam.analisis.software.grupo2.ui.AbstractPersonaFormSearch;
 import org.springframework.stereotype.Component;
 
 import javax.swing.*;
+import java.awt.*;
 
 /**
  * Created by sbogado on 6/28/17.
@@ -18,7 +19,7 @@ public class MedicoFormSearch extends AbstractPersonaFormSearch<Medico, MedicoDa
     private JComboBox cmbEspecialidad;
 
     public MedicoFormSearch() {
-
+        super();
         JLabel lblEspecialidad = new JLabel("Especialidad:");
         lblEspecialidad.setBounds(274, 403, 95, 16);
         add(lblEspecialidad);
@@ -26,6 +27,9 @@ public class MedicoFormSearch extends AbstractPersonaFormSearch<Medico, MedicoDa
         cmbEspecialidad = new JComboBox();
         cmbEspecialidad.setBounds(267, 431, 284, 27);
         add(cmbEspecialidad);
+
+        this.setBackground(Color.red);
+        this.setVisible(true);
     }
 
 
@@ -39,6 +43,13 @@ public class MedicoFormSearch extends AbstractPersonaFormSearch<Medico, MedicoDa
         medicoData.setTipoDocumento(this.cbTipoDocumento.getSelectedIndex() == 0 ? null : (TipoDocumentoEnum) this.cbTipoDocumento.getSelectedItem());
         medicoData.setEspecialidad(this.cmbEspecialidad.getSelectedIndex() == 0 ? null : (Especialidad) this.cmbEspecialidad.getSelectedItem());
         return medicoData;
+    }
+
+
+    @Override
+    public void setTexto() {
+        super.setTexto();
+
     }
 
 

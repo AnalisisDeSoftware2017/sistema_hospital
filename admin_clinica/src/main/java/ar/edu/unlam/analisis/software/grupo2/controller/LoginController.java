@@ -31,10 +31,6 @@ public class LoginController extends AbstractFrameController<LoginJFrame> {
         registerEnterKeyAction(frame.getUserNameBox(), ()->login());
     }
 
-    @Override
-    protected void setTextoFrame() {
-
-    }
 
     public void login(){
         User user = new User();
@@ -46,7 +42,7 @@ public class LoginController extends AbstractFrameController<LoginJFrame> {
             mainMenuController.setVisible(true);
             this.setVisible(false);
         } catch (FailedLoginException e) {
-            e.printStackTrace();
+            this.frame.showErrorMessage();
         }
     }
 

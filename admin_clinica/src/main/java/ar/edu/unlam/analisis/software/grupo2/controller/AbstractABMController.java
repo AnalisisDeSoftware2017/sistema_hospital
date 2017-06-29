@@ -76,10 +76,6 @@ public abstract class AbstractABMController<T extends AbmEntity, PK extends Seri
         this.entitySaveController.setVisible(true);
     }
 
-    @Override
-    protected void setTextoFrame() {
-
-    }
 
     @Override
     public void setVisible(Boolean visible){

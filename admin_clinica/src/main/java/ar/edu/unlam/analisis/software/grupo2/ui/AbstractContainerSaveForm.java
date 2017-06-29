@@ -1,16 +1,12 @@
 package ar.edu.unlam.analisis.software.grupo2.ui;
 
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-
 import ar.edu.unlam.analisis.software.grupo2.core.model.AbmEntity;
 
-import java.awt.Color;
+import javax.swing.*;
+import javax.swing.border.EmptyBorder;
+import java.awt.*;
 
-import javax.swing.JButton;
-
-public abstract class AbstractContainerSaveForm<T extends AbmEntity> extends JFrame {
+public abstract class AbstractContainerSaveForm<T extends AbmEntity> extends AbstractPantalla {
 
 	private JPanel contentPane;
 	
@@ -25,7 +21,7 @@ public abstract class AbstractContainerSaveForm<T extends AbmEntity> extends JFr
 	 */
 
 	public AbstractContainerSaveForm(AbstractFormCreate<T> form) {
-			
+
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1033, 700);
 		contentPane = new JPanel();
@@ -67,6 +63,12 @@ public abstract class AbstractContainerSaveForm<T extends AbmEntity> extends JFr
 	
 	public JButton getBtnCancelar(){
 		return this.btnCancelar;
+	}
+
+	@Override
+	public void setTexto() {
+		// TODO Auto-generated method stub
+
 	}
 
 }

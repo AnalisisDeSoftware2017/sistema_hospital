@@ -8,7 +8,7 @@ import javax.swing.border.EtchedBorder;
 import java.awt.*;
 
 @org.springframework.stereotype.Component
-public class IngresoForm extends JFrame {
+public class IngresoForm extends AbstractPantalla {
 
 	private JPanel contentPane;
 
@@ -20,9 +20,8 @@ public class IngresoForm extends JFrame {
 	 * Create the frame.
 	 */
 	public IngresoForm() {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 878, 550);
-		contentPane = new JPanel();
+        super();
+        contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
@@ -150,7 +149,12 @@ public class IngresoForm extends JFrame {
         });*/
 		opciones.add(cerrarSesion);
 	}
-	
+
+    @Override
+    public void setTexto() {
+
+    }
+
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO addAll your handling code here:

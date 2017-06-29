@@ -11,7 +11,7 @@ import javax.swing.*;
  * Created by sbogado on 5/8/17.
  */
 @Component
-public class LoginJFrame extends JFrame{
+public class LoginJFrame extends AbstractPantalla {
 
 
     private MessageSource messageSource;
@@ -144,5 +144,17 @@ public class LoginJFrame extends JFrame{
         return this.password;
     }
 
+    @Override
+    public void setTexto() {
+
+    }
+
+    public void showErrorMessage() {
+        JOptionPane.showMessageDialog(this,
+                messageSource.getMessage("login.error", null, AppContext.getLocale()),
+                "Error",
+                JOptionPane.ERROR_MESSAGE);
+
+    }
 }
 

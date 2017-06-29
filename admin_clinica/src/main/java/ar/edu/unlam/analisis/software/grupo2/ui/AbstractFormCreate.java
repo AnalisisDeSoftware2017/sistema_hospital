@@ -4,7 +4,7 @@ import ar.edu.unlam.analisis.software.grupo2.core.model.AbmEntity;
 
 import javax.swing.*;
 
-public abstract class AbstractFormCreate<T extends AbmEntity> extends JPanel {
+public abstract class AbstractFormCreate<T extends AbmEntity> extends JPanel implements SetTextoInterface {
 
 	protected T entity;
 

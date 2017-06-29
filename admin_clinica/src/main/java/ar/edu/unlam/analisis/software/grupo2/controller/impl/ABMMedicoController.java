@@ -21,8 +21,5 @@ public class ABMMedicoController extends AbstractABMController<Medico, Long> {
     }
 
 
-    @Override
-    protected void setTextoFrame() {
 
-    }
 }

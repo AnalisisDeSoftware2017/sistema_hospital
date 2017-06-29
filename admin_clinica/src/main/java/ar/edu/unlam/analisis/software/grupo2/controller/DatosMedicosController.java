@@ -36,10 +36,7 @@ public class DatosMedicosController extends AbstractFrameController<DatosMedicoF
 
     }
 
-    @Override
-    protected void setTextoFrame() {
 
-    }
 
 
     private void irAPantallaAnterior() {
