@@ -16,7 +16,9 @@ public class IngresoForm extends AbstractPantalla {
 	private JButton btnABMMedico;
 	private JButton btnAbmEnfermedades;
 	private JButton anterior;
-	/**
+    private JButton btnAbmUsuarios;
+
+    /**
 	 * Create the frame.
 	 */
 	public IngresoForm() {
@@ -27,20 +29,20 @@ public class IngresoForm extends AbstractPantalla {
 		contentPane.setLayout(null);
 		
 		JLabel lblAbms = new JLabel();
-		lblAbms.setBounds(5, 29, 834, 26);
-		lblAbms.setText("ABMS");
+        lblAbms.setBounds(215, 25, 834, 26);
+        lblAbms.setText("ABMS");
 		lblAbms.setHorizontalAlignment(SwingConstants.CENTER);
 		lblAbms.setFont(new Font("Cambria", Font.PLAIN, 18));
 		lblAbms.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
 		contentPane.add(lblAbms);
 		
 		JPanel jPanel1 = new JPanel();
-		jPanel1.setBounds(18, 66, 834, 383);
-		contentPane.add(jPanel1);
+        jPanel1.setBounds(215, 74, 834, 509);
+        contentPane.add(jPanel1);
 		
 		btnABMMedico = new JButton();
-		btnABMMedico.setText("ABM medico");
-		btnABMMedico.setFont(new Font("Tahoma", Font.PLAIN, 14));
+        btnABMMedico.setText("ABM Medico");
+        btnABMMedico.setFont(new Font("Tahoma", Font.PLAIN, 14));
 
 		btnABMPaciente = new JButton();
 		btnABMPaciente.setText("ABM Paciente");
@@ -54,32 +56,40 @@ public class IngresoForm extends AbstractPantalla {
 		btnAbmEnfermedades = new JButton();
 		btnAbmEnfermedades.setText("ABM Enfermedades");
 		btnAbmEnfermedades.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		GroupLayout gl_jPanel1 = new GroupLayout(jPanel1);
+
+        btnAbmUsuarios = new JButton("ABM Usuarios");
+        btnAbmUsuarios.setFont(new Font("Tahoma", Font.PLAIN, 14));
+
+        GroupLayout gl_jPanel1 = new GroupLayout(jPanel1);
 		gl_jPanel1.setHorizontalGroup(
-			gl_jPanel1.createParallelGroup(Alignment.LEADING)
-				.addGroup(Alignment.TRAILING, gl_jPanel1.createSequentialGroup()
-					.addContainerGap(286, Short.MAX_VALUE)
-					.addGroup(gl_jPanel1.createParallelGroup(Alignment.TRAILING)
-						.addGroup(gl_jPanel1.createSequentialGroup()
-							.addComponent(anterior, GroupLayout.PREFERRED_SIZE, 86, GroupLayout.PREFERRED_SIZE)
-							.addGap(97))
-						.addGroup(gl_jPanel1.createParallelGroup(Alignment.TRAILING, false)
-							.addComponent(btnABMMedico, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-							.addComponent(btnABMPaciente, Alignment.LEADING, GroupLayout.PREFERRED_SIZE, 289, GroupLayout.PREFERRED_SIZE)
-							.addComponent(btnAbmEnfermedades, Alignment.LEADING, GroupLayout.PREFERRED_SIZE, 289, GroupLayout.PREFERRED_SIZE)))
-					.addGap(259))
-		);
+                gl_jPanel1.createParallelGroup(Alignment.TRAILING)
+                        .addGroup(gl_jPanel1.createSequentialGroup()
+                                .addContainerGap(392, Short.MAX_VALUE)
+                                .addComponent(anterior, GroupLayout.PREFERRED_SIZE, 86, GroupLayout.PREFERRED_SIZE)
+                                .addGap(356))
+                        .addGroup(Alignment.LEADING, gl_jPanel1.createSequentialGroup()
+                                .addGap(266)
+                                .addGroup(gl_jPanel1.createParallelGroup(Alignment.LEADING)
+                                        .addComponent(btnAbmUsuarios, Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addGroup(gl_jPanel1.createParallelGroup(Alignment.LEADING, false)
+                                                .addComponent(btnABMMedico, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(btnABMPaciente, Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, 289, Short.MAX_VALUE)
+                                                .addComponent(btnAbmEnfermedades, Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, 289, Short.MAX_VALUE)))
+                                .addContainerGap(279, Short.MAX_VALUE))
+        );
 		gl_jPanel1.setVerticalGroup(
-			gl_jPanel1.createParallelGroup(Alignment.LEADING)
-				.addGroup(Alignment.TRAILING, gl_jPanel1.createSequentialGroup()
-					.addContainerGap(111, Short.MAX_VALUE)
-					.addComponent(btnAbmEnfermedades, GroupLayout.PREFERRED_SIZE, 36, GroupLayout.PREFERRED_SIZE)
+                gl_jPanel1.createParallelGroup(Alignment.TRAILING)
+                        .addGroup(gl_jPanel1.createSequentialGroup()
+                                .addGap(76)
+                                .addComponent(btnAbmEnfermedades, GroupLayout.PREFERRED_SIZE, 36, GroupLayout.PREFERRED_SIZE)
 					.addPreferredGap(ComponentPlacement.RELATED)
 					.addComponent(btnABMMedico, GroupLayout.PREFERRED_SIZE, 36, GroupLayout.PREFERRED_SIZE)
 					.addPreferredGap(ComponentPlacement.UNRELATED)
 					.addComponent(btnABMPaciente, GroupLayout.PREFERRED_SIZE, 35, GroupLayout.PREFERRED_SIZE)
 					.addGap(18)
-					.addComponent(anterior, GroupLayout.PREFERRED_SIZE, 40, GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btnAbmUsuarios, GroupLayout.PREFERRED_SIZE, 32, GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(ComponentPlacement.RELATED, 130, Short.MAX_VALUE)
+                                .addComponent(anterior, GroupLayout.PREFERRED_SIZE, 40, GroupLayout.PREFERRED_SIZE)
 					.addGap(89))
 		);
 		jPanel1.setLayout(gl_jPanel1);
@@ -201,4 +211,8 @@ public class IngresoForm extends AbstractPantalla {
 	public JButton getAnterior(){
 		return this.anterior;
 	}
+
+    public JButton getBtnAbmUsuarios() {
+        return this.btnAbmUsuarios;
+    }
 }

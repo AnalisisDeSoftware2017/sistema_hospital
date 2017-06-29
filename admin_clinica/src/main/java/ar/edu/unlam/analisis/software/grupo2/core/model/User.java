@@ -13,7 +13,7 @@ import java.util.Date;
 
 @Entity
 @Table(name = "usuarios_sistema")
-public class User {
+public class User extends AbmEntity {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
@@ -64,19 +64,7 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", username='" + username + '\'' +
-                ", password='" + password + '\'' +
-                ", email='" + email + '\'' +
-                ", nombre='" + nombre + '\'' +
-                ", apellido='" + apellido + '\'' +
-                ", isActive=" + isActive +
-                ", isLocked=" + isLocked +
-                ", fechaCreacion=" + fechaCreacion +
-                ", lastLogin=" + lastLogin +
-                ", failedLogin=" + failedLogin +
-                '}';
+        return getName();
     }
 
     @Override
@@ -205,5 +193,10 @@ public class User {
 
     public void setFailedLogin(Integer failedLogin) {
         this.failedLogin = failedLogin;
+    }
+
+    @Override
+    public String getName() {
+        return this.username + "    " + this.nombre + "    " + this.apellido;
     }
 }

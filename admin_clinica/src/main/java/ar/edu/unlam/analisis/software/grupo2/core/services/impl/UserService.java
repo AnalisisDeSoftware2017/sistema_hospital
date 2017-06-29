@@ -3,7 +3,6 @@ package ar.edu.unlam.analisis.software.grupo2.core.services.impl;
 import ar.edu.unlam.analisis.software.grupo2.core.dao.UserDao;
 import ar.edu.unlam.analisis.software.grupo2.core.exception.FailedLoginException;
 import ar.edu.unlam.analisis.software.grupo2.core.model.User;
-import ar.edu.unlam.analisis.software.grupo2.core.services.IServiceCRUD;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -16,7 +15,7 @@ import java.util.Optional;
  * Created by sbogado on 16/05/17.
  */
 @Service
-public class UserService implements IServiceCRUD<User, Long> {
+public class UserService extends AbstractServiceCRUD<User, Long> {
     private static final Integer CANTIDAD_DE_LOGINS_FAILS_TO_BLOCK = new Integer(3);
     @Autowired
     private UserDao userDao;
@@ -50,6 +49,7 @@ public class UserService implements IServiceCRUD<User, Long> {
 
     public User createUser(User user){
         user.setFailedLogin(0);
+        user.setLocked(false);
         user.setPassword(encodePassword(user.getPassword()));
         return userDao.save(user);
     }
@@ -70,7 +70,7 @@ public class UserService implements IServiceCRUD<User, Long> {
 
     @Override
     public User save(User entity) {
-        return userDao.save(entity);
+        return createUser(entity);
     }
 
     @Override
