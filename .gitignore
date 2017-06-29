@@ -1,11 +1,10 @@
-*.class
+hospitales_admin/target/classes/ar/edu/unlam/analisis/software/grupo2/core/model/User.class
 /bin/
 
 /out/
 *workspace.xml
 *.iml
-/target*
-/producto_analisis_soft_2017.iml
+*target*
 .idea/
 
 .project
