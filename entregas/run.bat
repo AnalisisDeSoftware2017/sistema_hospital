@@ -1,0 +1,1 @@
+java -jar gilbarco-pmobile-password_hash-1.4.0.RELEASE.jar %1

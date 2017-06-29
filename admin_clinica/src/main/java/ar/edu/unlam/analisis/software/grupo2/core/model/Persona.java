@@ -42,8 +42,8 @@ public abstract class Persona extends AbmEntity {
     
     @Override
 	public String getName() {
-		return this.codigo + "\t"+ this.nombre +" "+this.apellido ;
-	}
+        return this.codigo + "                     " + this.nombre + "    " + this.apellido;
+    }
 
 
 

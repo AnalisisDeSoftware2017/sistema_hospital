@@ -29,10 +29,10 @@ public class ReporteDao {
     public List<Medico> findAllMedicosByMedicoData(MedicoData medicoData) {
         Session session = entityManager.unwrap(Session.class);
         Criteria criteria = session.createCriteria(Medico.class);
-        /*criteria.createAlias("especialidades", "especialidad");
         if (null != medicoData.getEspecialidad()) {
-            criteria.add(Restrictions.eq("especialidad.id", medicoData.getEspecialidad().getId()));
-        }*/
+            criteria.createAlias("especialidades", "e1");
+            criteria.add(Restrictions.eq("e1.id", medicoData.getEspecialidad().getId()));
+        }
 
         if (null != medicoData.getApellido() && !medicoData.getApellido().isEmpty()) {
             criteria.add(Restrictions.eq("apellido", medicoData.getApellido()));

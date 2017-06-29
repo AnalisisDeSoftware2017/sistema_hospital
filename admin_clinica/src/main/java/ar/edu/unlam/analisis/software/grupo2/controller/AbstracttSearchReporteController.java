@@ -31,6 +31,14 @@ public abstract class AbstracttSearchReporteController<T extends Persona, E exte
         registerEnterKeyAction(this.frame.getBtnAnterior(), () -> anterior());
         registerClickAction(this.frame.getBtnBuscar(), (event) -> search());
         registerEnterKeyAction(this.frame.getBtnBuscar(), () -> search());
+
+        registerClickAction(this.listScreen.getBtnAnterior(), (event) -> showSearchForm());
+        registerEnterKeyAction(this.listScreen.getBtnAnterior(), () -> showSearchForm());
+        this.frame.setVisible(true);
+    }
+
+    protected void showSearchForm() {
+        this.listScreen.setVisible(false);
         this.frame.setVisible(true);
     }
 

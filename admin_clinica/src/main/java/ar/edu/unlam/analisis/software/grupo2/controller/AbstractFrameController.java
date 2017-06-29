@@ -24,12 +24,35 @@ public abstract class AbstractFrameController<T extends AbstractPantalla> {
 
     private Boolean frameWasInit=false;
 
+    /**
+     * Preparo el frame, inizializo eventos y le asigno que metodos se van a ejecutar
+     */
     protected abstract void prepareAndOpenFrame();
 
+
+    /**
+     * Registro eventos que se van a realizar sobre un boton
+     *
+     * @param button
+     * @param listener
+     */
     protected void registerClickAction(JButton button, ActionListener listener) {
         button.addActionListener(listener);
     }
-    protected void registerKeyAction(JComponent component, KeyAdapter keyAdapter){component.addKeyListener(keyAdapter);}
+
+    /**
+     * Registro eventos key que se van a realizar sobre un componente
+     * @param component
+     * @param keyAdapter
+     */
+    protected void registerKeyAction(JComponent component, KeyAdapter keyAdapter){component.addKeyListener(keyAdapter);
+    }
+
+    /**
+     * Registro el evento sobre el cual se puede hacer enter
+     * @param component
+     * @param command
+     */
     protected void registerEnterKeyAction(JComponent component, Command command){
         component.addKeyListener(new KeyAdapter() {
             @Override
@@ -43,10 +66,15 @@ public abstract class AbstractFrameController<T extends AbstractPantalla> {
     protected void setControllerAnterior(AbstractFrameController abstractFrameController){
         this.controllerAnterior = abstractFrameController;
     }
+
     protected void salir(){
         System.exit(0); // SE SALE DEL PROGRAMA.
     }
 
+    /**
+     * Le digo al frame que estoy controlando que debe ser visible
+     * @param visible
+     */
     public void setVisible(Boolean visible){
         if(!frameWasInit){
             prepareAndOpenFrame();
