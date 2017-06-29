@@ -148,5 +148,13 @@ public class LoginJFrame extends AbstractPantalla {
     public void setTexto() {
 
     }
+
+    public void showErrorMessage() {
+        JOptionPane.showMessageDialog(this,
+                messageSource.getMessage("login.error", null, AppContext.getLocale()),
+                "Error",
+                JOptionPane.ERROR_MESSAGE);
+
+    }
 }
 
