@@ -43,7 +43,9 @@ public abstract class AbstracttSearchReporteController<T extends Persona, E exte
     }
 
     protected void cargarListaDePersonas(List<T> personas) {
+        this.frame.setVisible(false);
         this.listScreen.cargarLista(personas);
+        this.listScreen.setVisible(true);
     }
 
 }

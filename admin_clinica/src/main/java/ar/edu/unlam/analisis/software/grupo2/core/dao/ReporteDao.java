@@ -11,31 +11,34 @@ import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.transaction.Transactional;
 import java.util.List;
 
 /**
  * Created by sbogado on 6/28/17.
  */
 @Repository("reporteDao")
+@Transactional
 public class ReporteDao {
 
     @PersistenceContext
     private EntityManager entityManager;
 
 
+
     public List<Medico> findAllMedicosByMedicoData(MedicoData medicoData) {
         Session session = entityManager.unwrap(Session.class);
         Criteria criteria = session.createCriteria(Medico.class);
-        criteria.createAlias("especialidades", "especialidad");
+        /*criteria.createAlias("especialidades", "especialidad");
         if (null != medicoData.getEspecialidad()) {
             criteria.add(Restrictions.eq("especialidad.id", medicoData.getEspecialidad().getId()));
-        }
+        }*/
 
-        if (null != medicoData.getApellido()) {
+        if (null != medicoData.getApellido() && !medicoData.getApellido().isEmpty()) {
             criteria.add(Restrictions.eq("apellido", medicoData.getApellido()));
         }
 
-        if (null != medicoData.getNombre()) {
+        if (null != medicoData.getNombre() && !medicoData.getNombre().isEmpty()) {
             criteria.add(Restrictions.eq("nombre", medicoData.getNombre()));
         }
 
@@ -43,11 +46,11 @@ public class ReporteDao {
             criteria.add(Restrictions.eq("tipoDocumento", medicoData.getTipoDocumento()));
         }
 
-        if (null != medicoData.getNumeroDocumento()) {
+        if (null != medicoData.getNumeroDocumento() && !medicoData.getNumeroDocumento().isEmpty()) {
             criteria.add(Restrictions.eq("numeroDocumento", medicoData.getNumeroDocumento()));
         }
 
-        if (null != medicoData.getCodigo()) {
+        if (null != medicoData.getCodigo() && !medicoData.getCodigo().isEmpty()) {
             criteria.add(Restrictions.eq("codigo", medicoData.getCodigo()));
         }
         return criteria.list();
@@ -58,11 +61,11 @@ public class ReporteDao {
         Session session = entityManager.unwrap(Session.class);
         Criteria criteria = session.createCriteria(Paciente.class);
 
-        if (null != pacienteData.getApellido()) {
+        if (null != pacienteData.getApellido() && !pacienteData.getApellido().isEmpty()) {
             criteria.add(Restrictions.eq("apellido", pacienteData.getApellido()));
         }
 
-        if (null != pacienteData.getNombre()) {
+        if (null != pacienteData.getNombre() && !pacienteData.getNombre().isEmpty()) {
             criteria.add(Restrictions.eq("nombre", pacienteData.getNombre()));
         }
 
@@ -70,11 +73,11 @@ public class ReporteDao {
             criteria.add(Restrictions.eq("tipoDocumento", pacienteData.getTipoDocumento()));
         }
 
-        if (null != pacienteData.getNumeroDocumento()) {
+        if (null != pacienteData.getNumeroDocumento() && !pacienteData.getNumeroDocumento().isEmpty()) {
             criteria.add(Restrictions.eq("numeroDocumento", pacienteData.getNumeroDocumento()));
         }
 
-        if (null != pacienteData.getCodigo()) {
+        if (null != pacienteData.getCodigo() && !pacienteData.getCodigo().isEmpty()) {
             criteria.add(Restrictions.eq("codigo", pacienteData.getCodigo()));
         }
         return criteria.list();
