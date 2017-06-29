@@ -1,0 +1,14 @@
+hospitales_admin/target/classes/ar/edu/unlam/analisis/software/grupo2/core/model/User.class
+/bin/
+
+/out/
+*workspace.xml
+*.iml
+*target*
+.idea/
+
+.project
+.classpath
+archivos_prueba/
+.settings/
+
