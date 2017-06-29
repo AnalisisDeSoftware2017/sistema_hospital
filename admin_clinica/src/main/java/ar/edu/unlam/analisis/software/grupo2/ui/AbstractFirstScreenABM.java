@@ -1,16 +1,13 @@
 package ar.edu.unlam.analisis.software.grupo2.ui;
 
-import javax.swing.*;
-import javax.swing.border.EmptyBorder;
-
 import ar.edu.unlam.analisis.software.grupo2.core.model.AbmEntity;
-
 import ar.edu.unlam.analisis.software.grupo2.ui.customComponents.JListCustom;
 
-
+import javax.swing.*;
+import javax.swing.border.EmptyBorder;
 import java.util.List;
 
-public abstract class AbstractFirstScreenABM<T extends AbmEntity> extends JFrame {
+public abstract class AbstractFirstScreenABM<T extends AbmEntity> extends AbstractPantalla {
 
 	private JPanel contentPane;
 	private  JListCustom<T> listEntity;
@@ -23,9 +20,8 @@ public abstract class AbstractFirstScreenABM<T extends AbmEntity> extends JFrame
 	 * Create the frame.
 	 */
 	public AbstractFirstScreenABM() {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 870, 620);
-		contentPane = new JPanel();
+        super();
+        contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
@@ -95,4 +91,10 @@ public abstract class AbstractFirstScreenABM<T extends AbmEntity> extends JFrame
 		//TODO add title
 		JOptionPane.showMessageDialog(this,message, "", JOptionPane.ERROR_MESSAGE);
 	}
+
+
+    @Override
+    public void setTexto() {
+
+    }
 }

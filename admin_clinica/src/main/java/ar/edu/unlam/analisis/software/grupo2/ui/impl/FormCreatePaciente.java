@@ -3,13 +3,9 @@ package ar.edu.unlam.analisis.software.grupo2.ui.impl;
 import ar.edu.unlam.analisis.software.grupo2.core.model.Paciente;
 import ar.edu.unlam.analisis.software.grupo2.core.model.TipoDocumentoEnum;
 import ar.edu.unlam.analisis.software.grupo2.ui.AbstractFormCreate;
-
-import javax.swing.DefaultComboBoxModel;
-import javax.swing.JComboBox;
-import javax.swing.JLabel;
-import javax.swing.JTextField;
-
 import org.springframework.stereotype.Component;
+
+import javax.swing.*;
 
 /**
  * Created by sbogado on 6/6/17.
@@ -95,5 +91,10 @@ public class FormCreatePaciente extends AbstractFormCreate<Paciente> {
 		this.txtNumeroDeDocumento.setText(this.entity.getNumeroDocumento());
 		this.cbTipoDocumento.setSelectedItem(this.entity.getTipoDocumento()==null?TipoDocumentoEnum.DNI:this.entity.getTipoDocumento());
 	}
+
+    @Override
+    public void setTexto() {
+
+    }
 
 }

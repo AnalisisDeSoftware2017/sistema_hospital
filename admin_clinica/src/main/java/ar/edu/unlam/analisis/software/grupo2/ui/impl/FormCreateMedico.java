@@ -120,4 +120,9 @@ public class FormCreateMedico extends AbstractFormCreate<Medico> {
 
 		this.cbTipoDocumento.setSelectedItem(this.entity.getTipoDocumento()==null?TipoDocumentoEnum.DNI:this.entity.getTipoDocumento());
 	}
+
+    @Override
+    public void setTexto() {
+
+    }
 }

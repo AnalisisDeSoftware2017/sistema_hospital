@@ -20,8 +20,5 @@ public class ABMEspecialidadController extends AbstractABMController<Especialida
     }
 
 
-    @Override
-    protected void setTextoFrame() {
 
-    }
 }

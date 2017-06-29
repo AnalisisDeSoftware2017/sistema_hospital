@@ -5,7 +5,7 @@ import ar.edu.unlam.analisis.software.grupo2.data.PersonaData;
 
 import javax.swing.*;
 
-public abstract class AbstractContainerPersonaFormSearch<T extends Persona, E extends PersonaData> extends JFrame {
+public abstract class AbstractContainerPersonaFormSearch<T extends Persona, E extends PersonaData> extends AbstractPantalla {
 
     protected AbstractPersonaFormSearch<T, E> searchForm;
     private JButton btnAnterior;
@@ -13,18 +13,21 @@ public abstract class AbstractContainerPersonaFormSearch<T extends Persona, E ex
 
 
     public AbstractContainerPersonaFormSearch(AbstractPersonaFormSearch<T, E> form) {
-        setLayout(null);
+        super();
+        getContentPane().setLayout(null);
 
         this.searchForm = form;
 
         JPanel formContainer = new JPanel();
         formContainer.setBounds(22, 20, 1040, 530);
-        add(formContainer);
+        searchForm.setBounds(0, 0, 1020, 510);
+        formContainer.add(searchForm);
+        getContentPane().add(formContainer);
         formContainer.setLayout(null);
 
         JPanel botonera = new JPanel();
         botonera.setBounds(22, 562, 1040, 101);
-        add(botonera);
+        getContentPane().add(botonera);
         botonera.setLayout(null);
 
         btnBuscar = new JButton("Buscar");
@@ -34,6 +37,8 @@ public abstract class AbstractContainerPersonaFormSearch<T extends Persona, E ex
         btnAnterior = new JButton("Anterior");
         btnAnterior.setBounds(597, 47, 117, 29);
         botonera.add(btnAnterior);
+
+
     }
 
     public E getEntity() {
@@ -46,5 +51,12 @@ public abstract class AbstractContainerPersonaFormSearch<T extends Persona, E ex
 
     public JButton getBtnBuscar() {
         return btnBuscar;
+    }
+
+
+    @Override
+    public void setTexto() {
+        // TODO Auto-generated method stub
+
     }
 }

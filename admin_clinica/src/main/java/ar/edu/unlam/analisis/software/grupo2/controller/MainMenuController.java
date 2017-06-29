@@ -35,12 +35,6 @@ public class MainMenuController extends AbstractFrameController<MainForm> {
         frame.setVisible(true);
     }
 
-    @Override
-    protected void setTextoFrame() {
-
-
-
-    }
 
     private void dibujarIngreso() {
         this.setVisible(false);
