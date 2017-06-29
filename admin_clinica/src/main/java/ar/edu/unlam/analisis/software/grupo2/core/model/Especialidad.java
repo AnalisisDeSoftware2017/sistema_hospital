@@ -26,14 +26,11 @@ public class Especialidad extends AbmEntity {
     //TODO ver como joinear la tabla
     private List<Medico> medicos;
 
-	@Override
+
+    @Override
 	public String getName() {
 		return nombreEspecialidad;
 	}
-
-
-    public Especialidad() {
-    }
 
 
     public Long getId() {
