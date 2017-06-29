@@ -6,7 +6,7 @@ import ar.edu.unlam.analisis.software.grupo2.data.PersonaData;
 
 import javax.swing.*;
 
-public abstract class AbstractPersonaFormSearch<T extends Persona, E extends PersonaData> extends JPanel {
+public abstract class AbstractPersonaFormSearch<T extends Persona, E extends PersonaData> extends JPanel implements SetTextoInterface {
     protected JTextField txtNombre;
     protected JTextField txtApellido;
     protected JTextField txtCodigo;
@@ -14,8 +14,8 @@ public abstract class AbstractPersonaFormSearch<T extends Persona, E extends Per
     protected JComboBox<TipoDocumentoEnum> cbTipoDocumento;
 
     public AbstractPersonaFormSearch() {
+        super();
         setLayout(null);
-
         txtNombre = new JTextField();
         txtNombre.setBounds(267, 63, 285, 26);
         add(txtNombre);
@@ -67,5 +67,10 @@ public abstract class AbstractPersonaFormSearch<T extends Persona, E extends Per
 
     public abstract E getEntity();
 
+
+    @Override
+    public void setTexto() {
+
+    }
 
 }

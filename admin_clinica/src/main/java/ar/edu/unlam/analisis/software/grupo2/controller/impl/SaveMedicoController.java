@@ -7,7 +7,6 @@ import ar.edu.unlam.analisis.software.grupo2.core.services.impl.EspecialidadServ
 import ar.edu.unlam.analisis.software.grupo2.core.services.impl.MedicoService;
 import ar.edu.unlam.analisis.software.grupo2.ui.AbstractContainerSaveForm;
 import ar.edu.unlam.analisis.software.grupo2.ui.impl.ContainerSaveMedicoForm;
-import ar.edu.unlam.analisis.software.grupo2.ui.impl.FormCreateMedico;
 import ar.edu.unlam.analisis.software.grupo2.utils.AppContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -30,10 +29,6 @@ public class SaveMedicoController extends AbstractEntitySaveController<Medico,Lo
         super(service, form);
     }
 
-    @Override
-    protected void setTextoFrame() {
-
-    }
 
     @Override
     public void setEntity(Medico entity){

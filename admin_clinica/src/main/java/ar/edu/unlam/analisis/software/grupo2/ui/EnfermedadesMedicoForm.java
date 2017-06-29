@@ -7,7 +7,7 @@ import javax.swing.border.EmptyBorder;
 import java.awt.*;
 
 @org.springframework.stereotype.Component
-public class EnfermedadesMedicoForm extends JFrame {
+public class EnfermedadesMedicoForm extends AbstractPantalla {
 
 	private JPanel contentPane;
 	private JTextField nombreMed;
@@ -198,6 +198,11 @@ public class EnfermedadesMedicoForm extends JFrame {
 					.addContainerGap(16, Short.MAX_VALUE))
 		);
 		panel.setLayout(gl_panel);
+	}
+
+	@Override
+	public void setTexto() {
+
 	}
 
 /*

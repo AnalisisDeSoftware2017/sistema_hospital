@@ -6,11 +6,20 @@ import ar.edu.unlam.analisis.software.grupo2.data.PacienteData;
 import ar.edu.unlam.analisis.software.grupo2.ui.AbstractPersonaFormSearch;
 import org.springframework.stereotype.Component;
 
+import java.awt.*;
+
 /**
  * Created by sbogado on 6/28/17.
  */
 @Component
 public class PacienteFormSearch extends AbstractPersonaFormSearch<Paciente, PacienteData> {
+    public PacienteFormSearch() {
+        super();
+        this.setBackground(Color.red);
+        this.setVisible(true);
+    }
+
+
     @Override
     public PacienteData getEntity() {
         PacienteData pacienteData = new PacienteData();
@@ -21,4 +30,6 @@ public class PacienteFormSearch extends AbstractPersonaFormSearch<Paciente, Paci
         pacienteData.setTipoDocumento(this.cbTipoDocumento.getSelectedIndex() == 0 ? null : (TipoDocumentoEnum) this.cbTipoDocumento.getSelectedItem());
         return pacienteData;
     }
+
+
 }

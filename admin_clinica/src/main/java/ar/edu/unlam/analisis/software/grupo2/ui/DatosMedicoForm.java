@@ -12,7 +12,7 @@ import java.awt.event.KeyEvent;
 
 
 @Component
-public class DatosMedicoForm extends JFrame {
+public class DatosMedicoForm extends AbstractPantalla {
 
 	private JPanel contentPane;
 
@@ -160,6 +160,11 @@ public class DatosMedicoForm extends JFrame {
 		jLabel5.setBounds(0, 0, 520, 350);
 		contentPane.add(jLabel5);
 	}
+
+	@Override
+	public void setTexto() {
+
+	}
 	
 	/*public DatosMedicoForm(String codigo) { // Constructor 2 para crear un medico desde otras clases
         this.codigoMed=codigo;
@@ -180,11 +185,11 @@ public class DatosMedicoForm extends JFrame {
     }
     
     private static boolean soloLetras(String cadena){
-      if(cadena.matches("[������a-z������A-Z][������a-z������A-z ]*")) // Se valida en esta funci�n que no puede ser vac�a la cadena.
-        return true; //Son letras.
-      else
-        return false; //No son letras.
-    }
+		// Se valida en esta funci�n que no puede ser vac�a la cadena.
+//Son letras.
+//No son letras.
+		return cadena.matches("[������a-z������A-Z][������a-z������A-z ]*");
+	}
 
     /*private static boolean alfanumerico(String cadena){
       if(cadena.matches("[0-9a-zA-z]+")) // Tampoco puede ser vac�a una cadena.

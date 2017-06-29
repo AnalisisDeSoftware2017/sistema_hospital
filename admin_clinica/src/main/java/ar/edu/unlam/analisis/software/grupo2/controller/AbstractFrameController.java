@@ -1,5 +1,6 @@
 package ar.edu.unlam.analisis.software.grupo2.controller;
 
+import ar.edu.unlam.analisis.software.grupo2.ui.AbstractPantalla;
 import ar.edu.unlam.analisis.software.grupo2.utils.Command;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
@@ -8,12 +9,11 @@ import javax.swing.*;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
 
 /**
  * Created by sbogado on 5/8/17.
  */
-public abstract class AbstractFrameController<T extends  JFrame> {
+public abstract class AbstractFrameController<T extends AbstractPantalla> {
 
     protected AbstractFrameController controllerAnterior;
 
@@ -55,7 +55,9 @@ public abstract class AbstractFrameController<T extends  JFrame> {
         this.frame.setVisible(visible);
     }
 
-    protected abstract void setTextoFrame();
+    protected final void setTextoFrame() {
+        this.frame.setTexto();
+    }
 
 
 }

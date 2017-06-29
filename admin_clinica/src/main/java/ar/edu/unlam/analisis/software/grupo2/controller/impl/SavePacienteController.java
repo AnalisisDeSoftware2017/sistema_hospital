@@ -24,11 +24,6 @@ public class SavePacienteController extends AbstractEntitySaveController<Pacient
         super(service, form);
     }
 
-    @Override
-    protected void setTextoFrame() {
-
-    }
-
 
     @Override
     protected List<String> validateData(Paciente entidad) {

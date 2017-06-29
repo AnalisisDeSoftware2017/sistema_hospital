@@ -3,8 +3,8 @@ package ar.edu.unlam.analisis.software.grupo2.ui.impl;
 import ar.edu.unlam.analisis.software.grupo2.core.model.Especialidad;
 import ar.edu.unlam.analisis.software.grupo2.ui.AbstractFormCreate;
 import org.springframework.stereotype.Component;
-import javax.swing.JTextField;
-import javax.swing.JLabel;
+
+import javax.swing.*;
 
 /**
  * Created by sbogado on 6/6/17.
@@ -35,5 +35,10 @@ public class FormCreateEspecialidad extends AbstractFormCreate<Especialidad> {
     public void setEntity(Especialidad entitys) {
 		this.entity = entitys == null ? new Especialidad():entitys;
 		this.txtEspecialidad.setText(entity.getNombreEspecialidad());
+    }
+
+    @Override
+    public void setTexto() {
+
     }
 }

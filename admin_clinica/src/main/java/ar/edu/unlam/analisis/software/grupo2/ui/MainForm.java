@@ -9,7 +9,7 @@ import java.awt.*;
 
 
 @Component
-public class MainForm extends JFrame {
+public class MainForm extends AbstractPantalla {
 
 	private JPanel contentPane;
 	private JButton salir;
@@ -21,9 +21,8 @@ public class MainForm extends JFrame {
 	 * Create the frame.
 	 */
 	public MainForm() {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 877, 486);
-		contentPane = new JPanel();
+        super();
+        contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
@@ -114,5 +113,11 @@ public class MainForm extends JFrame {
 	public JButton getIngreso(){
 		return ingreso;
 	}
+
+    @Override
+    public void setTexto() {
+        // TODO Auto-generated method stub
+
+    }
 
 }

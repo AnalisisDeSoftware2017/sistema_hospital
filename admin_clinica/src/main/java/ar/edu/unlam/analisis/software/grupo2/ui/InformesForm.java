@@ -1,5 +1,7 @@
 package ar.edu.unlam.analisis.software.grupo2.ui;
 
+import org.springframework.stereotype.Component;
+
 import javax.swing.*;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.LayoutStyle.ComponentPlacement;
@@ -7,20 +9,19 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.border.EtchedBorder;
 import java.awt.*;
 
-@org.springframework.stereotype.Component
-public class InformesForm extends JFrame {
+@Component
+public class InformesForm extends AbstractPantalla {
 
 	private JPanel contentPane;
-	private JButton listaddoPacXMedBtn;
-	private JButton enfermedadesBtn;
-	private JButton anterior;
+    private JButton btnMedico;
+    private JButton btnPaciente;
+    private JButton anterior;
 	/**
 	 * Create the frame.
 	 */
 	public InformesForm() {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
-		contentPane = new JPanel();
+        super();
+        contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
@@ -36,14 +37,14 @@ public class InformesForm extends JFrame {
 		JPanel jPanel1 = new JPanel();
 		jPanel1.setBounds(5, 66, 424, 190);
 		contentPane.add(jPanel1);
-		
-		enfermedadesBtn = new JButton();
-		enfermedadesBtn.setText("Enfermedades que atiende cada m\u00C3\u00A9dico");
-		enfermedadesBtn.setFont(new Font("Tahoma", Font.PLAIN, 14));
 
-		listaddoPacXMedBtn = new JButton();
-		listaddoPacXMedBtn.setText("Listado de pacientes por m\u00C3\u00A9dico");
-		listaddoPacXMedBtn.setFont(new Font("Tahoma", Font.PLAIN, 14));
+        btnPaciente = new JButton();
+        btnPaciente.setText("Buscar Paciente");
+        btnPaciente.setFont(new Font("Tahoma", Font.PLAIN, 14));
+
+        btnMedico = new JButton();
+        btnMedico.setText("Buscar medico");
+        btnMedico.setFont(new Font("Tahoma", Font.PLAIN, 14));
 
 		
 		anterior = new JButton();
@@ -57,9 +58,9 @@ public class InformesForm extends JFrame {
 					.addGroup(gl_jPanel1.createParallelGroup(Alignment.LEADING)
 						.addGroup(Alignment.TRAILING, gl_jPanel1.createSequentialGroup()
 							.addGroup(gl_jPanel1.createParallelGroup(Alignment.LEADING)
-								.addComponent(listaddoPacXMedBtn, GroupLayout.PREFERRED_SIZE, 289, GroupLayout.PREFERRED_SIZE)
-								.addComponent(enfermedadesBtn))
-							.addGap(64))
+                                    .addComponent(btnMedico, GroupLayout.PREFERRED_SIZE, 289, GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btnPaciente))
+                                .addGap(64))
 						.addGroup(Alignment.TRAILING, gl_jPanel1.createSequentialGroup()
 							.addComponent(anterior, GroupLayout.PREFERRED_SIZE, 86, GroupLayout.PREFERRED_SIZE)
 							.addGap(161))))
@@ -68,10 +69,10 @@ public class InformesForm extends JFrame {
 			gl_jPanel1.createParallelGroup(Alignment.LEADING)
 				.addGroup(gl_jPanel1.createSequentialGroup()
 					.addGap(24)
-					.addComponent(enfermedadesBtn, GroupLayout.PREFERRED_SIZE, 36, GroupLayout.PREFERRED_SIZE)
-					.addPreferredGap(ComponentPlacement.UNRELATED)
-					.addComponent(listaddoPacXMedBtn, GroupLayout.PREFERRED_SIZE, 35, GroupLayout.PREFERRED_SIZE)
-					.addGap(18)
+                        .addComponent(btnPaciente, GroupLayout.PREFERRED_SIZE, 36, GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(ComponentPlacement.UNRELATED)
+                        .addComponent(btnMedico, GroupLayout.PREFERRED_SIZE, 35, GroupLayout.PREFERRED_SIZE)
+                        .addGap(18)
 					.addComponent(anterior, GroupLayout.PREFERRED_SIZE, 40, GroupLayout.PREFERRED_SIZE)
 					.addContainerGap(26, Short.MAX_VALUE))
 		);
@@ -142,7 +143,12 @@ public class InformesForm extends JFrame {
         });*/
 		opciones.add(cerrarSesion);
 	}
-	
+
+    @Override
+    public void setTexto() {
+
+    }
+
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO addAll your handling code here:
@@ -179,13 +185,15 @@ public class InformesForm extends JFrame {
     }*/
 
 
-	public JButton getListaddoPacXMedBtn(){
-		return this.listaddoPacXMedBtn;
-	}
-	public JButton getEnfermedadesBtn(){
-		return enfermedadesBtn;
-	}
-	public JButton getAnterior(){
+    public JButton getBtnMedico() {
+        return this.btnMedico;
+    }
+
+    public JButton getBtnPaciente() {
+        return btnPaciente;
+    }
+
+    public JButton getAnterior(){
 		return this.anterior;
 	}
 

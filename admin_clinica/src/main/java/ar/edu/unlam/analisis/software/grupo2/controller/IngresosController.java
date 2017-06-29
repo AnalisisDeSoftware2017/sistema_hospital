@@ -63,10 +63,6 @@ public class IngresosController extends AbstractFrameController<IngresoForm>{
         this.controllerAnterior.setVisible(true);
     }
 
-    @Override
-    protected void setTextoFrame() {
-
-    }
 
 
 
