@@ -38,37 +38,38 @@ Este proyecto es de analisis de software:
     </li>
    
 </ol>
-   
    Configuracion para correr el desarrollo:
     Si tenes el jar compilado crear un archivo llamado application.properties en la misma carpeta donde se encuentra el jar. 
     Ver mas info en la seccion de properties 
-    
-    <h1>Properties:</h1>
-    <h3>Seteo con que clase se va a manejar Hibernate</h3>
+
+   
+    Properties:
+    #Seteo con que clase se va a manejar Hibernate
     spring.datasource.driverClassName
-    <h3>Seteo con que dialecto se va a manejar Hibernate</h3>
+    #Seteo con que dialecto se va a manejar Hibernate
     spring.jpa.database-platform
     
-    <h3>La url sobre la cual se tiene que hacer la conexion a la base de datos</h3>
+    #La url sobre la cual se tiene que hacer la conexion a la base de datos
     spring.datasource.url=jdbc:mysql://localhost:3306/clinica_laureles
-    <h3>El nombre del usuario con el cual se va a conectar a la base de datos</h3>
+    #El nombre del usuario con el cual se va a conectar a la base de datos
     spring.datasource.username=root
-    <h3>La password de ese usuario</h3>
+    #La password de ese usuario
     spring.datasource.password=seeb143
-    <h3>Que queries se van a ejecutar. Valores posibles: create, create-drop, update, none</h3>
+    #Que queries se van a ejecutar. Valores posibles: create, create-drop, update, none
     spring.jpa.hibernate.ddl-auto=update
-    <h3>Mostrar consultas que se van a realizar</h3>
+    #Mostrar consultas que se van a realizar
     spring.jpa.show-sql=true
     
-    <h3>Esto es para algo que necesitaba para realizar las queries de busqueda sobre medicos y pacientes</h3>
+    #Esto es para algo que necesitaba para realizar las queries de busqueda sobre medicos y pacientes
     spring.jpa.properties.hibernate.current_session_context_class=org.springframework.orm.hibernate5.SpringSessionContext
-    <h3>Esto esta para decirle que pueda generar las tablas</h3>
+    #Esto esta para decirle que pueda generar las tablas
     spring.jpa.properties.javax.persistence.schema-generation.create-source=metadata
-    <h3>Que scripts son los que se van a generar</h3>
+    #Que scripts son los que se van a generar
     spring.jpa.properties.javax.persistence.schema-generation.scripts.action=create
-    <h3>En que archivo se van a generar cuando se corra el proyecto</h3>
+    #En que archivo se van a generar cuando se corra el proyecto
     spring.jpa.properties.javax.persistence.schema-generation.scripts.create-target=create_mysql.sql
 
+  
     
   
 ###Properties para MYSQL  
