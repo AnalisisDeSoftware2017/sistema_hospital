@@ -10,43 +10,98 @@ Este proyecto es de analisis de software:
 </ul>
 
 
-<h2>Pasos iniciales:</h2>
+*Configuracion del entorno de desarrollo:*
+<ol>
+<li> <h4>Descargar el jdk de java 1.8 </h4>
+    <h5>En caso de tenerlo, configurar el path de java. Agregando la variable de entorno JAVA_HOME (Dentro de System variables) apuntando  al
+    bin que se encuentra en la carpeta dentro del jdk. Por ejemplo en mi caso seria algo como: C:\Program Files\Java\jdk1.8.0_131\bin
+        Si queres probar si lo tenes bien instalado o que version de java tenes instalada tenes que correr: "java -version". </h5>
+        <b>Despues de esto se debe cerrar la terminal</b></li>
+    <li>
+        <h4>Instalar maven.</h4>
+        <ul>
+            <li>De la siguiente pagina: https://maven.apache.org/download.cgi tienen que descargarlo.</li>
+            <li>Configurar la variable de entorno M2_HOME (C:\maven) y M2 (%M2_HOME%\bin</li>
+            <li>Iniciar nuevamente la consola: y correr: "mvn -version"</li>
+        </ul>
+    </li>
+    <li>Clonar el proyecto</li>
+    <li>Pararse con la consola sobre el proyecto y ejecutar el comando "mvn clean install"</li>
+    <li>
+        <ul>
+            <li>Eclipse: <br/>
+                    File -> import -> maven -> Existing Maven Projects (Seleccionar la carpeta -> El proyecto)  <br/>
+                    En caso de no importar correctamente el proyecto, pararse sobre la carpeta del proyecto en la terminal y correr <br/>   "mvn clean eclipse:clean eclipse:eclipse"
+            </li>
+            <li>IntelliJ: open -> Buscas la carpeta del proyecto, ingresas, seleccionas el pom y clickeas Open as project</li>
+        </ul>
+    </li>
+   
+</ol>
+   
+   Configuracion para correr el desarrollo:
+    Si tenes el jar compilado crear un archivo llamado application.properties en la misma carpeta donde se encuentra el jar. 
+    Ver mas info en la seccion de properties 
+    
+    <h1>Properties:</h1>
+    <h3>Seteo con que clase se va a manejar Hibernate</h3>
+    spring.datasource.driverClassName
+    <h3>Seteo con que dialecto se va a manejar Hibernate</h3>
+    spring.jpa.database-platform
+    
+    <h3>La url sobre la cual se tiene que hacer la conexion a la base de datos</h3>
+    spring.datasource.url=jdbc:mysql://localhost:3306/clinica_laureles
+    <h3>El nombre del usuario con el cual se va a conectar a la base de datos</h3>
+    spring.datasource.username=root
+    <h3>La password de ese usuario</h3>
+    spring.datasource.password=seeb143
+    <h3>Que queries se van a ejecutar. Valores posibles: create, create-drop, update, none</h3>
+    spring.jpa.hibernate.ddl-auto=update
+    <h3>Mostrar consultas que se van a realizar</h3>
+    spring.jpa.show-sql=true
+    
+    <h3>Esto es para algo que necesitaba para realizar las queries de busqueda sobre medicos y pacientes</h3>
+    spring.jpa.properties.hibernate.current_session_context_class=org.springframework.orm.hibernate5.SpringSessionContext
+    <h3>Esto esta para decirle que pueda generar las tablas</h3>
+    spring.jpa.properties.javax.persistence.schema-generation.create-source=metadata
+    <h3>Que scripts son los que se van a generar</h3>
+    spring.jpa.properties.javax.persistence.schema-generation.scripts.action=create
+    <h3>En que archivo se van a generar cuando se corra el proyecto</h3>
+    spring.jpa.properties.javax.persistence.schema-generation.scripts.create-target=create_mysql.sql
 
-<ul>
-    <li>
-        Instalar posgresql 
-    </li>
-    <li>
-        Crear usuario en postgresql (Para ello se debe correr el siguiente script): 
-        create user admin_laureles PASSWORD 'password';
-        ALTER ROLE admin_laureles WITH SUPERUSER;
-    </li>
-    <li>
-        Instalar maven:
-        https://maven.apache.org/download.cgi
-    </li>
-    <li>
-        Agregar maven al path.
-        Por ejemplo: <i>C:\maven\bin</i>
-    </li>
-    <li>
-        Comprobar que maven está correctamente instalado. 
-        Para ello, en la consola se debe ejecutar el siguiente comando:
-        <i>mvn --version</i>
-        (En caso que de error comprobar que java esté correctamente configurado y en el path)
-    </li>
-    <li>
-        Importar el proyecto a eclipse como un proyecto maven.
-    </li>
-    <li>
-        De acá en más pregunten porque no me acuerdo (Tiene que correr un clean install)
-    </li>
-    <li>
-        Correr el main dentro de ApplicationControlPac
-    </li>
-</ul>
+    
+  
+###Properties para MYSQL  
+ 
+spring.datasource.url=jdbc:mysql://localhost:3306/clinica_laureles
+spring.datasource.username=root
+spring.datasource.password=seeb143
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+spring.jpa.database-platform=org.hibernate.dialect.MySQLDialect
+spring.jpa.properties.hibernate.current_session_context_class=org.springframework.orm.hibernate5.SpringSessionContext
+spring.jpa.properties.javax.persistence.schema-generation.create-source=metadata
+spring.jpa.properties.javax.persistence.schema-generation.scripts.action=create
+spring.jpa.properties.javax.persistence.schema-generation.scripts.create-target=create_mysql.sql
 
+  
+  
+  
+  
 
-<h3>Por cierto, les avisé que me iban a odiar Jeje :)</h3>
-
+### Properties PostgresSQL tengo que ver si funciona (Todavia no lo probe)
+spring.datasource.url=jdbc:postgresql://localhost:5432/clinica_laureles
+spring.datasource.username=postgres
+spring.datasource.password=seeb143
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+spring.datasource.driverClassName=org.postgresql.Driver
+spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
+spring.jpa.properties.hibernate.current_session_context_class=org.springframework.orm.hibernate5.SpringSessionContext
+spring.jpa.properties.javax.persistence.schema-generation.create-source=metadata
+spring.jpa.properties.javax.persistence.schema-generation.scripts.action=create
+spring.jpa.properties.javax.persistence.schema-generation.scripts.create-target=create_postgres.sql
+  
+  
+  
 
