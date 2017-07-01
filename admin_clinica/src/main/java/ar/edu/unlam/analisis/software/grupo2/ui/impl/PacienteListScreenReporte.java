@@ -6,5 +6,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class PacienteListScreenReporte extends AbstractListScreenReporte<Paciente> {
+	public PacienteListScreenReporte() {
+	}
 
 }

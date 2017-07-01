@@ -20,11 +20,14 @@ public abstract class AbstractFirstScreenABM<T extends AbmEntity> extends Abstra
 	 * Create the frame.
 	 */
 	public AbstractFirstScreenABM() {
+		
         super();
+        
         contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		
 		
 		JPanel panel = new JPanel();
 		panel.setBounds(21, 63, 809, 517);

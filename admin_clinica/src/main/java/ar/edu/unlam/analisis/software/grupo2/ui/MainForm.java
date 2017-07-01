@@ -22,7 +22,8 @@ public class MainForm extends AbstractPantalla {
 	 */
 	public MainForm() {
         super();
-        contentPane = new JPanel();
+        
+        contentPane = this.setPanel("/img/Hospital_Laurel.jpg");
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
@@ -65,16 +66,12 @@ public class MainForm extends AbstractPantalla {
 		menuItem_4.setText("Cerrar Sesi\u00F3n");
 		menu_2.add(menuItem_4);
 		
-		JLabel label = new JLabel();
-		label.setBounds(0, 0, 861, 447);
-		contentPane.add(label);
-		
 		informes = new JButton();
 		//TODO addAll internacionalizancion
 		informes.setToolTipText("Click para ver enfermedades y pacientes que atienden los m\u00E9dicos.");
 		informes.setText("Informes");
 		informes.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		informes.setBounds(40, 270, 180, 64);
+		informes.setBounds(412, 315, 404, 64);
 		contentPane.add(informes);
 		
 		salir = new JButton();
@@ -82,7 +79,7 @@ public class MainForm extends AbstractPantalla {
 		salir.setToolTipText("Click para salir del programa.");
 		salir.setText("Salir");
 		salir.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		salir.setBounds(40, 360, 180, 64);
+		salir.setBounds(412, 421, 404, 64);
 		contentPane.add(salir);
 		
 		ingreso = new JButton();
@@ -91,15 +88,15 @@ public class MainForm extends AbstractPantalla {
 		//TODO addAll internacionalizancion
 		ingreso.setText("Ingreso de Datos");
 		ingreso.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		ingreso.setBounds(40, 180, 180, 64);
+		ingreso.setBounds(412, 197, 404, 64);
 		contentPane.add(ingreso);
 
 		//TODO addAll internacionalizancion
-		JLabel lblNewLabel = new JLabel("CONTROL DE PACIENTES");
+		JLabel lblNewLabel = new JLabel("MENU");
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel.setFont(new Font("Cambria", Font.PLAIN, 18));
-		lblNewLabel.setBounds(10, 120, 550, 26);
-		lblNewLabel.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+		lblNewLabel.setFont(new Font("Cambria", Font.PLAIN, 45));
+		lblNewLabel.setBounds(115, 102, 1105, 57);
+	
 		contentPane.add(lblNewLabel);
 	}
 
