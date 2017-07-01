@@ -5,6 +5,8 @@ import ar.edu.unlam.analisis.software.grupo2.ui.customComponents.JListCustom;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
+
+import java.awt.Color;
 import java.util.List;
 
 public abstract class AbstractFirstScreenABM<T extends AbmEntity> extends AbstractPantalla {
@@ -30,12 +32,13 @@ public abstract class AbstractFirstScreenABM<T extends AbmEntity> extends Abstra
 		
 		
 		JPanel panel = new JPanel();
+		panel.setBackground(new Color(0,0,0,0));
 		panel.setBounds(21, 63, 809, 517);
 		contentPane.add(panel);
 		panel.setLayout(null);
 
 		listEntity = new JListCustom<>();
-		listEntity.setBounds(6, 4, 585, 507);
+		listEntity.setBounds(10, 0, 585, 507);
 		panel.add(listEntity);
 		
 		btnCrear = new JButton("Crear");

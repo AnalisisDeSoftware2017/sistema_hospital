@@ -5,6 +5,8 @@ import ar.edu.unlam.analisis.software.grupo2.core.model.TipoDocumentoEnum;
 import ar.edu.unlam.analisis.software.grupo2.data.PersonaData;
 
 import javax.swing.*;
+import java.awt.Font;
+import java.awt.Color;
 
 public abstract class AbstractPersonaFormSearch<T extends Persona, E extends PersonaData> extends JPanel implements SetTextoInterface {
     protected JTextField txtNombre;
@@ -17,50 +19,60 @@ public abstract class AbstractPersonaFormSearch<T extends Persona, E extends Per
         super();
         setLayout(null);
         txtNombre = new JTextField();
-        txtNombre.setBounds(267, 63, 285, 26);
+        txtNombre.setBounds(481, 127, 285, 26);
         add(txtNombre);
         txtNombre.setColumns(10);
 
         JLabel lblNombre = new JLabel("Nombre:");
-        lblNombre.setBounds(267, 35, 61, 16);
+        lblNombre.setForeground(Color.RED);
+        lblNombre.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 16));
+        lblNombre.setBounds(481, 99, 112, 16);
         add(lblNombre);
 
         txtApellido = new JTextField();
         txtApellido.setColumns(10);
-        txtApellido.setBounds(267, 129, 285, 26);
+        txtApellido.setBounds(481, 193, 285, 26);
         add(txtApellido);
 
         JLabel lblApellido = new JLabel("Apellido:");
-        lblApellido.setBounds(267, 101, 61, 16);
+        lblApellido.setForeground(Color.RED);
+        lblApellido.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 16));
+        lblApellido.setBounds(481, 165, 123, 16);
         add(lblApellido);
 
         txtCodigo = new JTextField();
         txtCodigo.setColumns(10);
-        txtCodigo.setBounds(267, 196, 285, 26);
+        txtCodigo.setBounds(481, 260, 285, 26);
         add(txtCodigo);
 
         JLabel lblCodigo = new JLabel("Codigo");
-        lblCodigo.setBounds(267, 168, 112, 16);
+        lblCodigo.setForeground(Color.RED);
+        lblCodigo.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 16));
+        lblCodigo.setBounds(481, 232, 112, 16);
         add(lblCodigo);
 
         JLabel lblTipoDocumento = new JLabel("Tipo documento:");
-        lblTipoDocumento.setBounds(267, 234, 112, 16);
+        lblTipoDocumento.setForeground(Color.RED);
+        lblTipoDocumento.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 16));
+        lblTipoDocumento.setBounds(481, 298, 166, 16);
         add(lblTipoDocumento);
 
         cbTipoDocumento = new JComboBox();
-        cbTipoDocumento.setBounds(267, 262, 285, 27);
+        cbTipoDocumento.setBounds(481, 326, 285, 27);
         add(cbTipoDocumento);
 
         txtNumeroDeDocumento = new JTextField();
         txtNumeroDeDocumento.setColumns(10);
-        txtNumeroDeDocumento.setBounds(267, 338, 285, 26);
+        txtNumeroDeDocumento.setBounds(481, 402, 285, 26);
         add(txtNumeroDeDocumento);
 
         //TODO remove this and add in controller
         this.cbTipoDocumento.setModel(new DefaultComboBoxModel<>(TipoDocumentoEnum.values()));
 
         JLabel lblNumeroDocumento = new JLabel("Numero de documento:");
-        lblNumeroDocumento.setBounds(267, 310, 166, 16);
+        lblNumeroDocumento.setForeground(Color.RED);
+        lblNumeroDocumento.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 16));
+        lblNumeroDocumento.setBounds(481, 374, 217, 16);
         add(lblNumeroDocumento);
     }
 

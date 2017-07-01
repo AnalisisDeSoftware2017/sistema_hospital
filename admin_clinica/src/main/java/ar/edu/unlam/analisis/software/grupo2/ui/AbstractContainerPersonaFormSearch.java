@@ -3,6 +3,8 @@ package ar.edu.unlam.analisis.software.grupo2.ui;
 import ar.edu.unlam.analisis.software.grupo2.core.model.Persona;
 import ar.edu.unlam.analisis.software.grupo2.data.PersonaData;
 
+import java.awt.Color;
+
 import javax.swing.*;
 
 public abstract class AbstractContainerPersonaFormSearch<T extends Persona, E extends PersonaData> extends AbstractPantalla {
@@ -20,22 +22,25 @@ public abstract class AbstractContainerPersonaFormSearch<T extends Persona, E ex
 
         JPanel formContainer = new JPanel();
         formContainer.setBounds(22, 20, 1040, 530);
+        formContainer.setBackground(new Color(0,0,0,0));
         searchForm.setBounds(0, 0, 1020, 510);
+        searchForm.setBackground(new Color(0,0,0,0));
         formContainer.add(searchForm);
         getContentPane().add(formContainer);
         formContainer.setLayout(null);
 
         JPanel botonera = new JPanel();
         botonera.setBounds(22, 562, 1040, 101);
+        botonera.setBackground(new Color(0,0,0,0));
         getContentPane().add(botonera);
         botonera.setLayout(null);
 
         btnBuscar = new JButton("Buscar");
-        btnBuscar.setBounds(193, 47, 117, 29);
+        btnBuscar.setBounds(307, 47, 117, 29);
         botonera.add(btnBuscar);
 
         btnAnterior = new JButton("Anterior");
-        btnAnterior.setBounds(597, 47, 117, 29);
+        btnAnterior.setBounds(755, 47, 117, 29);
         botonera.add(btnAnterior);
 
 

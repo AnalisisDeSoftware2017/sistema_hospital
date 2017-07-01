@@ -21,11 +21,13 @@ public class MedicoFormSearch extends AbstractPersonaFormSearch<Medico, MedicoDa
     public MedicoFormSearch() {
         super();
         JLabel lblEspecialidad = new JLabel("Especialidad:");
-        lblEspecialidad.setBounds(274, 403, 95, 16);
+        lblEspecialidad.setForeground(Color.RED);
+        lblEspecialidad.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 16));
+        lblEspecialidad.setBounds(481, 454, 178, 16);
         add(lblEspecialidad);
 
         cmbEspecialidad = new JComboBox();
-        cmbEspecialidad.setBounds(267, 431, 284, 27);
+        cmbEspecialidad.setBounds(482, 481, 284, 27);
         add(cmbEspecialidad);
 
         this.setVisible(true);
