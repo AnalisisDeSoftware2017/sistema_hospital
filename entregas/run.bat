@@ -1,1 +1,1 @@
-java -jar gilbarco-pmobile-password_hash-1.4.0.RELEASE.jar %1
+java -jar sistema_hospitales_hashing-1.0-SNAPSHOT.jar %1

@@ -21,62 +21,17 @@ public class InformesForm extends AbstractPantalla {
 	 */
 	public InformesForm() {
         super();
-        contentPane = new JPanel();
+        contentPane = setPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
 		JLabel label = new JLabel();
-		label.setBounds(5, 29, 424, 26);
-		label.setText("CONTROL DE PACIENTES");
+		label.setBounds(444, 67, 424, 68);
+		label.setText("BUSQUEDAS");
 		label.setHorizontalAlignment(SwingConstants.CENTER);
-		label.setFont(new Font("Cambria", Font.PLAIN, 18));
-		label.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
+		label.setFont(new Font("Cambria", Font.PLAIN, 40));
 		contentPane.add(label);
-		
-		JPanel jPanel1 = new JPanel();
-		jPanel1.setBounds(5, 66, 424, 190);
-		contentPane.add(jPanel1);
-
-        btnPaciente = new JButton();
-        btnPaciente.setText("Buscar Paciente");
-        btnPaciente.setFont(new Font("Tahoma", Font.PLAIN, 14));
-
-        btnMedico = new JButton();
-        btnMedico.setText("Buscar medico");
-        btnMedico.setFont(new Font("Tahoma", Font.PLAIN, 14));
-
-		
-		anterior = new JButton();
-		anterior.setText("Anterior");
-		anterior.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		GroupLayout gl_jPanel1 = new GroupLayout(jPanel1);
-		gl_jPanel1.setHorizontalGroup(
-			gl_jPanel1.createParallelGroup(Alignment.LEADING)
-				.addGroup(gl_jPanel1.createSequentialGroup()
-					.addContainerGap(71, Short.MAX_VALUE)
-					.addGroup(gl_jPanel1.createParallelGroup(Alignment.LEADING)
-						.addGroup(Alignment.TRAILING, gl_jPanel1.createSequentialGroup()
-							.addGroup(gl_jPanel1.createParallelGroup(Alignment.LEADING)
-                                    .addComponent(btnMedico, GroupLayout.PREFERRED_SIZE, 289, GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(btnPaciente))
-                                .addGap(64))
-						.addGroup(Alignment.TRAILING, gl_jPanel1.createSequentialGroup()
-							.addComponent(anterior, GroupLayout.PREFERRED_SIZE, 86, GroupLayout.PREFERRED_SIZE)
-							.addGap(161))))
-		);
-		gl_jPanel1.setVerticalGroup(
-			gl_jPanel1.createParallelGroup(Alignment.LEADING)
-				.addGroup(gl_jPanel1.createSequentialGroup()
-					.addGap(24)
-                        .addComponent(btnPaciente, GroupLayout.PREFERRED_SIZE, 36, GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(ComponentPlacement.UNRELATED)
-                        .addComponent(btnMedico, GroupLayout.PREFERRED_SIZE, 35, GroupLayout.PREFERRED_SIZE)
-                        .addGap(18)
-					.addComponent(anterior, GroupLayout.PREFERRED_SIZE, 40, GroupLayout.PREFERRED_SIZE)
-					.addContainerGap(26, Short.MAX_VALUE))
-		);
-		jPanel1.setLayout(gl_jPanel1);
 		
 		JLabel jLabel1 = new JLabel();
 		jLabel1.setBounds(0, 0, 434, 256);
@@ -142,6 +97,25 @@ public class InformesForm extends AbstractPantalla {
             }
         });*/
 		opciones.add(cerrarSesion);
+		
+				
+				anterior = new JButton();
+				anterior.setBounds(564, 466, 162, 40);
+				contentPane.add(anterior);
+				anterior.setText("Anterior");
+				anterior.setFont(new Font("Tahoma", Font.PLAIN, 12));
+				
+				        btnMedico = new JButton();
+				        btnMedico.setBounds(504, 339, 289, 35);
+				        contentPane.add(btnMedico);
+				        btnMedico.setText("Buscar medico");
+				        btnMedico.setFont(new Font("Tahoma", Font.PLAIN, 14));
+				        
+				                btnPaciente = new JButton();
+				                btnPaciente.setBounds(504, 196, 289, 36);
+				                contentPane.add(btnPaciente);
+				                btnPaciente.setText("Buscar Paciente");
+				                btnPaciente.setFont(new Font("Tahoma", Font.PLAIN, 14));
 	}
 
     @Override

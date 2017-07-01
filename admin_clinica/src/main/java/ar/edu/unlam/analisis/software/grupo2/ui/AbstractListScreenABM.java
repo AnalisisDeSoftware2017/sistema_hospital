@@ -5,6 +5,8 @@ import ar.edu.unlam.analisis.software.grupo2.ui.customComponents.JListCustom;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
+
+import java.awt.Color;
 import java.util.List;
 
 public abstract class AbstractListScreenABM<T extends AbmEntity> extends AbstractPantalla {
@@ -21,13 +23,15 @@ public abstract class AbstractListScreenABM<T extends AbmEntity> extends Abstrac
 	 */
 	public AbstractListScreenABM() {
         super();
-        contentPane = new JPanel();
+        //contentPane = new JPanel();
+        contentPane = setPanel("/img/Atencion_Pacientes.jpg");
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
 		JPanel panel = new JPanel();
-		panel.setBounds(21, 63, 809, 517);
+		panel.setBackground(new Color(0,0,0,0));
+		panel.setBounds(22, 153, 809, 517);
 		contentPane.add(panel);
 		panel.setLayout(null);
 		

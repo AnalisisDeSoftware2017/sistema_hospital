@@ -3,9 +3,17 @@ package ar.edu.unlam.analisis.software.grupo2.ui;
 import ar.edu.unlam.analisis.software.grupo2.utils.AppContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Component;
 
+import java.awt.BorderLayout;
+import java.awt.Dimension;
+import java.awt.Graphics;
+import java.io.IOException;
+
 import javax.swing.*;
+import javax.swing.border.EmptyBorder;
+import java.awt.Color;
 
 /**
  * Created by sbogado on 5/8/17.
@@ -42,12 +50,14 @@ public class LoginJFrame extends AbstractPantalla {
      */
     @Autowired
     public LoginJFrame(MessageSource messageSource) {
+    	
         initComponents();
-        setSize(666,464);
         setLocationRelativeTo(null); // Para que el login aparezca en el centro de la pantalla.
         setResizable(false); // que no pueda agrandar la pantalla.
         this.messageSource=messageSource;
         setTitle(messageSource.getMessage("ui.LoginJFrame.titulo", null, AppContext.getLocale())); // Le da un titulo a la ventana.
+        
+        
     }
 
     public String getUsuario(){
@@ -66,19 +76,19 @@ public class LoginJFrame extends AbstractPantalla {
     }
 
     private void initComponents() {
-
+    	this.setPanel("/img/Atencion_Pacientes.jpg");
         user = new javax.swing.JTextField();
         user.setBounds(128, 17, 193, 20);
         password = new javax.swing.JPasswordField();
         password.setBounds(128, 48, 193, 20);
         ingresar = new javax.swing.JButton();
-        ingresar.setBounds(175, 86, 73, 23);
+        ingresar.setBounds(138, 86, 137, 23);
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel1.setBounds(61, 20, 40, 14);
+        jLabel1.setBounds(21, 20, 57, 14);
         jLabel4 = new javax.swing.JLabel();
-        jLabel4.setBounds(44, 51, 57, 14);
+        jLabel4.setBounds(21, 51, 97, 14);
         jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -88,7 +98,7 @@ public class LoginJFrame extends AbstractPantalla {
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Acceso al Sistema", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.BOTTOM, new java.awt.Font("Candara", 0, 12), java.awt.Color.darkGray)); // NOI18N
         //TODO: agragar internacionalizacion
         jLabel1.setText("Usuario:");
-        jLabel4.setText("contrase?a:");
+        jLabel4.setText("Contraseña:");
 
         user.setToolTipText("Ingrese su nombre de usuario.");
 
@@ -99,7 +109,7 @@ public class LoginJFrame extends AbstractPantalla {
         ingresar.setToolTipText("Click para Ingresar al Sistema");
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(202, 134, 428, 120);
+        jPanel1.setBounds(391, 288, 428, 120);
         jPanel1.setLayout(null);
         jPanel1.add(ingresar);
         jPanel1.add(jLabel4);
@@ -134,5 +144,7 @@ public class LoginJFrame extends AbstractPantalla {
                 JOptionPane.ERROR_MESSAGE);
 
     }
+    
+    
 }
 
