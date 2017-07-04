@@ -136,14 +136,14 @@ public class IngresoForm extends AbstractPantalla {
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO addAll your handling code here:
-        //ManualW guiaRapida=new ManualW();
-        //guiaRapida.setVisible(true);
+        ManualForm guiaRapida=new ManualForm();
+        guiaRapida.setVisible(true);
         setTitle("Manual de Ayuda");
     }
 
     private void mINIActionPerformed(java.awt.event.ActionEvent evt) {
         MainForm menu=new MainForm();
-        menu.setVisible(true); // Vuelve el menu proncipal
+        menu.setVisible(true); // Vuelve el menu principal
         dispose(); // Desaparece el informes.   
     }
 
@@ -152,14 +152,12 @@ public class IngresoForm extends AbstractPantalla {
         System.exit(0); // SE SALE DEL PROGRAMA.
     }
 
-
-
    /* private void cerrarSesionActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO addAll your handling code here:
         LoginForm log=new LoginForm(); // Abre el log principal del sistema.
         log.setVisible(true); // Hace visible el log.     
         dispose();//SE OCULTA
-    }*///GEN-LAST:event_cerrarSesionActionPerformed
+    }*
 
     /*private void mIngDatActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO addAll your handling code here:
@@ -167,7 +165,6 @@ public class IngresoForm extends AbstractPantalla {
         //ipw.setVisible(true); // Hago visible la ventana de pacientes.    
         dispose(); // Para que se oculte el menu.
     }*/
-
 
 	public JButton getBtnABMPaciente(){
 		return this.btnABMPaciente;
@@ -179,7 +176,6 @@ public class IngresoForm extends AbstractPantalla {
 	public JButton getAnterior(){
 		return this.anterior;
 	}
-
     public JButton getBtnAbmUsuarios() {
         return this.btnAbmUsuarios;
     }
