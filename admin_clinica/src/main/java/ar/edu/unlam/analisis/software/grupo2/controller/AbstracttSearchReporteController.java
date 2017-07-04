@@ -46,14 +46,20 @@ public abstract class AbstracttSearchReporteController<T extends Persona, E exte
 
 
     private void anterior() {
+        this.frame.clearFiltros();
         this.setVisible(false);
         this.controllerAnterior.setVisible(true);
     }
 
     protected void cargarListaDePersonas(List<T> personas) {
-        this.frame.setVisible(false);
-        this.listScreen.cargarLista(personas);
-        this.listScreen.setVisible(true);
+        if(null == personas || personas.isEmpty()){
+            this.frame.showEmptyPersonaMessage();
+        }else{
+            this.frame.clearFiltros();
+            this.frame.setVisible(false);
+            this.listScreen.cargarLista(personas);
+            this.listScreen.setVisible(true);
+        }
     }
 
 }

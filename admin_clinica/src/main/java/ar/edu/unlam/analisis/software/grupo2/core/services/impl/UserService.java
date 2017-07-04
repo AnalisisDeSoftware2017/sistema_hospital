@@ -83,4 +83,7 @@ public class UserService extends AbstractServiceCRUD<User, Long> {
         userDao.delete(id);
     }
 
+    public Optional<User> findUserByUsername(String username) {
+        return userDao.findUserByUsername(username);
+    }
 }

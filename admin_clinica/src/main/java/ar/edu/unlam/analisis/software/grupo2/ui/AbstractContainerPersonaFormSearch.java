@@ -2,6 +2,7 @@ package ar.edu.unlam.analisis.software.grupo2.ui;
 
 import ar.edu.unlam.analisis.software.grupo2.core.model.Persona;
 import ar.edu.unlam.analisis.software.grupo2.data.PersonaData;
+import ar.edu.unlam.analisis.software.grupo2.utils.AppContext;
 
 import java.awt.Color;
 
@@ -62,6 +63,13 @@ public abstract class AbstractContainerPersonaFormSearch<T extends Persona, E ex
     @Override
     public void setTexto() {
         // TODO Auto-generated method stub
+    }
 
+    public void showEmptyPersonaMessage() {
+        JOptionPane.showMessageDialog(this, messageSource.getMessage("ar.edu.unlam.los.laureles.noElementsToShow", null , AppContext.getLocale()));
+    }
+
+    public void clearFiltros() {
+        this.searchForm.clearFiltros();
     }
 }

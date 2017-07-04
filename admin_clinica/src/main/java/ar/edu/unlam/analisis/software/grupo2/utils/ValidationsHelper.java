@@ -20,7 +20,10 @@ public class ValidationsHelper {
     private static final int LONG_CODIGO = 20;
     private static final int MIN_LONG_APELLIDO = 4;
     private static final int MIN_LONG_NOMBRE = 4;
-
+    private static  final Integer MIN_USERNAME_LENGTH=4;
+    private static  final Integer MAX_USERNAME_LENGTH=32;
+    private static  final Integer MIN_PASSWORD_LENGTH=4;
+    private static  final Integer MAX_PASSWORD_LENGTH=32;
 
     @Autowired
     private MessageSource messageSource;
@@ -110,4 +113,17 @@ public class ValidationsHelper {
     }
 
 
+    public Collection<? extends String> validarPassword(String password) {
+        List<String> errores = new ArrayList<>();
+        if(password.length() < MIN_PASSWORD_LENGTH.intValue() || password.length() > MAX_PASSWORD_LENGTH.intValue() )
+            errores.add(messageSource.getMessage("ar.edu.unlam.los.laureles.passwordLengthViolation", new String[]{MIN_USERNAME_LENGTH.toString(), MAX_USERNAME_LENGTH.toString()} , AppContext.getLocale()));
+        return errores;
+    }
+
+    public Collection<? extends String> validarUsername(String username) {
+        List<String> errores = new ArrayList<>();
+        if(username.length() < MIN_USERNAME_LENGTH.intValue() || username.length() > MAX_USERNAME_LENGTH.intValue() )
+            errores.add(messageSource.getMessage("ar.edu.unlam.los.laureles.usernameLengthViolation", new String[]{MIN_USERNAME_LENGTH.toString(), MAX_USERNAME_LENGTH.toString()} , AppContext.getLocale()));
+        return errores;
+    }
 }

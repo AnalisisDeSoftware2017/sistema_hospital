@@ -43,7 +43,7 @@ public class SaveMedicoController extends AbstractEntitySaveController<Medico,Lo
         errores.addAll(this.validationsHelper.validarApellidoDePersona(entidad.getApellido()));
         errores.addAll(this.validationsHelper.validarCodigoPersona(entidad.getCodigo()));
         Optional<Medico> optMedico =((MedicoService)service ).findMedicoByCode(entidad.getCodigo());
-        if( optMedico.isPresent() &&  optMedico.get().getId().equals(this.frame.getEntity().getId())){
+        if( optMedico.isPresent() &&  !optMedico.get().getId().equals(this.frame.getEntity().getId())){
             errores.add(messageSource.getMessage("ar.edu.unlam.los.laureles.error.codigoRepetidoPersona",null, AppContext.getLocale()));
         }
         return errores;

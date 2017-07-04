@@ -85,4 +85,10 @@ public abstract class AbstractPersonaFormSearch<T extends Persona, E extends Per
 
     }
 
+    public void clearFiltros() {
+        this.txtApellido.setText("");
+        this.txtCodigo.setText("");
+        this.txtNombre.setText("");
+        this.txtNumeroDeDocumento.setText("");
+    }
 }

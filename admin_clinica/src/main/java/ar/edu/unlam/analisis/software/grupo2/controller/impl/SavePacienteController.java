@@ -38,7 +38,7 @@ public class SavePacienteController extends AbstractEntitySaveController<Pacient
         errores.addAll(this.validationsHelper.validarApellidoDePersona(entidad.getApellido()));
         errores.addAll(this.validationsHelper.validarCodigoPersona(entidad.getCodigo()));
         Optional<Paciente> optPaciente =((PacienteService)service ).findPacienteByCode(entidad.getCodigo());
-        if( optPaciente.isPresent() &&  optPaciente.get().getId().equals(this.frame.getEntity().getId())){
+        if( optPaciente.isPresent() &&  !optPaciente.get().getId().equals(this.frame.getEntity().getId())){
             errores.add(messageSource.getMessage("ar.edu.unlam.los.laureles.error.codigoRepetidoPersona",null, AppContext.getLocale()));
         }
         return errores;

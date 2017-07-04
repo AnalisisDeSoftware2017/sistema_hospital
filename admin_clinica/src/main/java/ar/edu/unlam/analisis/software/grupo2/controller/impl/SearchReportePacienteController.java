@@ -21,6 +21,7 @@ public class SearchReportePacienteController extends AbstracttSearchReporteContr
 
     @Override
     protected void search() {
+
         this.cargarListaDePersonas(this.reporteDao.findAllPacientesByPacienteData(this.frame.getEntity()));
     }
 }
