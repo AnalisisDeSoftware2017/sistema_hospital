@@ -1,1 +1,0 @@
-java -jar sistema_hospitales_hashing-1.0-SNAPSHOT.jar %1
