@@ -24,6 +24,7 @@ public class FormCreateMedico extends AbstractFormCreate<Medico> {
 	private JListCustom<Especialidad> cmbEspecialidad;
 
 	public FormCreateMedico() {
+		super();
 		setLayout(null);
 
 		txtNombre = new JTextField();

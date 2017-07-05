@@ -20,6 +20,7 @@ public class FormCreateUser extends AbstractFormCreate<User> {
     private JTextField txtEmail;
 
     public FormCreateUser() {
+        super();
         setLayout(null);
 
         txtNombre = new JTextField();

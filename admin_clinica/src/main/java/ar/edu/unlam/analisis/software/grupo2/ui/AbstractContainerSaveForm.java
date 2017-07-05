@@ -22,14 +22,14 @@ public abstract class AbstractContainerSaveForm<T extends AbmEntity> extends Abs
 
 	public AbstractContainerSaveForm(AbstractFormCreate<T> form) {
 
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 1033, 700);
-		contentPane = new JPanel();
+		super();
+		contentPane = this.setPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
 		JPanel botoneraPane = new JPanel();
+		botoneraPane.setBackground(new Color(0,0,0,0));
 		botoneraPane.setBounds(161, 573, 725, 68);
 		contentPane.add(botoneraPane);
 		botoneraPane.setLayout(null);

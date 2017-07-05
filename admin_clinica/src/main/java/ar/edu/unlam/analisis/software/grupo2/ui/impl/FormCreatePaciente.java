@@ -19,6 +19,7 @@ public class FormCreatePaciente extends AbstractFormCreate<Paciente> {
 	private JComboBox<TipoDocumentoEnum> cbTipoDocumento;
 	
 	public FormCreatePaciente() {
+		super();
 		setLayout(null);
 		
 		txtNombre = new JTextField();

@@ -5,11 +5,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 
 import javax.swing.*;
+import java.awt.*;
 
 public abstract class AbstractFormCreate<T extends AbmEntity> extends JPanel implements SetTextoInterface {
 
     @Autowired
     protected MessageSource messageSource;
+
+    protected AbstractFormCreate(){
+		this.setBackground(new Color(0,0,0,0));
+	}
 
 	protected T entity;
 
