@@ -23,7 +23,7 @@ public abstract class AbstractContainerSaveForm<T extends AbmEntity> extends Abs
 	public AbstractContainerSaveForm(AbstractFormCreate<T> form) {
 
 		super();
-		contentPane = this.setPanel();
+		contentPane = this.setPanel("/img/Atencion_Pacientes.jpg");
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
