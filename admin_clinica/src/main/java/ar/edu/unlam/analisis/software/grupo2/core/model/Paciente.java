@@ -12,17 +12,17 @@ public class Paciente extends Persona {
 
     //De aca puedo obtener los medicos que lo atienden :)
     @OneToMany(mappedBy = "paciente")
-    public List<SituaciondDelPaciente> situaciones;
+    public List<SituacionDelPaciente> situaciones;
 
 
     public Paciente() {
     }
 
-    public List<SituaciondDelPaciente> getSituaciones() {
+    public List<SituacionDelPaciente> getSituaciones() {
         return situaciones;
     }
 
-    public void setSituaciones(List<SituaciondDelPaciente> situaciones) {
+    public void setSituaciones(List<SituacionDelPaciente> situaciones) {
         this.situaciones = situaciones;
     }
 

@@ -6,7 +6,7 @@ import javax.persistence.*;
  * Created by sbogado on 4/25/17.
  */
 @Entity
-public class SituaciondDelPaciente {
+public class SituacionDelPaciente extends AbmEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -16,9 +16,14 @@ public class SituaciondDelPaciente {
     private Paciente paciente;
 
     @ManyToOne
+    private Especialidad especialidad;
+
+    @ManyToOne
     private Medico medico;
 
-    public SituaciondDelPaciente() {
+    private String detalle;
+
+    public SituacionDelPaciente() {
     }
 
     public Long getId() {
@@ -45,9 +50,26 @@ public class SituaciondDelPaciente {
         this.medico = medico;
     }
 
+
+    public Especialidad getEspecialidad() {
+        return especialidad;
+    }
+
+    public void setEspecialidad(Especialidad especialidad) {
+        this.especialidad = especialidad;
+    }
+
+    public String getDetalle() {
+        return detalle;
+    }
+
+    public void setDetalle(String detalle) {
+        this.detalle = detalle;
+    }
+
     @Override
     public String toString() {
-        return "SituaciondDelPaciente{" +
+        return "SituacionDelPaciente{" +
                 "id=" + id +
                 ", paciente=" + paciente +
                 ", medico=" + medico +
@@ -61,7 +83,7 @@ public class SituaciondDelPaciente {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        SituaciondDelPaciente that = (SituaciondDelPaciente) o;
+        SituacionDelPaciente that = (SituacionDelPaciente) o;
 
         if (id != null ? !id.equals(that.id) : that.id != null) return false;
         if (paciente != null ? !paciente.equals(that.paciente) : that.paciente != null) return false;
@@ -74,6 +96,12 @@ public class SituaciondDelPaciente {
         result = 31 * result + (paciente != null ? paciente.hashCode() : 0);
         result = 31 * result + (medico != null ? medico.hashCode() : 0);
         return result;
+    }
+
+    @Override
+    public String getName() {
+        // TODO Auto-generated method stub
+        return null;
     }
 
 
