@@ -15,7 +15,9 @@ import javax.transaction.Transactional;
 import java.util.List;
 
 /**
- * Created by sbogado on 6/28/17.
+ * Esta clase se utiliza para poder buscar con queries custom objetos que cumplan
+ * determinados requerimientos
+ *
  */
 @Repository("reporteDao")
 @Transactional
@@ -35,11 +37,11 @@ public class ReporteDao {
         }
 
         if (null != medicoData.getApellido() && !medicoData.getApellido().isEmpty()) {
-            criteria.add(Restrictions.eq("apellido", medicoData.getApellido()));
+            criteria.add(Restrictions.ilike("apellido", medicoData.getApellido()));
         }
 
         if (null != medicoData.getNombre() && !medicoData.getNombre().isEmpty()) {
-            criteria.add(Restrictions.eq("nombre", medicoData.getNombre()));
+            criteria.add(Restrictions.ilike("nombre", medicoData.getNombre()));
         }
 
         if (null != medicoData.getTipoDocumento()) {
@@ -62,11 +64,11 @@ public class ReporteDao {
         Criteria criteria = session.createCriteria(Paciente.class);
 
         if (null != pacienteData.getApellido() && !pacienteData.getApellido().isEmpty()) {
-            criteria.add(Restrictions.eq("apellido", pacienteData.getApellido()));
+            criteria.add(Restrictions.ilike("apellido", pacienteData.getApellido()));
         }
 
         if (null != pacienteData.getNombre() && !pacienteData.getNombre().isEmpty()) {
-            criteria.add(Restrictions.eq("nombre", pacienteData.getNombre()));
+            criteria.add(Restrictions.ilike("nombre", pacienteData.getNombre()));
         }
 
         if (null != pacienteData.getTipoDocumento()) {
