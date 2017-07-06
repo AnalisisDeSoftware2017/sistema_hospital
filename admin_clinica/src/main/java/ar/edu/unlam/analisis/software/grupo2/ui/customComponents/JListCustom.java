@@ -46,15 +46,19 @@ public class JListCustom<T extends AbmEntity > extends JList<T>{
 
 
 	public void setSelectedValues(List<T> entities) {
-		if(null != entities && null != defaultListModel){
-			List<Integer> indexList = new ArrayList<>();
-			entities.forEach(entity -> {
-				indexList.add(this.defaultListModel.indexOf(entity));
-			});
-			int [] array = new int[indexList.size()];
-			for(int i = 0 ; i < indexList.size(); i ++ ){
-				array[i]=indexList.get(i);
-			}
-		}
+        if(null != entities && null != defaultListModel){
+            List<Integer> indexList = new ArrayList<>();
+            entities.forEach(entity -> {
+                indexList.add(this.defaultListModel.indexOf(entity));
+            });
+            int [] array = new int[indexList.size()];
+            for(int i = 0; i < indexList.size(); i ++ ){
+                array[i]=indexList.get(i);
+            }
+            this.setSelectedIndices(array);
+        } else if (null == entities || entities.isEmpty()) {
+            int[] index = new int[0];
+            this.setSelectedIndices(index);
+        }
 	}
 }

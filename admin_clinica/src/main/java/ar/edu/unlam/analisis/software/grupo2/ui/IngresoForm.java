@@ -19,7 +19,7 @@ public class IngresoForm extends AbstractPantalla {
 	 */
 	public IngresoForm() {
         super();
-        contentPane = new JPanel(); //this.setPanel();
+        contentPane = this.setPanel();
         contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
