@@ -9,6 +9,8 @@ import ar.edu.unlam.analisis.software.grupo2.ui.customComponents.JComboBoxCustom
 import org.springframework.stereotype.Component;
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.List;
 
 /**
@@ -52,6 +54,11 @@ public class FormCreateSituacionDelPaciente extends AbstractFormCreate<Situacion
         add(lblDetalle);
 
         cmbMedico = new JComboBoxCustom();
+        cmbMedico.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                setearEspecialidades();
+            }
+        });
         cmbMedico.setBounds(171, 83, 285, 27);
         add(cmbMedico);
 
@@ -75,35 +82,10 @@ public class FormCreateSituacionDelPaciente extends AbstractFormCreate<Situacion
         return this.entity;
     }
 
-    public void setEspecialidadList(List<Especialidad> especialidades) {
-        this.cmbEspecialidad.setModel(new DefaultComboBoxModel<Especialidad>());
-        if (null != entity) {
-            this.cmbEspecialidad.setSelectedValue(entity.getEspecialidad());
-        }
-    }
-
-    public void setMedicoList(List<Medico> medicos) {
-        this.medicoList = medicos;
-        this.cmbMedico.setModel(new DefaultComboBoxModel<Medico>());
-        if (null != entity) {
-            this.cmbMedico.setSelectedValue(entity.getMedico());
-        }
-    }
-
-    public void setPacienteList(List<Paciente> pacientes) {
-        this.cmbPaciente.setModel(new DefaultComboBoxModel<Paciente>());
-        if (null != entity) {
-            this.cmbPaciente.setSelectedValue(entity.getPaciente());
-        }
-    }
-
     @Override
     public void setEntity(SituacionDelPaciente entity) {
         this.entity = entity == null ? new SituacionDelPaciente() : entity;
         this.txtDetalle.setText(this.entity.getDetalle());
-        if (null != this.especialidadList && null != this.entity.getEspecialidad()) {
-            this.cmbEspecialidad.setSelectedValue(entity.getEspecialidad());
-        }
         if (null != this.entity.getPaciente()) {
             this.cmbPaciente.setSelectedValue(entity.getPaciente());
         }
@@ -112,7 +94,36 @@ public class FormCreateSituacionDelPaciente extends AbstractFormCreate<Situacion
         }
     }
 
+    private void setEspecialidadList(List<Especialidad> especialidades) {
+        this.cmbEspecialidad.cleanAndAddAll(especialidades);
+        if (null != entity) {
+            this.cmbEspecialidad.setSelectedValue(entity.getEspecialidad());
+        }
+    }
 
+    public void setMedicoList(List<Medico> medicos) {
+        this.cmbMedico.setModel(new DefaultComboBoxModel<Medico>());
+        this.cmbMedico.addAll(medicos);
+        if (null != entity) {
+            this.cmbMedico.setSelectedValue(entity.getMedico());
+        }
+        if (null != this.cmbMedico.getSelectedElement()) {
+            this.setearEspecialidades();
+        }
+    }
+
+    public void setPacienteList(List<Paciente> pacientes) {
+        this.cmbPaciente.setModel(new DefaultComboBoxModel<Paciente>());
+        this.cmbPaciente.addAll(pacientes);
+        if (null != entity) {
+            this.cmbPaciente.setSelectedValue(entity.getPaciente());
+        }
+    }
+
+    private void setearEspecialidades() {
+        this.setEspecialidadList(this.cmbMedico.getSelectedElement().getEspecialidades());
+    }
+    
     @Override
     public void setTexto() {
 

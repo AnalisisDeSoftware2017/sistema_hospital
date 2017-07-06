@@ -14,6 +14,7 @@ import org.springframework.stereotype.Controller;
 @Controller
 public class ABMSituacionDelPacienteController extends AbstractABMController<SituacionDelPaciente, Long> {
 
+
     @Autowired
     public ABMSituacionDelPacienteController(AbstractListScreenABM<SituacionDelPaciente> pantalla, AbstractEntitySaveController<SituacionDelPaciente, Long> entitySaveController, AbstractServiceCRUD<SituacionDelPaciente, Long> service) {
         super(pantalla, entitySaveController, service);

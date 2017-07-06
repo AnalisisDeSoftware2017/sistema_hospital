@@ -1,6 +1,5 @@
 package ar.edu.unlam.analisis.software.grupo2.ui.impl;
 
-import ar.edu.unlam.analisis.software.grupo2.core.model.Especialidad;
 import ar.edu.unlam.analisis.software.grupo2.core.model.Medico;
 import ar.edu.unlam.analisis.software.grupo2.core.model.Paciente;
 import ar.edu.unlam.analisis.software.grupo2.core.model.SituacionDelPaciente;
@@ -28,10 +27,6 @@ public class ContainerSaveSituacionDelPacienteForm extends AbstractContainerSave
         super(form);
     }
 
-
-    public void setEspecialidadList(List<Especialidad> especialidadList) {
-        ((FormCreateSituacionDelPaciente) this.form).setEspecialidadList(especialidadList);
-    }
 
     public void setMedicoList(List<Medico> medicoList) {
         ((FormCreateSituacionDelPaciente) this.form).setMedicoList(medicoList);

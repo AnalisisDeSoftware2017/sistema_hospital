@@ -12,27 +12,22 @@ public class JComboBoxCustom<T extends AbmEntity> extends JComboBox<T> {
      */
     private static final long serialVersionUID = 6217263232018824029L;
 
-    private ComboBoxModel<T> defaultListModel;
-
     public JComboBoxCustom() {
         super();
-        defaultListModel = new DefaultComboBoxModel<T>();
-        super.setModel(defaultListModel);
     }
 
-    @SuppressWarnings("unchecked")
     public JComboBoxCustom(List<T> elements) {
         super((T[]) elements.toArray());
     }
 
     public void addAll(List<T> lista) {
         for (T elemento : lista) {
-            this.add(elemento);
+            super.addItem(elemento);
         }
     }
 
     public void cleanAndAddAll(List<T> lista) {
-        this.defaultListModel = new DefaultComboBoxModel<T>();
+        this.dataModel = new DefaultComboBoxModel<T>();
         addAll(lista);
     }
 
@@ -40,13 +35,13 @@ public class JComboBoxCustom<T extends AbmEntity> extends JComboBox<T> {
         super.add(elemento);
     }
 
-    @SuppressWarnings("unchecked")
+
     public T getSelectedElement() {
-        return (T) this.defaultListModel.getSelectedItem();
+        return (T) this.dataModel.getSelectedItem();
     }
 
 
     public void setSelectedValue(T element) {
-        this.defaultListModel.setSelectedItem(element);
+        this.dataModel.setSelectedItem(element);
     }
 }

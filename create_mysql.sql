@@ -3,7 +3,7 @@ create table especialidad_medicos (especialidad_id bigint not null, medicos_id b
 create table medico (id bigint not null auto_increment, apellido varchar(100) not null, codigo varchar(100) not null, nombre varchar(100) not null, numero_documento varchar(255) not null, tipo_documento varchar(255), primary key (id))
 create table medico_especialidades (medico_id bigint not null, especialidades_id bigint not null)
 create table paciente (id bigint not null auto_increment, apellido varchar(100) not null, codigo varchar(100) not null, nombre varchar(100) not null, numero_documento varchar(255) not null, tipo_documento varchar(255), primary key (id))
-create table situacion_del_paciente (id bigint not null auto_increment, especialidad_id bigint, medico_id bigint, paciente_id bigint, primary key (id))
+create table situacion_del_paciente (id bigint not null auto_increment, detalle varchar(255), especialidad_id bigint, medico_id bigint, paciente_id bigint, primary key (id))
 create table usuarios_sistema (id bigint not null auto_increment, apellido varchar(100) not null, email varchar(100) not null, failed_login integer not null, fecha_creacion datetime not null, is_active bit not null, is_locked bit not null, last_login datetime, nombre varchar(100) not null, password varchar(100) not null, username varchar(100) not null, primary key (id))
 alter table usuarios_sistema add constraint UK_sdcwkw7s3xe2xx02s6d4x9qbn unique (email)
 alter table usuarios_sistema add constraint UK_691e86xo91lah4ey74tqer7jn unique (username)
