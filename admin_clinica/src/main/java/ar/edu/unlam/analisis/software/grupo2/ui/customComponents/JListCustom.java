@@ -49,7 +49,12 @@ public class JListCustom<T extends AbmEntity > extends JList<T>{
         if(null != entities && null != defaultListModel){
             List<Integer> indexList = new ArrayList<>();
             entities.forEach(entity -> {
-                indexList.add(this.defaultListModel.indexOf(entity));
+                for (int i = 0; i < this.defaultListModel.getSize(); i++) {
+                    if (this.defaultListModel.get(i).getId().equals(entity.getId())) {
+                        indexList.add(i);
+                        return;
+                    }
+                }
             });
             int [] array = new int[indexList.size()];
             for(int i = 0; i < indexList.size(); i ++ ){

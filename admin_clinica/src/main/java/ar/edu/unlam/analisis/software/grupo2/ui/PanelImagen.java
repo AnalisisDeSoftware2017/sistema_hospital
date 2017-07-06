@@ -1,12 +1,7 @@
 package ar.edu.unlam.analisis.software.grupo2.ui;
 
-import java.awt.Dimension;
-import java.awt.Graphics;
-import java.io.IOException;
-
-import javax.swing.ImageIcon;
-
-import org.springframework.core.io.ClassPathResource;
+import javax.swing.*;
+import java.awt.*;
 
 public class PanelImagen extends javax.swing.JPanel {
 	private String cadena;
@@ -31,13 +26,7 @@ public PanelImagen(String imagePath){
 }
 @Override
 public void paintComponent (Graphics g){
-	
-	try {
-		System.out.println(new ClassPathResource(cadena).getFile().getAbsolutePath().toString());
-	} catch (IOException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	}
+
 	Dimension tamanio = getSize();
 	ImageIcon imagenFondo = new ImageIcon(getClass().getResource(cadena));
 	
