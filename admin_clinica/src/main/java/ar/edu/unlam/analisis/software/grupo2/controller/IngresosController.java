@@ -1,9 +1,6 @@
 package ar.edu.unlam.analisis.software.grupo2.controller;
 
-import ar.edu.unlam.analisis.software.grupo2.controller.impl.ABMEspecialidadController;
-import ar.edu.unlam.analisis.software.grupo2.controller.impl.ABMMedicoController;
-import ar.edu.unlam.analisis.software.grupo2.controller.impl.ABMPacienteController;
-import ar.edu.unlam.analisis.software.grupo2.controller.impl.ABMUserController;
+import ar.edu.unlam.analisis.software.grupo2.controller.impl.*;
 import ar.edu.unlam.analisis.software.grupo2.ui.IngresoForm;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -19,14 +16,16 @@ public class IngresosController extends AbstractFrameController<IngresoForm>{
     private final ABMMedicoController medicoController;
     private final ABMPacienteController pacienteController;
     private final ABMUserController userController;
+    private final ABMSituacionDelPacienteController situacionDelPacienteController;
 
     @Autowired
-    public IngresosController(IngresoForm ingresoForm, ABMMedicoController abmMedicoController, ABMEspecialidadController especialidadController, ABMPacienteController pacienteController, ABMUserController userController) {
+    public IngresosController(IngresoForm ingresoForm, ABMMedicoController abmMedicoController, ABMEspecialidadController especialidadController, ABMPacienteController pacienteController, ABMUserController userController, ABMSituacionDelPacienteController situacionDelPacienteController) {
         this.frame= ingresoForm;
         this.medicoController=abmMedicoController;
         this.especialidadController=especialidadController;
         this.pacienteController=pacienteController;
         this.userController = userController;
+        this.situacionDelPacienteController = situacionDelPacienteController;
     }
 
     @Override
@@ -41,8 +40,16 @@ public class IngresosController extends AbstractFrameController<IngresoForm>{
         registerEnterKeyAction(frame.getBtnABMPaciente(), ()->abrirPaciente());
         registerClickAction(frame.getBtnAbmUsuarios(), (event) -> abrirUsuarios());
         registerEnterKeyAction(frame.getBtnAbmUsuarios(), () -> abrirUsuarios());
+        registerClickAction(frame.getBtnABMSituacionPaciente(), (event) -> abrirSituacionPaciente());
+        registerEnterKeyAction(frame.getBtnABMSituacionPaciente(), () -> abrirSituacionPaciente());
 
         this.frame.setVisible(true);
+    }
+
+    private void abrirSituacionPaciente() {
+        this.frame.setVisible(false);
+        this.situacionDelPacienteController.setControllerAnterior(this);
+        this.situacionDelPacienteController.setVisible(true);
     }
 
     private void abrirPaciente() {

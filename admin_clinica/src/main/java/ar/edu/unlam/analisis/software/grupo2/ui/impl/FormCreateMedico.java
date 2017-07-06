@@ -101,13 +101,6 @@ public class FormCreateMedico extends AbstractFormCreate<Medico> {
 		return this.entity;
 	}
 
-	public void setEspecialidadList(List<Especialidad> especialidades){
-		this.cmbEspecialidad.addAll(especialidades);
-		if(null != entity){
-			this.cmbEspecialidad.setSelectedValues(entity.getEspecialidades());
-		}
-	}
-
 	@Override
 	public void setEntity(Medico entity) {
 		this.entity = entity==null?new Medico():entity;
@@ -120,6 +113,13 @@ public class FormCreateMedico extends AbstractFormCreate<Medico> {
 		}
 
 		this.cbTipoDocumento.setSelectedItem(this.entity.getTipoDocumento()==null?TipoDocumentoEnum.DNI:this.entity.getTipoDocumento());
+	}
+
+	public void setEspecialidadList(List<Especialidad> especialidades) {
+		this.cmbEspecialidad.cleanAndAddAll(especialidades);
+		if (null != entity) {
+			this.cmbEspecialidad.setSelectedValues(entity.getEspecialidades());
+		}
 	}
 
     @Override

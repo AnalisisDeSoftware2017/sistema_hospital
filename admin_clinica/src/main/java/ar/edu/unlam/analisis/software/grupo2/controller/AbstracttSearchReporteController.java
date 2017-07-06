@@ -2,9 +2,13 @@ package ar.edu.unlam.analisis.software.grupo2.controller;
 
 import ar.edu.unlam.analisis.software.grupo2.core.dao.ReporteDao;
 import ar.edu.unlam.analisis.software.grupo2.core.model.Persona;
+import ar.edu.unlam.analisis.software.grupo2.core.model.SituacionDelPaciente;
+import ar.edu.unlam.analisis.software.grupo2.core.services.impl.SituacionDelPacienteService;
 import ar.edu.unlam.analisis.software.grupo2.data.PersonaData;
 import ar.edu.unlam.analisis.software.grupo2.ui.AbstractContainerPersonaFormSearch;
 import ar.edu.unlam.analisis.software.grupo2.ui.AbstractListScreenReporte;
+import ar.edu.unlam.analisis.software.grupo2.ui.AbstractPersonaDetails;
+import ar.edu.unlam.analisis.software.grupo2.utils.AppContext;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
@@ -18,11 +22,18 @@ public abstract class AbstracttSearchReporteController<T extends Persona, E exte
     @Autowired
     protected ReporteDao reporteDao;
 
+    @Autowired
+    protected SituacionDelPacienteService situacionDelPacienteService;
+
     private AbstractListScreenReporte<T> listScreen;
 
-    public AbstracttSearchReporteController(AbstractContainerPersonaFormSearch<T, E> pantalla, AbstractListScreenReporte<T> listScreenReporte) {
+    private AbstractPersonaDetails<T> personaDetails;
+
+
+    public AbstracttSearchReporteController(AbstractContainerPersonaFormSearch<T, E> pantalla, AbstractListScreenReporte<T> listScreenReporte, AbstractPersonaDetails<T> details) {
         this.frame = pantalla;
         this.listScreen = listScreenReporte;
+        this.personaDetails = details;
     }
 
     @Override
@@ -34,7 +45,35 @@ public abstract class AbstracttSearchReporteController<T extends Persona, E exte
 
         registerClickAction(this.listScreen.getBtnAnterior(), (event) -> showSearchForm());
         registerEnterKeyAction(this.listScreen.getBtnAnterior(), () -> showSearchForm());
+
+        registerClickAction(this.listScreen.getBtnVerDetalle(), (event) -> showPersonaDetails());
+        registerEnterKeyAction(this.listScreen.getBtnVerDetalle(), () -> showPersonaDetails());
+
+        registerClickAction(this.personaDetails.getBtnAnterior(), (event) -> showListScreen());
+        registerEnterKeyAction(this.personaDetails.getBtnAnterior(), () -> showListScreen());
+        
+        
         this.frame.setVisible(true);
+    }
+
+
+    private void showPersonaDetails() {
+        T entity = this.listScreen.getSelectedItem();
+        if (null == entity) {
+            this.listScreen.showErrorMessage(messageSource.getMessage("ar.edu.unlam.los.laureles.nada.seleccionado", null, AppContext.getLocale()));
+        } else {
+            this.personaDetails.setEntity(entity);
+            this.personaDetails.setListaSituaciones(this.findListaDeSituaciones(entity));
+            this.personaDetails.setVisible(true);
+            this.listScreen.setVisible(false);
+        }
+    }
+
+    protected abstract List<SituacionDelPaciente> findListaDeSituaciones(T entity);
+
+    private void showListScreen() {
+        this.personaDetails.setVisible(false);
+        this.listScreen.setVisible(true);
     }
 
     protected void showSearchForm() {

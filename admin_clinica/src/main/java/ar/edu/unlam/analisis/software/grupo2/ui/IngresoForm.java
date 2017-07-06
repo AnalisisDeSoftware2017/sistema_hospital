@@ -1,10 +1,7 @@
 package ar.edu.unlam.analisis.software.grupo2.ui;
 
 import javax.swing.*;
-import javax.swing.GroupLayout.Alignment;
-import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.border.EmptyBorder;
-import javax.swing.border.EtchedBorder;
 import java.awt.*;
 
 @org.springframework.stereotype.Component
@@ -15,14 +12,15 @@ public class IngresoForm extends AbstractPantalla {
 	private JButton btnABMPaciente;
 	private JButton btnABMMedico;
 	private JButton anterior;
-	private JButton btnAbmEnfermedades;
+    private JButton btnAbmSituacionPaciente;
+    private JButton btnAbmEnfermedades;
     /**
 	 * Create the frame.
 	 */
 	public IngresoForm() {
         super();
         contentPane = this.setPanel();
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+        contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
@@ -98,11 +96,6 @@ public class IngresoForm extends AbstractPantalla {
         });*/
 		opciones.add(cerrarSesion);
 		
-		anterior = new JButton();
-		anterior.setText("Anterior");
-		anterior.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		anterior.setBounds(215, 468, 777, 40);
-		contentPane.add(anterior);
 		
 		this.btnAbmUsuarios= new JButton("ABM Usuarios");
 		btnAbmUsuarios.setFont(new Font("Tahoma", Font.PLAIN, 14));
@@ -122,10 +115,23 @@ public class IngresoForm extends AbstractPantalla {
 		contentPane.add(btnABMMedico);
 		
 		btnAbmEnfermedades = new JButton();
-		btnAbmEnfermedades.setText("ABM Enfermedades");
-		btnAbmEnfermedades.setFont(new Font("Tahoma", Font.PLAIN, 14));
+        btnAbmEnfermedades.setText("ABM Especialidades");
+        btnAbmEnfermedades.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		btnAbmEnfermedades.setBounds(215, 146, 777, 36);
 		contentPane.add(btnAbmEnfermedades);
+
+        btnAbmSituacionPaciente = new JButton();
+        btnAbmSituacionPaciente.setText("ABM situacion paciente");
+        btnAbmSituacionPaciente.setFont(new Font("Tahoma", Font.PLAIN, 12));
+        btnAbmSituacionPaciente.setBounds(215, 468, 777, 40);
+        contentPane.add(btnAbmSituacionPaciente);
+
+        anterior = new JButton();
+        anterior.setText("Anterior");
+        anterior.setFont(new Font("Tahoma", Font.PLAIN, 12));
+        anterior.setBounds(215, 520, 777, 40);
+        contentPane.add(anterior);
+
 	}
 
     @Override
@@ -166,6 +172,11 @@ public class IngresoForm extends AbstractPantalla {
         dispose(); // Para que se oculte el menu.
     }*/
 
+
+    public JButton getBtnABMSituacionPaciente() {
+        return this.btnAbmSituacionPaciente;
+    }
+    
 	public JButton getBtnABMPaciente(){
 		return this.btnABMPaciente;
 	}
