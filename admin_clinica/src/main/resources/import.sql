@@ -27,3 +27,17 @@ insert into paciente(apellido, codigo, nombre, numero_documento, tipo_documento)
 insert into paciente(apellido, codigo, nombre, numero_documento, tipo_documento)values('Jimenez','127','Matias', '38256100','DNI');
 insert into paciente(apellido, codigo, nombre, numero_documento, tipo_documento)values('Nesponla','124','Daiana', '38256097','DNI');
 insert into paciente(apellido, codigo, nombre, numero_documento, tipo_documento)values('Rapetti','126','Pablo', '38256099','DNI');
+
+/*especialidad_medicos */
+insert into especialidad_medicos(especialidad_id, medicos_id) values(1,125);
+insert into especialidad_medicos(especialidad_id, medicos_id) values(2,123);
+insert into especialidad_medicos(especialidad_id, medicos_id) values(3,126);
+insert into especialidad_medicos(especialidad_id, medicos_id) values(4,124);
+insert into especialidad_medicos(especialidad_id, medicos_id) values(1,127);
+
+/*medico_especialidades*/ 
+insert into medico_especialidades(medico_id, especialidades_id) values(125,1);
+insert into medico_especialidades(medico_id, especialidades_id) values(123,2);
+insert into medico_especialidades(medico_id, especialidades_id) values(126,3);
+insert into medico_especialidades(medico_id, especialidades_id) values(124,4);
+insert into medico_especialidades(medico_id, especialidades_id) values(127,1);
