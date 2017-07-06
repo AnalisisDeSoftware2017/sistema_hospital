@@ -54,12 +54,13 @@ public class FormCreateSituacionDelPaciente extends AbstractFormCreate<Situacion
         add(lblDetalle);
 
         cmbMedico = new JComboBoxCustom();
+        cmbMedico.setBounds(171, 83, 285, 27);
         cmbMedico.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 setearEspecialidades();
             }
         });
-        cmbMedico.setBounds(171, 83, 285, 27);
         add(cmbMedico);
 
         cmbPaciente = new JComboBoxCustom();
@@ -104,24 +105,34 @@ public class FormCreateSituacionDelPaciente extends AbstractFormCreate<Situacion
     public void setMedicoList(List<Medico> medicos) {
         this.cmbMedico.setModel(new DefaultComboBoxModel<Medico>());
         this.cmbMedico.addAll(medicos);
-        if (null != entity) {
+        if (null != entity && null != entity.getMedico()) {
             this.cmbMedico.setSelectedValue(entity.getMedico());
+        } else {
+            this.cmbMedico.setSelectedIndex(0);
         }
-        if (null != this.cmbMedico.getSelectedElement()) {
-            this.setearEspecialidades();
-        }
+        this.setearEspecialidades();
     }
 
     public void setPacienteList(List<Paciente> pacientes) {
         this.cmbPaciente.setModel(new DefaultComboBoxModel<Paciente>());
         this.cmbPaciente.addAll(pacientes);
-        if (null != entity) {
+        if (null != entity && null != entity.getPaciente()) {
             this.cmbPaciente.setSelectedValue(entity.getPaciente());
+        } else {
+            this.cmbMedico.setSelectedIndex(0);
         }
+
     }
 
     private void setearEspecialidades() {
-        this.setEspecialidadList(this.cmbMedico.getSelectedElement().getEspecialidades());
+        if (null == this.cmbMedico.getSelectedElement().getEspecialidades() || this.cmbMedico.getSelectedElement().getEspecialidades().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "El medico seleccionado no tiene especialidades asignadas", "Error", JOptionPane.ERROR_MESSAGE);
+        } else {
+            List<Especialidad> listaEspecialidades = this.cmbMedico.getSelectedElement().getEspecialidades();
+            Especialidad[] arrayEspecialidades = new Especialidad[listaEspecialidades.size()];
+            arrayEspecialidades = listaEspecialidades.toArray(arrayEspecialidades);
+            this.cmbEspecialidad.setModel(new DefaultComboBoxModel<>(arrayEspecialidades));
+        }
     }
     
     @Override

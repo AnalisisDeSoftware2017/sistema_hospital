@@ -29,11 +29,17 @@ public class SaveSituacionDelPacienteController extends AbstractEntitySaveContro
         super(service, form);
         this.medicoService = medicoService;
         this.pacienteService = pacienteService;
-        ((ContainerSaveSituacionDelPacienteForm) this.frame).setMedicoList(this.medicoService.findAll());
-        ((ContainerSaveSituacionDelPacienteForm) this.frame).setPacienteList(this.pacienteService.findAll());
 
     }
 
+
+    public void setVisible(Boolean visible) {
+        super.setVisible(visible);
+        if (visible) {
+            ((ContainerSaveSituacionDelPacienteForm) this.frame).setMedicoList(this.medicoService.findAll());
+            ((ContainerSaveSituacionDelPacienteForm) this.frame).setPacienteList(this.pacienteService.findAll());
+        }
+    }
 
     @Override
     protected List<String> validateData(SituacionDelPaciente entidad) {

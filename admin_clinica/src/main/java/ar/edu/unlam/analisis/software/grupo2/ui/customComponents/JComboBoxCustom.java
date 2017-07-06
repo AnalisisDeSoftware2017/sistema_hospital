@@ -22,7 +22,7 @@ public class JComboBoxCustom<T extends AbmEntity> extends JComboBox<T> {
 
     public void addAll(List<T> lista) {
         for (T elemento : lista) {
-            super.addItem(elemento);
+            this.add(elemento);
         }
     }
 
@@ -32,7 +32,7 @@ public class JComboBoxCustom<T extends AbmEntity> extends JComboBox<T> {
     }
 
     public void add(T elemento) {
-        super.add(elemento);
+        super.addItem(elemento);
     }
 
 
