@@ -3,7 +3,7 @@
   <dontWrapJar>false</dontWrapJar>
   <headerType>gui</headerType>
   <jar>C:\Users\Matias Jimenez\Documents\GitHub\AnalisisDeSoftware\sistema_hospital\entregas\admin_clinica-1.0-SNAPSHOT.jar</jar>
-  <outfile>C:\Users\Matias Jimenez\Desktop\PROYECTO HOSPITAL\SistemaHospital.exe</outfile>
+  <outfile>C:\Users\Matias Jimenez\Documents\GitHub\AnalisisDeSoftware\sistema_hospital\entregas\instalador\SistemaHospital.exe</outfile>
   <errTitle></errTitle>
   <cmdLine></cmdLine>
   <chdir>.</chdir>
@@ -13,12 +13,12 @@
   <stayAlive>false</stayAlive>
   <restartOnCrash>false</restartOnCrash>
   <manifest></manifest>
-  <icon>C:\Users\Matias Jimenez\Desktop\PROYECTO HOSPITAL\Hospital Red 2.ico</icon>
+  <icon>C:\Users\Matias Jimenez\Documents\GitHub\AnalisisDeSoftware\sistema_hospital\entregas\instalador\Hospital Red 2.ico</icon>
   <jre>
-    <path>C:\Program Files\Java\jdk1.8.0_65\jre</path>
+    <path>1.8.0</path>
     <bundledJre64Bit>false</bundledJre64Bit>
     <bundledJreAsFallback>false</bundledJreAsFallback>
-    <minVersion></minVersion>
+    <minVersion>1.8.0</minVersion>
     <maxVersion></maxVersion>
     <jdkPreference>preferJre</jdkPreference>
     <runtimeBits>64/32</runtimeBits>
