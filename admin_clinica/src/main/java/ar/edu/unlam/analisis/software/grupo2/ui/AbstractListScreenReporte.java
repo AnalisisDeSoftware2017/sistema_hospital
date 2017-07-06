@@ -5,6 +5,7 @@ import ar.edu.unlam.analisis.software.grupo2.ui.customComponents.JListCustom;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
+import java.awt.*;
 import java.util.List;
 
 public abstract class AbstractListScreenReporte<T extends Persona> extends AbstractPantalla {
@@ -19,18 +20,19 @@ public abstract class AbstractListScreenReporte<T extends Persona> extends Abstr
      */
     public AbstractListScreenReporte() {
         super();
-        contentPane = new JPanel();
+        contentPane = this.setPanel("/img/Atencion_Pacientes.jpg");
         contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
         setContentPane(contentPane);
         contentPane.setLayout(null);
 
         JPanel panel = new JPanel();
+        panel.setBackground(new Color(0, 0, 0, 0));
         panel.setBounds(21, 63, 809, 517);
         contentPane.add(panel);
         panel.setLayout(null);
 
         listEntity = new JListCustom<>();
-        listEntity.setBounds(6, 4, 585, 507);
+        listEntity.setBounds(28, 73, 585, 507);
         panel.add(listEntity);
 
         btnVerDetalle = new JButton("Ver detalle");

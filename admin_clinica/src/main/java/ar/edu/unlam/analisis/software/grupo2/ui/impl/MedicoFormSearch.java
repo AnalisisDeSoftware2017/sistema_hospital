@@ -47,6 +47,12 @@ public class MedicoFormSearch extends AbstractPersonaFormSearch<Medico, MedicoDa
     }
 
 
+    public void setListaEspecialidad(java.util.List<Especialidad> especialidadList) {
+        Especialidad[] especialidadArray = new Especialidad[especialidadList.size()];
+        especialidadArray = especialidadList.toArray(especialidadArray);
+        this.cmbEspecialidad.setModel(new DefaultComboBoxModel(especialidadArray));
+    }
+
     @Override
     public void setTexto() {
         super.setTexto();
