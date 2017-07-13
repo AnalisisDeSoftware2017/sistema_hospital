@@ -1,5 +1,6 @@
 package ar.edu.unlam.analisis.software.grupo2.ui;
 
+import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Component;
 
 import javax.swing.*;
@@ -20,8 +21,8 @@ public class MainForm extends AbstractPantalla {
 	/**
 	 * Create the frame.
 	 */
-	public MainForm() {
-        super();
+	public MainForm(MessageSource messageSource) {
+		super(messageSource);
         
         contentPane = this.setPanel("/img/Hospital_Laurel.jpg");
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));

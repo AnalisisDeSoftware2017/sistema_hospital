@@ -14,12 +14,16 @@ public abstract class AbstractPantalla extends JFrame implements SetTextoInterfa
 
     @Autowired
     protected MessageSource messageSource;
+
     protected ImageIcon img;
     private static final Integer HEIGHT = 1330;
     private static final Integer WIDTH  = 720;
     private JLabel label;
 
-    public AbstractPantalla() {
+
+    @Autowired
+    public AbstractPantalla(MessageSource messageSource) {
+        this.messageSource = messageSource;
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(0, 0, HEIGHT, WIDTH);
         getContentPane().setLayout(null);

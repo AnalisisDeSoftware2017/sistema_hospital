@@ -1,6 +1,7 @@
 package ar.edu.unlam.analisis.software.grupo2.ui;
 
 import ar.edu.unlam.analisis.software.grupo2.core.model.AbmEntity;
+import org.springframework.context.MessageSource;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
@@ -20,9 +21,8 @@ public abstract class AbstractContainerSaveForm<T extends AbmEntity> extends Abs
 	 * Create the frame.
 	 */
 
-	public AbstractContainerSaveForm(AbstractFormCreate<T> form) {
-
-		super();
+	public AbstractContainerSaveForm(AbstractFormCreate<T> form,MessageSource messageSource) {
+		super(messageSource);
 		contentPane = this.setPanel("/img/Atencion_Pacientes.jpg");
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);

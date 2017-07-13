@@ -5,6 +5,8 @@ import ar.edu.unlam.analisis.software.grupo2.core.model.Medico;
 import ar.edu.unlam.analisis.software.grupo2.core.model.TipoDocumentoEnum;
 import ar.edu.unlam.analisis.software.grupo2.data.MedicoData;
 import ar.edu.unlam.analisis.software.grupo2.ui.AbstractPersonaFormSearch;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Component;
 
 import javax.swing.*;
@@ -18,8 +20,9 @@ public class MedicoFormSearch extends AbstractPersonaFormSearch<Medico, MedicoDa
 
     private JComboBox cmbEspecialidad;
 
-    public MedicoFormSearch() {
-        super();
+    @Autowired
+    public MedicoFormSearch(MessageSource messageSource) {
+        super(messageSource);
         JLabel lblEspecialidad = new JLabel("Especialidad:");
         lblEspecialidad.setForeground(Color.RED);
         lblEspecialidad.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 16));

@@ -1,5 +1,8 @@
 package ar.edu.unlam.analisis.software.grupo2.ui;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.MessageSource;
+
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
@@ -17,8 +20,9 @@ public class IngresoForm extends AbstractPantalla {
     /**
 	 * Create the frame.
 	 */
-	public IngresoForm() {
-        super();
+    @Autowired
+	public IngresoForm(MessageSource messageSource) {
+		super(messageSource);
         contentPane = this.setPanel();
         contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -148,9 +152,9 @@ public class IngresoForm extends AbstractPantalla {
     }
 
     private void mINIActionPerformed(java.awt.event.ActionEvent evt) {
-        MainForm menu=new MainForm();
+      /*  MainForm menu=new MainForm();
         menu.setVisible(true); // Vuelve el menu principal
-        dispose(); // Desaparece el informes.   
+        dispose(); // Desaparece el informes.  */
     }
 
     private void SalirActionPerformed(java.awt.event.ActionEvent evt) {

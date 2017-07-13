@@ -1,5 +1,7 @@
 package ar.edu.unlam.analisis.software.grupo2.ui;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Component;
 
 import javax.swing.*;
@@ -16,7 +18,9 @@ public class DatosMedicoForm extends AbstractPantalla {
 
 	private JPanel contentPane;
 
-	public DatosMedicoForm() {
+	@Autowired
+	public DatosMedicoForm(MessageSource messageSource) {
+		super(messageSource);
 		//setIconImage(new ImageIcon(getClass().getResource("/imagenes/iconoCM.png")).getImage()); //Agrego el icono a la ventana
         setSize(529,383); 
         setLocationRelativeTo(null); // En el centro la ventana.
@@ -342,9 +346,9 @@ public class DatosMedicoForm extends AbstractPantalla {
     }
 
     private void mINIActionPerformed(java.awt.event.ActionEvent evt) {
-        MainForm menu=new MainForm();
+    /*    MainForm menu=new MainForm();
         menu.setVisible(true); // Vuelve el menu proncipal
-        dispose(); // Desaparece el informes.
+        dispose(); // Desaparece el informes.*/
     }
 
     private void SalirActionPerformed(java.awt.event.ActionEvent evt) {
@@ -353,9 +357,9 @@ public class DatosMedicoForm extends AbstractPantalla {
 
 
     private void mInfActionPerformed(java.awt.event.ActionEvent evt) {
-        InformesForm iw=new InformesForm();
+        /*InformesForm iw=new InformesForm();
         iw.setVisible(true); // Hago visible la ventana de Informes.
-        dispose(); // Desaparece el menu.
+        dispose(); // Desaparece el menu.*/
     }
 
     private void mIngDatActionPerformed(java.awt.event.ActionEvent evt) {

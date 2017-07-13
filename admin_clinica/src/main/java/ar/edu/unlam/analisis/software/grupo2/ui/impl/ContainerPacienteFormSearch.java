@@ -5,6 +5,7 @@ import ar.edu.unlam.analisis.software.grupo2.data.PacienteData;
 import ar.edu.unlam.analisis.software.grupo2.ui.AbstractContainerPersonaFormSearch;
 import ar.edu.unlam.analisis.software.grupo2.ui.AbstractPersonaFormSearch;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Component;
 
 /**
@@ -15,8 +16,9 @@ public class ContainerPacienteFormSearch extends AbstractContainerPersonaFormSea
 
 
     @Autowired
-    public ContainerPacienteFormSearch(AbstractPersonaFormSearch<Paciente, PacienteData> form) {
-        super(form);
+    public ContainerPacienteFormSearch(AbstractPersonaFormSearch<Paciente, PacienteData> form,MessageSource messageSource) {
+
+        super(form, messageSource);
     }
 
 

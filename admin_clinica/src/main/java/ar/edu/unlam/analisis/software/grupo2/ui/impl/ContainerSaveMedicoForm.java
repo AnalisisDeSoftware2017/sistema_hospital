@@ -5,6 +5,7 @@ import ar.edu.unlam.analisis.software.grupo2.core.model.Medico;
 import ar.edu.unlam.analisis.software.grupo2.ui.AbstractFormCreate;
 import ar.edu.unlam.analisis.software.grupo2.ui.AbstractContainerSaveForm;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -26,8 +27,8 @@ public class ContainerSaveMedicoForm extends AbstractContainerSaveForm<Medico> {
      * @param form
      */
     @Autowired
-    public ContainerSaveMedicoForm(AbstractFormCreate<Medico> form) {
-        super(form);
+    public ContainerSaveMedicoForm(AbstractFormCreate<Medico> form, MessageSource messageSource) {
+        super(form, messageSource);
     }
 
 }

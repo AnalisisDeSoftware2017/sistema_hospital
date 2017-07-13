@@ -50,11 +50,10 @@ public class LoginJFrame extends AbstractPantalla {
      */
     @Autowired
     public LoginJFrame(MessageSource messageSource) {
-    	
+        super(messageSource);
         initComponents();
         setLocationRelativeTo(null); // Para que el login aparezca en el centro de la pantalla.
         setResizable(false); // que no pueda agrandar la pantalla.
-        this.messageSource=messageSource;
         setTitle(messageSource.getMessage("ui.LoginJFrame.titulo", null, AppContext.getLocale())); // Le da un titulo a la ventana.
         
         
@@ -134,6 +133,8 @@ public class LoginJFrame extends AbstractPantalla {
 
     @Override
     public void setTexto() {
+
+
 
     }
 

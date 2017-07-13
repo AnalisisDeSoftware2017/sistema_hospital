@@ -4,6 +4,7 @@ import ar.edu.unlam.analisis.software.grupo2.core.model.Paciente;
 import ar.edu.unlam.analisis.software.grupo2.ui.AbstractFormCreate;
 import ar.edu.unlam.analisis.software.grupo2.ui.AbstractContainerSaveForm;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Component;
 
 /**
@@ -19,8 +20,8 @@ public class ContainerSavePacienteForm extends AbstractContainerSaveForm<Pacient
      * @param form
      */
     @Autowired
-    public ContainerSavePacienteForm(AbstractFormCreate<Paciente> form) {
-        super(form);
+    public ContainerSavePacienteForm(AbstractFormCreate<Paciente> form, MessageSource messageSource) {
+        super(form,messageSource);
     }
 
 }

@@ -3,6 +3,7 @@ package ar.edu.unlam.analisis.software.grupo2.ui.impl;
 import ar.edu.unlam.analisis.software.grupo2.core.model.Medico;
 import ar.edu.unlam.analisis.software.grupo2.core.model.SituacionDelPaciente;
 import ar.edu.unlam.analisis.software.grupo2.ui.AbstractPersonaDetails;
+import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Component;
 
 import javax.swing.*;
@@ -18,8 +19,8 @@ public class MedicoDetails extends AbstractPersonaDetails<Medico> {
 
     private JTextArea taEspecialidades;
 
-    public MedicoDetails() {
-
+    public MedicoDetails(MessageSource messageSource) {
+        super(messageSource);
         taEspecialidades = new JTextArea(16, 30);
         taEspecialidades.setEditable(false); // set textArea non-editable
         JScrollPane scrollPane = new JScrollPane(taEspecialidades);
