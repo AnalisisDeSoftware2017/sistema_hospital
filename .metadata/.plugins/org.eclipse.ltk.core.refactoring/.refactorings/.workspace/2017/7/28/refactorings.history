@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;sistema_hospitales_hashing&apos;" deleteContents="false" description="Delete resource &apos;sistema_hospitales_hashing&apos;" element1="/sistema_hospitales_hashing" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1499825570295"/>&#x0A;<refactoring comment="Delete resource &apos;admin_clinica&apos;" deleteContents="false" description="Delete resource &apos;admin_clinica&apos;" element1="/admin_clinica" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1499870700950"/>
-</session>

@@ -13,3 +13,4 @@ archivos_prueba/
 .settings/
 
 *eclipse*
+.metadata/
