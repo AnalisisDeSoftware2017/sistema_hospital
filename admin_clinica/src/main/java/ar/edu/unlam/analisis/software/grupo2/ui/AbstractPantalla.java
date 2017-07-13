@@ -1,27 +1,23 @@
 package ar.edu.unlam.analisis.software.grupo2.ui;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
-import org.springframework.core.io.ClassPathResource;
-
-import java.awt.BorderLayout;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
+import java.awt.*;
+import java.util.Locale;
 
 public abstract class AbstractPantalla extends JFrame implements SetTextoInterface {
 
 
-    @Autowired
-    protected MessageSource messageSource;
 
-    protected ImageIcon img;
     private static final Integer HEIGHT = 1330;
     private static final Integer WIDTH  = 720;
+    protected ImageIcon img;
+    private MessageSource messageSource;
     private JLabel label;
 
 
-    @Autowired
     public AbstractPantalla(MessageSource messageSource) {
         this.messageSource = messageSource;
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -42,6 +38,17 @@ public abstract class AbstractPantalla extends JFrame implements SetTextoInterfa
         setContentPane(p);
         return p;
     }
+
+
+    public String getMessage(String code, String[] args, Locale locale) {
+        return this.messageSource.getMessage(code, args, locale);
+    }
+
+
+    public String getMessage(String code, Locale locale) {
+        return this.messageSource.getMessage(code, null, locale);
+    }
+
     
     
 }

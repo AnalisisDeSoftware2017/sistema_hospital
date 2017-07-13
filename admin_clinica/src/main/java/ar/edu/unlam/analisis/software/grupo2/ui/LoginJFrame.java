@@ -3,26 +3,15 @@ package ar.edu.unlam.analisis.software.grupo2.ui;
 import ar.edu.unlam.analisis.software.grupo2.utils.AppContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
-import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Component;
 
-import java.awt.BorderLayout;
-import java.awt.Dimension;
-import java.awt.Graphics;
-import java.io.IOException;
-
 import javax.swing.*;
-import javax.swing.border.EmptyBorder;
-import java.awt.Color;
 
 /**
  * Created by sbogado on 5/8/17.
  */
 @Component
 public class LoginJFrame extends AbstractPantalla {
-
-
-    private MessageSource messageSource;
 
     private static final long serialVersionUID = 1L;
     private String usuario = "";
@@ -54,7 +43,6 @@ public class LoginJFrame extends AbstractPantalla {
         initComponents();
         setLocationRelativeTo(null); // Para que el login aparezca en el centro de la pantalla.
         setResizable(false); // que no pueda agrandar la pantalla.
-        setTitle(messageSource.getMessage("ui.LoginJFrame.titulo", null, AppContext.getLocale())); // Le da un titulo a la ventana.
         
         
     }
@@ -133,14 +121,12 @@ public class LoginJFrame extends AbstractPantalla {
 
     @Override
     public void setTexto() {
-
-
-
+        setTitle(getMessage("ui.LoginJFrame.titulo", null, AppContext.getLocale())); // Le da un titulo a la ventana.
     }
 
     public void showErrorMessage() {
         JOptionPane.showMessageDialog(this,
-                messageSource.getMessage("login.error", null, AppContext.getLocale()),
+                getMessage("login.error", null, AppContext.getLocale()),
                 "Error",
                 JOptionPane.ERROR_MESSAGE);
 

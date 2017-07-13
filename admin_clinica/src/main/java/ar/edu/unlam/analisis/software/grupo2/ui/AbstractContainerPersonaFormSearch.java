@@ -5,9 +5,8 @@ import ar.edu.unlam.analisis.software.grupo2.data.PersonaData;
 import ar.edu.unlam.analisis.software.grupo2.utils.AppContext;
 import org.springframework.context.MessageSource;
 
-import java.awt.Color;
-
 import javax.swing.*;
+import java.awt.*;
 
 public abstract class AbstractContainerPersonaFormSearch<T extends Persona, E extends PersonaData> extends AbstractPantalla {
 
@@ -67,7 +66,7 @@ public abstract class AbstractContainerPersonaFormSearch<T extends Persona, E ex
     }
 
     public void showEmptyPersonaMessage() {
-        JOptionPane.showMessageDialog(this, messageSource.getMessage("ar.edu.unlam.los.laureles.noElementsToShow", null , AppContext.getLocale()));
+        JOptionPane.showMessageDialog(this, getMessage("ar.edu.unlam.los.laureles.noElementsToShow", null, AppContext.getLocale()));
     }
 
     public void clearFiltros() {
