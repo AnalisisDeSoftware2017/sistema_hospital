@@ -9,10 +9,10 @@ import java.awt.*;
 
 public abstract class AbstractFormCreate<T extends AbmEntity> extends JPanel implements SetTextoInterface {
 
-    @Autowired
     protected MessageSource messageSource;
 
-    protected AbstractFormCreate(){
+    protected AbstractFormCreate(MessageSource messageSource){
+    	this.messageSource = messageSource;
 		this.setBackground(new Color(0,0,0,0));
 	}
 

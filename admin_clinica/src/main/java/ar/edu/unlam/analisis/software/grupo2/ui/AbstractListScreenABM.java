@@ -2,6 +2,7 @@ package ar.edu.unlam.analisis.software.grupo2.ui;
 
 import ar.edu.unlam.analisis.software.grupo2.core.model.AbmEntity;
 import ar.edu.unlam.analisis.software.grupo2.ui.customComponents.JListCustom;
+import org.springframework.context.MessageSource;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
@@ -21,8 +22,8 @@ public abstract class AbstractListScreenABM<T extends AbmEntity> extends Abstrac
 	/**
 	 * Create the frame.
 	 */
-	public AbstractListScreenABM() {
-        super();
+	public AbstractListScreenABM(MessageSource messageSource) {
+		super(messageSource);
         //contentPane = new JPanel();
         contentPane = setPanel("/img/Atencion_Pacientes.jpg");
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));

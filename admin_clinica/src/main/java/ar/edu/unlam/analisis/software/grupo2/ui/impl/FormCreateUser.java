@@ -3,6 +3,7 @@ package ar.edu.unlam.analisis.software.grupo2.ui.impl;
 import ar.edu.unlam.analisis.software.grupo2.core.model.User;
 import ar.edu.unlam.analisis.software.grupo2.ui.AbstractFormCreate;
 import ar.edu.unlam.analisis.software.grupo2.utils.AppContext;
+import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Component;
 
 import javax.swing.*;
@@ -19,8 +20,8 @@ public class FormCreateUser extends AbstractFormCreate<User> {
     private JPasswordField confirmPassword;
     private JTextField txtEmail;
 
-    public FormCreateUser() {
-        super();
+    public FormCreateUser(MessageSource messageSource) {
+        super(messageSource);
         setLayout(null);
 
         txtNombre = new JTextField();

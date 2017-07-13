@@ -5,6 +5,7 @@ import ar.edu.unlam.analisis.software.grupo2.core.model.Medico;
 import ar.edu.unlam.analisis.software.grupo2.core.model.TipoDocumentoEnum;
 import ar.edu.unlam.analisis.software.grupo2.ui.AbstractFormCreate;
 import ar.edu.unlam.analisis.software.grupo2.ui.customComponents.JListCustom;
+import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Component;
 
 import javax.swing.*;
@@ -23,8 +24,8 @@ public class FormCreateMedico extends AbstractFormCreate<Medico> {
 	private List<Especialidad> especialidadList;
 	private JListCustom<Especialidad> cmbEspecialidad;
 
-	public FormCreateMedico() {
-		super();
+	public FormCreateMedico(MessageSource messageSource) {
+		super(messageSource);
 		setLayout(null);
 
 		txtNombre = new JTextField();

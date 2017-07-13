@@ -6,6 +6,7 @@ import ar.edu.unlam.analisis.software.grupo2.data.MedicoData;
 import ar.edu.unlam.analisis.software.grupo2.ui.AbstractContainerPersonaFormSearch;
 import ar.edu.unlam.analisis.software.grupo2.ui.AbstractPersonaFormSearch;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -20,8 +21,8 @@ public class ContainerMedicoFormSearch extends AbstractContainerPersonaFormSearc
 
 
     @Autowired
-    public ContainerMedicoFormSearch(AbstractPersonaFormSearch<Medico, MedicoData> form) {
-        super(form);
+    public ContainerMedicoFormSearch(AbstractPersonaFormSearch<Medico, MedicoData> form,MessageSource messageSource) {
+        super(form, messageSource);
     }
 
     public void setEspecialidades(List<Especialidad> all) {

@@ -4,6 +4,7 @@ import ar.edu.unlam.analisis.software.grupo2.core.model.Paciente;
 import ar.edu.unlam.analisis.software.grupo2.core.model.TipoDocumentoEnum;
 import ar.edu.unlam.analisis.software.grupo2.data.PacienteData;
 import ar.edu.unlam.analisis.software.grupo2.ui.AbstractPersonaFormSearch;
+import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Component;
 
 import java.awt.*;
@@ -13,8 +14,8 @@ import java.awt.*;
  */
 @Component
 public class PacienteFormSearch extends AbstractPersonaFormSearch<Paciente, PacienteData> {
-    public PacienteFormSearch() {
-        super();
+    public PacienteFormSearch(MessageSource messageSource) {
+        super(messageSource);
         this.setVisible(true);
     }
 

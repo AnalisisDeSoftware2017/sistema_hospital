@@ -2,6 +2,8 @@ package ar.edu.unlam.analisis.software.grupo2.ui;
 
 import ar.edu.unlam.analisis.software.grupo2.core.model.Persona;
 import ar.edu.unlam.analisis.software.grupo2.ui.customComponents.JListCustom;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.MessageSource;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
@@ -18,8 +20,9 @@ public abstract class AbstractListScreenReporte<T extends Persona> extends Abstr
     /**
      * Create the frame.
      */
-    public AbstractListScreenReporte() {
-        super();
+    @Autowired
+    public AbstractListScreenReporte(MessageSource messageSource) {
+        super(messageSource);
         contentPane = this.setPanel("/img/Atencion_Pacientes.jpg");
         contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
         setContentPane(contentPane);

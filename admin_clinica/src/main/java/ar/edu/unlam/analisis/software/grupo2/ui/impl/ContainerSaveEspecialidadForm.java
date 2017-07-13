@@ -1,6 +1,7 @@
 package ar.edu.unlam.analisis.software.grupo2.ui.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Component;
 
 import ar.edu.unlam.analisis.software.grupo2.core.model.Especialidad;
@@ -15,8 +16,8 @@ public class ContainerSaveEspecialidadForm extends AbstractContainerSaveForm<Esp
 	
 
 	@Autowired
-    public ContainerSaveEspecialidadForm(AbstractFormCreate<Especialidad> form) {
-		super(form);
+    public ContainerSaveEspecialidadForm(AbstractFormCreate<Especialidad> form, MessageSource messageSource) {
+		super(form, messageSource);
 	}
 
 }

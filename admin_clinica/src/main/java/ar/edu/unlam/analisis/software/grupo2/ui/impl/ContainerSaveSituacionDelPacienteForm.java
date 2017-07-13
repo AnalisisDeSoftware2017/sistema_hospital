@@ -6,7 +6,9 @@ import ar.edu.unlam.analisis.software.grupo2.core.model.SituacionDelPaciente;
 import ar.edu.unlam.analisis.software.grupo2.ui.AbstractContainerSaveForm;
 import ar.edu.unlam.analisis.software.grupo2.ui.AbstractFormCreate;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Component;
+import sun.plugin2.message.Message;
 
 import java.util.List;
 
@@ -23,8 +25,8 @@ public class ContainerSaveSituacionDelPacienteForm extends AbstractContainerSave
      * @param form
      */
     @Autowired
-    public ContainerSaveSituacionDelPacienteForm(AbstractFormCreate<SituacionDelPaciente> form) {
-        super(form);
+    public ContainerSaveSituacionDelPacienteForm(AbstractFormCreate<SituacionDelPaciente> form, MessageSource messageSource) {
+        super(form, messageSource);
     }
 
 

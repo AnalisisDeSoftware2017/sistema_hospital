@@ -1,12 +1,11 @@
 package ar.edu.unlam.analisis.software.grupo2.ui;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Component;
 
 import javax.swing.*;
-import javax.swing.GroupLayout.Alignment;
-import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.border.EmptyBorder;
-import javax.swing.border.EtchedBorder;
 import java.awt.*;
 
 @Component
@@ -19,8 +18,9 @@ public class InformesForm extends AbstractPantalla {
 	/**
 	 * Create the frame.
 	 */
-	public InformesForm() {
-        super();
+	@Autowired
+	public InformesForm(MessageSource messageSource) {
+		super(messageSource);
         contentPane = setPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -132,9 +132,9 @@ public class InformesForm extends AbstractPantalla {
     }
 
     private void mINIActionPerformed(java.awt.event.ActionEvent evt) {
-        MainForm menu=new MainForm();
+        /*MainForm menu=new MainForm();
         menu.setVisible(true); // Vuelve el menu proncipal
-        dispose(); // Desaparece el informes.   
+        dispose(); // Desaparece el informes.   */
     }
 
     private void SalirActionPerformed(java.awt.event.ActionEvent evt) {

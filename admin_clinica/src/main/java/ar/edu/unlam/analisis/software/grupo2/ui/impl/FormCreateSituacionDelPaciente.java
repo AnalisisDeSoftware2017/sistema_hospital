@@ -6,6 +6,7 @@ import ar.edu.unlam.analisis.software.grupo2.core.model.Paciente;
 import ar.edu.unlam.analisis.software.grupo2.core.model.SituacionDelPaciente;
 import ar.edu.unlam.analisis.software.grupo2.ui.AbstractFormCreate;
 import ar.edu.unlam.analisis.software.grupo2.ui.customComponents.JComboBoxCustom;
+import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Component;
 
 import javax.swing.*;
@@ -25,8 +26,8 @@ public class FormCreateSituacionDelPaciente extends AbstractFormCreate<Situacion
     private JEditorPane txtDetalle;
     private List<Medico> medicoList;
 
-    public FormCreateSituacionDelPaciente() {
-        super();
+    public FormCreateSituacionDelPaciente(MessageSource messageSource) {
+        super(messageSource);
         setLayout(null);
 
         JLabel lblMedico = new JLabel("Medico:");

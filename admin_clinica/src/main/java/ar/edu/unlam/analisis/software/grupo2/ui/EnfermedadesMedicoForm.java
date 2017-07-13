@@ -1,5 +1,8 @@
 package ar.edu.unlam.analisis.software.grupo2.ui;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.MessageSource;
+
 import javax.swing.*;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.LayoutStyle.ComponentPlacement;
@@ -16,7 +19,9 @@ public class EnfermedadesMedicoForm extends AbstractPantalla {
 	/**
 	 * Create the frame.
 	 */
-	public EnfermedadesMedicoForm() {
+	@Autowired
+	public EnfermedadesMedicoForm(MessageSource messageSource) {
+		super(messageSource);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 602, 441);
 		contentPane = new JPanel();
@@ -223,15 +228,15 @@ public class EnfermedadesMedicoForm extends AbstractPantalla {
     }
 
     private void mINIActionPerformed(java.awt.event.ActionEvent evt) {
-        MainForm menu=new MainForm();
+       /* MainForm menu=new MainForm();
         menu.setVisible(true); // Vuelve el menu proncipal
-        dispose(); // Desaparece el informes.
+        dispose(); // Desaparece el informes.*/
     }
 
     private void mInfActionPerformed(java.awt.event.ActionEvent evt) {
-        InformesForm iw=new InformesForm();
+        /*InformesForm iw=new InformesForm();
         iw.setVisible(true); // Hago visible la ventana de Informes.
-        dispose(); // Desaparece el menu.
+        dispose(); // Desaparece el menu.*/
     }
 
     private void SalirActionPerformed(java.awt.event.ActionEvent evt) {

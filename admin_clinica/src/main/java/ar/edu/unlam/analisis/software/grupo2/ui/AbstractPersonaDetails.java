@@ -2,6 +2,8 @@ package ar.edu.unlam.analisis.software.grupo2.ui;
 
 import ar.edu.unlam.analisis.software.grupo2.core.model.Persona;
 import ar.edu.unlam.analisis.software.grupo2.core.model.SituacionDelPaciente;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.MessageSource;
 
 import javax.swing.*;
 import java.awt.*;
@@ -17,8 +19,9 @@ public abstract class AbstractPersonaDetails<T extends Persona> extends Abstract
     protected JTextArea taConsultas;
     private JButton btnAnterior;
 
-    public AbstractPersonaDetails() {
-        super();
+
+    public AbstractPersonaDetails(MessageSource messageSource) {
+        super(messageSource);
         getContentPane().setLayout(null);
 
         JPanel panel = new JPanel();

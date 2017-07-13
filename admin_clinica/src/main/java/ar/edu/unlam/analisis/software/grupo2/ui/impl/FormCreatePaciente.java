@@ -3,6 +3,8 @@ package ar.edu.unlam.analisis.software.grupo2.ui.impl;
 import ar.edu.unlam.analisis.software.grupo2.core.model.Paciente;
 import ar.edu.unlam.analisis.software.grupo2.core.model.TipoDocumentoEnum;
 import ar.edu.unlam.analisis.software.grupo2.ui.AbstractFormCreate;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Component;
 
 import javax.swing.*;
@@ -17,9 +19,10 @@ public class FormCreatePaciente extends AbstractFormCreate<Paciente> {
 	private JTextField txtCodigo;
 	private JTextField txtNumeroDeDocumento;
 	private JComboBox<TipoDocumentoEnum> cbTipoDocumento;
-	
-	public FormCreatePaciente() {
-		super();
+
+	@Autowired
+	public FormCreatePaciente(MessageSource messageSource) {
+		super(messageSource);
 		setLayout(null);
 		
 		txtNombre = new JTextField();

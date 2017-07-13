@@ -1,5 +1,8 @@
 package ar.edu.unlam.analisis.software.grupo2.ui;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.MessageSource;
+
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
@@ -12,9 +15,10 @@ public class DatosPacienteForm extends JFrame {
 	private JPanel contentPane;
 	private JTextField codigoPac;
 	private JTextField nombrePac;
+	private MessageSource messageSource;
 
-
-	public DatosPacienteForm() {
+	@Autowired
+	public DatosPacienteForm(MessageSource messageSource) {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 883, 575);
 		contentPane = new JPanel();
@@ -285,17 +289,16 @@ public class DatosPacienteForm extends JFrame {
 
 	    private void mINIActionPerformed(java.awt.event.ActionEvent evt) {
 	     
-	        MainForm menu=new MainForm();
+	  /*      MainForm menu=new MainForm();
 	        menu.setVisible(true); // Vuelve el menu proncipal
-	        dispose(); // Desaparece el informes.
+	        dispose(); // Desaparece el informes.*/
 	    }
 
 	    private void mInfActionPerformed(java.awt.event.ActionEvent evt) {
-	     
-	     
+	     /*
 	        InformesForm iw=new InformesForm();
 	        iw.setVisible(true); // Hago visible la ventana de Informes.
-	        dispose(); // Desaparece el menu.
+	        dispose(); // Desaparece el menu.*/
 	    }
 
 	    private void SalirActionPerformed(java.awt.event.ActionEvent evt) {

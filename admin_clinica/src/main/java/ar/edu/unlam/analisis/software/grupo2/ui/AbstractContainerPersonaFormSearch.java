@@ -3,6 +3,7 @@ package ar.edu.unlam.analisis.software.grupo2.ui;
 import ar.edu.unlam.analisis.software.grupo2.core.model.Persona;
 import ar.edu.unlam.analisis.software.grupo2.data.PersonaData;
 import ar.edu.unlam.analisis.software.grupo2.utils.AppContext;
+import org.springframework.context.MessageSource;
 
 import java.awt.Color;
 
@@ -15,8 +16,8 @@ public abstract class AbstractContainerPersonaFormSearch<T extends Persona, E ex
     private JButton btnBuscar;
 
 
-    public AbstractContainerPersonaFormSearch(AbstractPersonaFormSearch<T, E> form) {
-        super();
+    public AbstractContainerPersonaFormSearch(AbstractPersonaFormSearch<T, E> form,MessageSource messageSource) {
+        super(messageSource);
         getContentPane().setLayout(null);
 
         this.searchForm = form;

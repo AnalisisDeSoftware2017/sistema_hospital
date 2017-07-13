@@ -80,6 +80,7 @@ public abstract class AbstractFrameController<T extends AbstractPantalla> {
             prepareAndOpenFrame();
             frameWasInit=true;
         }
+        this.frame.setTexto();
         this.frame.setVisible(visible);
     }
 

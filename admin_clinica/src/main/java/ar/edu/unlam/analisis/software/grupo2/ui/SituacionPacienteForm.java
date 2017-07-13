@@ -198,16 +198,16 @@ public class SituacionPacienteForm extends JFrame {
 
     private void mINIActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO addAll your handling code here:
-        MainForm menu=new MainForm();
+        /*MainForm menu=new MainForm();
         menu.setVisible(true); // Vuelve el menu proncipal
-        dispose(); // Desaparece el informes.
+        dispose(); // Desaparece el informes.*/
     }
 
     private void mInfActionPerformed(java.awt.event.ActionEvent evt) {
 
-        InformesForm iw=new InformesForm();
+        /*InformesForm iw=new InformesForm();
         iw.setVisible(true); // Hago visible la ventana de Informes.
-        dispose(); // Desaparece el menu.
+        dispose(); // Desaparece el menu.*/
     }
 
     private void SalirActionPerformed(java.awt.event.ActionEvent evt) {

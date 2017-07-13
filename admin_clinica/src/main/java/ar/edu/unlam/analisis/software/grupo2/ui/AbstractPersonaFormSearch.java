@@ -3,6 +3,8 @@ package ar.edu.unlam.analisis.software.grupo2.ui;
 import ar.edu.unlam.analisis.software.grupo2.core.model.Persona;
 import ar.edu.unlam.analisis.software.grupo2.core.model.TipoDocumentoEnum;
 import ar.edu.unlam.analisis.software.grupo2.data.PersonaData;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.MessageSource;
 
 import javax.swing.*;
 import java.awt.Font;
@@ -14,9 +16,12 @@ public abstract class AbstractPersonaFormSearch<T extends Persona, E extends Per
     protected JTextField txtCodigo;
     protected JTextField txtNumeroDeDocumento;
     protected JComboBox<TipoDocumentoEnum> cbTipoDocumento;
+    private MessageSource messageSource;
 
-    public AbstractPersonaFormSearch() {
+    @Autowired
+    public AbstractPersonaFormSearch(MessageSource messageSource) {
         super();
+        this.messageSource= messageSource;
         setLayout(null);
         txtNombre = new JTextField();
         txtNombre.setBounds(481, 127, 285, 26);
