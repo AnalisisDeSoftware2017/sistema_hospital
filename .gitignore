@@ -12,3 +12,4 @@ hospitales_admin/target/classes/ar/edu/unlam/analisis/software/grupo2/core/model
 archivos_prueba/
 .settings/
 
+*eclipse*
