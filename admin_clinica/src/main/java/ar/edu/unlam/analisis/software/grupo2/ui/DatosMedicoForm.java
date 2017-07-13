@@ -1,5 +1,6 @@
 package ar.edu.unlam.analisis.software.grupo2.ui;
 
+import ar.edu.unlam.analisis.software.grupo2.utils.AppContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Component;
@@ -25,7 +26,7 @@ public class DatosMedicoForm extends AbstractPantalla {
         setSize(529,383); 
         setLocationRelativeTo(null); // En el centro la ventana.
         setResizable(false); // Anula poder maximizar la ventana.
-        setTitle("Ingreso de Datos"); // Le da un titulo a la ventana.
+        setTitle(messageSource.getMessage("ui.DatosMedicoForm.ingresoDatos", null, AppContext.getLocale())); // Le da un titulo a la ventana.
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -37,12 +38,12 @@ public class DatosMedicoForm extends AbstractPantalla {
 		
 		JMenu jMenu2 = new JMenu();
 		jMenu2.setToolTipText("");
-		jMenu2.setText("Ayuda");
+		jMenu2.setText(messageSource.getMessage("ui.DatosMedicoForm.text.ayuda", null, AppContext.getLocale()));
 		jMenuBar1.add(jMenu2);
 		
 		JMenuItem menuItem = new JMenuItem();
-		menuItem.setToolTipText("Vista de gu\u00C3\u00ADa r\u00C3\u00A1pida de uso.");
-		menuItem.setText("Manual");
+		menuItem.setToolTipText(messageSource.getMessage("ui.DatosMedicoForm.guia", null, AppContext.getLocale()));
+		menuItem.setText(messageSource.getMessage("ui.DatosMedicoForm.text.manual", null, AppContext.getLocale()));
 		menuItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem2ActionPerformed(evt);
@@ -51,11 +52,11 @@ public class DatosMedicoForm extends AbstractPantalla {
 		jMenu2.add(menuItem);
 		
 		JMenu jMenu3 = new JMenu();
-		jMenu3.setText("Ir a");
+		jMenu3.setText(messageSource.getMessage("ui.DatosMedicoForm.text.irA", null, AppContext.getLocale()));
 		jMenuBar1.add(jMenu3);
 		
 		JMenuItem menuItem_1 = new JMenuItem();
-		menuItem_1.setText("Menu Inicio");
+		menuItem_1.setText(messageSource.getMessage("ui.DatosMedicoForm.menuInicio", null, AppContext.getLocale()));
 		menuItem_1.addActionListener(new java.awt.event.ActionListener() {
 	            public void actionPerformed(java.awt.event.ActionEvent evt) {
 	                mINIActionPerformed(evt);
@@ -64,7 +65,7 @@ public class DatosMedicoForm extends AbstractPantalla {
 		jMenu3.add(menuItem_1);
 		
 		JMenuItem menuItem_2 = new JMenuItem();
-		menuItem_2.setText("Ingreso de Datos");
+		menuItem_2.setText(messageSource.getMessage("ui.DatosMedicoForm.ingresoDatos", null, AppContext.getLocale()));
 		menuItem_2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mIngDatActionPerformed(evt);
@@ -73,7 +74,7 @@ public class DatosMedicoForm extends AbstractPantalla {
 		jMenu3.add(menuItem_2);
 		
 		JMenuItem menuItem_3 = new JMenuItem();
-		menuItem_3.setText("Informes");
+		menuItem_3.setText(messageSource.getMessage("ui.DatosMedicoForm.text.informes", null, AppContext.getLocale()));
 		menuItem_3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mInfActionPerformed(evt);
@@ -82,21 +83,21 @@ public class DatosMedicoForm extends AbstractPantalla {
 		jMenu3.add(menuItem_3);
 		
 		JMenu opciones = new JMenu();
-		opciones.setText("Opciones");
+		opciones.setText(messageSource.getMessage("ui.DatosMedicoForm.text.opciones", null, AppContext.getLocale()));
 		jMenuBar1.add(opciones);
 		
 		JMenuItem menuItem_4 = new JMenuItem();
-		menuItem_4.setText("Salir del Programa");
+		menuItem_4.setText(messageSource.getMessage("ui.DatosMedicoForm.salirPrograma", null, AppContext.getLocale()));
 		
 		opciones.add(menuItem_4);
 		
 		JMenuItem mntmCerrarSesin = new JMenuItem();
-		mntmCerrarSesin.setText("Cerrar Sesi\u00F3n");
+		mntmCerrarSesin.setText(messageSource.getMessage("ui.DatosMedicoForm.cerrarSesion", null, AppContext.getLocale()));
 		opciones.add(mntmCerrarSesin);
 		
 		JLabel jLabel1 = new JLabel();
 		jLabel1.setBounds(161, 84, 54, 17);
-		jLabel1.setText("C\u00F3digo:");
+		jLabel1.setText(messageSource.getMessage("ui.DatosMedicoForm.text.codigo", null, AppContext.getLocale()));
 		jLabel1.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		contentPane.add(jLabel1);
 		
@@ -112,7 +113,7 @@ public class DatosMedicoForm extends AbstractPantalla {
 		
 		JLabel jLabel3 = new JLabel();
 		jLabel3.setBounds(225, 123, 54, 17);
-		jLabel3.setText("Nombre:");
+		jLabel3.setText(messageSource.getMessage("ui.DatosMedicoForm.text.nombre", null, AppContext.getLocale()));
 		jLabel3.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		contentPane.add(jLabel3);
 		
@@ -128,25 +129,25 @@ public class DatosMedicoForm extends AbstractPantalla {
 		
 		anterior = new JButton();
 		anterior.setBounds(295, 253, 110, 33);
-		anterior.setText("Anterior");
+		anterior.setText(messageSource.getMessage("ui.DatosMedicoForm.text.anterior", null, AppContext.getLocale()));
 		anterior.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		contentPane.add(anterior);
 		
 		ingresarBtn = new JButton();
 		ingresarBtn.setBounds(381, 200, 120, 30);
-		ingresarBtn.setText("Ingresar");
+		ingresarBtn.setText(messageSource.getMessage("ui.DatosMedicoForm.text.ingresar", null, AppContext.getLocale()));
 		ingresarBtn.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		contentPane.add(ingresarBtn);
 		
 		borrarC = new JButton();
 		borrarC.setBounds(135, 200, 170, 30);
-		borrarC.setText("Borrar Campos");
+		borrarC.setText(messageSource.getMessage("ui.DatosMedicoForm.borrarCampos", null, AppContext.getLocale()));
 		borrarC.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		contentPane.add(borrarC);
 		
 		JLabel jLabel4 = new JLabel();
 		jLabel4.setBounds(265, 162, 77, 17);
-		jLabel4.setText("Especialidad:");
+		jLabel4.setText(messageSource.getMessage("ui.DatosMedicoForm.text.especialidad", null, AppContext.getLocale()));
 		jLabel4.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		contentPane.add(jLabel4);
 		

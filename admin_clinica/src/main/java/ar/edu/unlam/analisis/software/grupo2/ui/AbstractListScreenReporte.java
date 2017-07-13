@@ -2,6 +2,7 @@ package ar.edu.unlam.analisis.software.grupo2.ui;
 
 import ar.edu.unlam.analisis.software.grupo2.core.model.Persona;
 import ar.edu.unlam.analisis.software.grupo2.ui.customComponents.JListCustom;
+import ar.edu.unlam.analisis.software.grupo2.utils.AppContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 
@@ -38,11 +39,11 @@ public abstract class AbstractListScreenReporte<T extends Persona> extends Abstr
         listEntity.setBounds(28, 73, 585, 507);
         panel.add(listEntity);
 
-        btnVerDetalle = new JButton("Ver detalle");
+        btnVerDetalle = new JButton(getMessage("ui.AbstractListScreenReporte.verDetalle", null, AppContext.getLocale()));
         btnVerDetalle.setBounds(654, 141, 117, 29);
         panel.add(btnVerDetalle);
 
-        btnAnterior = new JButton("Anterior");
+        btnAnterior = new JButton(getMessage("ui.AbstractListScreenReporte.text.anterior", null, AppContext.getLocale()));
         btnAnterior.setBounds(654, 329, 117, 29);
         panel.add(btnAnterior);
     }

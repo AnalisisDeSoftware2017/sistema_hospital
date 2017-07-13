@@ -82,18 +82,18 @@ public class LoginJFrame extends AbstractPantalla {
         setIconImages(getIconImages());
         getContentPane().setLayout(null);
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Acceso al Sistema", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.BOTTOM, new java.awt.Font("Candara", 0, 12), java.awt.Color.darkGray)); // NOI18N
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, getMessage("ui.LoginJFrame.jPanel1.titulo", null, AppContext.getLocale()), javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.BOTTOM, new java.awt.Font("Candara", 0, 12), java.awt.Color.darkGray)); // NOI18N
         //TODO: agragar internacionalizacion
-        jLabel1.setText("Usuario:");
-        jLabel4.setText("Contraseña:");
+        jLabel1.setText(getMessage("ui.LoginJFrame.text.usuario", null, AppContext.getLocale()));
+        jLabel4.setText(getMessage("ui.LoginJFrame.text.password", null, AppContext.getLocale()));
 
-        user.setToolTipText("Ingrese su nombre de usuario.");
+        user.setToolTipText(getMessage("ui.LoginJFrame.ingresarUsuario", null, AppContext.getLocale()));
 
-        password.setToolTipText("Ingrese su contrase?a.");
+        password.setToolTipText(getMessage("ui.LoginJFrame.ingresarPassword", null, AppContext.getLocale()));
 
-        ingresar.setText("Ingresar");
+        ingresar.setText(getMessage("ui.LoginJFrame.text.ingresar", null, AppContext.getLocale()));
 
-        ingresar.setToolTipText("Click para Ingresar al Sistema");
+        ingresar.setToolTipText(getMessage("ui.LoginJFrame.clickIngreso", null, AppContext.getLocale()));
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(391, 288, 428, 120);

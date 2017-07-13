@@ -1,5 +1,6 @@
 package ar.edu.unlam.analisis.software.grupo2.ui;
 
+import ar.edu.unlam.analisis.software.grupo2.utils.AppContext;
 import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Component;
 
@@ -34,13 +35,13 @@ public class MainForm extends AbstractPantalla {
 		contentPane.add(menuBar);
 		
 		JMenu menu = new JMenu();
-		menu.setToolTipText("Obtenga ayuda.");
-		menu.setText("Ayuda");
+		menu.setToolTipText(getMessage("ui.MainForm.obtenerAyuda", null, AppContext.getLocale()));
+		menu.setText(getMessage("ui.MainForm.text.ayuda", null, AppContext.getLocale()));
 		menuBar.add(menu);
 		
 		JMenuItem menuItem = new JMenuItem();
-		menuItem.setToolTipText("Vista de gu\u00EDa r\u00E1pida de uso.");
-		menuItem.setText("Manual");
+		menuItem.setToolTipText(getMessage("ui.MainForm.guia", null, AppContext.getLocale()));
+		menuItem.setText(getMessage("ui.MainForm.text.manual", null, AppContext.getLocale()));
 		menu.add(menuItem);
 		
 		JMenu menu_1 = new JMenu();
@@ -48,52 +49,47 @@ public class MainForm extends AbstractPantalla {
 		menuBar.add(menu_1);
 		
 		JMenuItem menuItem_1 = new JMenuItem();
-		menuItem_1.setText("Ingreso de Datos");
+		menuItem_1.setText(getMessage("ui.MainForm.ingresoDatos", null, AppContext.getLocale()));
 		menu_1.add(menuItem_1);
 		
 		JMenuItem menuItem_2 = new JMenuItem();
-		menuItem_2.setText("Informes");
+		menuItem_2.setText(getMessage("ui.MainForm.text.informes", null, AppContext.getLocale()));
 		menu_1.add(menuItem_2);
 		
 		JMenu menu_2 = new JMenu();
-		menu_2.setText("Opciones");
+		menu_2.setText(getMessage("ui.MainForm.text.opciones", null, AppContext.getLocale()));
 		menuBar.add(menu_2);
 		
 		JMenuItem menuItem_3 = new JMenuItem();
-		menuItem_3.setText("Salir del Programa");
+		menuItem_3.setText(getMessage("ui.MainForm.salirPrograma", null, AppContext.getLocale()));
 		menu_2.add(menuItem_3);
 		
 		JMenuItem menuItem_4 = new JMenuItem();
-		menuItem_4.setText("Cerrar Sesi\u00F3n");
+		menuItem_4.setText(getMessage("ui.MainForm.cerrarSesion", null, AppContext.getLocale()));
 		menu_2.add(menuItem_4);
 		
 		informes = new JButton();
-		//TODO addAll internacionalizancion
-		informes.setToolTipText("Click para ver enfermedades y pacientes que atienden los m\u00E9dicos.");
-		informes.setText("Informes");
+		informes.setToolTipText(getMessage("ui.MainForm.clickEnfermedadesPacientes", null, AppContext.getLocale()));
+		informes.setText(getMessage("ui.MainForm.text.informes", null, AppContext.getLocale()));
 		informes.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		informes.setBounds(412, 315, 404, 64);
 		contentPane.add(informes);
 		
 		salir = new JButton();
-		//TODO addAll internacionalizancion
-		salir.setToolTipText("Click para salir del programa.");
-		salir.setText("Salir");
+		salir.setToolTipText(getMessage("ui.MainForm.clickSalirPrograma", null, AppContext.getLocale()));
+		salir.setText(getMessage("ui.MainForm.text.salir", null, AppContext.getLocale()));
 		salir.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		salir.setBounds(412, 421, 404, 64);
 		contentPane.add(salir);
 		
 		ingreso = new JButton();
-		//TODO addAll internacionalizancion
-		ingreso.setToolTipText("Click para agregar informaci\u00F3n sobre m\u00E9dicos y pacientes.");
-		//TODO addAll internacionalizancion
-		ingreso.setText("Ingreso de Datos");
+		ingreso.setToolTipText(getMessage("ui.MainForm.clickAgregarInformacion", null, AppContext.getLocale()));
+		ingreso.setText(getMessage("ui.MainForm.ingresoDatos", null, AppContext.getLocale()));
 		ingreso.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		ingreso.setBounds(412, 197, 404, 64);
 		contentPane.add(ingreso);
 
-		//TODO addAll internacionalizancion
-		JLabel lblNewLabel = new JLabel("MENU");
+		JLabel lblNewLabel = new JLabel(getMessage("ui.MainForm.text.menu", null, AppContext.getLocale()));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setFont(new Font("Cambria", Font.PLAIN, 45));
 		lblNewLabel.setBounds(115, 102, 1105, 57);

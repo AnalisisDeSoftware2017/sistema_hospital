@@ -1,5 +1,6 @@
 package ar.edu.unlam.analisis.software.grupo2.ui;
 
+import ar.edu.unlam.analisis.software.grupo2.utils.AppContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 
@@ -53,20 +54,20 @@ public class DatosPacienteForm extends JFrame {
 		
 		ingresarBtn = new JButton();
 		ingresarBtn.setBounds(432, 363, 90, 33);
-		ingresarBtn.setText("Ingresar");
+		ingresarBtn.setText(messageSource.getMessage("ui.DatosPacienteForm.text.ingresar", null, AppContext.getLocale()));
 		ingresarBtn.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		contentPane.add(ingresarBtn);
 		
 		anterior = new JButton();
 		anterior.setBounds(28, 484, 100, 33);
-		anterior.setText("Anterior");
+		anterior.setText(messageSource.getMessage("ui.DatosPacienteForm.text.anterior", null, AppContext.getLocale()));
 		anterior.setMaximumSize(new Dimension(77, 33));
 		anterior.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		contentPane.add(anterior);
 		
 		borrarC = new JButton();
 		borrarC.setBounds(287, 363, 140, 33);
-		borrarC.setText("Borrar Campos");
+		borrarC.setText(messageSource.getMessage("ui.DatosPacienteForm.borrarCampos", null, AppContext.getLocale()));
 		borrarC.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		contentPane.add(borrarC);
 		
@@ -74,19 +75,19 @@ public class DatosPacienteForm extends JFrame {
 		
 		JLabel jLabel2 = new JLabel();
 		jLabel2.setBounds(267, 151, 48, 17);
-		jLabel2.setText("C\u00F3digo:");
+		jLabel2.setText(messageSource.getMessage("ui.DatosPacienteForm.text.codigo", null, AppContext.getLocale()));
 		jLabel2.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		contentPane.add(jLabel2);
 		
 		JLabel jLabel3 = new JLabel();
 		jLabel3.setBounds(261, 191, 54, 17);
-		jLabel3.setText("Nombre:");
+		jLabel3.setText(messageSource.getMessage("ui.DatosPacienteForm.text.nombre", null, AppContext.getLocale()));
 		jLabel3.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		contentPane.add(jLabel3);
 		
 		JLabel jLabel1 = new JLabel();
 		jLabel1.setFont(new Font("Cambria", Font.PLAIN, 18));
-		jLabel1.setText("DATOS DEL PACIENTE");
+		jLabel1.setText(messageSource.getMessage("ui.DatosPacienteForm.datosDelPaciente", null, AppContext.getLocale()));
 		jLabel1.setBounds(10, 24, 380, 26);
 		contentPane.add(jLabel1);
 		
@@ -96,12 +97,12 @@ public class DatosPacienteForm extends JFrame {
 		
 		JMenu jMenu4 = new JMenu();
 		jMenu4.setToolTipText("");
-		jMenu4.setText("Ayuda");
+		jMenu4.setText(messageSource.getMessage("ui.DatosPacienteForm.text.ayuda", null, AppContext.getLocale()));
 		jMenuBar3.add(jMenu4);
 		
 		JMenuItem menuItem = new JMenuItem();
-		menuItem.setToolTipText("Vista de gu\u00EDa r\u00E1pida de uso.");
-		menuItem.setText("Manual");
+		menuItem.setToolTipText(messageSource.getMessage("ui.DatosPacienteForm.guia", null, AppContext.getLocale()));
+		menuItem.setText(messageSource.getMessage("ui.DatosPacienteForm.text.manual", null, AppContext.getLocale()));
 		menuItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem4ActionPerformed(evt);
@@ -110,11 +111,11 @@ public class DatosPacienteForm extends JFrame {
 		jMenu4.add(menuItem);
 		
 		JMenu jMenu5 = new JMenu();
-		jMenu5.setText("Ir a");
+		jMenu5.setText(messageSource.getMessage("ui.DatosPacienteForm.text.irA", null, AppContext.getLocale()));
 		jMenuBar3.add(jMenu5);
 		
 		JMenuItem menuItem_1 = new JMenuItem();
-		menuItem_1.setText("Menu Inicio");
+		menuItem_1.setText(messageSource.getMessage("ui.DatosPacienteForm.menuInicio", null, AppContext.getLocale()));
 		menuItem_1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mINIActionPerformed(evt);
@@ -123,7 +124,7 @@ public class DatosPacienteForm extends JFrame {
 		jMenu5.add(menuItem_1);
 		
 		JMenuItem menuItem_2 = new JMenuItem();
-		menuItem_2.setText("Ingreso de Datos");
+		menuItem_2.setText(messageSource.getMessage("ui.DatosPacienteForm.ingresoDatos", null, AppContext.getLocale()));
 		/*menuItem_2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mIngDatActionPerformed(evt);
@@ -132,7 +133,7 @@ public class DatosPacienteForm extends JFrame {
 		jMenu5.add(menuItem_2);
 		
 		JMenuItem menuItem_3 = new JMenuItem();
-		menuItem_3.setText("Informes");
+		menuItem_3.setText(messageSource.getMessage("ui.DatosPacienteForm.text.informes", null, AppContext.getLocale()));
 		menuItem_3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mInfActionPerformed(evt);
@@ -141,11 +142,11 @@ public class DatosPacienteForm extends JFrame {
 		jMenu5.add(menuItem_3);
 		
 		JMenu opciones = new JMenu();
-		opciones.setText("Opciones");
+		opciones.setText(messageSource.getMessage("ui.DatosPacienteForm.text.opciones", null, AppContext.getLocale()));
 		jMenuBar3.add(opciones);
 		
 		JMenuItem menuItem_4 = new JMenuItem();
-		menuItem_4.setText("Salir del Programa");
+		menuItem_4.setText(messageSource.getMessage("ui.DatosPacienteForm.salirPrograma", null, AppContext.getLocale()));
 		menuItem_4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SalirActionPerformed(evt);
@@ -154,7 +155,7 @@ public class DatosPacienteForm extends JFrame {
 		opciones.add(menuItem_4);
 		
 		JMenuItem menuItem_5 = new JMenuItem();
-		menuItem_5.setText("Cerrar Sesi\u00F3n");
+		menuItem_5.setText(messageSource.getMessage("ui.DatosPacienteForm.cerrarSesion", null, AppContext.getLocale()));
 		/*menuItem_5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cerrarSesionActionPerformed(evt);
@@ -168,7 +169,7 @@ public class DatosPacienteForm extends JFrame {
 		contentPane.add(txtApellido);
 		
 		JLabel lblApellido = new JLabel();
-		lblApellido.setText("Apellido:");
+		lblApellido.setText(messageSource.getMessage("ui.DatosPacienteForm.text.apellido", null, AppContext.getLocale()));
 		lblApellido.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		lblApellido.setBounds(261, 228, 54, 17);
 		contentPane.add(lblApellido);
@@ -179,7 +180,7 @@ public class DatosPacienteForm extends JFrame {
 		contentPane.add(txtEmail);
 		
 		JLabel lblEmail = new JLabel();
-		lblEmail.setText("Email:");
+		lblEmail.setText(messageSource.getMessage("ui.DatosPacienteForm.text.email", null, AppContext.getLocale()));
 		lblEmail.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		lblEmail.setBounds(258, 261, 54, 17);
 		contentPane.add(lblEmail);
@@ -190,7 +191,7 @@ public class DatosPacienteForm extends JFrame {
 		contentPane.add(txtTelefono);
 		
 		JLabel lblTelefono = new JLabel();
-		lblTelefono.setText("Telefono:");
+		lblTelefono.setText(messageSource.getMessage("ui.DatosPacienteForm.text.telefono", null, AppContext.getLocale()));
 		lblTelefono.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		lblTelefono.setBounds(254, 298, 58, 17);
 		contentPane.add(lblTelefono);
@@ -201,7 +202,7 @@ public class DatosPacienteForm extends JFrame {
 		contentPane.add(txtCelular);
 		
 		JLabel lblCelular = new JLabel();
-		lblCelular.setText("Celular:");
+		lblCelular.setText(messageSource.getMessage("ui.DatosPacienteForm.text.celular", null, AppContext.getLocale()));
 		lblCelular.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		lblCelular.setBounds(258, 331, 54, 17);
 		contentPane.add(lblCelular);
@@ -212,13 +213,13 @@ public class DatosPacienteForm extends JFrame {
 		contentPane.add(textField);
 		
 		JLabel lblNroDocumento = new JLabel();
-		lblNroDocumento.setText("Nro Doc. :");
+		lblNroDocumento.setText(messageSource.getMessage("ui.DatosPacienteForm.nroDoc", null, AppContext.getLocale()));
 		lblNroDocumento.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		lblNroDocumento.setBounds(253, 118, 62, 17);
 		contentPane.add(lblNroDocumento);
 		
 		JLabel lblTipoDoc = new JLabel();
-		lblTipoDoc.setText("Tipo Doc. :");
+		lblTipoDoc.setText(messageSource.getMessage("ui.DatosPacienteForm.tipoDoc", null, AppContext.getLocale()));
 		lblTipoDoc.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		lblTipoDoc.setBounds(241, 78, 73, 17);
 		contentPane.add(lblTipoDoc);

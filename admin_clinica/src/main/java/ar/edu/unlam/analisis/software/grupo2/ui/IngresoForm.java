@@ -1,5 +1,6 @@
 package ar.edu.unlam.analisis.software.grupo2.ui;
 
+import ar.edu.unlam.analisis.software.grupo2.utils.AppContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 
@@ -30,7 +31,7 @@ public class IngresoForm extends AbstractPantalla {
 		
 		JLabel lblAbms = new JLabel();
         lblAbms.setBounds(215, 25, 834, 51);
-        lblAbms.setText("ADMINISTRACION");
+        lblAbms.setText(getMessage("ui.IngresoForm.text.administracion", null, AppContext.getLocale()));
 		lblAbms.setHorizontalAlignment(SwingConstants.CENTER);
 		lblAbms.setFont(new Font("Cambria", Font.PLAIN, 18));
 		contentPane.add(lblAbms);
@@ -45,20 +46,20 @@ public class IngresoForm extends AbstractPantalla {
 		
 		JMenu jMenu2 = new JMenu();
 		jMenu2.setToolTipText("");
-		jMenu2.setText("Ayuda");
+		jMenu2.setText(getMessage("ui.IngresoForm.text.ayuda", null, AppContext.getLocale()));
 		jMenuBar1.add(jMenu2);
 		
 		JMenuItem jMenuItem2 = new JMenuItem();
-		jMenuItem2.setToolTipText("Vista de gu\u00C3\u00ADa r\u00C3\u00A1pida de uso.");
-		jMenuItem2.setText("Manual");
+		jMenuItem2.setToolTipText(getMessage("ui.IngresoForm.guia", null, AppContext.getLocale()));
+		jMenuItem2.setText(getMessage("ui.IngresoForm.text.manual", null, AppContext.getLocale()));
 		jMenu2.add(jMenuItem2);
 		
 		JMenu jMenu3 = new JMenu();
-		jMenu3.setText("Ir a");
+		jMenu3.setText(getMessage("ui.IngresoForm.text.irA", null, AppContext.getLocale()));
 		jMenuBar1.add(jMenu3);
 		
 		JMenuItem mINI = new JMenuItem();
-		mINI.setText("Menu Inicio");
+		mINI.setText(getMessage("ui.IngresoForm.menuInicio", null, AppContext.getLocale()));
 		 mINI.addActionListener(new java.awt.event.ActionListener() {
 	            public void actionPerformed(java.awt.event.ActionEvent evt) {
 	                mINIActionPerformed(evt);
@@ -69,7 +70,7 @@ public class IngresoForm extends AbstractPantalla {
 
 		//TODO addAll this to controller
 		JMenuItem mIngDat = new JMenuItem();
-		mIngDat.setText("Ingreso de Datos");
+		mIngDat.setText(getMessage("ui.IngresoForm.ingresoDatos", null, AppContext.getLocale()));
 		/* mIngDat.addActionListener(new java.awt.event.ActionListener() {
 	            public void actionPerformed(java.awt.event.ActionEvent evt) {
 	                mIngDatActionPerformed(evt);
@@ -78,11 +79,11 @@ public class IngresoForm extends AbstractPantalla {
 		jMenu3.add(mIngDat);
 		
 		JMenu opciones = new JMenu();
-		opciones.setText("Opciones");
+		opciones.setText(getMessage("ui.IngresoForm.text.opciones", null, AppContext.getLocale()));
 		jMenuBar1.add(opciones);
 		
 		JMenuItem Salir = new JMenuItem();
-		Salir.setText("Salir del Programa");
+		Salir.setText(getMessage("ui.IngresoForm.salirPrograma", null, AppContext.getLocale()));
 		 Salir.addActionListener(new java.awt.event.ActionListener() {
 	            public void actionPerformed(java.awt.event.ActionEvent evt) {
 	                SalirActionPerformed(evt);
@@ -92,7 +93,7 @@ public class IngresoForm extends AbstractPantalla {
 
 		//TODO addAll this to a controller
 		JMenuItem cerrarSesion = new JMenuItem();
-		cerrarSesion.setText("Cerrar Sesi\u00C3\u00B3n");
+		cerrarSesion.setText(getMessage("ui.IngresoForm.cerrarSesion", null, AppContext.getLocale()));
 	/*	cerrarSesion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cerrarSesionActionPerformed(evt);
@@ -101,37 +102,37 @@ public class IngresoForm extends AbstractPantalla {
 		opciones.add(cerrarSesion);
 		
 		
-		this.btnAbmUsuarios= new JButton("ABM Usuarios");
+		this.btnAbmUsuarios= new JButton(getMessage("ui.IngresoForm.text.ABMusuarios", null, AppContext.getLocale()));
 		btnAbmUsuarios.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		btnAbmUsuarios.setBounds(215, 386, 777, 32);
 		contentPane.add(btnAbmUsuarios);
 		
 		btnABMPaciente = new JButton();
-		btnABMPaciente.setText("ABM Paciente");
+		btnABMPaciente.setText(getMessage("ui.IngresoForm.text.ABMpacientes", null, AppContext.getLocale()));
 		btnABMPaciente.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		btnABMPaciente.setBounds(215, 305, 777, 35);
 		contentPane.add(btnABMPaciente);
 		
 		btnABMMedico = new JButton();
-		btnABMMedico.setText("ABM Medico");
+		btnABMMedico.setText(getMessage("ui.IngresoForm.text.ABMmedicos", null, AppContext.getLocale()));
 		btnABMMedico.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		btnABMMedico.setBounds(215, 219, 777, 36);
 		contentPane.add(btnABMMedico);
 		
 		btnAbmEnfermedades = new JButton();
-        btnAbmEnfermedades.setText("ABM Especialidades");
+        btnAbmEnfermedades.setText(getMessage("ui.IngresoForm.text.ABMespecialidades", null, AppContext.getLocale()));
         btnAbmEnfermedades.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		btnAbmEnfermedades.setBounds(215, 146, 777, 36);
 		contentPane.add(btnAbmEnfermedades);
 
         btnAbmSituacionPaciente = new JButton();
-        btnAbmSituacionPaciente.setText("ABM situacion paciente");
+        btnAbmSituacionPaciente.setText(getMessage("ui.IngresoForm.text.ABMsituacionPaciente", null, AppContext.getLocale()));
         btnAbmSituacionPaciente.setFont(new Font("Tahoma", Font.PLAIN, 12));
         btnAbmSituacionPaciente.setBounds(215, 468, 777, 40);
         contentPane.add(btnAbmSituacionPaciente);
 
         anterior = new JButton();
-        anterior.setText("Anterior");
+        anterior.setText(getMessage("ui.IngresoForm.text.anterior", null, AppContext.getLocale()));
         anterior.setFont(new Font("Tahoma", Font.PLAIN, 12));
         anterior.setBounds(215, 520, 777, 40);
         contentPane.add(anterior);

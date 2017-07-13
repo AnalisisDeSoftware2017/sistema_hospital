@@ -1,5 +1,6 @@
 package ar.edu.unlam.analisis.software.grupo2.ui;
 
+import ar.edu.unlam.analisis.software.grupo2.utils.AppContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 
@@ -35,12 +36,12 @@ public class EnfermedadesMedicoForm extends AbstractPantalla {
 		
 		JMenu jMenu2 = new JMenu();
 		jMenu2.setToolTipText("");
-		jMenu2.setText("Ayuda");
+		jMenu2.setText(getMessage("ui.EnfermedadesMedicoForm.text.ayuda", null, AppContext.getLocale()));
 		jMenuBar1.add(jMenu2);
 		
 		JMenuItem jMenuItem2 = new JMenuItem();
-		jMenuItem2.setToolTipText("Vista de gu\u00C3\u00ADa r\u00C3\u00A1pida de uso.");
-		jMenuItem2.setText("Manual");
+		jMenuItem2.setToolTipText(getMessage("ui.EnfermedadesMedicoForm.guia", null, AppContext.getLocale()));
+		jMenuItem2.setText(getMessage("ui.EnfermedadesMedicoForm.text.manual", null, AppContext.getLocale()));
 		jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem2ActionPerformed(evt);
@@ -49,11 +50,11 @@ public class EnfermedadesMedicoForm extends AbstractPantalla {
 		jMenu2.add(jMenuItem2);
 		
 		JMenu jMenu3 = new JMenu();
-		jMenu3.setText("Ir a");
+		jMenu3.setText(getMessage("ui.EnfermedadesMedicoForm.text.irA", null, AppContext.getLocale()));
 		jMenuBar1.add(jMenu3);
 		
 		JMenuItem mINI = new JMenuItem();
-		mINI.setText("Menu Inicio");
+		mINI.setText(getMessage("ui.EnfermedadesMedicoForm.menuInicio", null, AppContext.getLocale()));
 		 mINI.addActionListener(new java.awt.event.ActionListener() {
 	            public void actionPerformed(java.awt.event.ActionEvent evt) {
 	                mINIActionPerformed(evt);
@@ -62,7 +63,7 @@ public class EnfermedadesMedicoForm extends AbstractPantalla {
 		jMenu3.add(mINI);
 		
 		JMenuItem mIngDat = new JMenuItem();
-		mIngDat.setText("Ingreso de Datos");
+		mIngDat.setText(getMessage("ui.EnfermedadesMedicoForm.ingresoDatos", null, AppContext.getLocale()));
 		mIngDat.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mIngDatActionPerformed(evt);
@@ -71,7 +72,7 @@ public class EnfermedadesMedicoForm extends AbstractPantalla {
 		jMenu3.add(mIngDat);
 		
 		JMenuItem mInf = new JMenuItem();
-		mInf.setText("Informes");
+		mInf.setText(getMessage("ui.EnfermedadesMedicoForm.text.informes", null, AppContext.getLocale()));
 		mInf.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mInfActionPerformed(evt);
@@ -80,11 +81,11 @@ public class EnfermedadesMedicoForm extends AbstractPantalla {
 		jMenu3.add(mInf);
 		
 		JMenu opciones = new JMenu();
-		opciones.setText("Opciones");
+		opciones.setText(getMessage("ui.EnfermedadesMedicoForm.text.opciones", null, AppContext.getLocale()));
 		jMenuBar1.add(opciones);
 		
 		JMenuItem salir = new JMenuItem();
-		salir.setText("Salir del Programa");
+		salir.setText(getMessage("ui.EnfermedadesMedicoForm.salirPrograma", null, AppContext.getLocale()));
 		salir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SalirActionPerformed(evt);
@@ -93,7 +94,7 @@ public class EnfermedadesMedicoForm extends AbstractPantalla {
 		opciones.add(salir);
 		
 		JMenuItem cerrarSesion = new JMenuItem();
-		cerrarSesion.setText("Cerrar Sesi\u00C3\u00B3n");
+		cerrarSesion.setText(getMessage("ui.EnfermedadesMedicoForm.cerrarSesion", null, AppContext.getLocale()));
 		/*cerrarSesion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cerrarSesionActionPerformed(evt);
@@ -102,14 +103,14 @@ public class EnfermedadesMedicoForm extends AbstractPantalla {
 		opciones.add(cerrarSesion);
 		
 		JLabel jLabel1 = new JLabel();
-		jLabel1.setText("<html><u>Enfermedades que atiende cada m\u00C3\u00A9dico</u></html>");
+		jLabel1.setText(getMessage("ui.EnfermedadesMedicoForm.enfermedadesPorMedico", null, AppContext.getLocale()));
 		jLabel1.setHorizontalAlignment(SwingConstants.CENTER);
 		jLabel1.setFont(new Font("Cambria", Font.PLAIN, 14));
 		jLabel1.setBounds(10, 41, 290, 26);
 		contentPane.add(jLabel1);
 		
 		JLabel jLabel3 = new JLabel();
-		jLabel3.setText("Nombre M\u00E9dico:");
+		jLabel3.setText(getMessage("ui.EnfermedadesMedicoForm.text.nombreMedico", null, AppContext.getLocale()));
 		jLabel3.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		jLabel3.setBounds(333, 203, 119, 15);
 		contentPane.add(jLabel3);
@@ -124,7 +125,7 @@ public class EnfermedadesMedicoForm extends AbstractPantalla {
 		contentPane.add(nombreMed);
 		
 		anterior = new JButton();
-		anterior.setText("Anterior");
+		anterior.setText(getMessage("ui.EnfermedadesMedicoForm.text.anterior", null, AppContext.getLocale()));
 		anterior.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		anterior.setBounds(10, 361, 100, 30);
 		contentPane.add(anterior);
@@ -157,13 +158,13 @@ public class EnfermedadesMedicoForm extends AbstractPantalla {
 		contentPane.add(panel);
 		
 		JLabel lblCdigoMdico = new JLabel();
-		lblCdigoMdico.setText("C\u00F3digo M\u00E9dico");
+		lblCdigoMdico.setText(getMessage("ui.EnfermedadesMedicoForm.text.codigoMedico", null, AppContext.getLocale()));
 		lblCdigoMdico.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		
 		codigoMed = new JTextField();
 		
 		consultarBtn = new JButton();
-		consultarBtn.setText("Consultar");
+		consultarBtn.setText(getMessage("ui.EnfermedadesMedicoForm.text.consultar", null, AppContext.getLocale()));
 		consultarBtn.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		
 		borrarC = new JButton();

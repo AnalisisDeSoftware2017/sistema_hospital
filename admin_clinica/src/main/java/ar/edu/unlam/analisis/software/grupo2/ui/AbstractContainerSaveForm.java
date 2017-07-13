@@ -1,6 +1,7 @@
 package ar.edu.unlam.analisis.software.grupo2.ui;
 
 import ar.edu.unlam.analisis.software.grupo2.core.model.AbmEntity;
+import ar.edu.unlam.analisis.software.grupo2.utils.AppContext;
 import org.springframework.context.MessageSource;
 
 import javax.swing.*;
@@ -34,11 +35,11 @@ public abstract class AbstractContainerSaveForm<T extends AbmEntity> extends Abs
 		contentPane.add(botoneraPane);
 		botoneraPane.setLayout(null);
 		
-		btnGuardar = new JButton("Guardar");
+		btnGuardar = new JButton(getMessage("ui.AbstractContainerSaveForm.text.guardar", null, AppContext.getLocale()));
 		btnGuardar.setBounds(116, 19, 117, 29);
 		botoneraPane.add(btnGuardar);
 		
-		btnCancelar = new JButton("Cancelar");
+		btnCancelar = new JButton(getMessage("ui.AbstractContainerSaveForm.text.cancelar", null, AppContext.getLocale()));
 		btnCancelar.setBounds(502, 19, 117, 29);
 		botoneraPane.add(btnCancelar);
 		

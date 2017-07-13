@@ -106,5 +106,5 @@ public class ManualForm extends JFrame {
     }
 
     JButton cerrar;
-    
+
 }

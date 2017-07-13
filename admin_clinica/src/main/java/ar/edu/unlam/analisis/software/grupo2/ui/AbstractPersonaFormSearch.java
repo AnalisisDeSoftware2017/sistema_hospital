@@ -3,6 +3,7 @@ package ar.edu.unlam.analisis.software.grupo2.ui;
 import ar.edu.unlam.analisis.software.grupo2.core.model.Persona;
 import ar.edu.unlam.analisis.software.grupo2.core.model.TipoDocumentoEnum;
 import ar.edu.unlam.analisis.software.grupo2.data.PersonaData;
+import ar.edu.unlam.analisis.software.grupo2.utils.AppContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 
@@ -28,7 +29,7 @@ public abstract class AbstractPersonaFormSearch<T extends Persona, E extends Per
         add(txtNombre);
         txtNombre.setColumns(10);
 
-        JLabel lblNombre = new JLabel("Nombre:");
+        JLabel lblNombre = new JLabel(messageSource.getMessage("ui.AbstractPersonaFormSearch.text.nombre", null, AppContext.getLocale()));
         lblNombre.setForeground(Color.RED);
         lblNombre.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 16));
         lblNombre.setBounds(481, 99, 112, 16);
@@ -39,7 +40,7 @@ public abstract class AbstractPersonaFormSearch<T extends Persona, E extends Per
         txtApellido.setBounds(481, 193, 285, 26);
         add(txtApellido);
 
-        JLabel lblApellido = new JLabel("Apellido:");
+        JLabel lblApellido = new JLabel(messageSource.getMessage("ui.AbstractPersonaFormSearch.text.apellido", null, AppContext.getLocale()));
         lblApellido.setForeground(Color.RED);
         lblApellido.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 16));
         lblApellido.setBounds(481, 165, 123, 16);
@@ -50,13 +51,13 @@ public abstract class AbstractPersonaFormSearch<T extends Persona, E extends Per
         txtCodigo.setBounds(481, 260, 285, 26);
         add(txtCodigo);
 
-        JLabel lblCodigo = new JLabel("Codigo");
+        JLabel lblCodigo = new JLabel(messageSource.getMessage("ui.AbstractPersonaFormSearch.text.codigo", null, AppContext.getLocale()));
         lblCodigo.setForeground(Color.RED);
         lblCodigo.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 16));
         lblCodigo.setBounds(481, 232, 112, 16);
         add(lblCodigo);
 
-        JLabel lblTipoDocumento = new JLabel("Tipo documento:");
+        JLabel lblTipoDocumento = new JLabel(messageSource.getMessage("ui.AbstractPersonaFormSearch.text.tipoDocumento", null, AppContext.getLocale()));
         lblTipoDocumento.setForeground(Color.RED);
         lblTipoDocumento.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 16));
         lblTipoDocumento.setBounds(481, 298, 166, 16);
@@ -74,7 +75,7 @@ public abstract class AbstractPersonaFormSearch<T extends Persona, E extends Per
         //TODO remove this and add in controller
         this.cbTipoDocumento.setModel(new DefaultComboBoxModel<>(TipoDocumentoEnum.values()));
 
-        JLabel lblNumeroDocumento = new JLabel("Numero de documento:");
+        JLabel lblNumeroDocumento = new JLabel(messageSource.getMessage("ui.AbstractPersonaFormSearch.text.nroDocumento", null, AppContext.getLocale()));
         lblNumeroDocumento.setForeground(Color.RED);
         lblNumeroDocumento.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 16));
         lblNumeroDocumento.setBounds(481, 374, 217, 16);

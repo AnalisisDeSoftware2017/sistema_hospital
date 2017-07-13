@@ -1,5 +1,6 @@
 package ar.edu.unlam.analisis.software.grupo2.ui;
 
+import ar.edu.unlam.analisis.software.grupo2.utils.AppContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Component;
@@ -28,7 +29,7 @@ public class InformesForm extends AbstractPantalla {
 		
 		JLabel label = new JLabel();
 		label.setBounds(444, 67, 424, 68);
-		label.setText("BUSQUEDAS");
+		label.setText(getMessage("ui.InformesForm.text.busquedas", null, AppContext.getLocale()));
 		label.setHorizontalAlignment(SwingConstants.CENTER);
 		label.setFont(new Font("Cambria", Font.PLAIN, 40));
 		contentPane.add(label);
@@ -43,20 +44,20 @@ public class InformesForm extends AbstractPantalla {
 		
 		JMenu jMenu2 = new JMenu();
 		jMenu2.setToolTipText("");
-		jMenu2.setText("Ayuda");
+		jMenu2.setText(getMessage("ui.InformesForm.text.ayuda", null, AppContext.getLocale()));
 		jMenuBar1.add(jMenu2);
 		
 		JMenuItem jMenuItem2 = new JMenuItem();
-		jMenuItem2.setToolTipText("Vista de gu\u00C3\u00ADa r\u00C3\u00A1pida de uso.");
-		jMenuItem2.setText("Manual");
+		jMenuItem2.setToolTipText(getMessage("ui.InformesForm.guia", null, AppContext.getLocale()));
+		jMenuItem2.setText(getMessage("ui.InformesForm.text.manual", null, AppContext.getLocale()));
 		jMenu2.add(jMenuItem2);
 		
 		JMenu jMenu3 = new JMenu();
-		jMenu3.setText("Ir a");
+		jMenu3.setText(getMessage("ui.InformesForm.text.irA", null, AppContext.getLocale()));
 		jMenuBar1.add(jMenu3);
 		
 		JMenuItem mINI = new JMenuItem();
-		mINI.setText("Menu Inicio");
+		mINI.setText(getMessage("ui.InformesForm.menuInicio", null, AppContext.getLocale()));
 		 mINI.addActionListener(new java.awt.event.ActionListener() {
 	            public void actionPerformed(java.awt.event.ActionEvent evt) {
 	                mINIActionPerformed(evt);
@@ -67,7 +68,7 @@ public class InformesForm extends AbstractPantalla {
 
 		//TODO addAll this to controller
 		JMenuItem mIngDat = new JMenuItem();
-		mIngDat.setText("Ingreso de Datos");
+		mIngDat.setText(getMessage("ui.InformesForm.ingresoDatos", null, AppContext.getLocale()));
 		/* mIngDat.addActionListener(new java.awt.event.ActionListener() {
 	            public void actionPerformed(java.awt.event.ActionEvent evt) {
 	                mIngDatActionPerformed(evt);
@@ -76,11 +77,11 @@ public class InformesForm extends AbstractPantalla {
 		jMenu3.add(mIngDat);
 		
 		JMenu opciones = new JMenu();
-		opciones.setText("Opciones");
+		opciones.setText(getMessage("ui.InformesForm.text.opciones", null, AppContext.getLocale()));
 		jMenuBar1.add(opciones);
 		
 		JMenuItem Salir = new JMenuItem();
-		Salir.setText("Salir del Programa");
+		Salir.setText(getMessage("ui.InformesForm.salirPrograma", null, AppContext.getLocale()));
 		 Salir.addActionListener(new java.awt.event.ActionListener() {
 	            public void actionPerformed(java.awt.event.ActionEvent evt) {
 	                SalirActionPerformed(evt);
@@ -90,7 +91,7 @@ public class InformesForm extends AbstractPantalla {
 
 		//TODO addAll this to a controller
 		JMenuItem cerrarSesion = new JMenuItem();
-		cerrarSesion.setText("Cerrar Sesi\u00C3\u00B3n");
+		cerrarSesion.setText(getMessage("ui.InformesForm.cerrarSesion", null, AppContext.getLocale()));
 	/*	cerrarSesion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cerrarSesionActionPerformed(evt);
@@ -102,19 +103,19 @@ public class InformesForm extends AbstractPantalla {
 				anterior = new JButton();
 				anterior.setBounds(564, 466, 162, 40);
 				contentPane.add(anterior);
-				anterior.setText("Anterior");
+				anterior.setText(getMessage("ui.InformesForm.text.anterior", null, AppContext.getLocale()));
 				anterior.setFont(new Font("Tahoma", Font.PLAIN, 12));
 				
 				        btnMedico = new JButton();
 				        btnMedico.setBounds(504, 339, 289, 35);
 				        contentPane.add(btnMedico);
-				        btnMedico.setText("Buscar medico");
+				        btnMedico.setText(getMessage("ui.InformesForm.buscarMedico", null, AppContext.getLocale()));
 				        btnMedico.setFont(new Font("Tahoma", Font.PLAIN, 14));
 				        
 				                btnPaciente = new JButton();
 				                btnPaciente.setBounds(504, 196, 289, 36);
 				                contentPane.add(btnPaciente);
-				                btnPaciente.setText("Buscar Paciente");
+				                btnPaciente.setText(getMessage("ui.InformesForm.buscarPaciente", null, AppContext.getLocale()));
 				                btnPaciente.setFont(new Font("Tahoma", Font.PLAIN, 14));
 	}
 

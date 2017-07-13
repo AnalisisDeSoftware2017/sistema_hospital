@@ -2,6 +2,7 @@ package ar.edu.unlam.analisis.software.grupo2.ui;
 
 import ar.edu.unlam.analisis.software.grupo2.core.model.AbmEntity;
 import ar.edu.unlam.analisis.software.grupo2.ui.customComponents.JListCustom;
+import ar.edu.unlam.analisis.software.grupo2.utils.AppContext;
 import org.springframework.context.MessageSource;
 
 import javax.swing.*;
@@ -41,19 +42,19 @@ public abstract class AbstractFirstScreenABM<T extends AbmEntity> extends Abstra
 		listEntity.setBounds(10, 0, 585, 507);
 		panel.add(listEntity);
 		
-		btnCrear = new JButton("Crear");
+		btnCrear = new JButton(getMessage("ui.AbstractFirstScreenABM.text.crear", null, AppContext.getLocale()));
 		btnCrear.setBounds(654, 74, 117, 29);
 		panel.add(btnCrear);
 		
-		btnEditar = new JButton("Editar");
+		btnEditar = new JButton(getMessage("ui.AbstractFirstScreenABM.text.editar", null, AppContext.getLocale()));
 		btnEditar.setBounds(654, 204, 117, 29);
 		panel.add(btnEditar);
 		
-		btnEliminar = new JButton("Eliminar");
+		btnEliminar = new JButton(getMessage("ui.AbstractFirstScreenABM.text.eliminar", null, AppContext.getLocale()));
 		btnEliminar.setBounds(654, 355, 117, 29);
 		panel.add(btnEliminar);
 		
-		btnAnterior = new JButton("Anterior");
+		btnAnterior = new JButton(getMessage("ui.AbstractFirstScreenABM.text.anterior", null, AppContext.getLocale()));
 		btnAnterior.setBounds(654, 444, 117, 29);
 		panel.add(btnAnterior);
 	}

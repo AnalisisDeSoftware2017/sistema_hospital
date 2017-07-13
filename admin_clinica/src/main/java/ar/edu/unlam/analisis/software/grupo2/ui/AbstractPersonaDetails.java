@@ -2,6 +2,7 @@ package ar.edu.unlam.analisis.software.grupo2.ui;
 
 import ar.edu.unlam.analisis.software.grupo2.core.model.Persona;
 import ar.edu.unlam.analisis.software.grupo2.core.model.SituacionDelPaciente;
+import ar.edu.unlam.analisis.software.grupo2.utils.AppContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 
@@ -30,31 +31,31 @@ public abstract class AbstractPersonaDetails<T extends Persona> extends Abstract
         getContentPane().add(panel);
         panel.setLayout(null);
 
-        JLabel lblNombre = new JLabel("Nombre:");
+        JLabel lblNombre = new JLabel(getMessage("ui.AbstractPersonaDetails.text.nombre", null, AppContext.getLocale()));
         lblNombre.setBounds(66, 43, 112, 16);
         panel.add(lblNombre);
         lblNombre.setForeground(Color.RED);
         lblNombre.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 16));
 
-        JLabel lblApellido = new JLabel("Apellido:");
+        JLabel lblApellido = new JLabel(getMessage("ui.AbstractPersonaDetails.text.apellido", null, AppContext.getLocale()));
         lblApellido.setBounds(66, 109, 123, 16);
         panel.add(lblApellido);
         lblApellido.setForeground(Color.RED);
         lblApellido.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 16));
 
-        JLabel lblCodigo = new JLabel("Codigo");
+        JLabel lblCodigo = new JLabel(getMessage("ui.AbstractPersonaDetails.text.codigo", null, AppContext.getLocale()));
         lblCodigo.setBounds(66, 176, 112, 16);
         panel.add(lblCodigo);
         lblCodigo.setForeground(Color.RED);
         lblCodigo.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 16));
 
-        JLabel lblTipoDocumento = new JLabel("Tipo documento:");
+        JLabel lblTipoDocumento = new JLabel(getMessage("ui.AbstractPersonaDetails.text.tipoDocumento", null, AppContext.getLocale()));
         lblTipoDocumento.setBounds(66, 242, 166, 16);
         panel.add(lblTipoDocumento);
         lblTipoDocumento.setForeground(Color.RED);
         lblTipoDocumento.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 16));
 
-        JLabel lblNumeroDocumento = new JLabel("Numero de documento:");
+        JLabel lblNumeroDocumento = new JLabel(getMessage("ui.AbstractPersonaDetails.text.nroDocumento", null, AppContext.getLocale()));
         lblNumeroDocumento.setBounds(66, 318, 217, 16);
         panel.add(lblNumeroDocumento);
         lblNumeroDocumento.setForeground(Color.RED);
@@ -87,7 +88,7 @@ public abstract class AbstractPersonaDetails<T extends Persona> extends Abstract
         scrollPane.setBounds(560, 35, 726, 520);
         getContentPane().add(scrollPane);
 
-        btnAnterior = new JButton("Anterior");
+        btnAnterior = new JButton(getMessage("ui.AbstractPersonaDetails.text.anterior", null, AppContext.getLocale()));
         btnAnterior.setBounds(524, 649, 114, 25);
         getContentPane().add(btnAnterior);
     }
