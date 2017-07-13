@@ -6,7 +6,7 @@ import ar.edu.unlam.analisis.software.grupo2.data.MedicoData;
 import ar.edu.unlam.analisis.software.grupo2.data.PacienteData;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
-import org.hibernate.criterion.Restrictions;
+import org.hibernate.criterion.*;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
@@ -30,7 +30,7 @@ public class ReporteDao {
 
     public List<Medico> findAllMedicosByMedicoData(MedicoData medicoData) {
         Session session = entityManager.unwrap(Session.class);
-        Criteria criteria = session.createCriteria(Medico.class);
+        Criteria criteria = session.createCriteria(Medico.class).setResultTransformer(CriteriaSpecification.DISTINCT_ROOT_ENTITY);
         if (null != medicoData.getEspecialidad()) {
             criteria.createAlias("especialidades", "e1");
             criteria.add(Restrictions.eq("e1.id", medicoData.getEspecialidad().getId()));
@@ -61,7 +61,7 @@ public class ReporteDao {
 
     public List<Paciente> findAllPacientesByPacienteData(PacienteData pacienteData) {
         Session session = entityManager.unwrap(Session.class);
-        Criteria criteria = session.createCriteria(Paciente.class);
+        Criteria criteria = session.createCriteria(Paciente.class).setResultTransformer(CriteriaSpecification.DISTINCT_ROOT_ENTITY);;
 
         if (null != pacienteData.getApellido() && !pacienteData.getApellido().isEmpty()) {
             criteria.add(Restrictions.ilike("apellido", pacienteData.getApellido()));
@@ -83,7 +83,6 @@ public class ReporteDao {
             criteria.add(Restrictions.eq("codigo", pacienteData.getCodigo()));
         }
         return criteria.list();
-
     }
 
 }

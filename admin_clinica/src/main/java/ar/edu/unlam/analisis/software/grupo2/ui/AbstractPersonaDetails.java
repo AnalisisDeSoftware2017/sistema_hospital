@@ -94,6 +94,7 @@ public abstract class AbstractPersonaDetails<T extends Persona> extends Abstract
 
 
     public void setEntity(T entity) {
+        this.taConsultas.setText("");
         this.lblDataApellido.setText(entity.getApellido());
         this.lblDataCodigo.setText(entity.getCodigo());
         this.lblDataNombre.setText(entity.getNombre());

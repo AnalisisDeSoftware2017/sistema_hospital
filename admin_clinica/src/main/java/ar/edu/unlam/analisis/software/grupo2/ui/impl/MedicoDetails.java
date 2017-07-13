@@ -41,6 +41,7 @@ public class MedicoDetails extends AbstractPersonaDetails<Medico> {
     @Override
     public void setEntity(Medico medico) {
         super.setEntity(medico);
+        taEspecialidades.setText("");
         medico.getEspecialidades().forEach(especialidad -> {
             taEspecialidades.append(especialidad.getNombreEspecialidad() + "\n");
         });

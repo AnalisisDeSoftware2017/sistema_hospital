@@ -125,7 +125,7 @@ public class LoginJFrame extends AbstractPantalla {
     }
 
     public void showErrorMessage() {
-        JOptionPane.showMessageDialog(this,
+        JOptionPane.showMessageDialog(this,bqueries can occur only in the select or where clauses.
                 getMessage("login.error", null, AppContext.getLocale()),
                 "Error",
                 JOptionPane.ERROR_MESSAGE);
